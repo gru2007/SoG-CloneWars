@@ -10,7 +10,6 @@ ModCredits:
 	ModTabTitle: Clone Wars
 
 RequiresMods:
-	cnc: release-20230225
 	modchooser: release-20230225
 
 
