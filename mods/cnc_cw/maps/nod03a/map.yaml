@@ -434,4 +434,4 @@ Actors:
 		Location: 32,47
 		Owner: Neutral
 
-Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml
+Rules: cnc_cw|rules/campaign-maprules.yaml, cnc_cw|rules/campaign-tooltips.yaml, cnc_cw|rules/campaign-palettes.yaml, rules.yaml
