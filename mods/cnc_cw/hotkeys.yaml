@@ -1,0 +1,24 @@
+ProductionTypeBuilding: E
+	Description: Строения
+	Types: Production
+	Contexts: Player
+
+ProductionTypeDefense: R
+	Description: Защита
+	Types: Production
+	Contexts: Player
+
+ProductionTypeInfantry: T
+	Description: Пехота
+	Types: Production
+	Contexts: Player
+
+ProductionTypeVehicle: Y
+	Description: Техника
+	Types: Production
+	Contexts: Player
+
+ProductionTypeAircraft: U
+	Description: Воздух
+	Types: Production
+	Contexts: Player
