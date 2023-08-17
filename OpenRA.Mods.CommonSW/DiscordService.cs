@@ -32,7 +32,7 @@ namespace OpenRA.Mods.Common
 	public sealed class DiscordService : IGlobalModData, IDisposable
 	{
 		public readonly string ApplicationId = null;
-		public readonly string Tooltip = "Open Source real-time strategy game engine for early Westwood titles.";
+		public readonly string Tooltip = "Стратегия по Звёздым Войнам созданная на открытом движке OpenRA";
 		DiscordRpcClient client;
 		DiscordState currentState;
 
@@ -120,16 +120,16 @@ namespace OpenRA.Mods.Common
 			switch (state)
 			{
 				case DiscordState.InMenu:
-					stateText = "In menu";
+					stateText = "В меню";
 					break;
 				case DiscordState.InMapEditor:
-					stateText = "In Map Editor";
+					stateText = "В Редакторе Карт";
 					break;
 				case DiscordState.InSkirmishLobby:
-					stateText = "In Skirmish Lobby";
+					stateText = "В лобби Стычки";
 					break;
 				case DiscordState.InMultiplayerLobby:
-					stateText = "In Multiplayer Lobby";
+					stateText = "В лобби Мультиплеера";
 					timestamp = DateTime.UtcNow;
 					party = new Party
 					{
@@ -143,19 +143,19 @@ namespace OpenRA.Mods.Common
 					};
 					break;
 				case DiscordState.PlayingMultiplayer:
-					stateText = "Playing Multiplayer";
+					stateText = "Играет в Мультиплеер";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.PlayingCampaign:
-					stateText = "Playing Campaign";
+					stateText = "Играет в Кампанию";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.WatchingReplay:
-					stateText = "Watching Replay";
+					stateText = "Смотрит Replay";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.PlayingSkirmish:
-					stateText = "Playing Skirmish";
+					stateText = "Играет в Стычку";
 					timestamp = DateTime.UtcNow;
 					break;
 				default:
@@ -168,7 +168,7 @@ namespace OpenRA.Mods.Common
 				{
 					new Button
 					{
-						Label = "Visit Website",
+						Label = "Веб-сайт",
 						Url = Game.ModData.Manifest.Metadata.Website
 					}
 				};

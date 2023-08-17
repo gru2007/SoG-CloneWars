@@ -7,8 +7,9 @@ logos:
 	Inherits: ^Chrome
 	Regions:
 		eva: 769, 320, 128, 64
-		nod-load: 0, 256, 256, 256
-		gdi-load: 256, 256, 256, 256
+		nod-load: 120, 256, 256, 256
+		republic: 120, 256, 256, 256
+		
 
 #
 # Button

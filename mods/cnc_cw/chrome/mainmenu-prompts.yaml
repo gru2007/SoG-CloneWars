@@ -327,7 +327,7 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Width: PARENT_RIGHT - 30
 					Height: 16
 					Align: Center
-					Text: Разработчики OpenRA хотят получить информацию для улучшения их движка.
+					Text: Разработчики OpenRA и SoG хотят получить данные для улучшения движка и игры.
 				Label@PROMPT_TEXT_B:
 					X: 15
 					Y: 33
