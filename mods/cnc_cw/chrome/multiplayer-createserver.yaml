@@ -11,7 +11,7 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Create Server
+			Text: Создать сервер
 		Background@bg:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -22,20 +22,20 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 					Width: 105
 					Height: 25
 					Align: Right
-					Text: Server Name:
+					Text: Название:
 				TextField@SERVER_NAME:
 					X: 110
 					Y: 15
 					Width: 215
 					MaxLength: 50
 					Height: 25
-					Text: My OpenRA Server
+					Text: Мой сервер OpenRA
 				Label@PASSWORD_LABEL:
 					Y: 49
 					Width: 105
 					Height: 25
 					Align: Right
-					Text: Password:
+					Text: Пароль:
 				PasswordField@PASSWORD:
 					X: 110
 					Y: 50
@@ -48,13 +48,13 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 					Width: 105
 					Height: 25
 					Align: Left
-					Text: (optional)
+					Text: (опц)
 				Label@LISTEN_PORT_LABEL:
 					Y: 84
 					Width: 105
 					Height: 25
 					Align: Right
-					Text: Port:
+					Text: Порт:
 				TextField@LISTEN_PORT:
 					X: 110
 					Y: 85
@@ -69,7 +69,7 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 					Width: 150
 					Height: 20
 					Font: Regular
-					Text: Advertise Online
+					Text: Публичный
 				Label@NOTICES_HEADER_A:
 					X: 15
 					Y: 125
@@ -99,21 +99,21 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - Game will be advertised to the Local Area Network only.
+							Text: - Игра будет отобраться в поиске только в локальной сети
 						Label@FIREWALL:
 							Y: 12
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You must manually configure your firewall to allow connections.
+							Text: - Вам необходимо вручную настроить FireWall для подключений
 						Label@PORTFORWARD_A:
 							Y: 24
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - Players can connect using Direct IP from the Internet if you
+							Text: - Игроки из Интернета смогут вручную подключиться к Вам, если
 						Label@PORTFORWARD_B:
 							X: 7
 							Y: 36
@@ -121,7 +121,7 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: manually configure port forwarding on your router.
+							Text: вы вручную настроите доступ к порту Вашего сервера
 				Container@NOTICES_NO_UPNP:
 					X: 20
 					Y: 145
@@ -133,21 +133,21 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - Game will be advertised to the Local Area Network and Internet.
+							Text: - Игра будет отобраться в поиске в Локальной и Глобальной сети
 						Label@FIREWALL:
 							Y: 12
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You must manually configure your firewall to allow connections.
+							Text: - Вам необходимо вручную настроить FireWall для подключений
 						Label@PORTFORWARD_A:
 							Y: 24
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You must manually configure your router to allow and forward
+							Text: - Вам необходимо вручную настроить роутер для разрешения
 						Label@PORTFORWARD_B:
 							X: 7
 							Y: 36
@@ -155,14 +155,14 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: connections to your local IP and Port.
+							Text: соединений к порту Вашего сервера
 						Label@SETTINGS_A:
 							Y: 48
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You can enable UPnP/NAT-PMP (if supported by your router)
+							Text: - Вы можете включить UPnP/NAT-PMP (если роутер поддерживает)
 						Label@SETTINGS_B:
 							X: 7
 							Y: 60
@@ -170,7 +170,7 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: in the Advanced tab of the settings menu.
+							Text: в меню Продвинутых настроек игры
 				Container@NOTICES_UPNP:
 					X: 20
 					Y: 145
@@ -182,28 +182,28 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - Game will be advertised to the Local Area Network and Internet.
+							Text: - Игра будет отобраться в поиске в Локальной и Глобальной сети
 						Label@FIREWALL:
 							Y: 12
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You must manually configure your firewall to allow connections.
+							Text: - Вам необходимо вручную настроить FireWall для подключений
 						Label@PORTFORWARD_A:
 							Y: 24
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - Game will automatically configure port forwarding.
+							Text: - Игра автоматически откроет порт на роутере
 						Label@SETTINGS_A:
 							Y: 36
 							Width: 305
 							Height: 25
 							Font: Tiny
 							Align: Left
-							Text: - You can disable UPnP/NAT-PMP in the settings menu.
+							Text: - Вы можете выключить UPnP/NAT-PMP в меню Продвинутых настроек игры
 				Background@MAP_BG:
 					X: PARENT_RIGHT - 189
 					Y: 15
@@ -245,18 +245,18 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: Назад
 		Button@MAP_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 150
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Change Map
+			Text: Сменить Карту
 		Button@CREATE_BUTTON:
 			Key: return
 			X: PARENT_RIGHT - WIDTH
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Create
+			Text: Создать
 		TooltipContainer@TOOLTIP_CONTAINER:

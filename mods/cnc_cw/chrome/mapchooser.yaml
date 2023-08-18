@@ -22,13 +22,13 @@ Container@MAPCHOOSER_PANEL:
 					Y: 15
 					Height: 31
 					Width: 135
-					Text: Официальные Карты
+					Text: Официальные
 				Button@USER_MAPS_TAB_BUTTON:
 					X: 155
 					Y: 15
 					Height: 31
 					Width: 135
-					Text: Кастомные Карты
+					Text: Кастомные
 				Container@MAP_TAB_PANES:
 					Width: PARENT_RIGHT - 30
 					Height: PARENT_BOTTOM - 90
@@ -97,7 +97,7 @@ Container@MAPCHOOSER_PANEL:
 							Align: Center
 							Font: Tiny
 				Container@FILTER_ORDER_CONTROLS:
-					X: 15
+					X: 25
 					Y: PARENT_BOTTOM - 40
 					Width: PARENT_RIGHT - 30
 					Height: PARENT_BOTTOM

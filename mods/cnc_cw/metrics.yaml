@@ -4,3 +4,4 @@ Metrics:
 	ButtonDepth: 0
 	ButtonFont: Bold
 	TextfieldColorHighlight: 800000
+	SystemMessageLabel: Сервер

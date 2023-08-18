@@ -7,10 +7,10 @@ faster = Faster
 fastest = Fastest
 
 ## Server Orders
-custom-rules = This map contains custom rules. Game experience may change.
-map-bots-disabled = Bots have been disabled on this map.
-two-humans-required = This server requires at least two human players to start a match.
-unknown-server-command = Unknown server command: { $command }
+custom-rules = Эта карта содержит пользовательские правила. Игра может измениться.
+map-bots-disabled = Боты были отключены на этой карте.
+two-humans-required = Этот сервер требует, чтобы по крайней мере два человека были на сервере для начала игры.
+unknown-server-command = Неизвестная команда сервера: { $command }
 only-only-host-start-game = Only the host can start the game.
 no-start-until-required-slots-full = Unable to start the game until required slots are full.
 no-start-without-players = Unable to start the game with no players.
@@ -55,12 +55,12 @@ incorrect-password = Incorrect password.
 incompatible-mod = Server is running an incompatible mod.
 incompatible-version = Server is running an incompatible version.
 incompatible-protocol = Server is running an incompatible protocol.
-banned = You have been banned from the server.
-temp-banned = You have been temporarily banned from the server.
-full = The game is full.
-joined = { $player } has joined the game.
-new-admin = { $player } is now the admin.
-option-locked = { $option } cannot be changed.
+banned = Вы перманентно забанены на этом сервере.
+temp-banned = Вы временно забанены на этом сервере.
+full = На сервере нет свободных слотов.
+joined = { $player } вошёл в игру.
+new-admin = { $player } теперь админ.
+option-locked = { $option } не может быть изменана.
 invalid-configuration-command = Invalid configuration command.
 admin-option = Only the host can set that option.
 number-teams = Number of teams could not be parsed: { $raw }
@@ -76,7 +76,7 @@ player-color-terrain = Color was adjusted to be less similar to the terrain.
 player-color-player = Color was adjusted to be less similar to another player.
 invalid-player-color = Unable to determine a valid player color. A random color has been selected.
 invalid-error-code = Failed to parse error message.
-master-server-connected = Master server communication established.
+master-server-connected = Связь с мастер-сервером установлена.
 master-server-error = "Master server communication failed."
 game-offline = Game has not been advertised online.
 no-port-forward = Server port is not accessible from the internet.
@@ -524,66 +524,66 @@ incompatible-replay-unavailable-map = { -incompatible-replay-recorded } an unava
     { $map }.
 
 ## ServerCreationLogic
-internet-server-nat-A = Internet Server (UPnP/NAT-PMP
-internet-server-nat-B-enabled = Enabled
-internet-server-nat-B-not-supported = Not Supported
-internet-server-nat-B-disabled = Disabled
+internet-server-nat-A = Интернет сервер (UPnP/NAT-PMP
+internet-server-nat-B-enabled = Вкл
+internet-server-nat-B-not-supported = Нет Поддежки
+internet-server-nat-B-disabled = Выкл
 internet-server-nat-C = ):
 
-local-server = Local Server:
+local-server = Локальный сервер:
 
-server-creation-failed-prompt = Could not listen on port { $port }
-server-creation-failed-port-used = Check if the port is already being used.
-server-creation-failed-error = Error is: "{ $message }" ({ $code })
-server-creation-failed-title = Server Creation Failed
-server-creation-failed-cancel = Back
+server-creation-failed-prompt = Невозможно слушать порт { $port }
+server-creation-failed-port-used = Проверьте, используется ли порт.
+server-creation-failed-error = Ошибка: "{ $message }" ({ $code })
+server-creation-failed-title = Произошла Ошибка
+server-creation-failed-cancel = Назад
 
 ## ServerListLogic
 players-online =
     { $players ->
-        [one] { $players } Player Online
-       *[other] { $players } Players Online
+        [one] { $players } игрок онлайн
+       *[other] { $players } игроков онлайн
     }
 
-search-status-failed = Failed to query server list.
-search-status-no-games = No games found. Try changing filters.
-no-server-selected = No Server Selected
+search-status-failed = Не удалось запросить список серверов.
+search-status-no-games = Игр не найдено, попробуйте сменить фильтр.
+no-server-selected = Сервер не выбран
 
-map-status-searching = Searching...
-map-classification-unknown = Unknown Map
+map-status-searching = Поиске...
+map-classification-unknown = Неизвестная Карта
 
 players-label =
     { $players ->
-        [0] No Players
-        [one] One Player
-       *[other] { $players } Players
+        [0] Нет Игроков
+        [one] Один Игрок
+       *[other] { $players } Игроков
     }
 
 bots-label =
     { $bots ->
-        [0] No Bots
-        [one] One Bot
-       *[other] { $bots } Bots
+        [0] Нет ботов
+        [one] Один Бот
+       *[other] { $bots } Ботов
     }
 
 ## ServerListLogic, ReplayBrowserLogic, ObserverShroudSelectorLogic
-players = Players
+players = Игроков
 
 ## ServerListLogic, GameInfoStatsLogic
-spectators = Spectators
+spectators = Наблюдателей
 spectators-label =
     { $spectators ->
-        [0] No Spectators
-        [one] One Spectator
-       *[other] { $spectators } Spectators
+        [0] Нет Наблюдателей
+        [one] Один Наблюдатель
+       *[other] { $spectators } Наблюдателей
     }
 
 ## ServerlistLogic, GameInfoStatsLogic, ObserverShroudSelectorLogic, SpawnSelectorTooltipLogic, ReplayBrowserLogic
 team-number = Team { $team }
 no-team = No Team
 
-playing = Playing
-waiting = Waiting
+playing = Запущено
+waiting = Ожидание
 
 n-other-players =
     { $players ->

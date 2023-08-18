@@ -82,7 +82,7 @@ Container@MISSIONBROWSER_PANEL:
 							Y: PARENT_BOTTOM - HEIGHT
 							Width: 56
 							Height: 25
-							Text: Сложность:
+							Text: Слож.:
 							Align: Right
 						DropDownButton@DIFFICULTY_DROPDOWNBUTTON:
 							X: 61
@@ -95,7 +95,7 @@ Container@MISSIONBROWSER_PANEL:
 							Y: PARENT_BOTTOM - HEIGHT
 							Width: 110
 							Height: 25
-							Text: Скорость:
+							Text: Скор.:
 							Align: Right
 						DropDownButton@GAMESPEED_DROPDOWNBUTTON:
 							X: PARENT_RIGHT - WIDTH
@@ -129,7 +129,7 @@ Container@MISSIONBROWSER_PANEL:
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Информационное видео 
+			Text: Видео 
 			Font: Bold
 		Button@STOP_INFO_VIDEO_BUTTON:
 			X: PARENT_RIGHT - 440
@@ -143,7 +143,7 @@ Container@MISSIONBROWSER_PANEL:
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Play
+			Text: Играть
 			Font: Bold
 		Background@MISSION_BIN:
 			X: 15
