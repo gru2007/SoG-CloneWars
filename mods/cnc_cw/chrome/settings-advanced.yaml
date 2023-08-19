@@ -22,7 +22,7 @@ Container@ADVANCED_PANEL:
 							Height: PARENT_BOTTOM
 							Font: TinyBold
 							Align: Center
-							Text: Advanced
+							Text: Продвинутые
 				Container@ROW:
 					Width: PARENT_RIGHT - 24
 					Height: 20
@@ -35,7 +35,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Enable UPnP/NAT-PMP Discovery
+									Text: Включить UPnP/NAT-PMP
 						Container@FETCH_NEWS_CHECKBOX_CONTAINER:
 							X: PARENT_RIGHT / 2 + 10
 							Width: PARENT_RIGHT / 2 - 20
@@ -44,7 +44,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Fetch Community News
+									Text: Получать новости
 				Container@ROW:
 					Width: PARENT_RIGHT - 24
 					Height: 20
@@ -57,7 +57,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Show Performance Graph
+									Text: График производительности
 						Container@CHECK_VERSION_CHECKBOX_CONTAINER:
 							X: PARENT_RIGHT / 2 + 10
 							Width: PARENT_RIGHT / 2 - 20
@@ -66,7 +66,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Check for Updates
+									Text: Проверять обновления
 				Container@ROW:
 					Width: PARENT_RIGHT - 24
 					Height: 50
@@ -79,7 +79,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Show Performance Text
+									Text: Текст о производительности
 						Container@SENDSYSINFO_CHECKBOX_CONTAINER:
 							X: PARENT_RIGHT / 2 + 10
 							Width: PARENT_RIGHT / 2 - 20
@@ -88,14 +88,14 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_RIGHT
 									Height: 20
 									Font: Regular
-									Text: Send System Information
+									Text: Отправлять данные о системе
 								Label@SENDSYSINFO_DESC:
 									Y: 15
 									Width: PARENT_RIGHT
 									Height: 30
 									Font: Tiny
 									WordWrap: True
-									Text: Your Operating System, OpenGL and .NET runtime versions, and language settings will be sent along with an anonymous ID to help prioritize future development.
+									Text: Ваша ОС, OpenGL, версию .NET и настройки языка будут отправлены с анонимным ID для преоритизации разработки.
 				Container@SPACER:
 				Background@SECTION_HEADER:
 					X: 5
@@ -109,7 +109,7 @@ Container@ADVANCED_PANEL:
 							Height: PARENT_BOTTOM
 							Font: TinyBold
 							Align: Center
-							Text: Developer
+							Text: Разработчик
 				Container@ROW:
 					Width: PARENT_RIGHT - 24
 					Height: 40
@@ -121,13 +121,13 @@ Container@ADVANCED_PANEL:
 								Label@A:
 									Width: PARENT_RIGHT
 									Height: 20
-									Text: Additional developer-specific options can be enabled via the
+									Text: Дополнительные настройки для разработчиков можно включить
 									Align: Center
 								Label@B:
 									Y: 20
 									Width: PARENT_RIGHT
 									Height: 20
-									Text: Debug.DisplayDeveloperSettings setting or launch flag
+									Text:  с Debug.DisplayDeveloperSettings настройкой или флагом запуска
 									Align: Center
 				Container@ROW:
 					Width: PARENT_RIGHT - 24

@@ -24,8 +24,8 @@ requires-host = Only the host can do that.
 invalid-bot-slot = Can't add bots to a slot with another client.
 invalid-bot-type = Invalid bot type.
 only-host-change-map = Only the host can change the map.
-lobby-disconnected = { $player } has left.
-player-disconnected = { $player } has disconnected.
+lobby-disconnected = { $player } вышел.
+player-disconnected = { $player } отключился.
 player-team-disconnected = { $player } (Team { $team }) has disconnected.
 observer-disconnected = { $player } (Spectator) has disconnected.
 unknown-map = Map was not found on server.
@@ -39,8 +39,8 @@ temp-ban = { $admin } temporarily banned { $player } from the server.
 only-host-transfer-admin = Only admins can transfer admin to another player.
 only-host-move-spectators = Only the host can move players to spectators.
 empty-slot = No-one in that slot.
-move-spectators = { $admin } moved { $player } to spectators.
-nick = { $player } is now known as { $name }.
+move-spectators = { $admin } переместил { $player } в наблюдателей.
+nick = { $player } теперь извеестен как { $name }.
 player-dropped = A player has been dropped after timing out.
 connection-problems = { $player } is experiencing connection problems.
 timeout = { $player } has been dropped after timing out.
@@ -86,7 +86,7 @@ no-permission = You do not have permission to join this server.
 slot-closed = Your slot was closed by the host.
 
 ## Server
-game-started = Game started
+game-started = Игра началась
 
 ## PlayerMessageTracker
 chat-temp-disabled =
@@ -143,12 +143,12 @@ unmute = Unmute this player
 ## GameInfoStatsLogic
 gone = Gone
 
-kick-title = Kick { $player }?
+kick-title = Кикнуть { $player }?
 kick-prompt = They will not be able to rejoin this game.
 kick-accept = Kick
 
 ## GameTimerLogic
-paused = Paused
+paused = На паузе
 max-speed = Max Speed
 speed = { $percentage }% Speed
 complete = { $percentage }% complete
@@ -179,17 +179,17 @@ restart-mission-cancel = Stay
 
 surrender-button = Surrender
 
-surrender-title = Surrender
-surrender-prompt = Are you sure you want to surrender?
-surrender-accept = Surrender
-surrender-cancel = Stay
+surrender-title = Сдаться
+surrender-prompt = Вы уверены что хотите сдаться?
+surrender-accept = Сдаться
+surrender-cancel = Остаться
 
 load-game-button = Load Game
 save-game-button = Save Game
 
-music-button = Music
+music-button = Музыка
 
-settings-button = Settings
+settings-button = Настройки
 
 return-to-map = Return to map
 resume = Resume
@@ -281,7 +281,7 @@ manual-install = Manual Install
 quit = Выйти
 
 ## KickClientLogic
-kick-client = Kick { $player }?
+kick-client = Кикнуть { $player }?
 
 ## KickSpectatorsLogic
 kick-spectators =
@@ -449,18 +449,18 @@ delete-all-maps-title = Delete maps
 delete-all-maps-prompt = Delete all maps on this page?
 delete-all-maps-accept = Delete
 
-order-maps-players = Players
-order-maps-date = Map Date
+order-maps-players = Игроки
+order-maps-date = Дата карты
 
 ## MissionBrowserLogic
-no-video-title = Video not installed
+no-video-title = Видео не установлены
 no-video-prompt = The game videos can be installed from the
     "Manage Content" menu in the mod chooser.
-no-video-cancel = Back
+no-video-cancel = Назад
 
 cant-play-title = Unable to play video
 cant-play-prompt = Something went wrong during video playback.
-cant-play-cancel = Back
+cant-play-cancel = Назад
 
 ## MusicPlayerLogic
 sound-muted = Audio has been muted in settings.
@@ -471,16 +471,16 @@ audio-muted = Audio muted.
 audio-unmuted = Audio unmuted.
 
 ## PlayerProfileLogic
-loading-player-profile = Loading player profile...
-loading-player-profile-failed = Failed to load player profile.
+loading-player-profile = Загрузка профиля игрока...
+loading-player-profile-failed = Неудалось получить профиль.
 
 ## ReplayBrowserLogic
-duration = Duration: { $time }
-singleplayer = Singleplayer
-multiplayer = Multiplayer
+duration = Длина: { $time }
+singleplayer = Одиночная
+multiplayer = Мультиплеер
 
-victory = Victory
-defeat = Defeat
+victory = Победа
+defeat = Поражение
 
 today = Today
 last-week = Last 7 days

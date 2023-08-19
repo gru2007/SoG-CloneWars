@@ -200,7 +200,7 @@ Background@PRODUCTION_TOOLTIP:
 			Y: 20
 			Height: 15
 			Font: TinyBold
-			Text: Requires {0}
+			Text: Нужно {0}
 		Label@DESC:
 			X: 5
 			Y: 20
@@ -262,7 +262,7 @@ Background@PRODUCTION_TOOLTIP_FACTIONSUFFIX:
 			Y: 20
 			Height: 15
 			Font: TinyBold
-			Text: Requires {0}
+			Text: Нужно {0}
 		Label@DESC:
 			X: 5
 			Y: 20
@@ -407,7 +407,7 @@ Background@LATENCY_TOOLTIP:
 			Y: 1
 			Height: 23
 			Font: Bold
-			Text: Latency:
+			Text: Задежка:
 		Label@LATENCY:
 			Y: 1
 			Height: 23
@@ -422,7 +422,7 @@ Background@ANONYMOUS_PLAYER_TOOLTIP:
 		Label@NAME:
 			X: 5
 			Y: 2
-			Text: Anonymous Player
+			Text: Анонимный игрок
 			Height: 23
 			Font: MediumBold
 		Label@LOCATION:
@@ -453,7 +453,7 @@ Background@ANONYMOUS_PLAYER_TOOLTIP:
 				Label@LABEL:
 					X: 10
 					Height: 12
-					Text: Game Admin
+					Text: Админ игры
 					Font: TinyBold
 
 Container@REGISTERED_PLAYER_TOOLTIP:
@@ -499,7 +499,7 @@ Container@REGISTERED_PLAYER_TOOLTIP:
 									X: 10
 									Y: 1
 									Height: 12
-									Text: Game Admin
+									Text: Админ игры
 									Font: TinyBold
 				Container@MESSAGE_HEADER:
 					Height: 26

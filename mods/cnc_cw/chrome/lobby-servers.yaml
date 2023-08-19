@@ -11,26 +11,26 @@ Container@LOBBY_SERVERS_BIN:
 					X: 5
 					Width: 355
 					Height: 25
-					Text: Server
+					Text: Сервер
 					Align: Center
 					Font: Bold
 				Label@PLAYERS:
 					X: 390
 					Width: 85
 					Height: 25
-					Text: Players
+					Text: Игроки
 					Font: Bold
 				Label@LOCATION:
 					X: 480
 					Width: 110
 					Height: 25
-					Text: Location
+					Text: Локация
 					Font: Bold
 				Label@STATUS:
 					X: 595
 					Width: 50
 					Height: 25
-					Text: Status
+					Text: Статус
 					Font: Bold
 		LogicTicker@NOTICE_WATCHER:
 		Container@NOTICE_CONTAINER:
@@ -47,21 +47,21 @@ Container@LOBBY_SERVERS_BIN:
 							Width: PARENT_RIGHT-10
 							Height: 18
 							Align: Center
-							Text: You are running an outdated version of OpenRA. Download the latest version from www.openra.net
+							Text: У вас запущена устаревшая версия игры. Скачайте последнюю с сайта stormgalaxy.com
 							Font: TinyBold
 						Label@UNKNOWN_VERSION_LABEL:
 							X: 5
 							Width: PARENT_RIGHT-10
 							Height: 18
 							Align: Center
-							Text: You are running an unrecognized version of OpenRA. Download the latest version from www.openra.net
+							Text: Вы используете неизвестную версию игры. Скачайте последнюю с сайта stormgalaxy.com
 							Font: TinyBold
 						Label@PLAYTEST_AVAILABLE_LABEL:
 							X: 5
 							Width: PARENT_RIGHT-10
 							Height: 18
 							Align: Center
-							Text: A preview of the next OpenRA release is available for testing. Download the playtest from www.openra.net
+							Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта stormgalaxy.com
 							Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			Width: PARENT_RIGHT

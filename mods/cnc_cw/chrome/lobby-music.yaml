@@ -11,20 +11,20 @@ Container@LOBBY_MUSIC_BIN:
 				Label@MUSIC:
 					Width: 308
 					Height: 25
-					Text: Music
+					Text: Музыка
 					Align: Center
 					Font: Bold
 				Label@TITLE:
 					X: 317
 					Width: 230
 					Height: 25
-					Text: Track
+					Text: Трек
 					Font: Bold
 				Label@LENGTH:
 					X: PARENT_RIGHT - 80
 					Height: 25
 					Width: 50
-					Text: Length
+					Text: Длина
 					Font: Bold
 					Align: Right
 		Background@CONTROLS:
@@ -125,24 +125,25 @@ Container@LOBBY_MUSIC_BIN:
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: Shuffle
+					Text: Перемешать
 				Checkbox@REPEAT:
-					X: PARENT_RIGHT - 15 - WIDTH
+					X: PARENT_RIGHT - 45 - WIDTH
 					Y: 150
 					Width: 70
 					Height: 20
 					Font: Regular
-					Text: Loop
+					Text: Зациклить
 				Label@VOLUME_LABEL:
+					X: 20
 					Y: 182
 					Width: 65
 					Height: 25
 					Align: Right
-					Text: Volume:
+					Text: Громкость:
 				ExponentialSlider@MUSIC_SLIDER:
-					X: 70
+					X: 90
 					Y: 186
-					Width: PARENT_RIGHT - 80
+					Width: PARENT_RIGHT - 100
 					Height: 20
 					Ticks: 7
 		ScrollPanel@MUSIC_LIST:
@@ -179,16 +180,16 @@ Container@LOBBY_MUSIC_BIN:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Music Not Installed
+					Text: Музыка не установлена
 				Label@DESCA:
 					Y: 95
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: The game music can be installed
+					Text: музыка может быть установлена
 				Label@DESCB:
 					Y: 115
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: from the "Manage Content" menu.
+					Text: из вкладки "Контент" в гл. меню

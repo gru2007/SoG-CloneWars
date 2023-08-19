@@ -11,28 +11,28 @@ Container@LOBBY_PLAYER_BIN:
 				Label@NAME:
 					Width: 200
 					Height: 25
-					Text: Player
+					Text: Игрок
 					Align: Center
 					Font: Bold
 				Label@COLOR:
 					X: 210
 					Width: 94
 					Height: 25
-					Text: Color
+					Text: Цвет
 					Align: Center
 					Font: Bold
 				Label@FACTION:
 					X: 309
 					Width: 120
 					Height: 25
-					Text: Faction
+					Text: Фракция
 					Align: Center
 					Font: Bold
 				Label@TEAM:
 					X: 460-25
 					Width: 50
 					Height: 25
-					Text: Team
+					Text: Команда
 					Align: Center
 					Font: Bold
 				Label@HANDICAP:
@@ -46,14 +46,14 @@ Container@LOBBY_PLAYER_BIN:
 					X: 571
 					Width: 50
 					Height: 25
-					Text: Spawn
+					Text: Спаун
 					Align: Left
 					Font: Bold
 				Label@STATUS:
 					X: 627
 					Width: 20
 					Height: 25
-					Text: Ready
+					Text: Готов
 					Align: Left
 					Font: Bold
 		ScrollPanel@LOBBY_PLAYERS:
@@ -89,7 +89,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: Имя
 							LeftMargin: 24
 							MaxLength: 16
 							Visible: false
@@ -110,7 +110,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: Имя
 							Font: Regular
 							Visible: false
 						DropDownButton@COLOR:
@@ -143,7 +143,7 @@ Container@LOBBY_PLAYER_BIN:
 									X: 40
 									Width: 50
 									Height: 25
-									Text: Faction
+									Text: Фракция
 						DropDownButton@TEAM_DROPDOWN:
 							X: 435
 							Width: 50
@@ -155,7 +155,7 @@ Container@LOBBY_PLAYER_BIN:
 							Height: 25
 							Font: Regular
 							TooltipContainer: TOOLTIP_CONTAINER
-							TooltipText: A handicap decreases the combat effectiveness of the player's forces
+							TooltipText: Handicap уменьшает боевую эффективность воиск игрока
 						DropDownButton@SPAWN_DROPDOWN:
 							X: 571
 							Width: 50
@@ -254,7 +254,7 @@ Container@LOBBY_PLAYER_BIN:
 									X: 40
 									Width: 50
 									Height: 25
-									Text: Faction
+									Text: Фракция
 						Label@TEAM:
 							X: 435
 							Width: 25
@@ -277,7 +277,7 @@ Container@LOBBY_PLAYER_BIN:
 							Height: 25
 							Font: Regular
 							TooltipContainer: TOOLTIP_CONTAINER
-							TooltipText: A handicap decreases the combat effectiveness of the player's forces
+							TooltipText: Handicap уменьшает боевую эффективность воиск игрока
 						Label@SPAWN:
 							X: 571
 							Width: 25
@@ -307,7 +307,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: Имя
 							Font: Regular
 							Visible: false
 						Label@NAME:
@@ -319,7 +319,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 438
 							Height: 25
-							Text: Play in this slot
+							Text: Играть в этом слоте
 							Font: Regular
 				Container@TEMPLATE_EDITABLE_SPECTATOR:
 					X: 5
@@ -348,7 +348,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: Имя
 							LeftMargin: 24
 							MaxLength: 16
 							Children:
@@ -368,7 +368,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 441
 							Height: 25
-							Text: Spectator
+							Text: Наблюдатель
 							Align: Center
 							Font: Bold
 						Image@STATUS_IMAGE:
@@ -449,7 +449,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 441
 							Height: 25
-							Text: Spectator
+							Text: Наблюдатель
 							Align: Center
 							Font: Bold
 						Image@STATUS_IMAGE:
@@ -471,10 +471,10 @@ Container@LOBBY_PLAYER_BIN:
 							Width: 190
 							Height: 20
 							Font: Regular
-							Text: Allow Spectators?
+							Text: Вкл наблюдаталей?
 						Button@SPECTATE:
 							X: 210
 							Width: 438
 							Height: 25
-							Text: Spectate
+							Text: Наблюдать
 							Font: Regular

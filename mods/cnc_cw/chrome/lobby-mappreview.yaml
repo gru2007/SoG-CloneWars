@@ -68,7 +68,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: This map is not compatible
+					Text: Эта карта не совместима
 					IgnoreMouseOver: true
 				Label@MAP_STATUS_B:
 					Y: 201
@@ -76,7 +76,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: with this version of OpenRA
+					Text: с этой версией OpenRA
 		Container@MAP_VALIDATING:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -106,7 +106,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Validating...
+					Text: Проверка...
 					IgnoreMouseOver: true
 				ProgressBar@MAP_PROGRESSBAR:
 					Y: 194
@@ -183,7 +183,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Searching OpenRA Resource Center...
+					Text: Поиск в Центре Ресурсов OpenRA...
 					IgnoreMouseOver: true
 				Container@MAP_STATUS_UNAVAILABLE:
 					Width: PARENT_RIGHT
@@ -194,21 +194,21 @@ Container@MAP_PREVIEW:
 							Height: 25
 							Font: Tiny
 							Align: Center
-							Text: This map was not found on the
+							Text: Эта карта ненайдена в
 						Label@b:
 							Y: 171
 							Width: PARENT_RIGHT
 							Height: 25
 							Font: Tiny
 							Align: Center
-							Text: OpenRA Resource Center
+							Text: Центре Ресурсов OpenRA
 				Label@MAP_STATUS_ERROR:
 					Y: 158
 					Width: PARENT_RIGHT
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: An error occurred during installation
+					Text: Произошла ошибка во время установки
 				Label@MAP_STATUS_DOWNLOADING:
 					Y: 158
 					Width: PARENT_RIGHT

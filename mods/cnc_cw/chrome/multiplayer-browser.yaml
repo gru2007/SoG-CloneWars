@@ -79,7 +79,7 @@ Container@MULTIPLAYER_PANEL:
 									Width: PARENT_RIGHT-10
 									Height: 20
 									Align: Center
-									Text: Ноапая версия доступна для тестирования. Скачайте последнюю с сайта stormgalaxy.com
+									Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта stormgalaxy.com
 									Font: TinyBold
 				ScrollPanel@SERVER_LIST:
 					X: 15

@@ -151,7 +151,7 @@ Container@MUSIC_PANEL:
 					Font: Regular
 					Text: Перемешать
 				Checkbox@REPEAT:
-					X: PARENT_RIGHT - 35 - WIDTH
+					X: PARENT_RIGHT - 45 - WIDTH
 					Y: PARENT_BOTTOM - HEIGHT - 60
 					Width: 70
 					Height: 20

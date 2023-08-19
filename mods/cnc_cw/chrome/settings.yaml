@@ -2,11 +2,11 @@ Container@SETTINGS_PANEL:
 	Logic: SettingsLogic
 		ButtonStride: 0, 45
 		Panels:
-			DISPLAY_PANEL: Display
-			AUDIO_PANEL: Audio
-			INPUT_PANEL: Input
-			HOTKEYS_PANEL: Hotkeys
-			ADVANCED_PANEL: Advanced
+			DISPLAY_PANEL: Дисплей
+			AUDIO_PANEL: Аудио
+			INPUT_PANEL: Ввод
+			HOTKEYS_PANEL: Горячие кл.
+			ADVANCED_PANEL: Продвинутые
 	X: (WINDOW_RIGHT - WIDTH) / 2
 	Y: (WINDOW_BOTTOM - HEIGHT) / 2
 	Width: 640
@@ -18,19 +18,19 @@ Container@SETTINGS_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Settings
+			Text: Настройки
 		Button@BACK_BUTTON:
 			Key: escape
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: Назад
 		Button@RESET_BUTTON:
 			X: 150
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Reset
+			Text: Сбросить
 		Container@SETTINGS_TAB_CONTAINER:
 			X: 0 - 140 + 1
 			Children:
