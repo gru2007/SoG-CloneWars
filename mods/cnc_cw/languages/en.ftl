@@ -163,7 +163,7 @@ chat-availability =
 
 ## IngameMenuLogic
 leave = Выйти
-abort-mission = Отменить Миссию
+abort-mission = Отключиться
 
 leave-mission-title = Покинуть задание
 leave-mission-prompt = Покинуть задание и вернуться в меню?

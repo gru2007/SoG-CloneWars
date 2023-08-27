@@ -14,7 +14,7 @@ Container@SKIRMISH_STATS:
 					Font: MediumBold
 					Text: Задание:
 				Label@STATS_STATUS:
-					X: 95
+					X: 105
 					Y: 17
 					Width: PARENT_RIGHT - 110
 					Height: 20
