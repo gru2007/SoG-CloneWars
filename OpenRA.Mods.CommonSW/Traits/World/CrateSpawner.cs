@@ -22,7 +22,7 @@ namespace OpenRA.Mods.Common.Traits
 	public class CrateSpawnerInfo : TraitInfo, ILobbyOptions
 	{
 		[Desc("Descriptive label for the crates checkbox in the lobby.")]
-		public readonly string CheckboxLabel = "Crates";
+		public readonly string CheckboxLabel = "Ящики";
 
 		[Desc("Tooltip description for the crates checkbox in the lobby.")]
 		public readonly string CheckboxDescription = "Collect crates with units to receive random bonuses or penalties";

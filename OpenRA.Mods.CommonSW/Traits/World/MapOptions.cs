@@ -20,7 +20,7 @@ namespace OpenRA.Mods.Common.Traits
 	public class MapOptionsInfo : TraitInfo, ILobbyOptions, IRulesetLoaded
 	{
 		[Desc("Descriptive label for the short game checkbox in the lobby.")]
-		public readonly string ShortGameCheckboxLabel = "Short Game";
+		public readonly string ShortGameCheckboxLabel = "Короткая игра";
 
 		[Desc("Tooltip description for the short game checkbox in the lobby.")]
 		public readonly string ShortGameCheckboxDescription = "Players are defeated when their bases are destroyed";
@@ -38,7 +38,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly int ShortGameCheckboxDisplayOrder = 0;
 
 		[Desc("Descriptive label for the tech level option in the lobby.")]
-		public readonly string TechLevelDropdownLabel = "Tech Level";
+		public readonly string TechLevelDropdownLabel = "Уровень Технологий";
 
 		[Desc("Tooltip description for the tech level option in the lobby.")]
 		public readonly string TechLevelDropdownDescription = "The units and abilities that players can use";
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly int TechLevelDropdownDisplayOrder = 0;
 
 		[Desc("Tooltip description for the game speed option in the lobby.")]
-		public readonly string GameSpeedDropdownLabel = "Game Speed";
+		public readonly string GameSpeedDropdownLabel = "Скорость";
 
 		[Desc("Description of the game speed option in the lobby.")]
 		public readonly string GameSpeedDropdownDescription = "The rate at which time passes";

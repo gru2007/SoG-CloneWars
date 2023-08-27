@@ -111,7 +111,7 @@ Container@SERVER_LOBBY:
 							Text: Команда
 							Font: Bold
 							Key: ToggleChatMode
-							TooltipText: Включить режим чата
+							TooltipText: Режим чата
 							TooltipContainer: TOOLTIP_CONTAINER
 						TextField@CHAT_TEXTFIELD:
 							X: 55

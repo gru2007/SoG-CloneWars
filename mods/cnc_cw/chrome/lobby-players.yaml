@@ -471,7 +471,7 @@ Container@LOBBY_PLAYER_BIN:
 							Width: 190
 							Height: 20
 							Font: Regular
-							Text: Вкл наблюдаталей?
+							Text: Наблюдатели
 						Button@SPECTATE:
 							X: 210
 							Width: 438

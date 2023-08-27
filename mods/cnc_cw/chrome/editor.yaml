@@ -359,7 +359,7 @@ Container@EDITOR_WORLD_ROOT:
 			Y: 5
 			Width: 30
 			Height: 25
-			TooltipText: Menu
+			TooltipText: Меню
 			TooltipContainer: TOOLTIP_CONTAINER
 			Children:
 				Image:
@@ -570,7 +570,7 @@ Container@EDITOR_WORLD_ROOT:
 					Font: Bold
 					Key: EditorTilesTab
 					TooltipTemplate: BUTTON_TOOLTIP
-					TooltipText: Tiles
+					TooltipText: Тайлы
 					TooltipContainer: TOOLTIP_CONTAINER
 				Button@OVERLAYS_TAB:
 					X: 70
@@ -580,7 +580,7 @@ Container@EDITOR_WORLD_ROOT:
 					Font: Bold
 					Key: EditorOverlaysTab
 					TooltipTemplate: BUTTON_TOOLTIP
-					TooltipText: Overlays
+					TooltipText: Оверлеи
 					TooltipContainer: TOOLTIP_CONTAINER
 				Button@ACTORS_TAB:
 					X: 149
@@ -590,7 +590,7 @@ Container@EDITOR_WORLD_ROOT:
 					Font: Bold
 					Key: EditorActorsTab
 					TooltipTemplate: BUTTON_TOOLTIP
-					TooltipText: Actors
+					TooltipText: Актеры
 					TooltipContainer: TOOLTIP_CONTAINER
 				Button@HISTORY_TAB:
 					X: 219
@@ -600,7 +600,7 @@ Container@EDITOR_WORLD_ROOT:
 					Font: Bold
 					Key: EditorHistoryTab
 					TooltipTemplate: BUTTON_TOOLTIP
-					TooltipText: History
+					TooltipText: История
 					TooltipContainer: TOOLTIP_CONTAINER
 		Button@UNDO_BUTTON:
 			X: WINDOW_RIGHT - 800
@@ -611,7 +611,7 @@ Container@EDITOR_WORLD_ROOT:
 			Font: Bold
 			Key: EditorUndo
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Undo last step
+			TooltipText: Отменить последний шаг
 			TooltipContainer: TOOLTIP_CONTAINER
 		Button@REDO_BUTTON:
 			X: WINDOW_RIGHT - 690
@@ -622,7 +622,7 @@ Container@EDITOR_WORLD_ROOT:
 			Font: Bold
 			Key: EditorRedo
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Redo last step
+			TooltipText: Повторить последний шаг
 			TooltipContainer: TOOLTIP_CONTAINER
 		Button@COPYPASTE_BUTTON:
 			X: WINDOW_RIGHT - 580
@@ -632,7 +632,7 @@ Container@EDITOR_WORLD_ROOT:
 			Text: Copy/Paste
 			Key: EditorCopy
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Copy
+			TooltipText: Копировать
 			TooltipContainer: TOOLTIP_CONTAINER
 		DropDownButton@COPYFILTER_BUTTON:
 			X: WINDOW_RIGHT - 475

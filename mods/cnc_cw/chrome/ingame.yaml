@@ -130,7 +130,7 @@ Container@OBSERVER_WIDGETS:
 					Width: PARENT_RIGHT - 30
 					Height: 25
 					Align: Right
-					Text: Audio Muted
+					Text: Аудио в муте
 					Contrast: true
 		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		MenuButton@OPTIONS_BUTTON:
@@ -139,7 +139,7 @@ Container@OBSERVER_WIDGETS:
 			Y: 5
 			Width: 30
 			Height: 25
-			TooltipText: Menu
+			TooltipText: Меню
 			TooltipContainer: TOOLTIP_CONTAINER
 			DisableWorldSounds: true
 			Children:
@@ -181,7 +181,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Pause
+					TooltipText: Пауза
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -198,7 +198,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Play
+					TooltipText: Играть
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -215,7 +215,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 36
 					Height: 20
 					Key: ReplaySpeedSlow
-					TooltipText: Slow speed
+					TooltipText: Медленно
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 50%
@@ -226,7 +226,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedRegular
-					TooltipText: Regular speed
+					TooltipText: Обычно
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 100%
@@ -237,7 +237,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedFast
-					TooltipText: Fast speed
+					TooltipText: Быстро
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 200%
@@ -248,7 +248,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedMax
-					TooltipText: Maximum speed
+					TooltipText: Макс
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: MAX
@@ -334,7 +334,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: Игрок
 									Align: Left
 									Shadow: True
 								Label@CASH_HEADER:
@@ -343,7 +343,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Cash
+									Text: Деньги
 									Align: Right
 									Shadow: True
 								Label@POWER_HEADER:
@@ -352,7 +352,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Power
+									Text: Энер.
 									Align: Center
 									Shadow: True
 								Label@KILLS_HEADER:
@@ -361,7 +361,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 40
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Kills
+									Text: Килы
 									Align: Right
 									Shadow: True
 								Label@DEATHS_HEADER:
@@ -370,7 +370,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Deaths
+									Text: Смерти
 									Align: Right
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -379,7 +379,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Destroyed
+									Text: Уничт.
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -388,7 +388,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Lost
+									Text: Потерян
 									Align: Right
 									Shadow: True
 								Label@EXPERIENCE_HEADER:
@@ -397,7 +397,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Score
+									Text: Очки
 									Align: Right
 									Shadow: True
 								Label@ACTIONS_MIN_HEADER:
@@ -433,7 +433,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: Игрок
 									Shadow: True
 								Label@CASH_HEADER:
 									X: 160
@@ -448,7 +448,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Income
+									Text: Приход
 									Align: Right
 									Shadow: True
 								Label@ASSETS_HEADER:
@@ -456,7 +456,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Assets
+									Text: Ассеты
 									Align: Right
 									Shadow: True
 								Label@EARNED_HEADER:
@@ -464,7 +464,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Earned
+									Text: Заработано
 									Align: Right
 									Shadow: True
 								Label@SPENT_HEADER:
@@ -472,7 +472,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Spent
+									Text: Потрачено
 									Align: Right
 									Shadow: True
 								Label@HARVESTERS_HEADER:
@@ -480,7 +480,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Harvesters
+									Text: Добытчики
 									Align: Right
 									Shadow: True
 								Label@DERRICKS_HEADER:
@@ -1235,8 +1235,8 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
+					TooltipText: Атака
+					TooltipDesc: Выбранные юниты будут двигаться к указанной точке\nи атакавать всех врагов которых встретят.\n\nУдерживайте {(Ctrl)} когда targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1566,7 +1566,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Sell
-							TooltipText: Sell
+							TooltipText: Продать
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1588,7 +1588,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Repair
-							TooltipText: Repair
+							TooltipText: Чинить
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1610,7 +1610,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: PlaceBeacon
-							TooltipText: Place Beacon
+							TooltipText: Разместить маяк
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1626,7 +1626,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Options
+							TooltipText: Настройки
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							DisableWorldSounds: true
@@ -1747,7 +1747,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Buildings
+							TooltipText: Постройки
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Building
@@ -1769,7 +1769,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Support
+							TooltipText: Поддержка
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Defence
@@ -1813,7 +1813,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Vehicles
+							TooltipText: Техника
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Vehicle
@@ -1835,7 +1835,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Aircraft
+							TooltipText: Воздух
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Aircraft

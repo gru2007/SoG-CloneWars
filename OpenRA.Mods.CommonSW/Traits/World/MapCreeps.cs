@@ -19,10 +19,10 @@ namespace OpenRA.Mods.Common.Traits
 	public class MapCreepsInfo : TraitInfo, ILobbyOptions
 	{
 		[Desc("Descriptive label for the creeps checkbox in the lobby.")]
-		public readonly string CheckboxLabel = "Creep Actors";
+		public readonly string CheckboxLabel = "Враждебные войска";
 
 		[Desc("Tooltip description for the creeps checkbox in the lobby.")]
-		public readonly string CheckboxDescription = "Hostile forces spawn on the battlefield";
+		public readonly string CheckboxDescription = "Враждебные силы появятся на поле боя";
 
 		[Desc("Default value of the creeps checkbox in the lobby.")]
 		public readonly bool CheckboxEnabled = true;

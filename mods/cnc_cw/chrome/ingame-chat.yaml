@@ -30,10 +30,10 @@ Container@CHAT_PANEL:
 					Y: PARENT_BOTTOM - HEIGHT
 					Width: 50
 					Height: 25
-					Text: Team
+					Text: Команда
 					Font: Bold
 					Key: ToggleChatMode
-					TooltipText: Toggle chat mode
+					TooltipText: Режим чата
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					TooltipContainer: TOOLTIP_CONTAINER
 				TextField@CHAT_TEXTFIELD:

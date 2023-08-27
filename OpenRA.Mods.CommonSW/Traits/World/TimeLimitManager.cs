@@ -22,7 +22,7 @@ namespace OpenRA.Mods.Common.Traits
 	public class TimeLimitManagerInfo : TraitInfo, ILobbyOptions, IRulesetLoaded
 	{
 		[Desc("Label that will be shown for the time limit option in the lobby.")]
-		public readonly string TimeLimitLabel = "Time Limit";
+		public readonly string TimeLimitLabel = "Лимит времени";
 
 		[Desc("Tooltip description that will be shown for the time limit option in the lobby.")]
 		public readonly string TimeLimitDescription = "Player or team with the highest score after this time wins";

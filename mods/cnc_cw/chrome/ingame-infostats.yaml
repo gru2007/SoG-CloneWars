@@ -12,7 +12,7 @@ Container@SKIRMISH_STATS:
 					Width: 80
 					Height: 20
 					Font: MediumBold
-					Text: Mission:
+					Text: Задание:
 				Label@STATS_STATUS:
 					X: 95
 					Y: 17
@@ -25,7 +25,7 @@ Container@SKIRMISH_STATS:
 					Width: 482
 					Height: 20
 					Font: Bold
-					Text: Destroy all opposition!
+					Text: Уничтожить противников!
 					Disabled: true
 					TextColorDisabled: FFFFFF
 		Container@STATS_HEADERS:
@@ -38,27 +38,27 @@ Container@SKIRMISH_STATS:
 					Y: 1
 					Width: 210
 					Height: 25
-					Text: Player
+					Text: Игрок
 					Font: Bold
 				Label@FACTION:
 					X: 230
 					Y: 1
 					Width: 120
 					Height: 25
-					Text: Faction
+					Text: Фракция
 					Font: Bold
 				Label@SCORE:
 					X: 392
 					Y: 1
 					Width: 60
 					Height: 25
-					Text: Score
+					Text: Очки
 					Font: Bold
 				Label@ACTIONS:
 					X: 457
 					Width: 20
 					Height: 25
-					Text: Actions
+					Text: Действия
 					Font: Bold
 		ScrollPanel@PLAYER_LIST:
 			X: 15
@@ -169,7 +169,7 @@ Container@SKIRMISH_STATS:
 							Height: 25
 							Background: checkbox-toggle
 							TooltipContainer: TOOLTIP_CONTAINER
-							TooltipText: Kick this player
+							TooltipText: Кикнуть
 							Children:
 								Image:
 									ImageCollection: lobby-bits

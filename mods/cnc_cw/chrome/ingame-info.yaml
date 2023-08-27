@@ -9,7 +9,7 @@ Container@GAME_INFO_PANEL:
 		Label@TITLE:
 			Width: PARENT_RIGHT
 			Y: 0 - 22
-			Text: Game Information
+			Text: Информация
 			Align: Center
 			Font: BigBold
 			Contrast: true

@@ -1,89 +1,89 @@
 ## MapOptions, MissionBrowserLogic
-slowest = Slowest
-slower = Slower
-normal = Normal
-fast = Fast
-faster = Faster
-fastest = Fastest
+slowest = Медлительно
+slower = Медленее
+normal = Нормально
+fast = Быстренько
+faster = Быстро
+fastest = Флеш
 
 ## Server Orders
 custom-rules = Эта карта содержит пользовательские правила. Игра может измениться.
 map-bots-disabled = Боты были отключены на этой карте.
 two-humans-required = Этот сервер требует, чтобы по крайней мере два человека были на сервере для начала игры.
 unknown-server-command = Неизвестная команда сервера: { $command }
-only-only-host-start-game = Only the host can start the game.
-no-start-until-required-slots-full = Unable to start the game until required slots are full.
-no-start-without-players = Unable to start the game with no players.
-insufficient-enabled-spawnPoints = Unable to start the game until more spawn points are enabled.
+only-only-host-start-game = Только хост может начать игру.
+no-start-until-required-slots-full = Невозможно начать игру пока необходимые слоты полные.
+no-start-without-players = Невозможно начать игру без игроков.
+insufficient-enabled-spawnPoints = Невозможно начать игру пока more spawn points are enabled.
 malformed-command = Malformed { $command } command
 state-unchanged-ready = Cannot change state when marked as ready.
 invalid-faction-selected = Invalid faction selected: { $faction }
 supported-factions = Supported values: { $factions }
 state-unchanged-game-started = Cannot change state when game started. ({ $command })
-requires-host = Only the host can do that.
-invalid-bot-slot = Can't add bots to a slot with another client.
-invalid-bot-type = Invalid bot type.
+requires-host = Только хост может это делать.
+invalid-bot-slot = Не могу добавить ботов в слот с другим клиентом.
+invalid-bot-type = Неправильный тип бота.
 only-host-change-map = Only the host can change the map.
 lobby-disconnected = { $player } вышел.
 player-disconnected = { $player } отключился.
 player-team-disconnected = { $player } (Team { $team }) has disconnected.
 observer-disconnected = { $player } (Spectator) has disconnected.
-unknown-map = Map was not found on server.
-searching-map = Searching for map on the Resource Center...
+unknown-map = Карта не найдена на сервере.
+searching-map = Поиск карты в Центре Ресурсов...
 only-host-change-configuration = Only the host can change the configuration.
-changed-map = { $player } changed the map to { $map }
-value-changed = { $player } changed { $name } to { $value }.
-you-were-kicked = You have been kicked from the server.
-kicked = { $admin } kicked { $player } from the server.
-temp-ban = { $admin } temporarily banned { $player } from the server.
-only-host-transfer-admin = Only admins can transfer admin to another player.
-only-host-move-spectators = Only the host can move players to spectators.
-empty-slot = No-one in that slot.
+changed-map = { $player } сменил карту на { $map }
+value-changed = { $player } изменил { $name } на { $value }.
+you-were-kicked = Вы были кикнуты с сервера.
+kicked = { $admin } кикнул { $player } с сервера.
+temp-ban = { $admin } временно забанил { $player } на сервере.
+only-host-transfer-admin = Только админы могут передавать админку.
+only-host-move-spectators = Только хост может отправлять игроков в наблюдатели.
+empty-slot = Никого в этом слоте.
 move-spectators = { $admin } переместил { $player } в наблюдателей.
 nick = { $player } теперь извеестен как { $name }.
-player-dropped = A player has been dropped after timing out.
-connection-problems = { $player } is experiencing connection problems.
-timeout = { $player } has been dropped after timing out.
+player-dropped = Игрок был выкинут из-за истечения времени ожидания.
+connection-problems = { $player } имеет проблемы с соединением.
+timeout = { $player } был выкинут из-за истечения времени ожидания.
 timeout-in =
     { $timeout ->
-        [one] { $player } will be dropped in { $timeout } second.
-       *[other] { $player } will be dropped in { $timeout } seconds.
+        [one] { $player } будет выкинут через { $timeout }сек.
+       *[other] { $player } будет выкинут через { $timeout }сек.
     }
-error-game-started = The game has already started.
-requires-password = Server requires a password.
-incorrect-password = Incorrect password.
-incompatible-mod = Server is running an incompatible mod.
-incompatible-version = Server is running an incompatible version.
-incompatible-protocol = Server is running an incompatible protocol.
+error-game-started = Игра уже началась.
+requires-password = Сервер требует пароль.
+incorrect-password = Неверный пароль.
+incompatible-mod = На сервере запущен несовместимый мод.
+incompatible-version = На сервере запущена неподдерживаемая версия.
+incompatible-protocol = На сервере запущен несовместимый протокол.
 banned = Вы перманентно забанены на этом сервере.
 temp-banned = Вы временно забанены на этом сервере.
 full = На сервере нет свободных слотов.
 joined = { $player } вошёл в игру.
 new-admin = { $player } теперь админ.
 option-locked = { $option } не может быть изменана.
-invalid-configuration-command = Invalid configuration command.
-admin-option = Only the host can set that option.
-number-teams = Number of teams could not be parsed: { $raw }
-admin-kick = Only the host can kick players.
-kick-none = No-one in that slot.
-no-kick-game-started = Only spectators can be kicked after the game has started.
-admin-clear-spawn = Only admins can clear spawn points.
-spawn-occupied = You cannot occupy the same spawn point as another player.
-spawn-locked = The spawn point is locked to another player slot.
-admin-lobby-info = Only the host can set lobby info.
-invalid-lobby-info = Invalid lobby info sent.
-player-color-terrain = Color was adjusted to be less similar to the terrain.
-player-color-player = Color was adjusted to be less similar to another player.
-invalid-player-color = Unable to determine a valid player color. A random color has been selected.
-invalid-error-code = Failed to parse error message.
+invalid-configuration-command = Неверная команда.
+admin-option = Только хост может ставить эту настройку.
+number-teams = Число команд не может быть обработано: { $raw }
+admin-kick = Только хост может кикать.
+kick-none = Никого в этом слоте.
+no-kick-game-started = Только наблюдатели могут быть кикнуты после начала игры.
+admin-clear-spawn = Только админы могут очищать точки спауна.
+spawn-occupied = Вы не можете взять ту же точку спауна как у другого игрока.
+spawn-locked = Точка спауна заблокирована другим слотом игрока.
+admin-lobby-info = Только хост может устанавливать ннфу о лобби.
+invalid-lobby-info = Неверное инфо о лобби отправлено.
+player-color-terrain = Цвет изменен т.к. похож на рельеф.
+player-color-player = Цвет изменен т.к. похож на цвет другого игрокаю
+invalid-player-color = Не удалось получить цвет игрока. Случайный будет выбран.
+invalid-error-code = Не удалось прочитать ошибку.
 master-server-connected = Связь с мастер-сервером установлена.
-master-server-error = "Master server communication failed."
-game-offline = Game has not been advertised online.
-no-port-forward = Server port is not accessible from the internet.
-blacklisted-title = Server name contains a blacklisted word.
-requires-forum-account = Server requires players to have an OpenRA forum account.
-no-permission = You do not have permission to join this server.
-slot-closed = Your slot was closed by the host.
+master-server-error = Связаться с мастер-сервером не удалось.
+game-offline = Сервер не доступен в поиске.
+no-port-forward = Порт не доступен из интернета.
+blacklisted-title = Имя сервера содержит запрещенное слово.
+requires-forum-account = Сервер требует иметь аккаунт форума OpenRA.
+no-permission = У вас нет прав заходить на этот сервер.
+slot-closed = Ваш слот закрыт хостом.
 
 ## Server
 game-started = Игра началась
@@ -98,103 +98,103 @@ chat-temp-disabled =
 ## ActorEditLogic
 duplicate-actor-id = Duplicate Actor ID
 enter-actor-id = Enter an Actor ID
-owner = Owner
+owner = Владелец
 
 ## ActorSelectorLogic
-type = Type
+type = Тип
 
 ## CommonSelectorLogic
-search-results = Search Results
+search-results = Результаты
 multiple = Multiple
 
 ## SaveMapLogic
-unpacked = unpacked
+unpacked = папка
 
-save-map-failed-title = Failed to save map
-save-map-failed-prompt = See debug.log for details.
+save-map-failed-title = Не удалось сохранить
+save-map-failed-prompt = Посмотрите debug.log для деталей.
 save-map-failed-accept = OK
 
-overwrite-map-failed-title = Warning
-overwrite-map-failed-prompt = By saving you will overwrite
-    an already existing map.
-overwrite-map-failed-confirm = Save
+overwrite-map-failed-title = Внимание
+overwrite-map-failed-prompt = Сохраняя вы перезапишите
+    уже существующую карту.
+overwrite-map-failed-confirm = Сохр.
 
-overwrite-map-outside-edit-title = Warning
-overwrite-map-outside-edit-prompt = "The map has been edited from outside the editor.
-    By saving you may overwrite progress
-overwrite-map-outside-edit-confirm = Save
+overwrite-map-outside-edit-title = Внимание
+overwrite-map-outside-edit-prompt = "Карта была отредактирована вне редактора.
+    Сохраняя вы можете перезаписать изменения
+overwrite-map-outside-edit-confirm = Сохр.
 
 ## GameInfoLogic
-objectives = Objectives
-briefing = Briefing
-options = Options
-debug = Debug
-chat = Chat
+objectives = Задания
+briefing = Брифинг
+options = Настройки
+debug = Дебаг
+chat = Чат
 
 ## GameInfoObjectivesLogic, GameInfoStatsLogic
-in-progress = In progress
-accomplished = Accomplished
-failed = Failed
+in-progress = В процессе
+accomplished = Выполнено
+failed = Провалено
 
 ## GameInfoStatsLogic
-mute = Mute this player
-unmute = Unmute this player
+mute = Замутить игрока
+unmute = Размутить игрока
 
 ## GameInfoStatsLogic
 gone = Gone
 
 kick-title = Кикнуть { $player }?
-kick-prompt = They will not be able to rejoin this game.
-kick-accept = Kick
+kick-prompt = Они не смогут перезайти в эту игру.
+kick-accept = Кик
 
 ## GameTimerLogic
 paused = На паузе
-max-speed = Max Speed
-speed = { $percentage }% Speed
-complete = { $percentage }% complete
+max-speed = Макс скорость
+speed = { $percentage }% скорость
+complete = { $percentage }% выполнено
 
 ## LobbyLogic, InGameChatLogic
-chat-disabled = Chat Disabled
+chat-disabled = Чат выключен
 chat-availability =
     { $seconds ->
-        [one] Chat available in { $seconds } second...
-        *[other] Chat available in { $seconds } seconds...
+        [one] Чат доступен через { $seconds }сек...
+        *[other] Чат доступен через { $seconds }сек...
     }
 
 ## IngameMenuLogic
-leave = Leave
-abort-mission = Abort Mission
+leave = Выйти
+abort-mission = Отменить Миссию
 
-leave-mission-title = Leave Mission
-leave-mission-prompt = Leave this game and return to the menu?
-leave-mission-accept = Leave
-leave-mission-cancel = Stay
+leave-mission-title = Покинуть задание
+leave-mission-prompt = Покинуть задание и вернуться в меню?
+leave-mission-accept = Покинуть
+leave-mission-cancel = Остаться
 
-restart-button = Restart
+restart-button = Рестарт
 
-restart-mission-title = Restart
-restart-mission-prompt = Are you sure you want to restart?
-restart-mission-accept = Restart
-restart-mission-cancel = Stay
+restart-mission-title = Рестарт
+restart-mission-prompt = Вы точно хотите перезапустить?
+restart-mission-accept = Рестарт
+restart-mission-cancel = Остаться
 
-surrender-button = Surrender
+surrender-button = Сдаться
 
 surrender-title = Сдаться
 surrender-prompt = Вы уверены что хотите сдаться?
 surrender-accept = Сдаться
 surrender-cancel = Остаться
 
-load-game-button = Load Game
-save-game-button = Save Game
+load-game-button = Загрузить
+save-game-button = Сохранить
 
 music-button = Музыка
 
 settings-button = Настройки
 
-return-to-map = Return to map
-resume = Resume
+return-to-map = Вернуться
+resume = Продолжить
 
-save-map-button = Save Map
+save-map-button = Сохр.
 
 error-max-player-title = Error: Max player count exceeded
 error-max-player-prompt = There are too many players defined ({ $players }/{ $max }).
@@ -210,28 +210,28 @@ exit-map-editor-confirm = Exit
 
 ## IngamePowerBarLogic
 ## IngamePowerCounterLogic
-power-usage = Power Usage: { $usage }/{ $capacity }
-infinite-power = Infinite
+power-usage = Электричество: { $usage }/{ $capacity }
+infinite-power = Бесконечно
 
 ## IngameSiloBarLogic
 ## IngameCashCounterLogic
-silo-usage = Silo Usage: { $usage }/{ $capacity }
+silo-usage = Хранилище: { $usage }/{ $capacity }
 
 ## ObserverShroudSelectorLogic
-camera-option-all-players = All Players
-camera-option-disable-shroud = Disable Shroud
-camera-option-other = Other
+camera-option-all-players = Все игроки
+camera-option-disable-shroud = Откл. Shroud
+camera-option-other = Другие
 
 ## ObserverStatsLogic
-information-none = Information: None
-basic = Basic
-economy = Economy
-production = Production
-support-powers = Support Powers
+information-none = Информация: None
+basic = База
+economy = Экономика
+production = Производство
+support-powers = Силы поддержки
 combat = Combat
-army = Army
-earnings-graph = Earnings (graph)
-army-graph = Army (graph)
+army = Армия
+earnings-graph = Деньги (граф)
+army-graph = Армия (граф)
 
 ## WorldTooltipLogic
 unrevealed-terrain = Unrevealed Terrain
@@ -265,17 +265,17 @@ installation-failed = Installation Failed
 check-install-log = Refer to install.log in the logs directory for details.
 extracting-filename = Extracting { $filename }
 extracting-filename-progress = Extracting { $filename } ({ $progress }%)
-cancel = Cancel
-retry = Retry
+cancel = Отменить
+retry = Повторить
 
 ## InstallFromDiscLogic, LobbyLogic
-back = Back
+back = Назад
 
 # InstallFromDiscLogic, ModContentPromptLogic
-continue = Continue
+continue = Продолжить
 
 ## ModContentLogic
-manual-install = Manual Install
+manual-install = Ручная установка
 
 ## ModContentPromptLogic
 quit = Выйти
@@ -291,43 +291,43 @@ kick-spectators =
     }
 
 ## LobbyLogic
-add = Add
-remove = Remove
-configure-bots = Configure Bots
-n-teams = { $count } Teams
-humans-vs-bots = Humans vs Bots
-free-for-all = Free for all
-configure-teams = Configure Teams
+add = Добавить
+remove = Удалить
+configure-bots = Настроить ботов
+n-teams = { $count } Команды
+humans-vs-bots = PvE
+free-for-all = Все против Всех
+configure-teams = Настроить команды
 
 ## LobbyLogic, CommonSelectorLogic, InGameChatLogic
-all = All
+all = Все
 
 ## InputSettingsLogic, CommonSelectorLogic
-none = None
+none = Ничего
 
 ## LobbyLogic, IngameChatLogic
-team = Team
+team = Команда
 
 ## LobbyOptionsLogic
-not-available = Not Available
+not-available = Недоступно
 
 ## LobbyUtils
-slot = Slot
-open = Open
-closed = Closed
-bots = Bots
+slot = Слот
+open = Открыто
+closed = Закрыто
+bots = Боты
 
 # LobbyUtils, Server
-bots-disabled = Bots Disabled
+bots-disabled = Боты выкл
 
 ## MapPreviewLogic
-connecting = Connecting...
-downloading-map = Downloading { $size } kB
-downloading-map-progress = Downloading { $size } kB ({ $progress }%)
-retry-install = Retry Install
-retry-search = Retry Search
+connecting = Подключение...
+downloading-map = Загрузка { $size } kB
+downloading-map-progress = Загрузка { $size } kB ({ $progress }%)
+retry-install = Повтор. установку
+retry-search = Повтор. поиск
 ## also MapChooserLogic
-created-by = Created by { $author }
+created-by = Создано { $author }
 
 ## SpawnSelectorTooltipLogic
 disabled-spawn = Disabled spawn
@@ -339,20 +339,20 @@ medium = Средне
 far = Далеко
 furthest = Очень Далеко
 
-windowed = Windowed
-legacy-fullscreen = Fullscreen (Legacy)
-fullscreen = Fullscreen
+windowed = В окне
+legacy-fullscreen = Полный (Legacy)
+fullscreen = Полный
 
-display = Display { $number }
+display = Дисплей { $number }
 
-show-on-damage = Show On Damage
-always-show = Always Show
+show-on-damage = Показывать при уроне
+always-show = Всегда показывать
 
-automatic = Automatic
-manual = Manual
+automatic = Автоматическое
+manual = Ручное
 
 ## DisplaySettingsLogic, InputSettingsLogic
-disabled = Disabled
+disabled = Выключено
 
 ## DisplaySettingsLogic, InputSettingsLogic, IntroductionPromptLogic
 classic = Классическая
@@ -360,8 +360,8 @@ modern = Современная
 standard = По умолчанию
 
 ## DisplaySettingsLogic, IntroductionPromptLogic
-inverted = Inverted
-joystick = Joystick
+inverted = Инвертированная
+joystick = Джойстик
 
 alt = Alt
 ctrl = Ctrl
@@ -369,39 +369,39 @@ meta = Meta
 shift = Shift
 
 ## SettingsLogic
-settings-save-title = Restart Required
-settings-save-prompt = Some changes will not be applied until
-    the game is restarted.
-settings-save-cancel = Continue
+settings-save-title = Необходим рестарт
+settings-save-prompt = Некоторые настройки не будут применены
+    пока игра не перезапущена.
+settings-save-cancel = Продолжить
 
-restart-title = Restart Now?
-restart-prompt = Some changes will not be applied until
-    the game is restarted. Restart now?
-restart-accept = Restart Now
-restart-cancel = Restart Later
+restart-title = Перезапустить сейчас?
+restart-prompt = Некоторые настройки не будут применены
+    пока игра не перезапущена. Перезапустить?
+restart-accept = Сейчас
+restart-cancel = Позже
 
-reset-title = Reset { $panel }
-reset-prompt = Are you sure you want to reset
-    all settings in this panel?
-reset-accept = Reset
-reset-cancel = Cancel
+reset-title = Сбросить { $panel }
+reset-prompt = Вы уверены, что хотите сбросить
+    все настройки в этой панели?
+reset-accept = Сбросить
+reset-cancel = Отменить
 
 ## AssetBrowserLogic
-all-packages = All Packages
-length-in-seconds = { $length } sec
+all-packages = Все пакеты
+length-in-seconds = { $length } сек
 
 ## ConnectionLogic
-connecting-to-endpoint = Connecting to { $endpoint }...
-could-not-connect-to-target = Could not connect to { $target }
-unknown-error = Unknown error
-password-required = Password Required
-connection-failed = Connection Failed
-mod-switch-failed = Failed to switch mod.
+connecting-to-endpoint = Поключение к { $endpoint }...
+could-not-connect-to-target = Невозможно подключиться к { $target }
+unknown-error = Неизвестная ошибка
+password-required = Необзодим пароль
+connection-failed = Подключение не удалось
+mod-switch-failed = Не удалось сменить мод.
 
 ## GameSaveBrowserLogic
-rename-save-title = Rename Save
-rename-save-prompt = Enter a new file name:
-rename-save-accept = Rename
+rename-save-title = Переименовать
+rename-save-prompt = Введите новое имя:
+rename-save-accept = ОК
 
 delete-save-title = Delete selected game save?
 delete-save-prompt = Delete '{ $save }'
@@ -422,22 +422,22 @@ overwrite-save-prompt = Overwrite { $file }?
 overwrite-save-accept = Overwrite
 
 ## MainMenuLogic
-loading-news = Loading news
-news-retrival-failed = Failed to retrieve news: { $message }
-news-parsing-failed = Failed to parse news: { $message }
+loading-news = Загрузка новостей
+news-retrival-failed = Не удалось загрузить новости: { $message }
+news-parsing-failed = Не удалось прочитать новости: { $message }
 
 ## MapChooserLogic
-all-maps = All Maps
+all-maps = Все карты
 no-matches = No matches
 player-players =
     { $players ->
-        [one] { $players } Player
-       *[other] { $players } Players
+        [one] { $players } Игрок
+       *[other] { $players } Игроков
     }
-map-size-huge = (Huge)
-map-size-large = (Large)
-map-size-medium = (Medium)
-map-size-small = (Small)
+map-size-huge = (Огромная)
+map-size-large = (Большая)
+map-size-medium = (Средняя)
+map-size-small = (Маленькая)
 
 map-deletion-failed = Failed to delete map '{ $map }'. See the debug.log file for details.
 
@@ -472,7 +472,7 @@ audio-unmuted = Audio unmuted.
 
 ## PlayerProfileLogic
 loading-player-profile = Загрузка профиля игрока...
-loading-player-profile-failed = Неудалось получить профиль.
+loading-player-profile-failed = Не удалось получить профиль.
 
 ## ReplayBrowserLogic
 duration = Длина: { $time }
@@ -482,33 +482,33 @@ multiplayer = Мультиплеер
 victory = Победа
 defeat = Поражение
 
-today = Today
-last-week = Last 7 days
-last-fortnight = Last 14 days
-last-month = Last 30 days
+today = Сегодня
+last-week = Последние 7д
+last-fortnight = Последние 14д
+last-month = Последние 30д
 
-replay-duration-very-short = Under 5 min
-replay-duration-short = Short (10 min)
-replay-duration-medium = Medium (30 min)
-replay-duration-long = Long (60+ min)
+replay-duration-very-short = Менее 5 мин
+replay-duration-short = Короткий (10 мин)
+replay-duration-medium = Средний (30 мин)
+replay-duration-long = Длинный (60+ мин)
 
-rename-replay-title = Rename Replay
-rename-replay-prompt = Enter a new file name:
-rename-replay-accept = Rename
+rename-replay-title = Переименовать
+rename-replay-prompt = Введите новое имя:
+rename-replay-accept = ОК
 
-delete-replay-title = Delete selected replay?
-delete-replay-prompt = Delete replay { $replay }?
-delete-replay-accept = Delete
+delete-replay-title = Удалить реплей?
+delete-replay-prompt = Удалить { $replay }?
+delete-replay-accept = Удлаить
 
-delete-all-replays-title = Delete all selected replays?
+delete-all-replays-title = Удалить все реплеи?
 delete-all-replays-prompt =
     { $count ->
-        [one] Delete { $count } replay.
-       *[other] Delete { $count } replays.
+        [one] Удалить { $count } реплей.
+       *[other] Удалить { $count } реплеев.
     }
-delete-all-replays-accept = Delete All
+delete-all-replays-accept = Удалить все
 
-replay-deletion-failed = Failed to delete replay file '{ $file }'. See the debug.log file for details.
+replay-deletion-failed = Не удалось удалить '{ $file }'. Посмотрите debug.log для подробностей.
 
 ## ReplayUtils
 incompatible-replay-title = Incompatible Replay
@@ -579,34 +579,34 @@ spectators-label =
     }
 
 ## ServerlistLogic, GameInfoStatsLogic, ObserverShroudSelectorLogic, SpawnSelectorTooltipLogic, ReplayBrowserLogic
-team-number = Team { $team }
-no-team = No Team
+team-number = Команда { $team }
+no-team = Нету
 
 playing = Запущено
 waiting = Ожидание
 
 n-other-players =
     { $players ->
-        [one] One other player
-       *[other] { $players } other players
+        [one] Один другой игрок
+       *[other] { $players } других игроков
     }
 
 in-progress-for =
     { $minutes ->
-        [0] In progress
-        [one] In progress for { $minutes } minute.
-       *[other] In progress for { $minutes } minutes.
+        [0] В процессе
+        [one] В процессе { $minutes } мин.
+       *[other] В процессе { $minutes } мин.
     }
-password-protected = Password protected
-waiting-for-players = Waiting for players
-server-shutting-down = Server shutting down
-unknown-server-state = Unknown server state
+password-protected = Защищен паролем
+waiting-for-players = Ожидание игроков
+server-shutting-down = Сервер выключается
+unknown-server-state = Неизвестное состояние
 
 ## Game
-saved-screenshot = Saved screenshot { $filename }
+saved-screenshot = Сохранен скриншот { $filename }
 
 ## ChatCommands
-invalid-command = { $name } is not a valid command.
+invalid-command = { $name } - неправильная команда.
 
 ## DebugVisualizationCommands
 combat-geometry-description = toggles combat geometry overlay.

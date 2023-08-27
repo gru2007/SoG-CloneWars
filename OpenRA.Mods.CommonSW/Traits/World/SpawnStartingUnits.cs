@@ -25,7 +25,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly string StartingUnitsClass = "none";
 
 		[Desc("Descriptive label for the starting units option in the lobby.")]
-		public readonly string DropdownLabel = "Starting Units";
+		public readonly string DropdownLabel = "Стартовые юниты";
 
 		[Desc("Tooltip description for the starting units option in the lobby.")]
 		public readonly string DropdownDescription = "The units that players start the game with";
