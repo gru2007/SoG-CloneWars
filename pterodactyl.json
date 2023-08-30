@@ -1,0 +1,122 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "1.0",
+        "update_url": "https://raw.githubusercontent.com/gru2007/SoG-CloneWars/main/pterodactyl.json"
+    },
+    "exported_at": "2023-08-30T20:44:50+03:00",
+    "name": "OpenRA - CloneWars",
+    "author": "ruslru376@gmail.com",
+    "description": "OpenRA is a project that recreates and modernizes the classic Command & Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods).",
+    "features": null,
+    "docker_images": {
+        "quay.io\/parkervcp\/pterodactyl-images:debian_mono-6-complete": "quay.io\/parkervcp\/pterodactyl-images:debian_mono-6-complete"
+    },
+    "file_denylist": [],
+    "startup": ".\/squashfs-root\/AppRun --server Server.Name=\"{{SERVER_NAME}}\" Server.ListenPort={{SERVER_PORT}} Server.AdvertiseOnline={{PUBLIC}} Server.EnableSingleplayer={{SINGLEPLAYER}} Server.Password=\"{{PASSWORD}}\" Server.EnableGeoIP={{GEOIP}} Server.ShareAnonymizedIPs={{ANONYMOUS}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\\u0421\\u0432\\u044f\\u0437\\u044c \\u0441 \\u043c\\u0430\\u0441\\u0442\\u0435\\u0440-\\u0441\\u0435\\u0440\\u0432\\u0435\\u0440\\u043e\\u043c \\u0443\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\u0430.\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{\r\n    \"custom\": false,\r\n    \"location\": \"logs\/latest.log\"\r\n}",
+        "stop": "^Z"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# Vanilla Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\n## install packages to get version and download links\r\napt update\r\napt install -y curl wget file jq\r\ncd \/mnt\/server\/\r\n\r\nrm -R squashfs-root\r\n## get release info and download links\r\nLATEST_JSON=$(curl --silent \"https:\/\/api.github.com\/repos\/${GITHUB_PACKAGE}\/releases\/latest\")\r\nRELEASES=$(curl --silent \"https:\/\/api.github.com\/repos\/${GITHUB_PACKAGE}\/releases\")\r\nif [ -z \"${VERSION}\" ] || [ \"${VERSION}\" == \"latest\" ]; then\r\nDOWNLOAD_LINK=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url | grep -i ${MATCH})\r\nelse\r\nVERSION_CHECK=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .tag_name')\r\nif [ \"${VERSION}\" == \"${VERSION_CHECK}\" ]; then\r\nDOWNLOAD_LINK=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .assets[].browser_download_url' | grep -i ${MATCH})\r\nelse\r\necho -e \"defaulting to latest release\"\r\nDOWNLOAD_LINK=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url)\r\nfi\r\nfi\r\nwget $DOWNLOAD_LINK\r\nchmod +x $MATCH\r\n.\/$MATCH --appimage-extract\r\nrm $MATCH\r\nrm *.zsync\r\ncd squashfs-root\r\nchmod +x AppRun",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "\u0418\u043c\u044f \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
+            "description": "\u0423\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0438\u043c\u044f \u0441\u0435\u0440\u0432\u0435\u0440\u0430 \u0432 \u043f\u043e\u0438\u0441\u043a\u0435",
+            "env_variable": "SERVER_NAME",
+            "default_value": "OpenRAServer",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "\u041f\u0430\u0440\u043e\u043b\u044c",
+            "description": "\u0423\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u043f\u0430\u0440\u043e\u043b\u044c \u0434\u043b\u044f \u0432\u0445\u043e\u0434\u0430",
+            "env_variable": "PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable:string",
+            "field_type": "text"
+        },
+        {
+            "name": "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043e\u0434\u0438\u043d\u043e\u0447\u043a\u0443",
+            "description": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0438\u0433\u0440\u0443, \u0434\u0430\u0436\u0435 \u0435\u0441\u043b\u0438 \u043c\u0435\u043d\u044c\u0448\u0435 2\u0445 \u0447\u0435\u043b\u043e\u0432\u0435\u043a \u043d\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0435",
+            "env_variable": "SINGLEPLAYER",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:false,true",
+            "field_type": "text"
+        },
+        {
+            "name": "\u041f\u0443\u0431\u043b\u0438\u0447\u043d\u044b\u0439 \u0441\u0435\u0440\u0432\u0435\u0440",
+            "description": "\u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u0435\u0440\u0432\u0435\u0440 \u0432 \u043f\u043e\u0438\u0441\u043a\u0435",
+            "env_variable": "PUBLIC",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:true,false",
+            "field_type": "text"
+        },
+        {
+            "name": "GEOIP",
+            "description": "\u0412\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u043d\u0438\u0435 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f IP",
+            "env_variable": "GEOIP",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:false,true",
+            "field_type": "text"
+        },
+        {
+            "name": "\u0410\u043d\u043e\u043d\u0438\u043c\u043d\u044b\u0435 IP",
+            "description": "\u041f\u0440\u044f\u0447\u0435\u0442 IP \u043e\u0442 \u043b\u0438\u0448\u043d\u0438\u0445 \u0433\u043b\u0430\u0437",
+            "env_variable": "ANONYMOUS",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:false,true",
+            "field_type": "text"
+        },
+        {
+            "name": "GITHUB_PACKAGE",
+            "description": "GITHUB_PACKAGE",
+            "env_variable": "GITHUB_PACKAGE",
+            "default_value": "gru2007\/SoG-CloneWars",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "\u0418\u043c\u044f \u0444\u0430\u0439\u043b\u0430",
+            "description": "\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0434\u043b\u044f \u043f\u0435\u0440\u0435\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043d\u0435 \u0441 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438",
+            "env_variable": "MATCH",
+            "default_value": "SoG_CloneWars-x86_64.AppImage",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "\u0412\u0435\u0440\u0441\u0438\u044f",
+            "description": "\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0432\u0435\u0440\u0441\u0438\u044e \u0434\u043b\u044f \u0441\u043a\u0430\u0447\u0438\u0432\u0430\u043d\u0438\u044f \u043f\u0440\u0438 \u043f\u0435\u0440\u0435\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0435. latest - \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u044f\u044f",
+            "env_variable": "VERSION",
+            "default_value": "latest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        }
+    ]
+}
