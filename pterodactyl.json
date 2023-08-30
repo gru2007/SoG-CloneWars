@@ -1,13 +1,13 @@
 {
     "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
-        "version": "1.0",
+        "version": "PTDL_v2",
         "update_url": "https://raw.githubusercontent.com/gru2007/SoG-CloneWars/main/pterodactyl.json"
     },
     "exported_at": "2023-08-30T20:44:50+03:00",
     "name": "OpenRA - CloneWars",
     "author": "ruslru376@gmail.com",
-    "description": "OpenRA is a project that recreates and modernizes the classic Command & Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods).",
+    "description": "OpenRA is a project that recreates and modernizes the classic Command & Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods). ",
     "features": null,
     "docker_images": {
         "quay.io\/parkervcp\/pterodactyl-images:debian_mono-6-complete": "quay.io\/parkervcp\/pterodactyl-images:debian_mono-6-complete"
