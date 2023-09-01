@@ -1,4 +1,4 @@
-This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-101 of OpenRA.
+This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-105 of OpenRA.
 
 All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.
 
@@ -71,11 +71,11 @@ Debug:
 ### UUID
 Sysinfo anonymous user identifier.
 
-**Default Value:** cdb1a4f5-42af-425e-a8b9-ef38f32e9601
+**Default Value:** 79430623-8591-4d3d-8faa-376ef68e8538
 
 ```miniyaml
 Debug:
-        UUID: cdb1a4f5-42af-425e-a8b9-ef38f32e9601
+        UUID: 79430623-8591-4d3d-8faa-376ef68e8538
 ```
 ### DisplayDeveloperSettings
 Enable hidden developer settings in the Advanced settings tab.
@@ -376,6 +376,10 @@ For dedicated servers only, allow anonymous clients to join.
 Server:
         RequireAuthentication: False
 ```
+### AdminNamesList
+For dedicated servers only, if non-empty, give admin permissions only for players in this list.
+
+
 ### ProfileIDWhitelist
 For dedicated servers only, if non-empty, only allow authenticated players with these profile IDs to join.
 

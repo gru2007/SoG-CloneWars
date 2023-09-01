@@ -547,7 +547,7 @@ namespace OpenRA.Server
 					{
 						client.Slot = LobbyInfo.FirstEmptySlot();
 
-						//Admin Access give
+						// Admin Access give
 						if (Type == ServerType.Dedicated && Settings.AdminNamesList.Length > 0)
 						{
 							client.IsAdmin = Settings.AdminNamesList.Contains(client.Name);
