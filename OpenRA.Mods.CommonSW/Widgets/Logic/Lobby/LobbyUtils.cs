@@ -114,7 +114,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				new DropDownOption
 				{
-					Title = "Kick",
+					Title = "Кик",
 					OnClick = onClick
 				},
 			};
@@ -123,7 +123,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				options.Add(new DropDownOption
 				{
-					Title = "Transfer Admin",
+					Title = "Передать Админку",
 					OnClick = () => orderManager.IssueOrder(Order.Command($"make_admin {c.Index}"))
 				});
 			}
@@ -132,7 +132,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				options.Add(new DropDownOption
 				{
-					Title = "Move to Spectator",
+					Title = "Сделать Наблюдаталем",
 					OnClick = () => orderManager.IssueOrder(Order.Command($"make_spectator {c.Index}"))
 				});
 			}
@@ -348,9 +348,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			switch (client.ConnectionQuality)
 			{
-				case Session.ConnectionQuality.Good: return "Good";
-				case Session.ConnectionQuality.Moderate: return "Moderate";
-				case Session.ConnectionQuality.Poor: return "Poor";
+				case Session.ConnectionQuality.Good: return "Хорошо";
+				case Session.ConnectionQuality.Moderate: return "Нормально";
+				case Session.ConnectionQuality.Poor: return "Ужасно";
 				default: return "Unknown";
 			}
 		}
