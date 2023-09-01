@@ -74,7 +74,7 @@ namespace OpenRA
 
 		[Desc("For dedicated servers only, if non-empty, give admin permissions only for players in this list.")]
 		public string[] AdminNamesList = Array.Empty<string>();
-		
+
 		[Desc("For dedicated servers only, if non-empty, only allow authenticated players with these profile IDs to join.")]
 		public int[] ProfileIDWhitelist = Array.Empty<int>();
 
