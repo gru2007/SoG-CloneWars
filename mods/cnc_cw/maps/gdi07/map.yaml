@@ -1027,4 +1027,6 @@ Actors:
 		Owner: Neutral
 		Location: 14,46
 
-Rules: cnc_cw|rules/campaign-maprules.yaml, cnc_cw|rules/campaign-tooltips.yaml, cnc_cw|rules/campaign-palettes.yaml, rules.yaml
+Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml
+
+Translations: cnc|languages/lua/en.ftl

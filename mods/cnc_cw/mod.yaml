@@ -51,7 +51,7 @@ Packages:
 
 MapFolders:
 	cnc_cw|maps: System
-	~^SupportDir|maps/cnc/release-20230225: User
+	~^SupportDir|maps/cnc/release-20231010: User
 
 Rules:
 	cnc_cw|rules/misc.yaml
@@ -133,10 +133,11 @@ ChromeLayout:
 	common|chrome/ingame-transients.yaml
 	cnc_cw|chrome/ingame-menu.yaml
 	cnc_cw|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
 	cnc_cw|chrome/ingame-infochat.yaml
 	cnc_cw|chrome/ingame-info.yaml
 	cnc_cw|chrome/ingame-infobriefing.yaml
-	cnc_cw|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infoscripterror.yaml
 	cnc_cw|chrome/ingame-infoobjectives.yaml
 	cnc_cw|chrome/ingame-infostats.yaml
 	cnc_cw|chrome/ingame-info-lobby-options.yaml
@@ -157,6 +158,9 @@ ChromeLayout:
 	common|chrome/text-notifications.yaml
 
 Translations:
+	common|languages/en.ftl
+	common|languages/rules/en.ftl
+	cnc_cw|languages/rules/en.ftl
 	cnc_cw|languages/en.ftl
 	cnc_cw|languages/ru.ftl
 
@@ -251,12 +255,6 @@ VideoFormats: Vqa, Wsa
 TerrainFormat: DefaultTerrain
 
 SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
-	TilesetExtensions:
-		TEMPERAT: .tem
-		WINTER: .win
-		SNOW: .sno
-		DESERT: .des
-		JUNGLE: .jun
 
 ModelSequenceFormat: PlaceholderModelSequence
 
@@ -269,27 +267,27 @@ GameSpeeds:
 	DefaultSpeed: default
 	Speeds:
 		slowest:
-			Name: slowest
+			Name: options-game-speed.slowest
 			Timestep: 80
 			OrderLatency: 2
 		slower:
-			Name: slower
+			Name: options-game-speed.slower
 			Timestep: 50
 			OrderLatency: 3
 		default:
-			Name: normal
+			Name: options-game-speed.normal
 			Timestep: 40
 			OrderLatency: 3
 		fast:
-			Name: fast
+			Name: options-game-speed.fast
 			Timestep: 35
 			OrderLatency: 4
 		faster:
-			Name: faster
+			Name: options-game-speed.faster
 			Timestep: 30
 			OrderLatency: 4
 		fastest:
-			Name: fastest
+			Name: options-game-speed.fastest
 			Timestep: 20
 			OrderLatency: 6
 
@@ -298,23 +296,33 @@ ModContent:
 	QuickDownload: basefiles
 	HeaderMessage: Необходим контент игры Tiberian Dawn
 	Packages:
-		base: Tiberian Dawn (база)
+		ContentPackage@base:
+			Title: Tiberian Dawn (база)
+			Identifier: base
 			TestFiles: ^SupportDir|Content/cnc/conquer.mix, ^SupportDir|Content/cnc/desert.mix, ^SupportDir|Content/cnc/sounds.mix, ^SupportDir|Content/cnc/speech.mix, ^SupportDir|Content/cnc/temperat.mix, ^SupportDir|Content/cnc/tempicnh.mix, ^SupportDir|Content/cnc/winter.mix
-			Sources: gdi95, gdi95-linux, nod95, nod95-linux, tfd, origin
+			Sources: gdi95, nod95, tfd, origin, cncr-steam, cncr-origin
 			Required: true
 			Download: basefiles
-		music: Tiberian Dawn Музыка
+		ContentPackage@music:
+			Title: Tiberian Dawn Музыка
+			Identifier: music
 			TestFiles: ^SupportDir|Content/cnc/scores.mix
-			Sources: gdi95, gdi95-linux, nod95, nod95-linux, tfd, origin
-		movies-gdi: Tiberian Dawn GDI Брифинги
-			TestFiles: ^SupportDir|Content/cnc/movies/visor.vqa, ^SupportDir|Content/cnc/movies/turtkill.vqa, ^SupportDir|Content/cnc/movies/trailer.vqa, ^SupportDir|Content/cnc/movies/tbrinfo3.vqa, ^SupportDir|Content/cnc/movies/tbrinfo2.vqa, ^SupportDir|Content/cnc/movies/tbrinfo1.vqa, ^SupportDir|Content/cnc/movies/seige.vqa, ^SupportDir|Content/cnc/movies/samsite.vqa, ^SupportDir|Content/cnc/movies/samdie.vqa, ^SupportDir|Content/cnc/movies/sabotage.vqa, ^SupportDir|Content/cnc/movies/retro.vqa, ^SupportDir|Content/cnc/movies/podium.vqa, ^SupportDir|Content/cnc/movies/planecra.vqa, ^SupportDir|Content/cnc/movies/pintle.vqa, ^SupportDir|Content/cnc/movies/paratrop.vqa, ^SupportDir|Content/cnc/movies/nodsweep.vqa, ^SupportDir|Content/cnc/movies/nodlose.vqa, ^SupportDir|Content/cnc/movies/nodflees.vqa, ^SupportDir|Content/cnc/movies/nod1.vqa, ^SupportDir|Content/cnc/movies/nitejump.vqa, ^SupportDir|Content/cnc/movies/napalm.vqa, ^SupportDir|Content/cnc/movies/logo.vqa, ^SupportDir|Content/cnc/movies/landing.vqa, ^SupportDir|Content/cnc/movies/intro2.vqa, ^SupportDir|Content/cnc/movies/hellvaly.vqa, ^SupportDir|Content/cnc/movies/gunboat.vqa, ^SupportDir|Content/cnc/movies/generic.vqa, ^SupportDir|Content/cnc/movies/gdilose.vqa, ^SupportDir|Content/cnc/movies/gdifinb.vqa, ^SupportDir|Content/cnc/movies/gdifina.vqa, ^SupportDir|Content/cnc/movies/gdiend2.vqa, ^SupportDir|Content/cnc/movies/gdiend1.vqa, ^SupportDir|Content/cnc/movies/gdi9.vqa, ^SupportDir|Content/cnc/movies/gdi8b.vqa, ^SupportDir|Content/cnc/movies/gdi8a.vqa, ^SupportDir|Content/cnc/movies/gdi7.vqa, ^SupportDir|Content/cnc/movies/gdi6.vqa, ^SupportDir|Content/cnc/movies/gdi5.vqa, ^SupportDir|Content/cnc/movies/gdi4b.vqa, ^SupportDir|Content/cnc/movies/gdi4a.vqa, ^SupportDir|Content/cnc/movies/gdi3lose.vqa, ^SupportDir|Content/cnc/movies/gdi3.vqa, ^SupportDir|Content/cnc/movies/gdi2.vqa, ^SupportDir|Content/cnc/movies/gdi15.vqa, ^SupportDir|Content/cnc/movies/gdi14.vqa, ^SupportDir|Content/cnc/movies/gdi13.vqa, ^SupportDir|Content/cnc/movies/gdi12.vqa, ^SupportDir|Content/cnc/movies/gdi11.vqa, ^SupportDir|Content/cnc/movies/gdi10.vqa, ^SupportDir|Content/cnc/movies/gdi1.vqa, ^SupportDir|Content/cnc/movies/gameover.vqa, ^SupportDir|Content/cnc/movies/forestkl.vqa, ^SupportDir|Content/cnc/movies/flyy.vqa, ^SupportDir|Content/cnc/movies/flag.vqa, ^SupportDir|Content/cnc/movies/dino.vqa, ^SupportDir|Content/cnc/movies/desolat.vqa, ^SupportDir|Content/cnc/movies/consyard.vqa, ^SupportDir|Content/cnc/movies/cc2tease.vqa, ^SupportDir|Content/cnc/movies/burdet2.vqa, ^SupportDir|Content/cnc/movies/burdet1.vqa, ^SupportDir|Content/cnc/movies/bombflee.vqa, ^SupportDir|Content/cnc/movies/bombaway.vqa, ^SupportDir|Content/cnc/movies/bkground.vqa, ^SupportDir|Content/cnc/movies/bcanyon.vqa, ^SupportDir|Content/cnc/movies/banner.vqa
-			Sources: gdi95, gdi95-linux, tfd, origin
-		movies-nod: Tiberian Dawn Nod Брифинги
-			TestFiles: ^SupportDir|Content/cnc/movies/visor.vqa, ^SupportDir|Content/cnc/movies/trtkil_d.vqa, ^SupportDir|Content/cnc/movies/trailer.vqa, ^SupportDir|Content/cnc/movies/tiberfx.vqa, ^SupportDir|Content/cnc/movies/tankkill.vqa, ^SupportDir|Content/cnc/movies/tankgo.vqa, ^SupportDir|Content/cnc/movies/sundial.vqa, ^SupportDir|Content/cnc/movies/stealth.vqa, ^SupportDir|Content/cnc/movies/spycrash.vqa, ^SupportDir|Content/cnc/movies/sethpre.vqa, ^SupportDir|Content/cnc/movies/seige.vqa, ^SupportDir|Content/cnc/movies/samsite.vqa, ^SupportDir|Content/cnc/movies/retro.vqa, ^SupportDir|Content/cnc/movies/refint.vqa, ^SupportDir|Content/cnc/movies/obel.vqa, ^SupportDir|Content/cnc/movies/nuke.vqa, ^SupportDir|Content/cnc/movies/nodlose.vqa, ^SupportDir|Content/cnc/movies/nodfinal.vqa, ^SupportDir|Content/cnc/movies/nodend4.vqa, ^SupportDir|Content/cnc/movies/nodend3.vqa, ^SupportDir|Content/cnc/movies/nodend2.vqa, ^SupportDir|Content/cnc/movies/nodend1.vqa, ^SupportDir|Content/cnc/movies/nod9.vqa, ^SupportDir|Content/cnc/movies/nod8.vqa, ^SupportDir|Content/cnc/movies/nod7b.vqa, ^SupportDir|Content/cnc/movies/nod7a.vqa, ^SupportDir|Content/cnc/movies/nod6.vqa, ^SupportDir|Content/cnc/movies/nod5.vqa, ^SupportDir|Content/cnc/movies/nod4b.vqa, ^SupportDir|Content/cnc/movies/nod4a.vqa, ^SupportDir|Content/cnc/movies/nod3.vqa, ^SupportDir|Content/cnc/movies/nod2.vqa, ^SupportDir|Content/cnc/movies/nod1pre.vqa, ^SupportDir|Content/cnc/movies/nod13.vqa, ^SupportDir|Content/cnc/movies/nod12.vqa, ^SupportDir|Content/cnc/movies/nod11.vqa, ^SupportDir|Content/cnc/movies/nod10b.vqa, ^SupportDir|Content/cnc/movies/nod10a.vqa, ^SupportDir|Content/cnc/movies/nod1.vqa, ^SupportDir|Content/cnc/movies/logo.vqa, ^SupportDir|Content/cnc/movies/landing.vqa, ^SupportDir|Content/cnc/movies/kanepre.vqa, ^SupportDir|Content/cnc/movies/intro2.vqa, ^SupportDir|Content/cnc/movies/insites.vqa, ^SupportDir|Content/cnc/movies/generic.vqa, ^SupportDir|Content/cnc/movies/gdi1.vqa, ^SupportDir|Content/cnc/movies/gameover.vqa, ^SupportDir|Content/cnc/movies/forestkl.vqa, ^SupportDir|Content/cnc/movies/flag.vqa, ^SupportDir|Content/cnc/movies/dino.vqa, ^SupportDir|Content/cnc/movies/dessweep.vqa, ^SupportDir|Content/cnc/movies/deskill.vqa, ^SupportDir|Content/cnc/movies/desflees.vqa, ^SupportDir|Content/cnc/movies/consyard.vqa, ^SupportDir|Content/cnc/movies/cc2tease.vqa, ^SupportDir|Content/cnc/movies/bombflee.vqa, ^SupportDir|Content/cnc/movies/bombaway.vqa, ^SupportDir|Content/cnc/movies/bcanyon.vqa, ^SupportDir|Content/cnc/movies/banner.vqa, ^SupportDir|Content/cnc/movies/akira.vqa, ^SupportDir|Content/cnc/movies/airstrk.vqa
-			Sources: nod95, nod95-linux, tfd, origin
-		music-covertops: Tiberian Dawn Covert Operations Музыка
+			Sources: gdi95, nod95, tfd, origin, cncr-steam, cncr-origin
+		ContentPackage@movies-gdi:
+			Title: Tiberian Dawn GDI Брифинги
+			Identifier: movies-gdi
+			TestFiles: ^SupportDir|Content/cnc/movies/visor.vqa, ^SupportDir|Content/cnc/movies/turtkill.vqa, ^SupportDir|Content/cnc/movies/tbrinfo3.vqa, ^SupportDir|Content/cnc/movies/tbrinfo2.vqa, ^SupportDir|Content/cnc/movies/tbrinfo1.vqa, ^SupportDir|Content/cnc/movies/seige.vqa, ^SupportDir|Content/cnc/movies/samsite.vqa, ^SupportDir|Content/cnc/movies/samdie.vqa, ^SupportDir|Content/cnc/movies/sabotage.vqa, ^SupportDir|Content/cnc/movies/retro.vqa, ^SupportDir|Content/cnc/movies/podium.vqa, ^SupportDir|Content/cnc/movies/planecra.vqa, ^SupportDir|Content/cnc/movies/pintle.vqa, ^SupportDir|Content/cnc/movies/paratrop.vqa, ^SupportDir|Content/cnc/movies/nodsweep.vqa, ^SupportDir|Content/cnc/movies/nodlose.vqa, ^SupportDir|Content/cnc/movies/nodflees.vqa, ^SupportDir|Content/cnc/movies/nod1.vqa, ^SupportDir|Content/cnc/movies/nitejump.vqa, ^SupportDir|Content/cnc/movies/napalm.vqa, ^SupportDir|Content/cnc/movies/logo.vqa, ^SupportDir|Content/cnc/movies/landing.vqa, ^SupportDir|Content/cnc/movies/intro2.vqa, ^SupportDir|Content/cnc/movies/hellvaly.vqa, ^SupportDir|Content/cnc/movies/gunboat.vqa, ^SupportDir|Content/cnc/movies/generic.vqa, ^SupportDir|Content/cnc/movies/gdilose.vqa, ^SupportDir|Content/cnc/movies/gdifinb.vqa, ^SupportDir|Content/cnc/movies/gdifina.vqa, ^SupportDir|Content/cnc/movies/gdiend2.vqa, ^SupportDir|Content/cnc/movies/gdiend1.vqa, ^SupportDir|Content/cnc/movies/gdi9.vqa, ^SupportDir|Content/cnc/movies/gdi8b.vqa, ^SupportDir|Content/cnc/movies/gdi8a.vqa, ^SupportDir|Content/cnc/movies/gdi7.vqa, ^SupportDir|Content/cnc/movies/gdi6.vqa, ^SupportDir|Content/cnc/movies/gdi5.vqa, ^SupportDir|Content/cnc/movies/gdi4b.vqa, ^SupportDir|Content/cnc/movies/gdi4a.vqa, ^SupportDir|Content/cnc/movies/gdi3lose.vqa, ^SupportDir|Content/cnc/movies/gdi3.vqa, ^SupportDir|Content/cnc/movies/gdi2.vqa, ^SupportDir|Content/cnc/movies/gdi15.vqa, ^SupportDir|Content/cnc/movies/gdi14.vqa, ^SupportDir|Content/cnc/movies/gdi13.vqa, ^SupportDir|Content/cnc/movies/gdi12.vqa, ^SupportDir|Content/cnc/movies/gdi11.vqa, ^SupportDir|Content/cnc/movies/gdi10.vqa, ^SupportDir|Content/cnc/movies/gdi1.vqa, ^SupportDir|Content/cnc/movies/gameover.vqa, ^SupportDir|Content/cnc/movies/forestkl.vqa, ^SupportDir|Content/cnc/movies/flyy.vqa, ^SupportDir|Content/cnc/movies/flag.vqa, ^SupportDir|Content/cnc/movies/dino.vqa, ^SupportDir|Content/cnc/movies/desolat.vqa, ^SupportDir|Content/cnc/movies/consyard.vqa, ^SupportDir|Content/cnc/movies/cc2tease.vqa, ^SupportDir|Content/cnc/movies/burdet2.vqa, ^SupportDir|Content/cnc/movies/burdet1.vqa, ^SupportDir|Content/cnc/movies/bombflee.vqa, ^SupportDir|Content/cnc/movies/bombaway.vqa, ^SupportDir|Content/cnc/movies/bkground.vqa, ^SupportDir|Content/cnc/movies/bcanyon.vqa, ^SupportDir|Content/cnc/movies/banner.vqa
+			Sources: gdi95, tfd, origin, cncr-steam, cncr-origin
+		ContentPackage@movies-nod:
+			Title: Tiberian Dawn Nod Брифинги
+			Identifier: movies-nod
+			TestFiles: ^SupportDir|Content/cnc/movies/visor.vqa, ^SupportDir|Content/cnc/movies/trtkil_d.vqa, ^SupportDir|Content/cnc/movies/tiberfx.vqa, ^SupportDir|Content/cnc/movies/tankkill.vqa, ^SupportDir|Content/cnc/movies/tankgo.vqa, ^SupportDir|Content/cnc/movies/sundial.vqa, ^SupportDir|Content/cnc/movies/stealth.vqa, ^SupportDir|Content/cnc/movies/spycrash.vqa, ^SupportDir|Content/cnc/movies/sethpre.vqa, ^SupportDir|Content/cnc/movies/seige.vqa, ^SupportDir|Content/cnc/movies/samsite.vqa, ^SupportDir|Content/cnc/movies/retro.vqa, ^SupportDir|Content/cnc/movies/refint.vqa, ^SupportDir|Content/cnc/movies/obel.vqa, ^SupportDir|Content/cnc/movies/nuke.vqa, ^SupportDir|Content/cnc/movies/nodlose.vqa, ^SupportDir|Content/cnc/movies/nodfinal.vqa, ^SupportDir|Content/cnc/movies/nodend4.vqa, ^SupportDir|Content/cnc/movies/nodend3.vqa, ^SupportDir|Content/cnc/movies/nodend2.vqa, ^SupportDir|Content/cnc/movies/nodend1.vqa, ^SupportDir|Content/cnc/movies/nod9.vqa, ^SupportDir|Content/cnc/movies/nod8.vqa, ^SupportDir|Content/cnc/movies/nod7b.vqa, ^SupportDir|Content/cnc/movies/nod7a.vqa, ^SupportDir|Content/cnc/movies/nod6.vqa, ^SupportDir|Content/cnc/movies/nod5.vqa, ^SupportDir|Content/cnc/movies/nod4b.vqa, ^SupportDir|Content/cnc/movies/nod4a.vqa, ^SupportDir|Content/cnc/movies/nod3.vqa, ^SupportDir|Content/cnc/movies/nod2.vqa, ^SupportDir|Content/cnc/movies/nod1pre.vqa, ^SupportDir|Content/cnc/movies/nod13.vqa, ^SupportDir|Content/cnc/movies/nod12.vqa, ^SupportDir|Content/cnc/movies/nod11.vqa, ^SupportDir|Content/cnc/movies/nod10b.vqa, ^SupportDir|Content/cnc/movies/nod10a.vqa, ^SupportDir|Content/cnc/movies/nod1.vqa, ^SupportDir|Content/cnc/movies/logo.vqa, ^SupportDir|Content/cnc/movies/landing.vqa, ^SupportDir|Content/cnc/movies/kanepre.vqa, ^SupportDir|Content/cnc/movies/intro2.vqa, ^SupportDir|Content/cnc/movies/insites.vqa, ^SupportDir|Content/cnc/movies/generic.vqa, ^SupportDir|Content/cnc/movies/gdi1.vqa, ^SupportDir|Content/cnc/movies/gameover.vqa, ^SupportDir|Content/cnc/movies/forestkl.vqa, ^SupportDir|Content/cnc/movies/flag.vqa, ^SupportDir|Content/cnc/movies/dino.vqa, ^SupportDir|Content/cnc/movies/dessweep.vqa, ^SupportDir|Content/cnc/movies/deskill.vqa, ^SupportDir|Content/cnc/movies/desflees.vqa, ^SupportDir|Content/cnc/movies/consyard.vqa, ^SupportDir|Content/cnc/movies/cc2tease.vqa, ^SupportDir|Content/cnc/movies/bombflee.vqa, ^SupportDir|Content/cnc/movies/bombaway.vqa, ^SupportDir|Content/cnc/movies/bcanyon.vqa, ^SupportDir|Content/cnc/movies/banner.vqa, ^SupportDir|Content/cnc/movies/akira.vqa, ^SupportDir|Content/cnc/movies/airstrk.vqa
+			Sources: nod95, tfd, origin, cncr-steam, cncr-origin
+		ContentPackage@music-covertops:
+			Title: Музыка Covert Operations
+			Identifier: music-covertops
 			TestFiles: ^SupportDir|Content/cnc/scores-covertops.mix
-			Sources: covertops, covertops-linux, tfd, origin
+			Sources: covertops, tfd, origin, cncr-steam, cncr-origin
 	Downloads:
 		cnc_cw|installer/downloads.yaml
 	Sources:
@@ -323,6 +331,7 @@ ModContent:
 		cnc_cw|installer/gdi95.yaml
 		cnc_cw|installer/nod95.yaml
 		cnc_cw|installer/origin.yaml
+		cnc_cw|installer/steam.yaml
 
 DiscordService:
 	ApplicationId: 1037696848808382474
