@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -53,7 +53,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly string Voice = "Action";
 
 		[Desc("Tolerance for attack angle. Range [0, 512], 512 covers 360 degrees.")]
-		public readonly WAngle FacingTolerance = new WAngle(512);
+		public readonly WAngle FacingTolerance = new(512);
 
 		public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
 		{
@@ -85,7 +85,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		bool wasAiming;
 
-		public AttackBase(Actor self, AttackBaseInfo info)
+		protected AttackBase(Actor self, AttackBaseInfo info)
 			: base(info)
 		{
 			this.self = self;
@@ -94,7 +94,7 @@ namespace OpenRA.Mods.Common.Traits
 		protected override void Created(Actor self)
 		{
 			facing = self.TraitOrDefault<IFacing>();
-			positionable = self.TraitOrDefault<IPositionable>();
+			positionable = self.OccupiesSpace as IPositionable;
 			notifyAiming = self.TraitsImplementing<INotifyAiming>().ToArray();
 
 			getArmaments = InitializeGetArmaments(self);
@@ -411,7 +411,7 @@ namespace OpenRA.Mods.Common.Traits
 			return stances;
 		}
 
-		class AttackOrderTargeter : IOrderTargeter
+		sealed class AttackOrderTargeter : IOrderTargeter
 		{
 			readonly AttackBase ab;
 
@@ -453,8 +453,7 @@ namespace OpenRA.Mods.Common.Traits
 				// If all are out of ammo, just use valid armament with highest range
 				armaments = armaments.OrderByDescending(x => x.MaxRange());
 				var a = armaments.FirstOrDefault(x => !x.IsTraitPaused);
-				if (a == null)
-					a = armaments.First();
+				a ??= armaments.First();
 
 				var outOfRange = !target.IsInRange(self.CenterPosition, a.MaxRange()) ||
 					(!forceAttack && target.Type == TargetType.FrozenActor && !ab.Info.TargetFrozenActors);
@@ -491,8 +490,7 @@ namespace OpenRA.Mods.Common.Traits
 				// If all are out of ammo, just use valid armament with highest range
 				armaments = armaments.OrderByDescending(x => x.MaxRange());
 				var a = armaments.FirstOrDefault(x => !x.IsTraitPaused);
-				if (a == null)
-					a = armaments.First();
+				a ??= armaments.First();
 
 				cursor = !target.IsInRange(self.CenterPosition, a.MaxRange())
 					? ab.Info.OutsideRangeCursor ?? a.Info.OutsideRangeCursor
@@ -516,7 +514,7 @@ namespace OpenRA.Mods.Common.Traits
 				}
 			}
 
-			public bool IsQueued { get; protected set; }
+			public bool IsQueued { get; private set; }
 		}
 	}
 }

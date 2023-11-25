@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -50,7 +50,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly WDist Recoil = WDist.Zero;
 
 		[Desc("Recoil recovery per-frame")]
-		public readonly WDist RecoilRecovery = new WDist(9);
+		public readonly WDist RecoilRecovery = new(9);
 
 		[SequenceReference]
 		[Desc("Muzzle flash sequence to render")]
@@ -109,8 +109,6 @@ namespace OpenRA.Mods.Common.Traits
 	{
 		public readonly WeaponInfo Weapon;
 		public readonly Barrel[] Barrels;
-
-		readonly Actor self;
 		Turreted turret;
 		BodyOrientation coords;
 		INotifyBurstComplete[] notifyBurstComplete;
@@ -127,7 +125,7 @@ namespace OpenRA.Mods.Common.Traits
 		int currentBarrel;
 		readonly int barrelCount;
 
-		readonly List<(int Ticks, int Burst, Action<int> Func)> delayedActions = new List<(int, int, Action<int>)>();
+		readonly List<(int Ticks, int Burst, Action<int> Func)> delayedActions = new();
 
 		public WDist Recoil;
 		public int FireDelay { get; protected set; }
@@ -136,7 +134,7 @@ namespace OpenRA.Mods.Common.Traits
 		public Armament(Actor self, ArmamentInfo info)
 			: base(info)
 		{
-			this.self = self;
+			Actor = self;
 
 			Weapon = info.WeaponInfo;
 			Burst = Weapon.Burst;
@@ -280,11 +278,11 @@ namespace OpenRA.Mods.Common.Traits
 			foreach (var na in notifyAttacks)
 				na.PreparingAttack(self, target, this, barrel);
 
-			Func<WPos> muzzlePosition = () => self.CenterPosition + MuzzleOffset(self, barrel);
-			Func<WAngle> muzzleFacing = () => MuzzleOrientation(self, barrel).Yaw;
-			var muzzleOrientation = WRot.FromYaw(muzzleFacing());
+			WPos MuzzlePosition() => self.CenterPosition + MuzzleOffset(self, barrel);
+			WAngle MuzzleFacing() => MuzzleOrientation(self, barrel).Yaw;
+			var muzzleOrientation = WRot.FromYaw(MuzzleFacing());
 
-			var passiveTarget = Weapon.TargetActorCenter ? target.CenterPosition : target.Positions.PositionClosestTo(muzzlePosition());
+			var passiveTarget = Weapon.TargetActorCenter ? target.CenterPosition : target.Positions.PositionClosestTo(MuzzlePosition());
 			var initialOffset = Weapon.FirstBurstTargetOffset;
 			if (initialOffset != WVec.Zero)
 			{
@@ -304,8 +302,8 @@ namespace OpenRA.Mods.Common.Traits
 			var args = new ProjectileArgs
 			{
 				Weapon = Weapon,
-				Facing = muzzleFacing(),
-				CurrentMuzzleFacing = muzzleFacing,
+				Facing = MuzzleFacing(),
+				CurrentMuzzleFacing = MuzzleFacing,
 
 				DamageModifiers = damageModifiers.ToArray(),
 
@@ -313,8 +311,8 @@ namespace OpenRA.Mods.Common.Traits
 
 				RangeModifiers = rangeModifiers.ToArray(),
 
-				Source = muzzlePosition(),
-				CurrentSource = muzzlePosition,
+				Source = MuzzlePosition(),
+				CurrentSource = MuzzlePosition,
 				SourceActor = self,
 				PassiveTarget = passiveTarget,
 				GuidedTarget = target
@@ -400,6 +398,6 @@ namespace OpenRA.Mods.Common.Traits
 			return WRot.FromYaw(b.Yaw).Rotate(turret?.WorldOrientation ?? self.Orientation);
 		}
 
-		public Actor Actor => self;
+		public Actor Actor { get; }
 	}
 }

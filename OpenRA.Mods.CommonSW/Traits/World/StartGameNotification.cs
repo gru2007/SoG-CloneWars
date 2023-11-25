@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -15,7 +15,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits
 {
 	[TraitLocation(SystemActors.World)]
-	class StartGameNotificationInfo : TraitInfo
+	sealed class StartGameNotificationInfo : TraitInfo
 	{
 		[NotificationReference("Speech")]
 		public readonly string Notification = "StartGame";
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.Common.Traits
 		public override object Create(ActorInitializer init) { return new StartGameNotification(this); }
 	}
 
-	class StartGameNotification : IWorldLoaded, INotifyGameLoaded, INotifyGameSaved
+	sealed class StartGameNotification : IWorldLoaded, INotifyGameLoaded, INotifyGameSaved
 	{
 		readonly StartGameNotificationInfo info;
 		public StartGameNotification(StartGameNotificationInfo info)
@@ -47,7 +47,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (!world.IsLoadingGameSave)
 			{
-				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.Notification, world.RenderPlayer == null ? null : world.RenderPlayer.Faction.InternalName);
+				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.Notification, world.RenderPlayer?.Faction.InternalName);
 				TextNotificationsManager.AddTransientLine(info.TextNotification, null);
 			}
 		}
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (!world.IsReplay)
 			{
-				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.LoadedNotification, world.RenderPlayer == null ? null : world.RenderPlayer.Faction.InternalName);
+				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.LoadedNotification, world.RenderPlayer?.Faction.InternalName);
 				TextNotificationsManager.AddTransientLine(info.LoadedTextNotification, null);
 			}
 		}
@@ -65,7 +65,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (!world.IsReplay)
 			{
-				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.SavedNotification, world.RenderPlayer == null ? null : world.RenderPlayer.Faction.InternalName);
+				Game.Sound.PlayNotification(world.Map.Rules, null, "Speech", info.SavedNotification, world.RenderPlayer?.Faction.InternalName);
 				TextNotificationsManager.AddTransientLine(info.SavedTextNotification, null);
 			}
 		}

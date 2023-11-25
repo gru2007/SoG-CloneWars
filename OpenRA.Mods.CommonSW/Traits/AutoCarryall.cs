@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -102,7 +102,7 @@ namespace OpenRA.Mods.Common.Traits
 			}
 		}
 
-		class FerryUnit : Activity
+		sealed class FerryUnit : Activity
 		{
 			readonly Actor cargo;
 			readonly Carryable carryable;
@@ -123,17 +123,12 @@ namespace OpenRA.Mods.Common.Traits
 
 			public override bool Tick(Actor self)
 			{
-				if (cargo.IsDead)
-				{
-					carryall.UnreserveCarryable(self);
+				// Cargo may have become invalid or PickupUnit cancelled.
+				if (carryall.Carryable == null || carryall.Carryable.IsDead)
 					return true;
-				}
 
 				var dropRange = carryall.Info.DropRange;
-				var destination = carryable.Destination;
-				if (destination != null)
-					self.QueueActivity(true, new DeliverUnit(self, Target.FromCell(self.World, destination.Value), dropRange, carryall.Info.TargetLineColor));
-
+				self.QueueActivity(true, new DeliverUnit(self, Target.FromCell(self.World, carryable.Destination ?? self.Location), dropRange, carryall.Info.TargetLineColor));
 				return true;
 			}
 		}

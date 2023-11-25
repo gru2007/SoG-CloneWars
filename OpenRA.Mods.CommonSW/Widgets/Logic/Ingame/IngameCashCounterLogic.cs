@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -17,6 +17,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 {
 	public class IngameCashCounterLogic : ChromeLogic
 	{
+		[TranslationReference("usage", "capacity")]
+		const string SiloUsage = "label-silo-usage";
+
 		const float DisplayFracPerFrame = .07f;
 		const int DisplayDeltaPerFrame = 37;
 
@@ -25,15 +28,11 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		readonly PlayerResources playerResources;
 		readonly LabelWithTooltipWidget cashLabel;
 		readonly CachedTransform<(int Resources, int Capacity), string> siloUsageTooltipCache;
-		readonly string cashTemplate;
 
 		int nextCashTickTime = 0;
 		int displayResources;
 
 		string siloUsageTooltip = "";
-
-		[TranslationReference("usage", "capacity")]
-		static readonly string SiloUsage = "silo-usage";
 
 		[ObjectCreator.UseCtor]
 		public IngameCashCounterLogic(Widget widget, ModData modData, World world)
@@ -44,11 +43,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			displayResources = playerResources.Cash + playerResources.Resources;
 
 			siloUsageTooltipCache = new CachedTransform<(int Resources, int Capacity), string>(x =>
-				modData.Translation.GetString(SiloUsage, Translation.Arguments("usage", x.Resources, "capacity", x.Capacity)));
+				TranslationProvider.GetString(SiloUsage, Translation.Arguments("usage", x.Resources, "capacity", x.Capacity)));
 			cashLabel = widget.Get<LabelWithTooltipWidget>("CASH");
 			cashLabel.GetTooltipText = () => siloUsageTooltip;
-
-			cashTemplate = cashLabel.Text;
 		}
 
 		public override void Tick()
@@ -80,7 +77,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 
 			siloUsageTooltip = siloUsageTooltipCache.Update((playerResources.Resources, playerResources.ResourceCapacity));
-			cashLabel.Text = cashTemplate.F(displayResources);
+			cashLabel.Text = displayResources.ToString();
 		}
 	}
 }

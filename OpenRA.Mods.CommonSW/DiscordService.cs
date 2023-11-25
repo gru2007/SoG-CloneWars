@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -32,7 +32,7 @@ namespace OpenRA.Mods.Common
 	public sealed class DiscordService : IGlobalModData, IDisposable
 	{
 		public readonly string ApplicationId = null;
-		public readonly string Tooltip = "Стратегия по Звёздым Войнам созданная на открытом движке OpenRA";
+		public readonly string Tooltip = "Open Source real-time strategy game engine for early Westwood titles.";
 		DiscordRpcClient client;
 		DiscordState currentState;
 
@@ -97,10 +97,7 @@ namespace OpenRA.Mods.Common
 				return;
 
 			var server = args.Secret.Split('|');
-			Game.RunAfterTick(() =>
-			{
-				Game.RemoteDirectConnect(new ConnectionTarget(server[0], int.Parse(server[1])));
-			});
+			Game.RunAfterTick(() => Game.RemoteDirectConnect(new ConnectionTarget(server[0], int.Parse(server[1]))));
 		}
 
 		void SetStatus(DiscordState state, string details = null, string secret = null, int? players = null, int? slots = null)
@@ -120,16 +117,16 @@ namespace OpenRA.Mods.Common
 			switch (state)
 			{
 				case DiscordState.InMenu:
-					stateText = "В меню";
+					stateText = "In menu";
 					break;
 				case DiscordState.InMapEditor:
-					stateText = "В Редакторе Карт";
+					stateText = "In Map Editor";
 					break;
 				case DiscordState.InSkirmishLobby:
-					stateText = "В лобби Стычки";
+					stateText = "In Skirmish Lobby";
 					break;
 				case DiscordState.InMultiplayerLobby:
-					stateText = "В лобби Мультиплеера";
+					stateText = "In Multiplayer Lobby";
 					timestamp = DateTime.UtcNow;
 					party = new Party
 					{
@@ -143,19 +140,19 @@ namespace OpenRA.Mods.Common
 					};
 					break;
 				case DiscordState.PlayingMultiplayer:
-					stateText = "Играет в Мультиплеер";
+					stateText = "Playing Multiplayer";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.PlayingCampaign:
-					stateText = "Играет в Кампанию";
+					stateText = "Playing Campaign";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.WatchingReplay:
-					stateText = "Смотрит Replay";
+					stateText = "Watching Replay";
 					timestamp = DateTime.UtcNow;
 					break;
 				case DiscordState.PlayingSkirmish:
-					stateText = "Играет в Стычку";
+					stateText = "Playing Skirmish";
 					timestamp = DateTime.UtcNow;
 					break;
 				default:
@@ -168,7 +165,7 @@ namespace OpenRA.Mods.Common
 				{
 					new Button
 					{
-						Label = "Веб-сайт",
+						Label = "Visit Website",
 						Url = Game.ModData.Manifest.Metadata.Website
 					}
 				};
