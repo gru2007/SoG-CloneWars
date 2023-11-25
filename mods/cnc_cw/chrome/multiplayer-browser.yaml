@@ -62,21 +62,21 @@ Container@MULTIPLAYER_PANEL:
 							Children:
 								Label@OUTDATED_VERSION_LABEL:
 									X: 5
-									Width: PARENT_RIGHT-10
+									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
 									Text: У вас запущена устаревшая версия игры. Скачайте последнюю с сайта stormgalaxy.com
 									Font: TinyBold
 								Label@UNKNOWN_VERSION_LABEL:
 									X: 5
-									Width: PARENT_RIGHT-10
+									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
 									Text: Вы используете неизвестную версию игры. Скачайте последнюю с сайта stormgalaxy.com
 									Font: TinyBold
 								Label@PLAYTEST_AVAILABLE_LABEL:
 									X: 5
-									Width: PARENT_RIGHT-10
+									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
 									Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта stormgalaxy.com

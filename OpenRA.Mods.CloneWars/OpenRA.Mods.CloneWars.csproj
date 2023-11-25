@@ -6,20 +6,25 @@
 
 	<Import Project="$(EngineRootPath)/Directory.Build.props" />
 
-	<ItemGroup>
-		<ProjectReference Include="../OpenRA.Game/OpenRA.Game.csproj">
-			<Private>False</Private>
-		</ProjectReference>
-
-		<ProjectReference Include="../OpenRA.Mods.CommonSW/OpenRA.Mods.CommonSW.csproj">
-			<Private>False</Private>
-		</ProjectReference>
-	</ItemGroup>
+	<PropertyGroup>
+     <IsPublishable Condition="'$(CopyCncDll)' == 'False'">false</IsPublishable>
+  	</PropertyGroup>
+	<PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
 
 	<ItemGroup>
+    <ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRA.Mods.CommonSW\OpenRA.Mods.CommonSW.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  	<ItemGroup>
 		<None Include="$(EngineRootPath)/AUTHORS">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-
 </Project>

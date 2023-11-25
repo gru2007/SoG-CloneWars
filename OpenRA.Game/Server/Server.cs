@@ -595,7 +595,7 @@ namespace OpenRA.Server
 						{
 							var motdFile = Path.Combine(Platform.SupportDir, "motd.txt");
 							if (!File.Exists(motdFile))
-								File.WriteAllText(motdFile, "Добро пожаловать, хорошего настроения и удачи!"");
+								File.WriteAllText(motdFile, "Добро пожаловать, хорошего настроения и удачи!");
 
 							var motd = File.ReadAllText(motdFile);
 							if (!string.IsNullOrEmpty(motd))

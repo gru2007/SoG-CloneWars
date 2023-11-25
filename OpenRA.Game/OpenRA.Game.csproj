@@ -1,6 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+		<EngineRootPath>../engine</EngineRootPath>
+	</PropertyGroup>
+  <Import Project="$(EngineRootPath)/Directory.Build.props" />
+  <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+  <PropertyGroup>
     <RootNamespace>OpenRA</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup Condition="'$(MSBuildRuntimeType)'!='Mono'">
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="6.0.0" />

@@ -642,8 +642,8 @@ Actors:
 		Location: 37,51
 		Facing: 349
 
-Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml
+Rules: cnc_cw|rules/campaign-maprules.yaml, cnc_cw|rules/campaign-tooltips.yaml, cnc_cw|rules/campaign-palettes.yaml, rules.yaml
 
 Weapons: weapons.yaml
 
-Translations: cnc|languages/lua/en.ftl, cnc|languages/difficulties/en.ftl
+Translations: cnc_cw|languages/lua/en.ftl, cnc_cw|languages/difficulties/en.ftl

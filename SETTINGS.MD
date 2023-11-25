@@ -1,4 +1,4 @@
-This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-105 of OpenRA.
+This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-200 of OpenRA.
 
 All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.
 
@@ -71,11 +71,11 @@ Debug:
 ### UUID
 Sysinfo anonymous user identifier.
 
-**Default Value:** 79430623-8591-4d3d-8faa-376ef68e8538
+**Default Value:** f9df7aea-a9d7-4da0-91c3-6d5136ee884e
 
 ```miniyaml
 Debug:
-        UUID: 79430623-8591-4d3d-8faa-376ef68e8538
+        UUID: f9df7aea-a9d7-4da0-91c3-6d5136ee884e
 ```
 ### DisplayDeveloperSettings
 Enable hidden developer settings in the Advanced settings tab.
@@ -294,6 +294,24 @@ Automatic: Use the first supported profile.
 Graphics:
         GLProfile: Automatic
 ```
+## Launch
+These are runtime parameters which can't be defined in `settings.yaml`.
+
+### Connect
+Connect to the following server given as IP:PORT on startup.
+
+### URI
+Connect to the unified resource identifier openra://IP:PORT on startup.
+
+### Replay
+Automatically start playing the given replay file.
+
+### Benchmark
+Dump performance data into cpu.csv and render.csv in the logs folder with the given prefix.
+
+### Map
+Automatically start playing the given map.
+
 ## Player
 ### Name
 Sets the player nickname.
@@ -362,10 +380,8 @@ Server:
 ### Map
 Starts the game with a default map. Input as hash that can be obtained by the utility.
 
-
 ### Ban
 Takes a comma separated list of IP addresses that are not allowed to join.
-
 
 ### RequireAuthentication
 For dedicated servers only, allow anonymous clients to join.
@@ -379,14 +395,11 @@ Server:
 ### AdminNamesList
 For dedicated servers only, if non-empty, give admin permissions only for players in this list.
 
-
 ### ProfileIDWhitelist
 For dedicated servers only, if non-empty, only allow authenticated players with these profile IDs to join.
 
-
 ### ProfileIDBlacklist
 For dedicated servers only, if non-empty, always reject players with these user IDs from joining.
-
 
 ### EnableSingleplayer
 For dedicated servers only, controls whether a game can be started with just one human player in the lobby.
@@ -470,7 +483,7 @@ Server:
         FloodLimitJoinCooldown: 5000
 ```
 ### FloodLimitInterval
-Amount of miliseconds player chat messages are tracked for.
+Amount of milliseconds player chat messages are tracked for.
 
 **Default Value:** 5000
 
@@ -495,4 +508,31 @@ Delay in milliseconds before players can send chat messages after flood was dete
 ```miniyaml
 Server:
         FloodLimitCooldown: 15000
+```
+### EnableVoteKick
+Can players vote to kick other players?
+
+**Default Value:** True
+
+```miniyaml
+Server:
+        EnableVoteKick: True
+```
+### VoteKickTimer
+After how much time in miliseconds should the vote kick fail after idling?
+
+**Default Value:** 30000
+
+```miniyaml
+Server:
+        VoteKickTimer: 30000
+```
+### VoteKickerCooldown
+If a vote kick was unsuccessful for how long should the player who started the vote not be able to start new votes?
+
+**Default Value:** 120000
+
+```miniyaml
+Server:
+        VoteKickerCooldown: 120000
 ```

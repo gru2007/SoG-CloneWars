@@ -1,6 +1,6 @@
 Metadata:
 	Title: Storm of The Galaxy - Clone Wars
-	Version: Alpha-106
+	Version: Alpha-200
 	Website: https://stormgalaxy.com
 	WebIcon32: https://www.openra.net/images/icons/cnc_32x32.png
 	WindowTitle: Storm of The Galaxy - Clone Wars
@@ -162,6 +162,7 @@ Translations:
 	common|languages/rules/en.ftl
 	cnc_cw|languages/rules/en.ftl
 	cnc_cw|languages/en.ftl
+	cnc_cw|languages/common/en.ftl
 	cnc_cw|languages/ru.ftl
 
 Voices:
