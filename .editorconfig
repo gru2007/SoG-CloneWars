@@ -165,7 +165,7 @@ dotnet_diagnostic.IDE0082.severity = warning
 
 # IDE0090 Simplify 'new' expression
 #csharp_style_implicit_object_creation_when_type_is_apparent = true
-dotnet_diagnostic.IDE0090.severity = warning
+dotnet_diagnostic.IDE0090.severity = none
 
 # IDE0180 Use tuple to swap values
 #csharp_style_prefer_tuple_swap = true
@@ -697,7 +697,7 @@ dotnet_diagnostic.CA1821.severity = warning
 
 # Mark members as static.
 dotnet_code_quality.CA1822.api_surface = private,internal
-dotnet_diagnostic.CA1822.severity = warning
+dotnet_diagnostic.CA1822.severity = none
 
 # Avoid unused private fields.
 dotnet_diagnostic.CA1823.severity = warning
@@ -794,7 +794,7 @@ dotnet_diagnostic.CA1855.severity = warning
 dotnet_diagnostic.CA1858.severity = warning
 
 # Avoid using 'Enumerable.Any()' extension method.
-dotnet_diagnostic.CA1860.severity = warning
+dotnet_diagnostic.CA1860.severity = none
 
 ### Reliability Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/reliability-warnings
@@ -839,7 +839,7 @@ dotnet_diagnostic.CA2200.severity = warning
 dotnet_diagnostic.CA2207.severity = warning
 
 # Instantiate argument exceptions correctly.
-dotnet_diagnostic.CA2208.severity = warning
+dotnet_diagnostic.CA2208.severity = none
 
 # Dispose methods should call base class dispose.
 dotnet_diagnostic.CA2215.severity = warning
@@ -856,7 +856,7 @@ dotnet_diagnostic.CA2231.severity = warning
 # Provide correct arguments to formatting methods.
 #dotnet_code_quality.CA2241.additional_string_formatting_methods =
 dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
-dotnet_diagnostic.CA2241.severity = warning
+dotnet_diagnostic.CA2241.severity = none
 
 # Test for NaN correctly.
 dotnet_diagnostic.CA2242.severity = warning
