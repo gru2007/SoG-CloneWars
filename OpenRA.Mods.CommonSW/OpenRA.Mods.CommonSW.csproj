@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-		<EngineRootPath>../engine</EngineRootPath>
+		<EngineRootPath>..\engine</EngineRootPath>
 	</PropertyGroup>
-  <Import Project="$(EngineRootPath)/Directory.Build.props" />
-  <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-	</PropertyGroup>
+  <Import Project="$(EngineRootPath)\Directory.Build.props" />
 
   <ItemGroup>
     <ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj">
