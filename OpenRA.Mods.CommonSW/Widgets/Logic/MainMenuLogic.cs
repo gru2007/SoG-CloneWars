@@ -316,8 +316,17 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 								// Parameter string is blank if the player has opted out
 								url += SystemInfoPromptLogic.CreateParameterString();
+								var response_ra = await client.GetStringAsync(url);
 
-								var response = await client.GetStringAsync(url);
+								// Storm News, but keeping stats for OpenRA
+								var url_storm = new HttpQueryBuilder(webServices.GameNewsStorm)
+								{
+									{ "version", Game.EngineVersion },
+									{ "mod", modData.Manifest.Id },
+									{ "modversion", modData.Manifest.Metadata.Version }
+								}.ToString();
+								url_storm += SystemInfoPromptLogic.CreateParameterString();
+								var response = await client.GetStringAsync(url_storm);
 								await File.WriteAllTextAsync(cacheFile, response);
 
 								Game.RunAfterTick(() => // run on the main thread

@@ -549,7 +549,12 @@ namespace OpenRA.Server
 					lock (LobbyInfo)
 					{
 						client.Slot = LobbyInfo.FirstEmptySlot();
-						client.IsAdmin = !LobbyInfo.Clients.Any(c => c.IsAdmin);
+
+						// Admin Access give
+						if (Type == ServerType.Dedicated && Settings.AdminNamesList.Length > 0 && !LobbyInfo.Clients.Any(c => c.IsAdmin))
+							client.IsAdmin = Settings.AdminNamesList.Contains(client.Name);
+						else
+							client.IsAdmin = !LobbyInfo.Clients.Any(c => c.IsAdmin);
 
 						if (client.IsObserver && !LobbyInfo.GlobalSettings.AllowSpectators)
 						{
@@ -590,7 +595,7 @@ namespace OpenRA.Server
 						{
 							var motdFile = Path.Combine(Platform.SupportDir, "motd.txt");
 							if (!File.Exists(motdFile))
-								File.WriteAllText(motdFile, "Welcome, have fun and good luck!");
+								File.WriteAllText(motdFile, "Добро пожаловать, хорошего настроения и удачи!"");
 
 							var motd = File.ReadAllText(motdFile);
 							if (!string.IsNullOrEmpty(motd))
