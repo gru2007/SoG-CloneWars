@@ -17,6 +17,10 @@ RequiresMods:
 PackageFormats: Mix
 
 Packages:
+	~^SupportDir|Content/ra/v2/
+	~^SupportDir|Content/ra/v2/expand
+	~^SupportDir|Content/ra/v2/cnc
+	~^SupportDir|Content/ra/v2/movies
 	~^SupportDir|Content/cnc
 	~^SupportDir|Content/cnc/movies
 	^EngineDir
@@ -25,8 +29,10 @@ Packages:
 	~speech.mix
 	~conquer.mix
 	~sounds.mix
+	~sounds-ra.mix
 	~tempicnh.mix
 	~temperat.mix
+	~temperat-ra.mix
 	~winter.mix
 	~desert.mix
 	~movies.mix
@@ -87,6 +93,7 @@ TileSets:
 	cnc_cw|tilesets/winter.yaml
 	cnc_cw|tilesets/snow.yaml
 	cnc_cw|tilesets/temperat.yaml
+	cnc_cw|tilesets/temperat-ra.yaml
 	cnc_cw|tilesets/jungle.yaml
 
 Weapons:
@@ -245,11 +252,11 @@ MapGrid:
 
 DefaultOrderGenerator: UnitOrderGenerator
 
-SupportsMapsFrom: cnc
+SupportsMapsFrom: cnc, ra
 
 SoundFormats: Aud, Wav
 
-SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA
+SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA, ShpD2
 
 VideoFormats: Vqa, Wsa
 
@@ -260,7 +267,7 @@ SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
 ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
-	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun
+	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun, .tmp, .int
 	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var
 	VideoExtensions: .vqa, .wsa
 
@@ -293,9 +300,9 @@ GameSpeeds:
 			OrderLatency: 6
 
 ModContent:
-	InstallPromptMessage: Игре требуется контент из игры Tiberian Dawn.\n\nБыстрая установка автоматически скачает контент (без музыки и видео)\nиз зеркала 2007 C&C Gold freeware release.\n\nПродвинутая установка включает опции для копирования\nмузыки, видео и другого контента с официальных изданий.
-	QuickDownload: basefiles
-	HeaderMessage: Необходим контент игры Tiberian Dawn
+	InstallPromptMessage: Игре требуется контент из игры Tiberian Dawn и Red Alert.\n\nБыстрая установка автоматически скачает контент (без музыки и видео)\nиз зеркала 2007 C&C Gold freeware release.\n\nПродвинутая установка включает опции для копирования\nмузыки, видео и другого контента с официальных изданий.
+	QuickDownload: quick
+	HeaderMessage: Необходим контент игры Tiberian Dawn и Red Alert
 	Packages:
 		ContentPackage@base:
 			Title: Tiberian Dawn (база)
@@ -304,6 +311,13 @@ ModContent:
 			Sources: gdi95, nod95, tfd, origin, cncr-steam, cncr-origin
 			Required: true
 			Download: basefiles
+		ContentPackage@base2:
+			Title: Red Alert (база)
+			Identifier: base2
+			TestFiles: ^SupportDir|Content/ra-cnc/v2/allies-ra.mix, ^SupportDir|Content/ra-cnc/v2/conquer-ra.mix, ^SupportDir|Content/ra-cnc/v2/interior-ra.mix, ^SupportDir|Content/ra-cnc/v2/hires-ra.mix, ^SupportDir|Content/ra-cnc/v2/lores-ra.mix, ^SupportDir|Content/ra-cnc/v2/local-ra.mix, ^SupportDir|Content/ra-cnc/v2/speech-ra.mix, ^SupportDir|Content/ra-cnc/v2/russian-ra.mix, ^SupportDir|Content/ra-cnc/v2/snow-ra.mix, ^SupportDir|Content/ra-cnc/v2/sounds-ra.mix, ^SupportDir|Content/ra-cnc/v2/temperat-ra.mix
+			Sources: cncr-steam
+			Required: true
+			Download: raquick
 		ContentPackage@music:
 			Title: Tiberian Dawn Музыка
 			Identifier: music
