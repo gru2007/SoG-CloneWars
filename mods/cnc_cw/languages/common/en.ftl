@@ -518,8 +518,8 @@ label-audio-muted = Audio muted.
 label-audio-unmuted = Audio unmuted.
 
 ## PlayerProfileLogic
-label-loading-player-profile = Loading player profile...
-label-loading-player-profile-failed = Failed to load player profile.
+label-loading-player-profile = Загрузка профиля игрока...
+label-loading-player-profile-failed = Не удалось получить профиль.
 
 ## ProductionTooltipLogic
 label-requires = Requires { $prequisites }

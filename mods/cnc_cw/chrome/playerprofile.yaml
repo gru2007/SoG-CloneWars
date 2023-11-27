@@ -43,7 +43,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Height: 25
 					Font: Small
 					Align: Center
-					Text: Подключитесь к аккаунту форума, чтобы
+					Text: Подключитесь к аккаунту сайта, чтобы
 				Label@DESC_B:
 					Y: 22
 					Width: PARENT_RIGHT
@@ -64,7 +64,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Width: 240
 					Height: 20
 					Font: TinyBold
-					Text: Подключиться к аккаунту форума OpenRA
+					Text: Подключиться к аккаунту сайта SoG
 		Background@GENERATING_KEYS:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -115,7 +115,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Height: 25
 					Font: Small
 					Align: Center
-					Text: на форуме OpenRA и нажмите продолжить.
+					Text: на сайте SoG и нажмите продолжить.
 				Button@DELETE_KEY:
 					X: 15
 					Y: 70
@@ -148,7 +148,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Height: 25
 					Font: Small
 					Align: Center
-					Text: с форума OpenRA...
+					Text: с сайта SoG...
 				ProgressBar:
 					X: (PARENT_RIGHT - WIDTH) / 2
 					Y: 70
@@ -173,7 +173,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Height: 25
 					Font: Small
 					Align: Center
-					Text: аккаунту форума OpenRA.
+					Text: аккаунту сайта SoG.
 				Button@FINGERPRINT_NOT_FOUND_CONTINUE:
 					X: 185
 					Y: 70
@@ -192,7 +192,7 @@ Container@LOCAL_PROFILE_PANEL:
 					Height: 25
 					Font: Small
 					Align: Center
-					Text: Не удалось поключиться к форуму OpenRA.
+					Text: Не удалось поключиться к сайту SoG.
 				Label@DESC_B:
 					Y: 30
 					Width: PARENT_RIGHT

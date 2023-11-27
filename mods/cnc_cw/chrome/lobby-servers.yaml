@@ -100,7 +100,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Requires Password
+							TooltipText: Необходим пароль
 						Image@REQUIRES_AUTHENTICATION:
 							X: 372
 							Y: 6
@@ -109,7 +109,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Requires OpenRA forum account
+							TooltipText: Необходим аккаунт SoG
 						LabelWithTooltip@PLAYERS:
 							X: 390
 							Width: 85
