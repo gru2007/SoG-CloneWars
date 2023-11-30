@@ -405,6 +405,31 @@
 	SpawnActorOnDeath:
 		RequiresCondition: airborne
 
+^VoxelHelicopterHusk:
+	RenderVoxels:
+	RenderSprites:
+	WithVoxelBody:
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 85
+	Aircraft:
+	Health:
+		HP: 28000
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	ScriptTriggers:
+	Interactable:
+	Tooltip:
+		GenericName: Destroyed Aircraft
+	FallsToEarth:
+		Moves: true
+		Velocity: 112
+		MaximumSpinSpeed: 40
+	HitShape:
+
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor

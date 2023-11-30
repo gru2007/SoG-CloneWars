@@ -358,6 +358,8 @@ LAAT:
 		Ammo: 6
 		AmmoCondition: ammo
 	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: LAAT.Husk
 	RenderVoxels:
 		Scale: 6
 	ReloadAmmoPool:
@@ -372,3 +374,17 @@ LAAT:
 	WithShadow:
 	WithVoxelBody:
 		ShowShadow: False
+
+LAAT.Husk:
+	Inherits: ^VoxelHelicopterHusk
+	Tooltip:
+		Name: Laat
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 130
+	RenderVoxels:
+		Scale: 6
+	RenderVoxels:
+		Palette: colorpickervoxel
+	RenderVoxels:
+		Image: laat
