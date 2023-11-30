@@ -17,6 +17,12 @@
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
+^VoxelActor:
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+	WithVoxelBody:
+
 ^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -321,6 +327,76 @@
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	MustBeDestroyed:
+	Voiced:
+		VoiceSet: VehicleVoice
+	HitShape:
+	MapEditorData:
+		Categories: Aircraft
+	SpawnActorOnDeath:
+		RequiresCondition: airborne
+
+^VoxelHelicopter:
+	Inherits@2: ^ExistsInWorld
+	Inherits@selection: ^SelectableCombatUnit
+	Inherits@handicaps: ^PlayerHandicaps
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	Repairable:
+		RepairActors: hpad
+	Aircraft:
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+		CruiseAltitude: 4c704
+		AltitudeVelocity: 96
+		IdealSeparation: 853
+		MaximumPitch: 120
+		MoveIntoShroud: false
+		CanHover: true
+		TakeOffOnResupply: true
+		VTOL: true
+		LandableTerrainTypes: Clear, Rough, Road, Beach, Tiberium, BlueTiberium
+		Crushes: crate, infantry
+		CanSlide: true
+		Pitch: -64
+		PitchSpeed: 16
+		Roll: 56
+		RollSpeed: 14
+	HiddenUnderFog:
+		Type: GroundPosition
+	ActorLostNotification:
+		TextNotification: Unit lost.
+	AttackMove:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Helicopter
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 85
+	RenderVoxels:
+		Palette: colorpickervoxel
+	WithVoxelBody:
+	Selectable:
+		Bounds: 1512, 1512
+	RevealOnFire:
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+	MustBeDestroyed:
+	HitShape:
 	Voiced:
 		VoiceSet: VehicleVoice
 	HitShape:

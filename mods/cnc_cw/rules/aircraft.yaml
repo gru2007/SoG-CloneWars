@@ -310,3 +310,65 @@ ORCA.Husk:
 		Type: GroundPosition
 	RenderSprites:
 		Image: orca
+
+LAAT:
+	Inherits: ^VoxelHelicopter
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Laat
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: hpad, anyhq, ~techlevel.medium
+		Queue: Aircraft.GDI
+		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+	Aircraft:
+		TurnSpeed: 28
+		Speed: 186
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: OrcaAGMissiles
+		LocalOffset: 427,-171,-213, 427,171,-213
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Weapon: OrcaAAMissiles
+		LocalOffset: 427,-171,-213, 427,171,-213
+		PauseOnCondition: !ammo
+	AttackMove:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+	AttackAircraft:
+		FacingTolerance: 80
+		OpportunityFire: false
+		PersistentTargeting: false
+		AttackType: Hover
+		Voice: Attack
+	AmmoPool:
+		Ammo: 6
+		AmmoCondition: ammo
+	RenderSprites:
+	RenderVoxels:
+		Scale: 6
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 2
+	Selectable:
+		DecorationBounds: 1280, 1024
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	WithShadow:
+	WithVoxelBody:
+		ShowShadow: False

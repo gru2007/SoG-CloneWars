@@ -82,6 +82,9 @@ Sequences:
 	cnc_cw|sequences/civilian.yaml
 	cnc_cw|sequences/campaign.yaml
 
+ModelSequences:
+	cnc_cw|sequences/voxels.yaml
+
 TileSets:
 	cnc_cw|tilesets/desert.yaml
 	cnc_cw|tilesets/winter.yaml
@@ -152,7 +155,7 @@ ChromeLayout:
 	cnc_cw|chrome/credits.yaml
 	cnc_cw|chrome/dialogs.yaml
 	cnc_cw|chrome/tooltips.yaml
-	cnc_cw|chrome/assetbrowser.yaml
+	common|chrome/assetbrowser.yaml
 	cnc_cw|chrome/missionbrowser.yaml
 	cnc_cw|chrome/editor.yaml
 	common|chrome/text-notifications.yaml
@@ -190,7 +193,7 @@ LoadScreen: CncLoadScreen
 	Image: cnc_cw|uibits/chrome.png
 	Image2x: cnc_cw|uibits/chrome-2x.png
 	Image3x: cnc_cw|uibits/chrome-3x.png
-	Text: Loading
+	Text: Загрузка
 
 ServerTraits:
 	LobbyCommands
@@ -249,7 +252,7 @@ SupportsMapsFrom: cnc
 
 SoundFormats: Aud, Wav
 
-SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA
+SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA, PngSheet
 
 VideoFormats: Vqa, Wsa
 
@@ -257,10 +260,11 @@ TerrainFormat: DefaultTerrain
 
 SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
 
-ModelSequenceFormat: PlaceholderModelSequence
+ModelSequenceFormat: VoxelModelSequence
 
 AssetBrowser:
-	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun
+	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun, .png
+	ModelExtensions: .vxl
 	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var
 	VideoExtensions: .vqa, .wsa
 

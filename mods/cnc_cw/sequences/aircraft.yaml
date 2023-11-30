@@ -6,6 +6,12 @@ c17:
 	icon:
 		Filename: c17icnh.shp
 
+laat:
+	Inherits: ^VehicleOverlays
+	icon:
+		Filename: c17.shp
+
+
 tran:
 	Defaults:
 		Filename: tran.shp

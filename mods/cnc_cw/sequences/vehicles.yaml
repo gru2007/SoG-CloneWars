@@ -1,3 +1,11 @@
+^VehicleOverlays:
+	emp-overlay:
+		Filename: mcv.shp
+		Offset: 0, 0, 24
+		Length: *
+		BlendMode: Additive
+		IgnoreWorldTint: True
+
 mcv:
 	idle:
 		Filename: mcv.shp
