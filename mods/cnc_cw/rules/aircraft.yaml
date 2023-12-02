@@ -366,7 +366,8 @@ LAAT:
 		Delay: 100
 		Count: 2
 	Selectable:
-		DecorationBounds: 1280, 1024
+		Bounds: 1749, 1749
+		DecorationBounds: 1749, 1749
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
