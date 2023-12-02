@@ -253,8 +253,7 @@ namespace OpenRA.Mods.Common.Server
 				var nonBotPlayers = server.LobbyInfo.NonBotPlayers;
 
 				// Are all players and admin (could be spectating) ready?
-				if (nonBotPlayers.Any(c => c.State != Session.ClientState.Ready) ||
-					server.LobbyInfo.Clients.First(c => c.IsAdmin).State != Session.ClientState.Ready)
+				if (nonBotPlayers.Any(c => c.State != Session.ClientState.Ready))
 					return;
 
 				// Does server have at least 2 human players?
