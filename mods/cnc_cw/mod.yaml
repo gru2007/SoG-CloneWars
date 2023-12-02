@@ -24,8 +24,8 @@ Packages:
 	^EngineDir
 	$cnc_cw: cnc_cw
 	^EngineDir|mods/common: common
-	$cnc_cw: cnc
 	^EngineDir|mods/cnc: cnc_orig
+	~./mods/cnc_cw: cnc
 	~speech.mix
 	~conquer.mix
 	~sounds.mix
