@@ -155,7 +155,7 @@ ChromeLayout:
 	cnc_cw|chrome/credits.yaml
 	cnc_cw|chrome/dialogs.yaml
 	cnc_cw|chrome/tooltips.yaml
-	common|chrome/assetbrowser.yaml
+	cnc_cw|chrome/assetbrowser.yaml
 	cnc_cw|chrome/missionbrowser.yaml
 	cnc_cw|chrome/editor.yaml
 	common|chrome/text-notifications.yaml
