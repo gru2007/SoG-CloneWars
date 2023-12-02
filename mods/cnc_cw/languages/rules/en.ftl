@@ -1,27 +1,27 @@
 ## Player
 options-tech-level =
-    .low = Low
-    .medium = Medium
-    .no-powers = No Powers
-    .unrestricted = Unrestricted
+    .low = Низкий
+    .medium = Средний
+    .no-powers = Нет сил
+    .unrestricted = Без ограничений
 
 checkbox-redeployable-mcvs =
     .label = Redeployable MCVs
-    .description = Allow undeploying Construction Yard
+    .description = Разрешает складывание Construction Yard
 
 checkbox-stealth-deliveries =
-    .label = Stealth Deliveries
-    .description = Nod's delivery plane is cloaked
+    .label = Стелс-доставки
+    .description = Самолет доставки NOD скрыт
 
 ## World
 options-starting-units =
-    .mcv-only = MCV Only
-    .light-support = Light Support
-    .heavy-support = Heavy Support
+    .mcv-only = Только MCV
+    .light-support = Легкая поддержка
+    .heavy-support = Тяжёлая поддержка
 
 dropdown-map-creeps =
-    .label = Creep Actors
-    .description = Hostile forces spawn on the battlefield
+    .label = Крипы
+    .description = Враждебные силы спауняться на поле боя
 
 options-difficulty =
-    .normal = Normal
+    .normal = Нормально

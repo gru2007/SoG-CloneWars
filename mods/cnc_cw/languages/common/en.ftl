@@ -92,183 +92,183 @@ notification-game-started = Игра началась
 ## PlayerMessageTracker
 notification-chat-temp-disabled =
     { $remaining ->
-        [one] Chat is disabled. Please try again in { $remaining } second.
-       *[other] Chat is disabled. Please try again in { $remaining } seconds.
+        [one] Чат отключён. Попробуйте снова через { $remaining } сек.
+       *[other] Чат отключён. Попробуйте снова через { $remaining } сек.
     }
 
 ## VoteKickTracker
-notification-unable-to-start-a-vote = Unable to start a vote.
-notification-insufficient-votes-to-kick = Insufficient votes to kick player { $kickee }.
-notification-kick-already-voted = You have already voted.
-notification-vote-kick-started = Player { $kicker } has started a vote to kick player { $kickee }.
-notification-vote-kick-in-progress = { $percentage }% of players have voted to kick player { $kickee }.
-notification-vote-kick-ended = Vote to kick player { $kickee } has failed.
+notification-unable-to-start-a-vote = Невозможно начать голосование.
+notification-insufficient-votes-to-kick = Недостаточно голосов, чтобы кикнуть { $kickee }.
+notification-kick-already-voted = Вы уже проголосовали.
+notification-vote-kick-started = { $kicker } начал голосование за кик { $kickee }.
+notification-vote-kick-in-progress = { $percentage }% игроков проголосовали за кик { $kickee }.
+notification-vote-kick-ended = Голосование за кик { $kickee } было провалено.
 
 ## ActorEditLogic
-label-duplicate-actor-id = Duplicate Actor ID
-label-actor-id = Enter an Actor ID
-label-actor-owner = Owner
+label-duplicate-actor-id = Дублировать Actor ID
+label-actor-id = Введите Actor ID
+label-actor-owner = Владелец
 
 ## ActorSelectorLogic
-label-actor-type = Type: { $actorType }
+label-actor-type = Тип: { $actorType }
 
 ## CommonSelectorLogic
 options-common-selector =
-    .search-results = Search Results
-    .all = All
-    .multiple = Multiple
-    .none = None
+    .search-results = Результаты
+    .all = Все
+    .multiple = Несколько
+    .none = Ничего
 
 ## SaveMapLogic
-label-unpacked-map = unpacked
+label-unpacked-map = распакована
 
 dialog-save-map-failed =
-    .title = Failed to save map
-    .prompt = See debug.log for details.
+    .title = Не удалось сохранить
+    .prompt = Посмотрите debug.log для деталей.
     .confirm = OK
 
 dialog-overwrite-map-failed =
-    .title = Warning
-    .prompt = By saving you will overwrite
-    an already existing map.
-    .confirm = Save
+    .title = Предупреждение
+    .prompt = Сохраняя, вы перезапишите
+    уже существующую карту.
+    .confirm = Сохранить
 
 dialog-overwrite-map-outside-edit =
-    .title = Warning
-    .prompt = The map has been edited from outside the editor.
-    By saving you may overwrite progress
-    .confirm = Save
+    .title = Предупреждение
+    .prompt = Карта была отредактирована за пределами редактора.
+    Сохранив, вы можете потерять прогресс
+    .confirm = Сохранить
 
-notification-save-current-map = Saved current map.
+notification-save-current-map = Карта сохранена.
 
 ## GameInfoLogic
 menu-game-info =
-    .objectives = Objectives
-    .briefing = Briefing
-    .options = Options
-    .debug = Debug
-    .chat = Chat
+    .objectives = Задачи
+    .briefing = Брифинг
+    .options = Настройки
+    .debug = Дебаг
+    .chat = Чат
 
 ## GameInfoObjectivesLogic, GameInfoStatsLogic
-label-mission-in-progress = In progress
-label-mission-accomplished = Accomplished
-label-mission-failed = Failed
+label-mission-in-progress = В процессе
+label-mission-accomplished = Выполнено
+label-mission-failed = Провалено
 
 ## GameInfoStatsLogic
-label-client-state-disconnected = Gone
-label-mute-player = Mute this player
-label-unmute-player = Unmute this player
-button-kick-player = Kick this player
-button-vote-kick-player = Vote to kick this player
+label-client-state-disconnected = Ушёл
+label-mute-player = Замьютить
+label-unmute-player = Размьютить
+button-kick-player = Кикнуть
+button-vote-kick-player = Голосование за кик
 
 dialog-kick =
-    .title = Kick { $player }?
-    .prompt = This player will not be able to rejoin the game.
-    .confirm = Kick
+    .title = Кикнуть { $player }?
+    .prompt = Этот игрок не сможет перезайти в игру.
+    .confirm = Кик
 
 dialog-vote-kick =
-    .title = Vote to kick { $player }?
-    .prompt = This player will not be able to rejoin the game.
+    .title = Голосование за кик { $player }?
+    .prompt = Этот игрок не сможет перезайти в игру.
     .prompt-break-bots =
     { $bots ->
-        [one] Kicking the game admin will also kick 1 bot.
-       *[other] Kicking the game admin will also kick { $bots } bots.
+        [one] Кик админа так же кикнет 1 бота.
+       *[other] Кик админа так же кикнет { $bots } ботов.
     }
-    .vote-start = Start Vote
-    .vote-for = Vote For
-    .vote-against = Vote Against
-    .vote-cancel = Abstain
+    .vote-start = Начать
+    .vote-for = За
+    .vote-against = Против
+    .vote-cancel = Закрыть
 
-notification-vote-kick-disabled = Vote kick is disabled on this server.
+notification-vote-kick-disabled = Голосование за кик отключено на этом сервере.
 
 ## GameTimerLogic
-label-paused = Paused
-label-max-speed = Max Speed
-label-replay-speed = { $percentage }% Speed
-label-replay-complete = { $percentage }% complete
+label-paused = На паузе
+label-max-speed = Макс скорость
+label-replay-speed = { $percentage }% скорость
+label-replay-complete = { $percentage }% выполнено
 
 ## LobbyLogic, InGameChatLogic
-label-chat-disabled = Chat Disabled
+label-chat-disabled = чат отключен
 label-chat-availability =
     { $seconds ->
-        [one] Chat available in { $seconds } second...
-       *[other] Chat available in { $seconds } seconds...
+        [one] Чат доступен через { $seconds } сек...
+       *[other] Чат доступен через { $seconds } сек...
     }
 
 ## IngameMenuLogic
 menu-ingame =
-    .leave = Leave
-    .abort = Abort Mission
-    .restart = Restart
-    .surrender = Surrender
-    .load-game = Load Game
-    .save-game = Save Game
-    .music = Music
-    .settings = Settings
-    .return-to-map = Return to map
-    .resume = Resume
-    .save-map = Save Map
-    .exit-map = Exit Map Editor
+    .leave = Выход
+    .abort = Отмена миссии
+    .restart = Перезапуск
+    .surrender = Сдаться
+    .load-game = Загрузить
+    .save-game = Сохранить
+    .music = Музыка
+    .settings = Настройки
+    .return-to-map = К карте
+    .resume = Продолжить
+    .save-map = Сохранить карту
+    .exit-map = Закрыть
 
 dialog-leave-mission =
-    .title = Leave Mission
-    .prompt = Leave this game and return to the menu?
-    .confirm = Leave
-    .cancel = Stay
+    .title = Отменить миссию
+    .prompt = Оставить эту игру и вернуться в меню?
+    .confirm = Отменить
+    .cancel = Остаться
 
 dialog-restart-mission =
-    .title = Restart
-    .prompt = Are you sure you want to restart?
-    .confirm = Restart
-    .cancel = Stay
+    .title = Перезапуск
+    .prompt = Вы уверены что хотите начать с начала?
+    .confirm = Перезапуск
+    .cancel = Остаться
 
 dialog-surrender =
-    .title = Surrender
-    .prompt = Are you sure you want to surrender?
-    .confirm = Surrender
-    .cancel = Stay
+    .title = Сдаться
+    .prompt = Вы уверены что хотите сдаться?
+    .confirm = Сдаться
+    .cancel = Остаться
 
 dialog-error-max-player =
-    .title = Error: Max player count exceeded
-    .prompt = There are too many players defined ({ $players }/{ $max }).
-    .confirm = Back
+    .title = Ошибка: Игроков слишком много
+    .prompt = Слишком много игроков задано ({ $players }/{ $max }).
+    .confirm = Назад
 
 dialog-exit-map-editor =
-    .title = Exit Map Editor
-    .prompt-unsaved = Exit and lose all unsaved changes?
-    .prompt-deleted = The map may have been deleted outside the editor.
-    .confirm-anyway = Exit anyway
-    .confirm = Exit
+    .title = Выйти из редактора?
+    .prompt-unsaved = Выйти и потерять все несохраненные изменения?
+    .prompt-deleted = Карта, возможно, была удалена вне редактора.
+    .confirm-anyway = ВЫЙТИ!
+    .confirm = Выйти
 
 ## IngamePowerBarLogic
 ## IngamePowerCounterLogic
-label-power-usage = Power Usage: { $usage }/{ $capacity }
-label-infinite-power = Infinite
+label-power-usage = Энергия: { $usage }/{ $capacity }
+label-infinite-power = Бесконечно
 
 ## IngameSiloBarLogic
 ## IngameCashCounterLogic
-label-silo-usage = Silo Usage: { $usage }/{ $capacity }
+label-silo-usage = Хранилище: { $usage }/{ $capacity }
 
 ## ObserverShroudSelectorLogic
 options-shroud-selector =
-    .all-players = All Players
-    .disable-shroud = Disable Shroud
+    .all-players = Все игроки
+    .disable-shroud = Откл. Shroud
     .other = Other
 
 ## ObserverStatsLogic
 options-observer-stats =
-    .none = Information: None
-    .basic = Basic
-    .economy = Economy
-    .production = Production
-    .support-powers = Support Powers
+    .none = Информация: None
+    .basic = База
+    .economy = Экономика
+    .production = Производство
+    .support-powers = Силы поддержки
     .combat = Combat
-    .army = Army
-    .earnings-graph = Earnings (graph)
-    .army-graph = Army (graph)
+    .army = Армия
+    .earnings-graph = Деньги (граф)
+    .army-graph = Армия (граф)
 
 ## WorldTooltipLogic
-label-unrevealed-terrain = Unrevealed Terrain
+label-unrevealed-terrain = Неисследованая карта
 
 ## DownloadPackageLogic
 label-downloading = Загрузка { $title }
@@ -311,34 +311,34 @@ dialog-kick-client =
 dialog-kick-spectators =
     .prompt =
     { $count ->
-        [one] Are you sure you want to kick one spectator?
-       *[other] Are you sure you want to kick { $count } spectators?
+        [one] Вы уверены, что хотите кикнуть 1 наблюдателя?
+       *[other] Вы уверены, что хотите кикнуть { $count } наблюдателей?
     }
 
 ## LobbyLogic
 options-slot-admin =
-    .add-bots = Add
-    .remove-bots = Remove
-    .configure-bots = Configure Bots
-    .teams-count = { $count } Teams
-    .humans-vs-bots = Humans vs Bots
-    .free-for-all = Free for all
-    .configure-teams = Configure Teams
+    .add-bots = Добавить
+    .remove-bots = Удалить
+    .configure-bots = Настроить ботов
+    .teams-count = { $count } Команд
+    .humans-vs-bots = Люди vs Ботов
+    .free-for-all = Все VS Все
+    .configure-teams = Настр. Команды
 
 ## LobbyLogic, InGameChatLogic
-button-general-chat = All
-button-team-chat = Team
+button-general-chat = Все
+button-team-chat = Команда
 
 ## LobbyOptionsLogic
-label-not-available = Not Available
+label-not-available = Недоступно
 
 ## LobbyUtils
 options-lobby-slot =
-    .slot = Slot
-    .open = Open
-    .closed = Closed
-    .bots = Bots
-    .bots-disabled = Bots Disabled
+    .slot = Слот
+    .open = Открыт
+    .closed = Закрыт
+    .bots = Боты
+    .bots-disabled = Боты выкл.
 
 ## MapPreviewLogic
 label-connecting = Подключение...
@@ -350,115 +350,115 @@ button-retry-search = Повторить поиск
 label-created-by = Создана { $author }
 
 ## SpawnSelectorTooltipLogic
-label-disabled-spawn = Disabled spawn
-label-available-spawn = Available spawn
+label-disabled-spawn = Выключенный спаун
+label-available-spawn = Доступный спаун
 
 ## DisplaySettingsLogic
 options-camera =
-    .close = Close
-    .medium = Medium
-    .far = Far
-    .furthest = Furthest
+    .close = Близко
+    .medium = Средне
+    .far = Далеко
+    .furthest = Оч. Далеко
 
 options-display-mode =
-    .windowed = Windowed
-    .legacy-fullscreen = Fullscreen (Legacy)
-    .fullscreen = Fullscreen
+    .windowed = В окне
+    .legacy-fullscreen = Полноэкранный (Legacy)
+    .fullscreen = Полноэкранный
 
-label-video-display-index = Display { $number }
+label-video-display-index = Диспей { $number }
 
 options-status-bars =
-    .standard = Standard
-    .show-on-damage = Show On Damage
-    .always-show = Always Show
+    .standard = Стандарт
+    .show-on-damage = При уроне
+    .always-show = Всегда
 
 options-target-lines =
-    .automatic = Automatic
-    .manual = Manual
-    .disabled = Disabled
+    .automatic = Авто
+    .manual = Вручную
+    .disabled = Выкл.
 
 ## HotkeysSettingsLogic
-label-original-notice = The default is "{ $key }"
-label-duplicate-notice = This is already used for "{ $key }" in the { $context } context
+label-original-notice = По умолчанию - "{ $key }"
+label-duplicate-notice = Это уже используется для "{ $key }" в { $context }
 
 ## InputSettingsLogic
 options-mouse-scroll-type =
-    .disabled = Disabled
-    .standard = Standard
-    .inverted = Inverted
-    .joystick = Joystick
+    .disabled = Выкл.
+    .standard = Стандарт
+    .inverted = Инвертировано
+    .joystick = Джойстик
 
 ## InputSettingsLogic, IntroductionPromptLogic
 options-control-scheme =
-    .classic = Classic
-    .modern = Modern
+    .classic = Классика
+    .modern = Совеременный
 
 options-zoom-modifier =
     .alt = Alt
     .ctrl = Ctrl
     .meta = Meta
     .shift = Shift
-    .none = None
+    .none = Нет
 
 ## SettingsLogic
 dialog-settings-save =
-    .title = Restart Required
-    .prompt = Some changes will not be applied until
-    the game is restarted.
-    .cancel = Continue
+    .title = Необходим перезапуск
+    .prompt = Некоторые изменения не применяться
+    без перезапуска игры.
+    .cancel = Продолжить
 
 dialog-settings-restart =
-    .title = Restart Now?
-    .prompt = Some changes will not be applied until
-    the game is restarted. Restart now?
-    .confirm = Restart Now
-    .cancel = Restart Later
+    .title = Перезапустить сейчас?
+    .prompt = Некоторые изменения не применяться
+    без перезапуска игры. Перезапустить сейчас?
+    .confirm = Сейчас
+    .cancel = Позже
 
 dialog-settings-reset =
-    .title = Reset { $panel }
-    .prompt = Are you sure you want to reset
-    all settings in this panel?
-    .confirm = Reset
-    .cancel = Cancel
+    .title = Сбросить { $panel }
+    .prompt = Вы уверены, что хотите
+    сбросить все настройки в этой панели?
+    .confirm = Сбросить
+    .cancel = Отмена
 
 ## AssetBrowserLogic
-label-all-packages = All Packages
-label-length-in-seconds = { $length } sec
+label-all-packages = Все пакеты
+label-length-in-seconds = { $length } сек
 
 ## ConnectionLogic
-label-connecting-to-endpoint = Connecting to { $endpoint }...
-label-could-not-connect-to-target = Could not connect to { $target }
-label-unknown-error = Unknown error
-label-password-required = Password Required
-label-connection-failed = Connection Failed
-notification-mod-switch-failed = Failed to switch mod.
+label-connecting-to-endpoint = Подключение к { $endpoint }...
+label-could-not-connect-to-target = Не могу подключиться к { $target }
+label-unknown-error = Неизвестная ошибка
+label-password-required = Необходим пароль
+label-connection-failed = Подключение неуспешно
+notification-mod-switch-failed = Неудалось сменить мод.
 
 ## GameSaveBrowserLogic
 dialog-rename-save =
-    .title = Rename Save
-    .prompt = Enter a new file name:
-    .confirm = Rename
+    .title = Переименовать сейв
+    .prompt = Введите новое имя файла:
+    .confirm = Переименовать
 
 dialog-delete-save =
-    .title = Delete selected game save?
-    .prompt = Delete '{ $save }'
-    .confirm = Delete
+    .title = Удалить сейв?
+    .prompt = Удалить '{ $save }'?
+    .confirm = Удалить
 
 dialog-delete-all-saves =
-    .title = Delete all game saves?
+    .title = Удалить все сейвы?
     .prompt =
     { $count ->
-        [one] Delete { $count } save.
-       *[other] Delete { $count } saves.
+        [one] Удалить { $count } сейв.
+       *[other] Удалить { $count } сейвов.
     }
-    .confirm = Delete All
+    .confirm = Удалить все
 
-notification-save-deletion-failed = Failed to delete save file '{ $savePath }'. See the logs for details.
+notification-save-deletion-failed = Не удалось удалить '{ $savePath }'. Посмотрите логи для деталей.
 
 dialog-overwrite-save =
-    .title = Overwrite saved game?
-    .prompt = Overwrite { $file }?
-    .confirm = Overwrite
+    .title = Перезаписать сейв?
+    .prompt = Перезаписать { $file }?
+    .confirm = Перезаписать
 
 ## MainMenuLogic
 label-loading-news = Загрузка новостей
@@ -467,85 +467,85 @@ label-news-parsing-failed = Не удалось обработать новос�
 label-author-datetime = от { $author } в { $datetime }
 
 ## MapChooserLogic
-label-all-maps = All Maps
-label-no-matches = No matches
+label-all-maps = Все карты
+label-no-matches = Нет совпадений
 label-player-count =
     { $players ->
-        [one] { $players } Player
-       *[other] { $players } Players
+        [one] { $players } Игрок
+       *[other] { $players } Игроков
     }
-label-map-size-huge = (Huge)
-label-map-size-large = (Large)
-label-map-size-medium = (Medium)
-label-map-size-small = (Small)
+label-map-size-huge = (Гигансткая)
+label-map-size-large = (Большая)
+label-map-size-medium = (Средняя)
+label-map-size-small = (Малая)
 
-notification-map-deletion-failed = Failed to delete map '{ $map }'. See the debug.log file for details.
+notification-map-deletion-failed = Не удалось удалить карту '{ $map }'. Посмотрите debug.log для деталей.
 
 dialog-delete-map =
-    .title = Delete map
-    .prompt = Delete the map '{ $title }'?
-    .confirm = Delete
+    .title = Удалить карту
+    .prompt = Удалить карту '{ $title }'?
+    .confirm = Удалить
 
 dialog-delete-all-maps =
-    .title = Delete maps
-    .prompt = Delete all maps on this page?
-    .confirm = Delete
+    .title = Удалить карты
+    .prompt = Удалить все карты на этой странице?
+    .confirm = Удалить
 
 options-order-maps =
-    .player-count = Players
-    .title = Title
-    .date = Date
-    .size = Size
+    .player-count = Игроки
+    .title = Название
+    .date = Дата
+    .size = Размер
 
 ## MissionBrowserLogic
 dialog-no-video =
-    .title = Video not installed
-    .prompt = The game videos can be installed from the
-    "Manage Content" menu in the mod chooser.
-    .cancel = Back
+    .title = Видео не установлено
+    .prompt = Игровые видео могут быть установлены в
+    вкладке "Контент" в главном меню.
+    .cancel = Назад
 
 dialog-cant-play-video =
-    .title = Unable to play video
-    .prompt = Something went wrong during video playback.
-    .cancel = Back
+    .title = Невозможно проиграть видео
+    .prompt = Что-то пошло не так...
+    .cancel = Назад
 
 ## MusicPlayerLogic
-label-sound-muted = Audio has been muted in settings.
-label-no-song-playing = No song playing
+label-sound-muted = Аудио замьючено в настройках.
+label-no-song-playing = Песни не играют
 
 ## MuteHotkeyLogic
-label-audio-muted = Audio muted.
-label-audio-unmuted = Audio unmuted.
+label-audio-muted = Аудио замьючено.
+label-audio-unmuted = Аудио размьючено.
 
 ## PlayerProfileLogic
 label-loading-player-profile = Загрузка профиля игрока...
 label-loading-player-profile-failed = Не удалось получить профиль.
 
 ## ProductionTooltipLogic
-label-requires = Requires { $prequisites }
+label-requires = Нужно { $prequisites }
 
 ## ReplayBrowserLogic
-label-duration = Duration: { $time }
+label-duration = Время: { $time }
 
 options-replay-type =
-    .singleplayer = Singleplayer
-    .multiplayer = Multiplayer
+    .singleplayer = Одиночка
+    .multiplayer = Мультиплеер
 
 options-winstate =
-    .victory = Victory
-    .defeat = Defeat
+    .victory = Победа
+    .defeat = Поражение
 
 options-replay-date =
-    .today = Today
-    .last-week = Last 7 days
-    .last-fortnight = Last 14 days
-    .last-month = Last 30 days
+    .today = Сегодня
+    .last-week = Последние 7 дней
+    .last-fortnight = Последние 14 дней
+    .last-month = Последние 30 дней
 
 options-replay-duration =
-    .very-short = Under 5 min
-    .short = Short (10 min)
-    .medium = Medium (30 min)
-    .long = Long (60+ min)
+    .very-short = Меньше 5мин
+    .short = Короткие (10 мин)
+    .medium = Средние (30 мин)
+    .long = Длинные (60+ мин)
 
 dialog-rename-replay =
     .title = Rename Replay
@@ -584,91 +584,91 @@ dialog-incompatible-replay =
     { $map }.
 
 ## ServerCreationLogic
-label-internet-server-nat-A = Internet Server (UPnP/NAT-PMP
-label-internet-server-nat-B-enabled = Enabled
-label-internet-server-nat-B-not-supported = Not Supported
-label-internet-server-nat-B-disabled = Disabled
+label-internet-server-nat-A = Интернет-сервер (UPnP/NAT-PMP
+label-internet-server-nat-B-enabled = Вкл
+label-internet-server-nat-B-not-supported = Нет поддержки
+label-internet-server-nat-B-disabled = Выкл
 label-internet-server-nat-C = ):
 
-label-local-server = Local Server:
+label-local-server = Локальный:
 
 dialog-server-creation-failed =
-    .prompt = Could not listen on port { $port }
-    .prompt-port-used = Check if the port is already being used.
-    .prompt-error = Error is: "{ $message }" ({ $code })
-    .title = Server Creation Failed
-    .cancel = Back
+    .prompt = Не могу слушать порт { $port }
+    .prompt-port-used = Проверьте не занят ли порт другой программой.
+    .prompt-error = Ошибка: "{ $message }" ({ $code })
+    .title = Создание сервера неуспешно
+    .cancel = Назад
 
 ## ServerListLogic
 label-players-online-count =
     { $players ->
-        [one] { $players } Player Online
-       *[other] { $players } Players Online
+        [one] { $players } Игрок онлайн
+       *[other] { $players } Игроков онлайн
     }
 
-label-search-status-failed = Failed to query server list.
-label-search-status-no-games = No games found. Try changing filters.
-label-no-server-selected = No Server Selected
+label-search-status-failed = Неудалось получить список серверов.
+label-search-status-no-games = Игр не найдено. Попробуйте изменить фильтры.
+label-no-server-selected = Сервер не выбран
 
-label-map-status-searching = Searching...
-label-map-classification-unknown = Unknown Map
+label-map-status-searching = Поиск...
+label-map-classification-unknown = Неизвестная карта
 
 label-players-count =
     { $players ->
-        [0] No Players
-        [one] One Player
-       *[other] { $players } Players
+        [0] нет игроков
+        [one] 1 игрок
+       *[other] { $players } игроков
     }
 
 label-bots-count =
     { $bots ->
-        [0] No Bots
-        [one] One Bot
-       *[other] { $bots } Bots
+        [0] нет ботов
+        [one] 1 бот
+       *[other] { $bots } ботов
     }
 
 ## ServerListLogic, ReplayBrowserLogic, ObserverShroudSelectorLogic
-label-players = Players
+label-players = Игроков
 
 ## ServerListLogic, GameInfoStatsLogic
-label-spectators = Spectators
+label-spectators = Наблюдателей
 label-spectators-count =
     { $spectators ->
-        [0] No Spectators
-        [one] One Spectator
-       *[other] { $spectators } Spectators
+        [0] нет наблюдатель
+        [one] 1 наблюдатель
+       *[other] { $spectators } наблюдателей
     }
 
 ## ServerlistLogic, GameInfoStatsLogic, ObserverShroudSelectorLogic, SpawnSelectorTooltipLogic, ReplayBrowserLogic
-label-team-name = Team { $team }
-label-no-team = No Team
+label-team-name = Команда { $team }
+label-no-team = Нет команды
 
-label-playing = Playing
-label-waiting = Waiting
+label-playing = Игра
+label-waiting = Ожидание
 
 label-other-players-count =
     { $players ->
-        [one] One other player
-       *[other] { $players } other players
+        [one] 1 другой игрок
+       *[other] { $players } других игроков
     }
 
 label-in-progress-for =
     { $minutes ->
-        [0] In progress for less than a minute.
-        [one] In progress for { $minutes } minute.
-       *[other] In progress for { $minutes } minutes.
+        [0] В процессе меньше минуты.
+        [one] В процессе { $minutes } мин.
+       *[other] В процессе { $minutes } мин.
     }
 
-label-password-protected = Password protected
-label-waiting-for-players = Waiting for players
-label-server-shutting-down = Server shutting down
-label-unknown-server-state = Unknown server state
+label-password-protected = Защищено паролем
+label-waiting-for-players = Ожидание игроков
+label-server-shutting-down = Сервер выключается
+label-unknown-server-state = Неизвестное состояние
 
 ## Game
-notification-saved-screenshot = Saved screenshot { $filename }
+notification-saved-screenshot = Сохранен скрин { $filename }
 
 ## ChatCommands
-notification-invalid-command = { $name } is not a valid command.
+notification-invalid-command = { $name } неправильная команда.
 
 ## DebugVisualizationCommands
 description-combat-geometry = toggles combat geometry overlay.
@@ -697,9 +697,9 @@ description-kill-selected-actors = kills selected actors.
 description-dispose-selected-actors = disposes selected actors.
 
 ## HelpCommands
-notification-available-commands = Here are the available commands:
-description-no-description = no description available.
-description-help-description = provides useful info about various commands
+notification-available-commands = Здесь список команд:
+description-no-description = нет описания...
+description-help-description = дает инфомацию о различных командах
 
 ## PlayerCommands
 description-pause-description = pause or unpause the game
@@ -728,26 +728,26 @@ description-terrain-geometry-overlay = toggles the terrain geometry overlay.
 
 ## MapOptions, MissionBrowserLogic
 options-game-speed =
-    .slowest = Slowest
-    .slower = Slower
-    .normal = Normal
-    .fast = Fast
-    .faster = Faster
-    .fastest = Fastest
+    .slowest = Медлительно
+    .slower = Медленее
+    .normal = Номально
+    .fast = Быстренько
+    .faster = Быстро
+    .fastest = Флеш
 
 ## TimeLimitManager
 options-time-limit =
-    .no-limit = No limit
+    .no-limit = Без лимита
     .options =
         { $minutes ->
-            [one] { $minutes } minute
-           *[other] { $minutes } minutes
+            [one] { $minutes } мин
+           *[other] { $minutes } мин
         }
 
-notification-time-limit-expired = Time limit has expired.
+notification-time-limit-expired = Временной лимит вышел.
 
 ## EditorActorBrush
-notification-added-actor = Added { $name } ({ $id })
+notification-added-actor = Добавлено { $name } ({ $id })
 
 ## EditorCopyPasteBrush
 notification-copied-tiles =
