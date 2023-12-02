@@ -23,9 +23,9 @@ Packages:
 	~^SupportDir|Content/eaw/sounds.zip
 	^EngineDir
 	$cnc_cw: cnc_cw
+	cnc_cw|: cnc
 	^EngineDir|mods/common: common
 	^EngineDir|mods/cnc: cnc_orig
-	~./mods/cnc_cw: cnc
 	~speech.mix
 	~conquer.mix
 	~sounds.mix
