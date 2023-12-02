@@ -19,9 +19,12 @@ PackageFormats: Mix
 Packages:
 	~^SupportDir|Content/cnc
 	~^SupportDir|Content/cnc/movies
+	~^SupportDir|Content/eaw
+	~^SupportDir|Content/eaw/sounds.zip
 	^EngineDir
 	$cnc_cw: cnc_cw
 	^EngineDir|mods/common: common
+	^EngineDir|mods/cnc: cnc
 	~speech.mix
 	~conquer.mix
 	~sounds.mix
@@ -45,6 +48,8 @@ Packages:
 	cnc_cw|bits/jungle
 	cnc_cw|bits/desert
 	cnc_cw|bits/ss
+	cnc_cw|bits/ts
+	cnc_cw|bits/models
 	cnc_cw|scripts
 	common|scripts
 	cnc_cw|uibits
@@ -52,6 +57,7 @@ Packages:
 MapFolders:
 	cnc_cw|maps: System
 	~^SupportDir|maps/cnc/release-20231010: User
+	cnc|maps: System
 
 Rules:
 	cnc_cw|rules/misc.yaml
@@ -250,7 +256,7 @@ DefaultOrderGenerator: UnitOrderGenerator
 
 SupportsMapsFrom: cnc
 
-SoundFormats: Aud, Wav
+SoundFormats: Aud, Wav, Mp3
 
 SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA, PngSheet
 
@@ -265,7 +271,7 @@ ModelSequenceFormat: VoxelModelSequence
 AssetBrowser:
 	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun, .png
 	ModelExtensions: .vxl
-	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var
+	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var, .mp3
 	VideoExtensions: .vqa, .wsa
 
 GameSpeeds:
@@ -298,7 +304,7 @@ GameSpeeds:
 
 ModContent:
 	InstallPromptMessage: Игре требуется контент из игры Tiberian Dawn.\n\nБыстрая установка автоматически скачает контент (без музыки и видео)\nиз зеркала 2007 C&C Gold freeware release.\n\nПродвинутая установка включает опции для копирования\nмузыки, видео и другого контента с официальных изданий.
-	QuickDownload: basefiles
+	QuickDownload: basefiles, basefiles2
 	HeaderMessage: Необходим контент игры Tiberian Dawn
 	Packages:
 		ContentPackage@base:
@@ -308,6 +314,13 @@ ModContent:
 			Sources: gdi95, nod95, tfd, origin, cncr-steam, cncr-origin
 			Required: true
 			Download: basefiles
+		ContentPackage@eaw:
+			Title: Empire at War (звуки)
+			Identifier: eaw
+			TestFiles: ^SupportDir|Content/eaw/Bossk_short_3_rus.mp3, ^SupportDir|Content/eaw/I000_uhd0202_rus.wav, ^SupportDir|Content/eaw/U000_trc0102_rus.wav
+			Sources:
+			Required: true
+			Download: eaw
 		ContentPackage@music:
 			Title: Tiberian Dawn Музыка
 			Identifier: music

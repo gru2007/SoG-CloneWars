@@ -80,14 +80,22 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var downloadYaml = MiniYaml.Load(modFileSystem, content.Downloads, null);
 				modFileSystem.UnmountAll();
 
-				var download = downloadYaml.FirstOrDefault(n => n.Key == content.QuickDownload);
-				if (download == null)
-					throw new InvalidOperationException($"Mod QuickDownload `{content.QuickDownload}` definition not found.");
+				foreach (var download in downloadYaml)
+				{
+					if (download == null)
+						throw new InvalidOperationException($"Mod QuickDownload `{content.QuickDownload}` definition not found.");
+				}
 
+				// Я знаю - сделано максимально тупо и по идиотски, но я пока не знаю как улучшить данную систему :(
 				Ui.OpenWindow("PACKAGE_DOWNLOAD_PANEL", new WidgetArgs
 				{
-					{ "download", new ModContent.ModDownload(download.Value, modObjectCreator) },
-					{ "onSuccess", continueLoading }
+					{ "download", new ModContent.ModDownload(downloadYaml[0].Value, modObjectCreator) },
+					{ "onSuccess", () => { } }
+				});
+				Ui.OpenWindow("PACKAGE_DOWNLOAD_PANEL", new WidgetArgs
+				{
+					{ "download", new ModContent.ModDownload(downloadYaml[1].Value, modObjectCreator) },
+					{ "onSuccess", continueLoading } // Так то в цикле надо делать проверку какая это итерация и выполнять код если она X, но оставлю это на потом
 				});
 			};
 
