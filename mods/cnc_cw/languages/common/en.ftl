@@ -525,7 +525,7 @@ label-loading-player-profile-failed = Не удалось получить пр�
 label-requires = Нужно { $prequisites }
 
 ## ReplayBrowserLogic
-label-duration = Время: { $time }
+label-duration = Длительность: { $time }
 
 options-replay-type =
     .singleplayer = Одиночка
@@ -548,39 +548,39 @@ options-replay-duration =
     .long = Длинные (60+ мин)
 
 dialog-rename-replay =
-    .title = Rename Replay
-    .prompt = Enter a new file name:
-    .confirm = Rename
+    .title = Переименовать реплей
+    .prompt = Введите новое имя реплея:
+    .confirm = Переименовать
 
 dialog-delete-replay =
-    .title = Delete selected replay?
-    .prompt = Delete replay { $replay }?
-    .confirm = Delete
+    .title = Удалить выбранный реплей?
+    .prompt = Удалить реплей { $replay }?
+    .confirm = Удалить
 
 dialog-delete-all-replays =
-    .title = Delete all selected replays?
+    .title = Удалить выбранные реплеи?
     .prompt =
     { $count ->
-        [one] Delete { $count } replay.
-       *[other] Delete { $count } replays.
+        [one] Удалить { $count } реплей.
+       *[other] Удалить { $count } реплеев.
     }
-    .confirm = Delete All
+    .confirm = Удалить всё
 
-notification-replay-deletion-failed = Failed to delete replay file '{ $file }'. See the debug.log file for details.
+notification-replay-deletion-failed = Невозможно удалить реплей '{ $file }'. Посмотрите debug.log для деталей.
 
 ## ReplayUtils
--incompatible-replay-recorded = It was recorded with
+-incompatible-replay-recorded = Это было записано с
 
 dialog-incompatible-replay =
-    .title = Incompatible Replay
-    .prompt = Replay metadata could not be read.
+    .title = Неподдерживаемый реплей
+    .prompt = Метадата реплея не может быть прочитана.
     .confirm = OK
-    .prompt-unknown-version = { -incompatible-replay-recorded } an unknown version.
-    .prompt-unknown-mod = { -incompatible-replay-recorded } an unknown mod.
-    .prompt-unavailable-mod = { -incompatible-replay-recorded } an unavailable mod: { $mod }.
-    .prompt-incompatible-version = { -incompatible-replay-recorded } an incompatible version:
+    .prompt-unknown-version = { -incompatible-replay-recorded } неизвестная версия.
+    .prompt-unknown-mod = { -incompatible-replay-recorded } неизвестный мод.
+    .prompt-unavailable-mod = { -incompatible-replay-recorded } недоступный мод: { $mod }.
+    .prompt-incompatible-version = { -incompatible-replay-recorded } несовместимая версия:
     { $version }.
-    .prompt-unavailable-map = { -incompatible-replay-recorded } an unavailable map:
+    .prompt-unavailable-map = { -incompatible-replay-recorded } недоступная карта:
     { $map }.
 
 ## ServerCreationLogic
@@ -678,7 +678,7 @@ description-depth-buffer = toggles depth buffer overlay.
 description-actor-tags-overlay = toggles actor tags overlay.
 
 ## DevCommands
-notification-cheats-disabled = Cheats are disabled.
+notification-cheats-disabled = Читы выключены.
 notification-invalid-cash-amount = Invalid amount of cash.
 description-toggle-visibility = toggles visibility checks and minimap.
 description-give-cash = gives the default or specified amount of money.
@@ -702,11 +702,11 @@ description-no-description = нет описания...
 description-help-description = дает инфомацию о различных командах
 
 ## PlayerCommands
-description-pause-description = pause or unpause the game
-description-surrender-description = self-destruct everything and lose the game
+description-pause-description = переключить паузу
+description-surrender-description = уничтожить все и проиграть в игре
 
 ## DeveloperMode
-notification-cheat-used = Cheat used: { $cheat } by { $player }{ $suffix }
+notification-cheat-used = Чит использован: { $cheat } { $player }{ $suffix }
 
 ## CustomTerrainDebugOverlay
 description-custom-terrain-debug-overlay = toggles the custom terrain debug overlay.
@@ -730,7 +730,7 @@ description-terrain-geometry-overlay = toggles the terrain geometry overlay.
 options-game-speed =
     .slowest = Медлительно
     .slower = Медленее
-    .normal = Номально
+    .normal = Нормально
     .fast = Быстренько
     .faster = Быстро
     .fastest = Флеш
@@ -752,27 +752,27 @@ notification-added-actor = Добавлено { $name } ({ $id })
 ## EditorCopyPasteBrush
 notification-copied-tiles =
     { $amount ->
-       [one] Copied one tile
-      *[other] Copied { $amount } tiles
+       [one] Скопирован 1 тайл
+      *[other] Скопировано { $amount } тайлов
     }
 
 ## EditorDefaultBrush
-notification-removed-actor = Removed { $name } ({ $id })
-notification-removed-resource = Removed { $type }
+notification-removed-actor = Удален { $name } ({ $id })
+notification-removed-resource = Удален { $type }
 
 ## EditorResourceBrush
 notification-added-resource =
     { $amount ->
-       [one] Added one cell of { $type }
-      *[other] Added { $amount } cells of { $type }
+       [one] Добавлена 1 ячейка { $type }
+      *[other] Добавлено { $amount } ячеек { $type }
     }
 
 ## EditorTileBrush
-notification-added-tile = Added tile { $id }
-notification-filled-tile = Filled with tile { $id }
+notification-added-tile = Добавлен тайл { $id }
+notification-filled-tile = Заполнено тайлом { $id }
 
 ## EditorActionManager
-notification-opened = Opened
+notification-opened = Открыт
 
 ## ActorEditLogic
-notification-edited-actor = Edited { $name } ({ $id })
+notification-edited-actor = Отредактирован { $name } ({ $id })

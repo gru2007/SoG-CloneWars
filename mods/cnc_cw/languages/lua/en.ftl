@@ -1,12 +1,12 @@
 ## campaign
-objective-failed = Objective failed
-objective-completed = Objective completed
+objective-failed = Задание провалено
+objective-completed = Задание выполнено
 
-primary = Primary
-secondary = Secondary
+primary = Основное
+secondary = Вторичное
 
-new-primary-objective = New primary objective
-new-secondary-objective = New secondary objective
+new-primary-objective = Новая основная цель
+new-secondary-objective = Новая вторичная цель
 
 # cnc64gdi01
 destroy-obelisk-sams = Destroy the SAM sites protecting the Obelisk.

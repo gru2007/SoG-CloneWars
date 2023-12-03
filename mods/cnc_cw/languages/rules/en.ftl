@@ -6,8 +6,8 @@ options-tech-level =
     .unrestricted = Без ограничений
 
 checkbox-redeployable-mcvs =
-    .label = Redeployable MCVs
-    .description = Разрешает складывание Construction Yard
+    .label = Складывание базы
+    .description = Разрешает складывание базы в машину
 
 checkbox-stealth-deliveries =
     .label = Стелс-доставки

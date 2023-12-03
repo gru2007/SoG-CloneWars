@@ -1,7 +1,7 @@
 dropdown-difficulty =
-    .label = Difficulty
-    .description = The difficulty of the mission
+    .label = Сложность
+    .description = Сложность миссии
 
 options-difficulty =
-    .easy = Easy
-    .hard = Hard
+    .easy = Легко
+    .hard = Сложно

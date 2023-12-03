@@ -49,11 +49,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Construction complete.
+		ReadyTextNotification: Строительство завершено.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить больше.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -64,11 +64,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Construction complete.
+		ReadyTextNotification: Строительство завершено.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить больше.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -79,11 +79,11 @@ FACT:
 		Group: Defence
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Construction complete.
+		ReadyTextNotification: Строительство завершено.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить больше.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -94,11 +94,11 @@ FACT:
 		Group: Defence
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Construction complete.
+		ReadyTextNotification: Строительство завершено.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить больше.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -122,7 +122,7 @@ FACT:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
 	Buildable:
-		Description: Builds structures
+		Description: Строит здания
 
 FACT.GDI:
 	Inherits: FACT

@@ -171,8 +171,8 @@ Translations:
 	common|languages/en.ftl
 	common|languages/rules/en.ftl
 	cnc_cw|languages/rules/en.ftl
-	cnc_cw|languages/en.ftl
 	cnc_cw|languages/common/en.ftl
+	cnc_cw|languages/common/rules/en.ftl
 	cnc_cw|languages/ru.ftl
 
 Voices:
