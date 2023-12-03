@@ -20,7 +20,6 @@ Packages:
 	~^SupportDir|Content/cnc
 	~^SupportDir|Content/cnc/movies
 	~^SupportDir|Content/eaw
-	~^SupportDir|Content/eaw/sounds.zip
 	^EngineDir
 	$cnc_cw: cnc_cw
 	cnc_cw|: cnc
