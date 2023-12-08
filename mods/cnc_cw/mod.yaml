@@ -304,7 +304,7 @@ GameSpeeds:
 
 ModContent:
 	InstallPromptMessage: Игре требуется контент из игры Tiberian Dawn.\n\nБыстрая установка автоматически скачает контент (без музыки и видео)\nиз зеркала 2007 C&C Gold freeware release.\n\nПродвинутая установка включает опции для копирования\nмузыки, видео и другого контента с официальных изданий.
-	QuickDownload: basefiles, basefiles2
+	QuickDownload: basefiles2, basefiles
 	HeaderMessage: Необходим контент игры Tiberian Dawn
 	Packages:
 		ContentPackage@base:
