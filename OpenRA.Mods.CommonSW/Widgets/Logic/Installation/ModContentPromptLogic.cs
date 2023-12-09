@@ -12,9 +12,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using OpenRA.FileSystem;
 using OpenRA.Widgets;
-using FS = OpenRA.FileSystem.FileSystem;
 
 namespace OpenRA.Mods.Common.Widgets.Logic
 {
@@ -30,7 +28,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		bool requiredContentInstalled;
 
 		[ObjectCreator.UseCtor]
-		public ModContentPromptLogic(ModData modData, Widget widget, Manifest mod, ModContent content, Action continueLoading)
+		public ModContentPromptLogic(ModData modData, Widget widget, Manifest mod, string modId, ModContent content, Action continueLoading)
 		{
 			this.content = content;
 			CheckRequiredContentInstalled();
@@ -61,41 +59,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				Ui.OpenWindow("CONTENT_PANEL", new WidgetArgs
 				{
+					{ "continueLoading", () => Game.RunAfterTick(() => Game.InitializeMod(modId, new Arguments())) },
 					{ "mod", mod },
 					{ "content", content },
 					{ "onCancel", CheckRequiredContentInstalled }
-				});
-			};
-
-			var quickButton = panel.Get<ButtonWidget>("QUICK_BUTTON");
-			quickButton.IsVisible = () => !string.IsNullOrEmpty(content.QuickDownload);
-			quickButton.Bounds.Y += headerHeight;
-			quickButton.OnClick = () =>
-			{
-				var modObjectCreator = new ObjectCreator(mod, Game.Mods);
-				var modPackageLoaders = modObjectCreator.GetLoaders<IPackageLoader>(mod.PackageFormats, "package");
-				var modFileSystem = new FS(mod.Id, Game.Mods, modPackageLoaders);
-				modFileSystem.LoadFromManifest(mod);
-
-				var downloadYaml = MiniYaml.Load(modFileSystem, content.Downloads, null);
-				modFileSystem.UnmountAll();
-
-				foreach (var download in downloadYaml)
-				{
-					if (download == null)
-						throw new InvalidOperationException($"Mod QuickDownload `{content.QuickDownload}` definition not found.");
-				}
-
-				// Я знаю - сделано максимально тупо и по идиотски, но я пока не знаю как улучшить данную систему :(
-				Ui.OpenWindow("PACKAGE_DOWNLOAD_PANEL", new WidgetArgs
-				{
-					{ "download", new ModContent.ModDownload(downloadYaml[0].Value, modObjectCreator) },
-					{ "onSuccess", () => { } }
-				});
-				Ui.OpenWindow("PACKAGE_DOWNLOAD_PANEL", new WidgetArgs
-				{
-					{ "download", new ModContent.ModDownload(downloadYaml[1].Value, modObjectCreator) },
-					{ "onSuccess", continueLoading } // Так то в цикле надо делать проверку какая это итерация и выполнять код если она X, но оставлю это на потом
 				});
 			};
 

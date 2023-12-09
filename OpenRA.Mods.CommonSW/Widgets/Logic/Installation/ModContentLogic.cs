@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using OpenRA.FileSystem;
 using OpenRA.Widgets;
@@ -23,6 +24,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		[TranslationReference]
 		const string ManualInstall = "button-manual-install";
 
+		[TranslationReference]
+		const string Continue = "button-continue";
+
+		[TranslationReference]
+		const string Quit = "button-quit";
+
 		readonly ModContent content;
 		readonly ScrollPanelWidget scrollPanel;
 		readonly Widget template;
@@ -31,13 +38,17 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		readonly Dictionary<string, ModContent.ModDownload> downloads = new();
 
 		bool sourceAvailable;
+		bool requiredContentInstalled;
 
 		[ObjectCreator.UseCtor]
-		public ModContentLogic(Widget widget, Manifest mod, ModContent content, Action onCancel)
+		public ModContentLogic(Widget widget, Manifest mod, ModContent content, Action onCancel, Action continueLoading)
 		{
 			this.content = content;
+			CheckRequiredContentInstalled();
 
 			var panel = widget.Get("CONTENT_PANEL");
+			var continueMessage = TranslationProvider.GetString(Continue);
+			var quitMessage = TranslationProvider.GetString(Quit);
 
 			var modObjectCreator = new ObjectCreator(mod, Game.Mods);
 			var modPackageLoaders = modObjectCreator.GetLoaders<IPackageLoader>(mod.PackageFormats, "package");
@@ -86,7 +97,14 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var backButton = panel.Get<ButtonWidget>("BACK_BUTTON");
 			backButton.Bounds.Y += headerHeight;
-			backButton.OnClick = () => { Ui.CloseWindow(); onCancel(); };
+			backButton.GetText = () => requiredContentInstalled ? continueMessage : quitMessage;
+			backButton.OnClick = () =>
+			{
+				if (requiredContentInstalled)
+					continueLoading();
+				else
+					Game.Exit();
+			};
 
 			PopulateContentList();
 			Game.RunAfterTick(Ui.ResetTooltips);
@@ -128,7 +146,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					var widgetArgs = new WidgetArgs
 					{
 						{ "download", downloads[p.Value.Download] },
-						{ "onSuccess", () => { } }
+						{ "onSuccess", CheckRequiredContentInstalled }
 					};
 
 					downloadButton.OnClick = () => Ui.OpenWindow("PACKAGE_DOWNLOAD_PANEL", widgetArgs);
@@ -149,6 +167,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 
 			sourceAvailable = content.Packages.Values.Any(p => p.Sources.Length > 0 && !p.IsInstalled());
+		}
+
+		void CheckRequiredContentInstalled()
+		{
+			requiredContentInstalled = content.Packages
+				.Where(p => p.Value.Required)
+				.All(p => p.Value.TestFiles.All(f => File.Exists(Platform.ResolvePath(f))));
 		}
 	}
 }

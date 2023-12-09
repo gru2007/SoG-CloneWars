@@ -1,6 +1,6 @@
 Metadata:
 	Title: Storm of The Galaxy - Clone Wars
-	Version: Alpha-206
+	Version: Alpha-209
 	Website: https://stormgalaxy.com
 	WebIcon32: https://raw.githubusercontent.com/gru2007/SoG-CloneWars/main/mods/cnc_cw/icon.png
 	WindowTitle: Storm of The Galaxy - Clone Wars
@@ -303,9 +303,9 @@ GameSpeeds:
 			OrderLatency: 6
 
 ModContent:
-	InstallPromptMessage: Игре требуется контент из игры Tiberian Dawn.\n\nБыстрая установка автоматически скачает контент (без музыки и видео)\nиз зеркала 2007 C&C Gold freeware release.\n\nПродвинутая установка включает опции для копирования\nмузыки, видео и другого контента с официальных изданий.
+	InstallPromptMessage: Игре требуется контент из игр Tiberian Dawn и Empire at War.\n\nЕго можно скачать нажатием двух кнопок, игра скачает его\nиз зеркала 2007 C&C Gold freeware release и сервера SoG.\n\nПри желании можете скопировать музыку, видео и другой контент\nиз официальных изданий.
 	QuickDownload: basefiles2, basefiles
-	HeaderMessage: Необходим контент игры Tiberian Dawn
+	HeaderMessage: Необходим контент игр Tiberian Dawn и Empire at War
 	Packages:
 		ContentPackage@base:
 			Title: Tiberian Dawn (база)
