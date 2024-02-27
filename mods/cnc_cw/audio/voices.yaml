@@ -1,10 +1,10 @@
 GenericVoice:
 	Variants:
-		nod: .v01, .v03
-		gdi: .v01, .v03
+		nod: .wav
+		gdi: .wav
 	Voices:
-		Select: ackno, await1, ready, report1, yessir1
-		Action: affirm1, ritaway, ugotit, roger, movout1
+		Select: U000_tbp0103_rus-2, U000_tbp0105_rus-2, U000_tbp0106_rus-2, U000_tbp0107_rus-2, U000_tbp0108_rus-2, U000_tbp0109_rus-2
+		Action: U000_tbp0110_rus-2, U000_tbp0111_rus-2, U000_tbp0202_rus-2, U000_tbp0113_rus-2, U000_tbp0114_rus-2, U000_tbp0210_rus-2
 		Attack: affirm1, ritaway, ugotit, noprob, yessir1
 		Die: nuyell1, nuyell3, nuyell4, nuyell5, nuyell6
 		Burned: yell1

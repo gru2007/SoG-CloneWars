@@ -15,9 +15,18 @@ basefiles: Tiberian Dawn (база)
 
 eaw: Empire at War (звуки)
 	Type: ZipFile
-	SHA1: b515a637a41f5d4bca354d9c6ffd4dfa8253ce8b
+	SHA1: d8d59895be64c8374b953d4e39a8ce8e58e53637
 	MirrorList: https://master.stormgalaxy.com/eaw.txt
 	Extract:
-		^SupportDir|Content/eaw/Bossk_short_3_rus.mp3: Bossk_short_3_rus.mp3
-		^SupportDir|Content/eaw/I000_uhd0202_rus.wav: I000_uhd0202_rus.wav
-		^SupportDir|Content/eaw/U000_trc0102_rus.wav: U000_trc0102_rus.wav
+		^SupportDir|Content/eaw/U000_tbp0103_rus-2.wav: U000_tbp0103_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0110_rus-2.wav: U000_tbp0110_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0105_rus-2.wav: U000_tbp0105_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0111_rus-2.wav: U000_tbp0111_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0106_rus-2.wav: U000_tbp0106_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0202_rus-2.wav: U000_tbp0202_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0107_rus-2.wav: U000_tbp0107_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0113_rus-2.wav: U000_tbp0113_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0108_rus-2.wav: U000_tbp0108_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0114_rus-2.wav: U000_tbp0114_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0109_rus-2.wav: U000_tbp0109_rus-2.wav
+		^SupportDir|Content/eaw/U000_tbp0210_rus-2.wav: U000_tbp0210_rus-2.wav

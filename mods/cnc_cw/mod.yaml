@@ -317,7 +317,7 @@ ModContent:
 		ContentPackage@eaw:
 			Title: Empire at War (звуки)
 			Identifier: eaw
-			TestFiles: ^SupportDir|Content/eaw/Bossk_short_3_rus.mp3, ^SupportDir|Content/eaw/I000_uhd0202_rus.wav, ^SupportDir|Content/eaw/U000_trc0102_rus.wav
+			TestFiles: ^SupportDir|Content/eaw/U000_tbp0103_rus-2.wav, ^SupportDir|Content/eaw/U000_tbp0202_rus-2.wav
 			Sources:
 			Required: true
 			Download: eaw
