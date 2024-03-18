@@ -128,15 +128,15 @@
 		Name: Любая
 		InternalName: Random
 		RandomFactionMembers: gdi, nod
-		Description: Random Faction\nA random faction will be chosen when the game starts.
+		Description: Случайная\nСлучайная фракция будет выбрана после запуска игры.
 	Faction@gdi:
 		Name: ВАР
 		InternalName: gdi
-		Description: Global Defense Initiative\nThe GDI is an international military branch of the United Nations tasked\nwith keeping world peace. Commanding the combined forces of the world's\nmost powerful nations, they possess an unmatched arsenal of high-tech weaponry.
+		Description: Великая Армия Республики\nОсновная часть вооружённых сил Галактической Республики в её последние годы существования.\nЗа исключением сепаратистских сил, она стала одной из крупнейших армий, когда-либо созданных.
 	Faction@nod:
 		Name: КНС
 		InternalName: nod
-		Description: Brotherhood of Nod\nThe Brotherhood is a religious cult centered around their leader Kane\nand the alien substance Tiberium. They utilize stealth technology\nand guerilla tactics to defeat those who oppose them.
+		Description: Конфедерация Независимых Систем\nГосударство, образованное несколькими планетами и секторами,\nобъявившими о намерении выйти из Галактической Республики,\nотказываясь соблюдать ее чрезмерное налогообложение и подчиняться коррупции в Сенате
 	ResourceRenderer:
 		ResourceTypes:
 			Tiberium:
