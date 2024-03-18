@@ -342,54 +342,6 @@ A10CIS:
 		StartColorAlpha: 128
 	-MapEditorData:
 
-TRAN.Husk:
-	Inherits: ^HelicopterHusk
-	Tooltip:
-		Name: Chinook Transport
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 140
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-	WithIdleOverlay@ROTOR1:
-		Offset: 597,0,85
-		Sequence: rotor
-	WithIdleOverlay@ROTOR2:
-		Offset: -597,0,171
-		Sequence: rotor2
-	RenderSprites:
-		Image: tran
-
-HELI.Husk:
-	Inherits: ^HelicopterHusk
-	Tooltip:
-		Name: Apache Longbow
-	Aircraft:
-		TurnSpeed: 16
-		Speed: 186
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-	WithIdleOverlay:
-		Offset: 0,0,85
-		Sequence: rotor
-	RenderSprites:
-		Image: heli
-
-ORCA.Husk:
-	Inherits: ^HelicopterHusk
-	Tooltip:
-		Name: Orca
-	Aircraft:
-		TurnSpeed: 16
-		Speed: 186
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-	RenderSprites:
-		Image: orca
-
 LAAT.Husk:
 	Inherits: ^VoxelHelicopterHusk
 	Tooltip:
