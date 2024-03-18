@@ -13,45 +13,18 @@ laat:
 
 
 tran:
-	Defaults:
+	Inherits: ^VehicleOverlays
 		Filename: tran.shp
-	idle:
-		Facings: 32
-		UseClassicFacings: True
-	rotor:
-		Filename: lrotor.shp
-		Length: 4
-	rotor2:
-		Filename: rrotor.shp
-		Length: 4
-	slow-rotor:
-		Filename: lrotor.shp
-		Start: 4
-		Length: 8
-	slow-rotor2:
-		Filename: rrotor.shp
-		Start: 4
-		Length: 8
-	open:
-		Start: 32
-		Length: 4
-	unload:
-		Start: 35
+	icon:
+		Filename: tranicnh.tem
+
+trancis:
+	Inherits: ^VehicleOverlays
 	icon:
 		Filename: tranicnh.tem
 
 heli:
-	idle:
-		Filename: heli.shp
-		Facings: 32
-		UseClassicFacings: True
-	rotor:
-		Filename: lrotor.shp
-		Length: 4
-	slow-rotor:
-		Filename: lrotor.shp
-		Start: 4
-		Length: 8
+	Inherits: ^VehicleOverlays
 	muzzle:
 		Filename: minigun.shp
 		Length: 6
@@ -60,25 +33,16 @@ heli:
 		Filename: heliicnh.tem
 
 orca:
-	Defaults:
-		Filename: orca.shp
-	idle:
-		Facings: 32
-		UseClassicFacings: True
-	move:
-		Start: 32
-		Facings: 32
+	Inherits: ^VehicleOverlays
 	icon:
 		Filename: orcaicnh.tem
 
 a10:
-	idle:
-		Filename: a10.shp
-		Facings: 32
-		UseClassicFacings: True
-	muzzle:
-		Filename: minigun.shp
-		Length: 6
-		Facings: 8
+	Inherits: ^VehicleOverlays
+	icon:
+		Filename: a10icnh.tem
+
+a10:
+	Inherits: ^VehicleOverlays
 	icon:
 		Filename: a10icnh.tem

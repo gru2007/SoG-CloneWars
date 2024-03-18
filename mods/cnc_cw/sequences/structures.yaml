@@ -309,6 +309,34 @@ hq:
 	icon:
 		Filename: hqicnh.tem
 
+hqcis:
+	Defaults:
+		Filename: hq.shp
+	idle:
+		Length: 16
+		Tick: 100
+	damaged-idle:
+		Start: 16
+		Length: 16
+		Tick: 100
+	dead:
+		Start: 32
+		Tick: 800
+	make:
+		Filename: hqmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		TilesetFilenames:
+			DESERT: bib3.des
+			WINTER: bib3.win
+			SNOW: bib3.sno
+			TEMPERAT: bib3.tem
+			JUNGLE: bib3.jun
+		Length: *
+	icon:
+		Filename: hqicnh.tem
+
 nuk2:
 	Defaults:
 		Filename: nuk2.shp

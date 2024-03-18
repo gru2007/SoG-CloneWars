@@ -1,17 +1,17 @@
 TRAN:
-	Inherits: ^Helicopter
+	Inherits: ^VoxelHelicopter
 	Inherits@TRANSPORT: ^Transport
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Chinook Transport
+		Name: LAAT Transport
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
-		Queue: Aircraft.GDI, Aircraft.Nod
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Queue: Aircraft.GDI
+		Description: LAAT для доставки пехоты.\n  Безоружен
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -23,47 +23,80 @@ TRAN:
 	RevealsShroud:
 		Range: 10c0
 		Type: GroundPosition
-	WithIdleOverlay@ROTOR1AIR:
-		Offset: 597,0,85
-		Sequence: rotor
-		RequiresCondition: airborne
-	WithIdleOverlay@ROTOR1GROUND:
-		Offset: 597,0,85
-		Sequence: slow-rotor
-		RequiresCondition: !airborne
-	WithIdleOverlay@ROTOR2AIR:
-		Offset: -597,0,171
-		Sequence: rotor2
-		RequiresCondition: airborne
-	WithIdleOverlay@ROTOR2GROUND:
-		Offset: -597,0,171
-		Sequence: slow-rotor2
-		RequiresCondition: !airborne
 	Cargo:
 		Types: Infantry
 		MaxWeight: 10
 		UnloadVoice: Unload
 		AfterUnloadDelay: 40
 	SpawnActorOnDeath:
-		Actor: TRAN.Husk
+		Actor: LAAT.Husk
 	Selectable:
 		DecorationBounds: 1749, 1749
+	RenderSprites:
+	RenderVoxels:
+		Scale: 6
+		Image: laat
+	WithShadow:
+	WithVoxelBody:
+		ShowShadow: False
+
+TRANCIS:
+	Inherits: ^VoxelHelicopter
+	Inherits@TRANSPORT: ^Transport
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: HMP Gunship Transport
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: hpad
+		Queue: Aircraft.Nod
+		Description: Gunship для доставки пехоты.\n  Безоружен
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 150
+		AltitudeVelocity: 0c100
+	Health:
+		HP: 12500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Cargo:
+		Types: Infantry
+		MaxWeight: 10
+		UnloadVoice: Unload
+		AfterUnloadDelay: 40
+	SpawnActorOnDeath:
+		Actor: GUNSHIP.Husk
+	Selectable:
+		DecorationBounds: 1749, 1749
+	RenderSprites:
+	RenderVoxels:
+		Scale: 6
+		Image: gunship
+	WithShadow:
+	WithVoxelBody:
+		ShowShadow: False
 
 HELI:
-	Inherits: ^Helicopter
+	Inherits: ^VoxelHelicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Apache Longbow
+		Name: HMP Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Nod
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: Gunship с пулеметами.\n  Силен против пехоты, Легких ТС и\n  Воздуха\n  Слаб против танков
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 180
@@ -98,17 +131,9 @@ HELI:
 	AmmoPool:
 		Ammo: 10
 		AmmoCondition: ammo
-	WithIdleOverlay@ROTORAIR:
-		Offset: 0,0,85
-		Sequence: rotor
-		RequiresCondition: airborne
-	WithIdleOverlay@ROTORGROUND:
-		Offset: 0,0,85
-		Sequence: slow-rotor
-		RequiresCondition: !airborne
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
-		Actor: HELI.Husk
+		Actor: GUNSHIP.Husk
 	ReloadAmmoPool:
 		Delay: 70
 		Count: 2
@@ -119,22 +144,29 @@ HELI:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+		Scale: 6
+		Image: gunship
+	WithShadow:
+	WithVoxelBody:
+		ShowShadow: False
 
 ORCA:
-	Inherits: ^Helicopter
+	Inherits: ^VoxelHelicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Orca
+		Name: LAAT/i
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.GDI
-		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: LAAT с AG-ракетами.\n  Силен против Зданий, Танков\n  Слаб против Пехоты
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186
@@ -167,18 +199,24 @@ ORCA:
 		Ammo: 6
 		AmmoCondition: ammo
 	SpawnActorOnDeath:
-		Actor: ORCA.Husk
-	WithMoveAnimation:
-		MoveSequence: move
+		Actor: LAAT.Husk
+	RenderSprites:
+	RenderVoxels:
+		Scale: 6
+		Image: laat
 	ReloadAmmoPool:
 		Delay: 100
 		Count: 2
 	Selectable:
-		DecorationBounds: 1280, 1024
+		Bounds: 1749, 1749
+		DecorationBounds: 1749, 1749
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	WithShadow:
+	WithVoxelBody:
+		ShowShadow: False
 
 C17:
 	Inherits: ^Plane
@@ -229,10 +267,51 @@ C17:
 	-MapEditorData:
 
 A10:
-	Inherits: ^Plane
+	Inherits: ^VoxelPlane
 	Interactable:
+	RenderVoxels:
+		Scale: 6
+		Image: arc170
 	Tooltip:
-		Name: A10 Bomber
+		Name: ARC170 Bomber
+	Valued:
+		Cost: 2000
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 373
+		Repulsable: False
+	AttackBomber:
+		Armaments: gun, bombs
+		FacingTolerance: 8
+	Armament@GUNS:
+		Name: gun
+		Weapon: Vulcan
+		LocalOffset: 1024,0,-85
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: Napalm
+		LocalOffset: 0,-256,-43, 0,256,-43
+	Contrail@1:
+		Offset: -640,171,0
+		TrailLength: 15
+		StartColorAlpha: 128
+	Contrail@2:
+		Offset: -640,-171,0
+		TrailLength: 15
+		StartColorAlpha: 128
+	-MapEditorData:
+
+A10CIS:
+	Inherits: ^VoxelPlane
+	Interactable:
+	RenderVoxels:
+		Scale: 4
+		Image: vulture
+	Tooltip:
+		Name: Vulture Bomber
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -311,75 +390,10 @@ ORCA.Husk:
 	RenderSprites:
 		Image: orca
 
-LAAT:
-	Inherits: ^VoxelHelicopter
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Laat
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: hpad, anyhq, ~techlevel.medium
-		Queue: Aircraft.GDI
-		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
-	Aircraft:
-		TurnSpeed: 28
-		Speed: 186
-	Health:
-		HP: 10000
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-	Armament@PRIMARY:
-		Weapon: OrcaAGMissiles
-		LocalOffset: 427,-171,-213, 427,171,-213
-		PauseOnCondition: !ammo
-	Armament@SECONDARY:
-		Weapon: OrcaAAMissiles
-		LocalOffset: 427,-171,-213, 427,171,-213
-		PauseOnCondition: !ammo
-	AttackMove:
-		Voice: Attack
-	AutoTarget:
-		ScanRadius: 5
-	AttackAircraft:
-		FacingTolerance: 80
-		OpportunityFire: false
-		PersistentTargeting: false
-		AttackType: Hover
-		Voice: Attack
-	AmmoPool:
-		Ammo: 6
-		AmmoCondition: ammo
-	RenderSprites:
-	SpawnActorOnDeath:
-		Actor: LAAT.Husk
-	RenderVoxels:
-		Scale: 6
-	ReloadAmmoPool:
-		Delay: 100
-		Count: 2
-	Selectable:
-		Bounds: 1749, 1749
-		DecorationBounds: 1749, 1749
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-	WithShadow:
-	WithVoxelBody:
-		ShowShadow: False
-
 LAAT.Husk:
 	Inherits: ^VoxelHelicopterHusk
 	Tooltip:
-		Name: Laat
+		Name: LAAT
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 130
@@ -389,3 +403,17 @@ LAAT.Husk:
 		Palette: colorpickervoxel
 	RenderVoxels:
 		Image: laat
+
+GUNSHIP.Husk:
+	Inherits: ^VoxelHelicopterHusk
+	Tooltip:
+		Name: HMP Gunship
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 130
+	RenderVoxels:
+		Scale: 6
+	RenderVoxels:
+		Palette: colorpickervoxel
+	RenderVoxels:
+		Image: gunship
