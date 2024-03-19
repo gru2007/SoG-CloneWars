@@ -4,11 +4,11 @@ MCV:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Mobile Construction Vehicle
+		Name: Мобильная стройплощадка
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.GDI, Vehicle.Nod
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: Разворачивается в стройплощадку.\n  Безоружна
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Mobile:
@@ -28,7 +28,7 @@ MCV:
 		Facing: 432
 		TransformSounds: constru2.aud, hvydoor1.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
-		NoTransformTextNotification: Cannot deploy here.
+		NoTransformTextNotification: Нельзя развернуть здесь.
 		Voice: Unload
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -45,13 +45,13 @@ HARV:
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Harvester
+		Name: Сборщик
 		GenericName: Harvester
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: proc
 		Queue: Vehicle.GDI, Vehicle.Nod
-		Description: Collects Tiberium for processing.\n  Unarmed
+		Description: Собирает ресурсы для обработки.\n  Безоружен
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -75,7 +75,7 @@ HARV:
 		Range: 4c0
 	ActorLostNotification:
 		Notification: HarvesterLost
-		TextNotification: Harvester lost.
+		TextNotification: Сборщик потерян.
 	SpawnActorOnDeath:
 		Actor: HARV.Husk
 		OwnerType: InternalName

@@ -1071,7 +1071,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Tree
+		Name: Дерево
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1125,7 +1125,7 @@
 		Dimensions: 2,2
 	WithSpriteBody:
 	Tooltip:
-		Name: Tree (Burnt)
+		Name: Дерево (сгорело)
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 	MapEditorData:
@@ -1137,7 +1137,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Blossom Tree
+		Name: Цветущее дерево
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1210,7 +1210,7 @@
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	Tooltip:
-		GenericName: Destroyed Vehicle
+		GenericName: Уничтоженная техника
 	WithColoredOverlay@IDISABLE:
 		Color: 000000B4
 	ScriptTriggers:

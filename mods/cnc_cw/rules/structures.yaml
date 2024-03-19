@@ -6,7 +6,7 @@ FACT:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Construction Yard
+		Name: Стойплощадка
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3

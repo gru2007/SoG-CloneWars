@@ -11,12 +11,12 @@ V19:
 	Health:
 		HP: 80000
 	Tooltip:
-		Name: Oil Derrick
+		Name: Нефтяная вышка
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: Даёт дополнительные деньги.
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to receive additional funds.
+		Description: Захватите для дополнительных денег.
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: V19.Husk
@@ -36,7 +36,7 @@ V19.Husk:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Oil Derrick (Destroyed)
+		Name: Нефтяная вышка (уничтожено)
 
 HOSP:
 	Inherits: ^TechBuilding
@@ -49,12 +49,12 @@ HOSP:
 	Health:
 		HP: 250000
 	Tooltip:
-		Name: Hospital
+		Name: Больница
 	TooltipDescription@ally:
-		Description: Provides infantry with self-healing.
+		Description: Позволяет пехоте регенерировать HP.
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to enable self-healing for infantry.
+		Description: Захватите для регенерации HP у пехоты.
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: HOSP.Husk
@@ -70,7 +70,7 @@ HOSP.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Hospital (Destroyed)
+		Name: Больница (уничтожено)
 	WithBuildingBib:
 		HasMinibib: true
 

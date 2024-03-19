@@ -1,7 +1,7 @@
 MCV.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Mobile Construction Vehicle (Destroyed)
+		Name: Мобильная Стройплощадка (уничтожена)
 	TransformOnCapture:
 		IntoActor: mcv
 	RenderSprites:

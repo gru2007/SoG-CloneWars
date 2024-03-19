@@ -14,8 +14,8 @@ Player:
 	PlaceBuilding:
 		NewOptionsNotification: NewOptions
 		CannotPlaceNotification: BuildingCannotPlaceAudio
-		NewOptionsTextNotification: New construction options.
-		CannotPlaceTextNotification: Cannot deploy here.
+		NewOptionsTextNotification: Новые опции строительства.
+		CannotPlaceTextNotification: Невозможно развернуть тут.
 	TechTree:
 	SupportPowerManager:
 	ScriptTriggers:
@@ -26,7 +26,7 @@ Player:
 	ConquestVictoryConditions:
 	PowerManager:
 		SpeechNotification: LowPower
-		TextNotification: Low power.
+		TextNotification: Мало энергии.
 	AllyRepair:
 	PlayerResources:
 		CashTickUpNotification: CashTickUp
@@ -36,8 +36,8 @@ Player:
 	DeveloperMode:
 		CheckboxDisplayOrder: 9
 	BaseAttackNotifier:
-		TextNotification: Base under attack.
-		AllyTextNotification: Our ally is under attack.
+		TextNotification: База под атакой.
+		AllyTextNotification: Наш союзник под атакой.
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
@@ -75,7 +75,7 @@ Player:
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
-		TextNotification: Silos needed.
+		TextNotification: Нужны хранилища.
 	PlayerExperience:
 	GameSaveViewportManager:
 	PlayerRadarTerrain:

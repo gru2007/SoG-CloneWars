@@ -1246,7 +1246,7 @@ Container@PLAYER_WIDGETS:
 					Key: AttackMove
 					DisableKeySound: true
 					TooltipText: Атака
-					TooltipDesc: Выбранные юниты будут двигаться к указанной точке\nи атакавать всех врагов которых встретят.\n\nУдерживайте {(Ctrl)} когда targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
+					TooltipDesc: Выбранные юниты будут двигаться к указанной точке\nи атакавать всех врагов которых встретят.\n\nУдерживайте {(Ctrl)} когда когда наводитесь, чтобы отдать приказ Наступление\nюниты будут атаковать всех противников по пути.\n\nНажмите ЛКМ, затем ПКМ по целевой локации.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1269,8 +1269,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Helicopters will land at the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipText: Принудительное Движение
+					TooltipDesc: Выбранные юниты будут двигаться в указанную позицию\n - Обычная активность у цели будет приглушена\n - Техника будет пытаться уничтожить технику в заданой точке\n - Вертолеты сядут указанной точке\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.\nУдерживайте {(Alt)} для временной активации когда командуйте юнитами.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1293,7 +1293,7 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Force Attack
+					TooltipText: Принудительная атака
 					TooltipDesc: Selected units will attack the targeted unit or location\n - Default activity for the target is suppressed\n - Allows targeting of own or ally forces\n - Long-range artillery units will always target the\n   location, ignoring units and buildings\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
@@ -1318,8 +1318,8 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: Guard
 					DisableKeySound: true
-					TooltipText: Guard
-					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
+					TooltipText: Защищать
+					TooltipDesc: Выбранные юниты будут следовать за юнитом-целью.\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1344,7 +1344,7 @@ Container@PLAYER_WIDGETS:
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Deploy
+					TooltipText: Развернуть
 					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
@@ -1396,7 +1396,7 @@ Container@PLAYER_WIDGETS:
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Stop
+					TooltipText: Стоп
 					TooltipDesc: Selected units will stop their current activity.\nSelected buildings will reset their rally point.\n\nActs immediately on selected targets.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
@@ -1420,7 +1420,7 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Waypoint Mode
+					TooltipText: Режим Waypoint'ов
 					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
@@ -1447,7 +1447,7 @@ Container@PLAYER_WIDGETS:
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Attack Anything Stance
+					TooltipText: Атаковать всё
 					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
@@ -1473,7 +1473,7 @@ Container@PLAYER_WIDGETS:
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Defend Stance
+					TooltipText: Защищать позицию
 					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
@@ -1499,7 +1499,7 @@ Container@PLAYER_WIDGETS:
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Return Fire Stance
+					TooltipText: Ответный огонь
 					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
@@ -1525,7 +1525,7 @@ Container@PLAYER_WIDGETS:
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Hold Fire Stance
+					TooltipText: Не стрелять
 					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
