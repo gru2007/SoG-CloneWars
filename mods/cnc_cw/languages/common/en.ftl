@@ -391,7 +391,7 @@ options-mouse-scroll-type =
 ## InputSettingsLogic, IntroductionPromptLogic
 options-control-scheme =
     .classic = Классика
-    .modern = Совеременный
+    .modern = Современный
 
 options-zoom-modifier =
     .alt = Alt
