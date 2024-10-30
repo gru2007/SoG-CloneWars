@@ -20,7 +20,9 @@ namespace OpenRA
 {
 	public class PlayerDatabase : IGlobalModData
 	{
-		public readonly string Profile = "https://stormgalaxy.com/api/openra/profile/";
+		// public readonly string Profile = "https://stormgalaxy.com/api/openra/profile/";
+		// Temp placeholder, sometime out webservice will be ready
+		public readonly string Profile = "https://forum.openra.net/openra/info/";
 		public readonly int IconSize = 24;
 
 		// 512x512 is large enough for 49 unique 72x72 badges
