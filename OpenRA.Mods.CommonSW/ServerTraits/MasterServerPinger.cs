@@ -175,7 +175,7 @@ namespace OpenRA.Mods.Common.Server
 						isInitialPing = false;
 						lock (masterServerMessages)
 						{
-							masterServerMessages.Enqueue(LocalizedMessage.Serialize(Connected, Translation.Arguments("server", endpoint)));
+							masterServerMessages.Enqueue(Connected);
 							if (errorCode != 0)
 							{
 								// Hardcoded error messages take precedence over the server-provided messages
