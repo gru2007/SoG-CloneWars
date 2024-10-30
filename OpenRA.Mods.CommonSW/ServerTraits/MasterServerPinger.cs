@@ -146,9 +146,9 @@ namespace OpenRA.Mods.Common.Server
 					// I'm too lazy to make a retry... so host need to change that setting
 					var address = "";
 					if (Game.Settings.Game.AlwaysUseBackupMaster) {
-						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
-					} else {
 						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertiseBackup;
+					} else {
+						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
 					}
 
 					var endpoint = address;
