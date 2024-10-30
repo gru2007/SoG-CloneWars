@@ -1,7 +1,7 @@
 basefiles: Tiberian Dawn (база)
 	Type: ZipFile
 	SHA1: 72f337464963fa37d3688eb03e80eefd33669a3d
-	MirrorList: http://www.openra.net/packages/cnc-mirrors.txt
+	MirrorList: https://demo.r-artemev.ru/cnc-mirrors.txt
 	Extract:
 		^SupportDir|Content/cnc/conquer.mix: conquer.mix
 		^SupportDir|Content/cnc/desert.mix: desert.mix
@@ -16,7 +16,7 @@ basefiles: Tiberian Dawn (база)
 eaw: Empire at War (звуки)
 	Type: ZipFile
 	SHA1: d8d59895be64c8374b953d4e39a8ce8e58e53637
-	MirrorList: https://master.stormgalaxy.com/eaw.txt
+	MirrorList: https://demo.r-artemev.ru/eaw.txt
 	Extract:
 		^SupportDir|Content/eaw/U000_tbp0103_rus-2.wav: U000_tbp0103_rus-2.wav
 		^SupportDir|Content/eaw/U000_tbp0110_rus-2.wav: U000_tbp0110_rus-2.wav
