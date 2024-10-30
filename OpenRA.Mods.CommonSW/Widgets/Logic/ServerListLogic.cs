@@ -437,15 +437,15 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			searchStatus = SearchStatus.Fetching;
 
-			// If it works doesn't touch it
-			var address = "";
-			if (Game.Settings.Game.AlwaysUseBackupMaster) {
-				address = services.ServerListBackup;
-			} else {
-				address = services.ServerList;
-			}
+			// If it works doesn't touch it  (don't work - fix)
+			// var address = "";
+			// if (Game.Settings.Game.AlwaysUseBackupMaster) {
+			// 	address = services.ServerListBackup;
+			// } else {
+			// 	address = services.ServerList;
+			// }
 
-			var queryURL = new HttpQueryBuilder(address)
+			var queryURL = new HttpQueryBuilder(ServerListBackup)
 			{
 				{ "protocol", GameServer.ProtocolVersion },
 				{ "engine", Game.EngineVersion },

@@ -143,15 +143,15 @@ namespace OpenRA.Mods.Common.Server
 			{
 				try
 				{
-					// I'm too lazy to make a retry... so host need to change that setting
-					var address = "";
-					if (Game.Settings.Game.AlwaysUseBackupMaster) {
-						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertiseBackup;
-					} else {
-						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
-					}
+					// I'm too lazy to make a retry... so host need to change that setting (FUCK THAT BUILD SYSTEM)
+					// var address = "";
+					// if (Game.Settings.Game.AlwaysUseBackupMaster) {
+					// 	address = server.ModData.Manifest.Get<WebServices>().ServerAdvertiseBackup;
+					// } else {
+					// 	address = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
+					// }
 
-					var endpoint = address;
+					var endpoint = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
 
 					var client = HttpClientFactory.Create();
 					var response = await client.PostAsync(endpoint, new StringContent(postData));

@@ -150,7 +150,7 @@ Debug:
         SyncCheckBotModuleCode: False
 ```
 ## Game
-### AlwaysUseBackupMaster
+### AlwaysUseBackupMaster (FUTURE)
 If true game will always ping a backup master server, you shouldn't touch it.
 
 **Default Value:** False
