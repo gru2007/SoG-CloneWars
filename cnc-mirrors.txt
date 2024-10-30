@@ -5,3 +5,4 @@ https://openra.0x47.net/cnc-packages.zip
 https://republic.community/hosted/files/command-and-conquer/openra/cnc-packages.zip
 https://cdn.mailaender.name/openra/cnc-packages.zip
 https://demo.r-artemev.ru/cnc-packages.zip
+https://s3.timeweb.cloud/3c71f243-personal/cnc-packages.zip
