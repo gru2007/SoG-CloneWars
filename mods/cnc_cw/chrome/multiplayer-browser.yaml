@@ -65,21 +65,21 @@ Container@MULTIPLAYER_PANEL:
 									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
-									Text: У вас запущена устаревшая версия игры. Скачайте последнюю с сайта stormgalaxy.com
+									Text: У вас запущена устаревшая версия игры. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
 									Font: TinyBold
 								Label@UNKNOWN_VERSION_LABEL:
 									X: 5
 									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
-									Text: Вы используете неизвестную версию игры. Скачайте последнюю с сайта stormgalaxy.com
+									Text: Вы используете неизвестную версию игры. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
 									Font: TinyBold
 								Label@PLAYTEST_AVAILABLE_LABEL:
 									X: 5
 									Width: PARENT_RIGHT - 10
 									Height: 20
 									Align: Center
-									Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта stormgalaxy.com
+									Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
 									Font: TinyBold
 				ScrollPanel@SERVER_LIST:
 					X: 15

@@ -239,7 +239,7 @@ Container@MENU_BACKGROUND:
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Скачайте последнюю с сайта stormgalaxy.com
+					Text: Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
 			Children:

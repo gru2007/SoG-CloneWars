@@ -134,7 +134,7 @@ FACT.GDI:
 		Prerequisites: ~disabled
 		ForceFaction: gdi
 	Tooltip:
-		Name: Construction Yard (GDI)
+		Name: Стойплощадка (ВАР)
 
 FACT.NOD:
 	Inherits: FACT
@@ -146,7 +146,7 @@ FACT.NOD:
 		Prerequisites: ~disabled
 		ForceFaction: nod
 	Tooltip:
-		Name: Construction Yard (Nod)
+		Name: Стойплощадка (КНС)
 
 NUKE:
 	Inherits: ^BaseBuilding
@@ -158,14 +158,14 @@ NUKE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Power Plant
+		Name: Генератор энергии
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: fact
 		Queue: Building.GDI, Building.Nod
-		Description: Generates power
+		Description: Создаёт электричество
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -189,14 +189,14 @@ NUK2:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Advanced Power Plant
+		Name: Продвинутый генератор энергии
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Building.GDI, Building.Nod
-		Description: Provides more power, cheaper than the\nstandard Power Plant
+		Description: Создаёт больше энергии, дешевле\nстандартного генератора
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -224,12 +224,12 @@ PROC:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Tiberium Refinery
+		Name: Переработчик Тиберия
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Building.GDI, Building.Nod
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: Перерабатывает чистый Тиберий в\nиспользуемые ресурсы
 	Building:
 		Footprint: _x_ xxx +++ ===
 		Dimensions: 3,4
@@ -270,12 +270,12 @@ SILO:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Tiberium Silo
+		Name: Хранилище Тиберия
 	Buildable:
 		BuildPaletteOrder: 35
 		Prerequisites: proc
 		Queue: Defence.GDI, Defence.Nod
-		Description: Stores processed Tiberium
+		Description: Хранит обработанный Тиберий
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -312,14 +312,14 @@ PYLE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Barracks
+		Name: Бараки
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.GDI
-		Description: Trains infantry
+		Description: Тренирует пехоту
 	Building:
 		Footprint: xx ++ ==
 		Dimensions: 2,3
@@ -348,11 +348,11 @@ PYLE:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: Юнит готов.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -373,14 +373,14 @@ HAND:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Hand of Nod
+		Name: Бараки
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.Nod
-		Description: Trains infantry
+		Description: Тренирует пехоту
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -408,11 +408,11 @@ HAND:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: Юнит готов.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -437,14 +437,14 @@ AFLD:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Airstrip
+		Name: Взлётно-посадочная полоса
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.Nod
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: Создаёт дроп-зону\nдля сброса техники
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -462,7 +462,7 @@ AFLD:
 	ProductionAirdrop:
 		Produces: Vehicle.Nod
 		ActorType: c17
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: Прибыли подкрепления.
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
 		RequiresCondition: !build-incomplete
@@ -475,9 +475,9 @@ AFLD:
 		Group: Vehicle
 		LowPowerModifier: 150
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -498,14 +498,14 @@ WEAP:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Weapons Factory
+		Name: Завод Оружия
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.GDI
-		Description: Produces vehicles
+		Description: Производит технику
 	Building:
 		Footprint: xxx +++ ===
 		Dimensions: 3,3
@@ -536,11 +536,11 @@ WEAP:
 		Group: Vehicle
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: Юнит готов.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -565,12 +565,12 @@ HPAD:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Helipad
+		Name: Космопорт
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
 		Queue: Building.GDI, Building.Nod
-		Description: Produces and repairs helicopters
+		Description: Производит и чинит авиацию
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -588,7 +588,7 @@ HPAD:
 		HpPerStep: 1000
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: Ремонт.
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
@@ -601,11 +601,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: Юнит готов.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -616,11 +616,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: Юнит готов.
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Unable to build more.
+		BlockedTextNotification: Невозможно построить ещё.
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Unable to comply. Building in progress.
+		LimitedTextNotification: Невозможно. Строительство в процессе.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -643,14 +643,14 @@ HQ:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Communications Center
+		Name: Центр связи
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
 		Queue: Building.GDI
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: Включает радар, а так же запрос авиаудара.\nРазблокирует более высокие по уровню здания.\nТребуется энергия для работы.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -678,16 +678,16 @@ HQ:
 		ChargeInterval: 7500
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Name: Авиаудар
+		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Airstrike ready.
-		SelectTargetTextNotification: Select target.
-		InsufficientPowerTextNotification: Insufficient power.
-		IncomingTextNotification: Enemy planes approaching.
+		EndChargeTextNotification: Авиаудар готов.
+		SelectTargetTextNotification: Выберите цель.
+		InsufficientPowerTextNotification: Недостаточно энергии.
+		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
 		UnitType: a10
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -715,14 +715,14 @@ HQCIS:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Communications Center
+		Name: Центр связи
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
-		Queue: Building.Nod
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Queue: Building.GDI
+		Description: Включает радар, а так же запрос авиаудара.\nРазблокирует более высокие по уровню здания.\nТребуется энергия для работы.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -750,16 +750,16 @@ HQCIS:
 		ChargeInterval: 7500
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Name: Авиаудар
+		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Airstrike ready.
-		SelectTargetTextNotification: Select target.
-		InsufficientPowerTextNotification: Insufficient power.
-		IncomingTextNotification: Enemy planes approaching.
+		EndChargeTextNotification: Авиаудар готов.
+		SelectTargetTextNotification: Выберите цель.
+		InsufficientPowerTextNotification: Недостаточно энергии.
+		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
 		UnitType: a10cis
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -785,12 +785,12 @@ FIX:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Repair Facility
+		Name: Ремонтный цех
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Building.GDI, Building.Nod
-		Description: Repairs vehicles
+		Description: Чинит технику
 	Building:
 		Footprint: _+_ +++ _+_
 		Dimensions: 3,3
@@ -811,7 +811,7 @@ FIX:
 		Interval: 15
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: Ремонт.
 	RallyPoint:
 	CommandBarBlacklist:
 		DisableStop: false
@@ -830,14 +830,14 @@ EYE:
 	Valued:
 		Cost: 1800
 	Tooltip:
-		Name: Advanced Communications Center
+		Name: Продвинутый центр связи
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.GDI
-		Description: Provides radar and Orbital Ion Cannon support power.\nUnlocks Mammoth Tank and Commando.\nRequires power to operate.
+		Description: Включает радар, а так же запрос Орбитального Ионного удара.\nРазблокирует танк Мамонт и Коммандос.\nНужна энергия для работы.
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -864,16 +864,16 @@ EYE:
 		Icon: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 9000
-		Name: Ion Cannon
-		Description: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Name: Ионное орудие
+		Description: Начать ионный орбитальный удар.\nНаносит моментальный урон на небольшой площади.
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
-		BeginChargeTextNotification: Ion cannon charging.
-		EndChargeTextNotification: Ion cannon ready.
-		SelectTargetTextNotification: Select target.
-		InsufficientPowerTextNotification: Insufficient power.
+		BeginChargeTextNotification: Ионное орудие заряжается.
+		EndChargeTextNotification: Ионное орудие готово.
+		SelectTargetTextNotification: Выберите цель.
+		InsufficientPowerTextNotification: Недостаточно энергии.
 		OnFireSound: ion1.aud
 		DisplayRadarPing: True
 		CameraActor: camera.small
@@ -893,14 +893,14 @@ TMPL:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Temple of Nod
+		Name: Храм войны
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.Nod
-		Description: Provides Nuclear Strike support power.\nUnlocks Stealth Tank, Chem. Warrior and Obelisk of Light.\nRequires power to operate.
+		Description: Предоставляет доступ к Ядерному удару.\nРазблокирует Стелс-Танк, Хим. Война и обелиска света.\nНужна энергия для работы.
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -922,18 +922,18 @@ TMPL:
 		Icon: abomb
 		Cursor: nuke
 		ChargeInterval: 11250
-		Name: Nuclear Strike
-		Description: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Name: Ядерный удар
+		Description: Запустить тактическую ядерную боеголовку.\nНаносит большой урон на большой площади.
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		SelectTargetTextNotification: Select target.
-		EndChargeTextNotification: Nuclear weapon available.
-		InsufficientPowerTextNotification: Insufficient power.
-		LaunchTextNotification: Nuclear weapon launched.
-		IncomingTextNotification: Nuclear warhead approaching.
+		SelectTargetTextNotification: Выберите цель.
+		EndChargeTextNotification: Ядерное оружие доступно.
+		InsufficientPowerTextNotification: Недостаточно мощности.
+		LaunchTextNotification: Ядерное оружие запущено.
+		IncomingTextNotification: Приближается ядерный удар.
 		MissileWeapon: atomic
 		MissileImage: atomic
 		MissileDelay: 11
@@ -966,13 +966,13 @@ GUN:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Turret
+		Name: Турель
 	Buildable:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 960
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: Базовая противотанковая турель.\n  Сильна vs Танков, техники\n  Слаба vs Пехоты
 	Building:
 	Health:
 		HP: 41000
@@ -1021,13 +1021,13 @@ SAM:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: SAM Site
+		Name: ПВО
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: hand
 		Queue: Defence.Nod
 		BuildDuration: 1130
-		Description: Anti-Aircraft base defense.\n  Strong vs Aircraft\n  Cannot target Ground units.
+		Description: Сбивает авиацели.\n  Сильна vs Авиатехники\n  Не стреляет по наземным юнитам.
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -1067,13 +1067,13 @@ OBLI:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Obelisk of Light
+		Name: Обелиск Света
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Defence.Nod
 		BuildDuration: 2080
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: Продвинутая турель.\nНужна энергия для работы.\n  Сильна vs всех Наземныю юнитов\n  Не может стерлять по воздуху
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 938, 1877, 0, -426
@@ -1114,13 +1114,13 @@ GTWR:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Guard Tower
+		Name: Сторожевая башня
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 960
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: Базовое защитное сооружение.\n  Сильна vs Пехоты\n  Слаба vs Танков
 	Building:
 	Health:
 		HP: 40000
@@ -1153,13 +1153,13 @@ ATWR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Advanced Guard Tower
+		Name: Улучшенная сторожевая башня
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Defence.GDI
 		BuildDuration: 1920
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Infantry\n  Weak vs Tanks
+		Description: Универсальное защитное сооружение.\n  Сильна vs Авиатехники, пехоты\n  Слаба vs Танков
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 938, 2048, 0, -512
@@ -1203,12 +1203,12 @@ SBAG:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Sandbag Barrier
+		Name: Мешки с песком
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
 		Queue: Defence.GDI
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: Останавливает пехоту и легкую технику.\nМожет быть раздавлен танками.
 	Armor:
 		Type: Light
 	LineBuild:
@@ -1225,12 +1225,12 @@ CYCL:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Chain Link Barrier
+		Name: Забор
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
 		Queue: Defence.Nod
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: Останавливает пехоту и легкую технику.\nМожет быть раздавлен танками.
 	Armor:
 		Type: Light
 	LineBuild:
@@ -1247,13 +1247,13 @@ BRIK:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Concrete Barrier
+		Name: Бетонный барьер
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 230
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: Останавливает пехоту и большинство танков.\nБлокирует некоторые снаряды.
 	Health:
 		HP: 20000
 	Armor:
@@ -1273,22 +1273,22 @@ BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Infantry Production
+		Name: Производство пехоты
 
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Vehicle Production
+		Name: Производство техники
 
 ANYPOWER:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Any Power Generation
+		Name: Электростанция
 
 ANYHQ:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: A Communications Center
+		Name: Центр связи

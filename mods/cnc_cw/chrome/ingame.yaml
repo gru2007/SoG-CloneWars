@@ -1270,7 +1270,7 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					DisableKeySound: true
 					TooltipText: Принудительное Движение
-					TooltipDesc: Выбранные юниты будут двигаться в указанную позицию\n - Обычная активность у цели будет приглушена\n - Техника будет пытаться уничтожить технику в заданой точке\n - Вертолеты сядут указанной точке\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.\nУдерживайте {(Alt)} для временной активации когда командуйте юнитами.
+					TooltipDesc: Выбранные юниты будут двигаться в указанную позицию\n - Обычная активность у цели будет приглушена\n - Техника будет пытаться уничтожить технику в заданой точке\n - Авиация сядет указанной точке\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.\nУдерживайте {(Alt)} для временной активации когда командуйте юнитами.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1294,7 +1294,7 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					DisableKeySound: true
 					TooltipText: Принудительная атака
-					TooltipDesc: Selected units will attack the targeted unit or location\n - Default activity for the target is suppressed\n - Allows targeting of own or ally forces\n - Long-range artillery units will always target the\n   location, ignoring units and buildings\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipDesc: Выбранные юниты будут атаковать цель или локацию\n - Обычная активность у цели будет приглушена\n - Позволяет атаковать союзников\n - Артилерия будет нацелена на\n   локацию, игнорируя юнитов и здания\n\nЛКМ по иконке, затем ПКМ по цели.\nУдерживайте {(Ctrl)} временной активации при командовании.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1345,7 +1345,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Развернуть
-					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n\nActs immediately on selected units.
+					TooltipDesc: Выбранные подразделения будут выполнять свои действия по развертыванию по умолчанию\n - MVC будут раскрыты в стройплощадки\n - Стройплощадки собраны в MVC\n - Транспорты будут выгружать своих пассажиров\n\nДействует немедленно на выбранные объекты.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1370,8 +1370,8 @@ Container@PLAYER_WIDGETS:
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Scatter
-					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
+					TooltipText: Разброс
+					TooltipDesc: Выбранные юниты прекратят свою текущую деятельность\nи выдвинуться к ближайшей локации.\n\nДействует немедленно на выбранные объекты.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1397,7 +1397,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Стоп
-					TooltipDesc: Selected units will stop their current activity.\nSelected buildings will reset their rally point.\n\nActs immediately on selected targets.
+					TooltipDesc: Выбранные юниты прекратят свою текущую деятельность.\nВыбранные здания сбросят свою точку сбора.\n\nДействует немедленно по выбранным целям.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1448,7 +1448,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Атаковать всё
-					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
+					TooltipDesc: Установить юниты в положение атаки на всё:\n - Юниты будут атаковать вражеские юниты и сооружения, как только увидят их\n - Юниты будут преследовать атакующих по всему полю боя
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1474,7 +1474,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Защищать позицию
-					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
+					TooltipDesc: Установить юниты на оборону:\n - Юниты будут атаковать вражеские юниты, как только увидят их\n - Юниты не будут двигаться или преследовать врагов
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1500,7 +1500,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Ответный огонь
-					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
+					TooltipDesc: Установить юниты на ответный огонь:\n - Юниты будут наносить ответный удар по врагам, которые нападают на них\n - Юниты не будут двигаться или преследовать врагов
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1526,7 +1526,7 @@ Container@PLAYER_WIDGETS:
 					DisableKeyRepeat: true
 					DisableKeySound: true
 					TooltipText: Не стрелять
-					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
+					TooltipDesc: Запретить юнитам стрелять:\n - Юниты не будут стрелять по врагам\n - Юниты не будут двигаться или преследовать врагов
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1553,7 +1553,7 @@ Container@PLAYER_WIDGETS:
 					Width: PARENT_RIGHT - 30
 					Height: 25
 					Align: Right
-					Text: Audio Muted
+					Text: Аудио в муте
 					Contrast: true
 		Image@SIDEBAR_BACKGROUND:
 			X: WINDOW_RIGHT - WIDTH - 5
@@ -1799,7 +1799,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Infantry
+							TooltipText: Пехота
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Infantry
@@ -1843,7 +1843,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Воздух
+							TooltipText: Авиация
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Aircraft
@@ -1868,8 +1868,8 @@ Container@PLAYER_WIDGETS:
 			Width: 192
 			TooltipContainer: TOOLTIP_CONTAINER
 			TooltipTemplate: PRODUCTION_TOOLTIP_FACTIONSUFFIX
-			ReadyText: Ready
-			HoldText: On Hold
+			ReadyText: Готово
+			HoldText: На Удержании
 			HotkeyPrefix: Production
 			HotkeyCount: 24
 			SelectProductionBuildingHotkey: SelectProductionBuilding

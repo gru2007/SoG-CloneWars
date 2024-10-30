@@ -211,7 +211,7 @@ exit-map-editor-confirm = Exit
 ## IngamePowerBarLogic
 ## IngamePowerCounterLogic
 power-usage = Электричество: { $usage }/{ $capacity }
-infinite-power = Бесконечно
+infinite-power = Беск.
 
 ## IngameSiloBarLogic
 ## IngameCashCounterLogic

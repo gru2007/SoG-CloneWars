@@ -11,7 +11,7 @@ TRAN:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.GDI
-		Description: LAAT для доставки пехоты.\n  Безоружен
+		Description: LAAT/i для доставки пехоты.\n  Безоружен
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -159,14 +159,14 @@ ORCA:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: LAAT/i
+		Name: LAAT/i Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.GDI
-		Description: LAAT с AG-ракетами.\n  Силен против Зданий, Танков\n  Слаб против Пехоты
+		Description: LAAT/i с AG-ракетами.\n  Силен против Зданий, Танков\n  Слаб против Пехоты
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186

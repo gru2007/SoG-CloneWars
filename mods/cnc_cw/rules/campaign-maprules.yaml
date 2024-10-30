@@ -62,16 +62,16 @@ airstrike.proxy:
 		ChargeInterval: 3000
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Name: Авиаудар
+		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Airstrike ready.
-		SelectTargetTextNotification: Select target.
-		InsufficientPowerTextNotification: Insufficient power.
-		IncomingTextNotification: Enemy planes approaching.
+		EndChargeTextNotification: Авиаудар готов.
+		SelectTargetTextNotification: Выберите цель.
+		InsufficientPowerTextNotification: Недостаточно энергии.
+		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
 		UnitType: a10
 		DisplayBeacon: True
 		BeaconPoster: airstrike

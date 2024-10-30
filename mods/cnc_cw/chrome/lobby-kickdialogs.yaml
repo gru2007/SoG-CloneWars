@@ -16,14 +16,14 @@ Background@KICK_CLIENT_DIALOG:
 			Height: 25
 			Font: Regular
 			Align: Center
-			Text: You may also apply a temporary ban, preventing
+			Text: Вы также можете выдать временный бан, предотвращая
 		Label@TEXTB:
 			Y: 86
 			Width: PARENT_RIGHT
 			Height: 25
 			Font: Regular
 			Align: Center
-			Text: them from joining for the remainder of this game.
+			Text: от присоединения на оставшуюся часть этой игры.
 		Checkbox@PREVENT_REJOINING_CHECKBOX:
 			X: (PARENT_RIGHT - WIDTH) / 2
 			Y: 120

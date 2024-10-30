@@ -263,7 +263,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: Техника
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: VehicleVoice
@@ -277,7 +277,7 @@
 		Locomotor: tracked
 		TurnSpeed: 20
 	Tooltip:
-		GenericName: Tank
+		GenericName: Танк
 
 ^Helicopter:
 	Inherits@1: ^ExistsInWorld
@@ -319,7 +319,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: Авиатехника
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -381,7 +381,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: Авиатехника
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 85
@@ -423,7 +423,7 @@
 	ScriptTriggers:
 	Interactable:
 	Tooltip:
-		GenericName: Destroyed Aircraft
+		GenericName: Уничтоженная авиатехника
 	FallsToEarth:
 		Moves: true
 		Velocity: 112
@@ -548,7 +548,7 @@
 	Inherits: ^Infantry
 	MustBeDestroyed:
 	Tooltip:
-		GenericName: Soldier
+		GenericName: Солдат
 	Guard:
 	TakeCover:
 		SpeedModifier: 60
@@ -569,7 +569,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Civilian
+		Name: Гражданский
 		GenericVisibility: None
 	Mobile:
 		Speed: 54
@@ -621,7 +621,7 @@
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Dinosaur
+		Name: Динозавр
 	RevealsShroud:
 		Range: 6c0
 	Mobile:
@@ -688,7 +688,7 @@
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Visceroid
+		Name: Викцероид
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 384,0,0
@@ -788,7 +788,7 @@
 		TargetTypes: Ground, Water
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: Юнит потерян.
 	AttackMove:
 	WithDamageOverlay:
 	Explodes:
@@ -797,7 +797,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: Корабль
 	Voiced:
 		VoiceSet: VehicleVoice
 	HitShape:
@@ -834,16 +834,16 @@
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
 		Notification: BuildingCaptured
-		TextNotification: Building captured.
+		TextNotification: Здание захвачено.
 		NewOwnerVoice: false
 	ActorLostNotification:
 		Notification: BuildingLost
-		TextNotification: Structure lost.
+		TextNotification: Структура потеряна.
 	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
 	Tooltip:
-		GenericName: Structure
+		GenericName: Структура
 	FrozenUnderFog:
 	Demolishable:
 	MapEditorData:
@@ -898,7 +898,7 @@
 ^CivBuilding:
 	Inherits: ^Building
 	Tooltip:
-		GenericName: Civilian Building
+		GenericName: Гражданское здание
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -914,7 +914,7 @@
 		Footprint: x
 	WithSpriteBody:
 	Tooltip:
-		GenericName: Civilian Building (Destroyed)
+		GenericName: Гражданское здание (Уничтожно)
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -931,7 +931,7 @@
 		Types: building
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-		TextNotification: Civilian building captured.
+		TextNotification: Гражданское здание захвачено.
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1400
@@ -943,7 +943,7 @@
 	Tooltip:
 		ShowOwnerRow: True
 	MapEditorData:
-		Categories: Tech building
+		Categories: Техническое здание
 	AppearsOnMapPreview:
 	WithBuildingRepairDecoration:
 		Image: allyrepair
@@ -992,7 +992,7 @@
 		Dimensions: 1,1
 		Footprint: =
 	Tooltip:
-		Name: Field (Destroyed)
+		Name: Поле (Уничтожено)
 		GenericVisibility: None
 		ShowOwnerRow: false
 	RenderSprites:
@@ -1161,7 +1161,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Rock
+		Name: Камень
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1244,14 +1244,14 @@
 		Moves: False
 		Explosion: HeliCrash
 	Tooltip:
-		GenericName: Destroyed Helicopter
+		GenericName: Уничтоженная авиатехника
 	-MapEditorData:
 
 ^Bridge:
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
 	Tooltip:
-		Name: Bridge
+		Name: Мост
 		ShowOwnerRow: false
 	Targetable:
 		RequiresForceFire: true
@@ -1277,7 +1277,7 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Crate
+		Name: Ящик
 		GenericName: Crate
 		ShowOwnerRow: false
 	Crate:

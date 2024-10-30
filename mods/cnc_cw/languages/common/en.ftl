@@ -243,7 +243,7 @@ dialog-exit-map-editor =
 ## IngamePowerBarLogic
 ## IngamePowerCounterLogic
 label-power-usage = Энергия: { $usage }/{ $capacity }
-label-infinite-power = Бесконечно
+label-infinite-power = Беск.
 
 ## IngameSiloBarLogic
 ## IngameCashCounterLogic

@@ -6,14 +6,14 @@ E1:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Minigunner
+		Name: Мини-стрелок
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: Пехота общего назначения.\n  Сильна vs Пехоты\n  Слаба vs Техники
 	Mobile:
 		Speed: 54
 	Health:
@@ -39,14 +39,14 @@ E2:
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Grenadier
+		Name: Гренадер
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.GDI
-		Description: Fast infantry armed with grenades. \n  Strong vs Buildings, slow-moving targets
+		Description: Быстрая пехота вооружённая гранатами. \n  Сильна vs Зданий, Медленных целей
 	Mobile:
 		Speed: 68
 	Health:
@@ -79,14 +79,14 @@ E3:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Rocket Soldier
+		Name: Солдат с РПГ
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: Пехота против техники и авиации. \n  Сильна vs Танки, Авиация\n  Слаба vs Пехота
 	Mobile:
 		Speed: 39
 	Health:
@@ -115,14 +115,14 @@ E4:
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Flamethrower
+		Name: Огнемётчик
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.Nod
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: Передовое противопехотное подразделение.\n  Сильна vs Пехоты, Зданий\n  Слаба vs Танков
 	Mobile:
 		Speed: 54
 	Health:
@@ -153,14 +153,14 @@ E5:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Chemical Warrior
+		Name: Химический воин
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Infantry.Nod
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+		Description: Усовершенствованная пехота.\n  Сильна vs всех Наземных юнитов
 	Mobile:
 		Speed: 54
 		Locomotor: chem
@@ -191,14 +191,14 @@ E6:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Engineer
+		Name: Инженер
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Damages and captures enemy structures.\n  Repairs destroyed vehicles\n  Unarmed
+		Description: Наносит урон и захватывает здания врага.\n  Чинит уничтоженую технику\n  Безоружен
 	Mobile:
 		Speed: 46
 	Health:
@@ -225,14 +225,14 @@ RMBO:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Commando
+		Name: Коммандо
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: eye, ~techlevel.high
 		Queue: Infantry.GDI
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: Элитный снайпер.\n  Силен vs Пехоты, Зданий\n  Слаб vs Техники
 	Mobile:
 		Speed: 68
 	Health:
@@ -266,7 +266,7 @@ PVICE:
 		Queue: Infantry.GDI, Infantry.Nod
 		BuildPaletteOrder: 50
 		Prerequisites: ~disabled
-		Description: Mutated abomination that spits liquid Tiberium.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+		Description: Мутировавшая мерзость, плюющаяся жидким тиберием.\n  Силен vs Пехоты, Зданий\n  Слаб vs Авиации
 	Tooltip:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -276,43 +276,43 @@ PVICE:
 STEG:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Stegosaurus
+		Name: Стегозавр
 	Armament:
 		Weapon: tail
 	WithDeathAnimation:
 		DeathSequencePalette: terrain
 		DeathPaletteIsPlayerPalette: false
 	Buildable:
-		Description: A large, heavily built, herbivorous quadruped
+		Description: Крупное, крепко сложенное травоядное четвероногое животное
 
 TREX:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Tyrannosaurus rex
+		Name: Тираннозавр рекс
 	Armament:
 		Weapon: teeth
 	Selectable:
 		Bounds: 2048, 1536, 85, 42
 		DecorationBounds: 2218, 1621
 	Buildable:
-		Description: Bipedal carnivore with a massive skull
+		Description: Двуногий хищник с массивным черепом
 
 TRIC:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Triceratops
+		Name: Трицератопс
 	Armament:
 		Weapon: horn
 	Buildable:
-		Description: Quadruped with large bony frill and three horns
+		Description: Четвероногий, с большим костяным жабо и тремя рогами
 	Selectable:
 		DecorationBounds: 1450, 1024, 0, 85
 
 RAPT:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Velociraptor
+		Name: Велоцираптор
 	Armament:
 		Weapon: claw
 	Buildable:
-		Description: Bipedal with enlarged sickle-shaped claw on each hindfoot
+		Description: Двуногий с увеличенными серповидными когтями на каждой задней ноге

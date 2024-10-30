@@ -85,12 +85,12 @@ BIO:
 	Health:
 		HP: 250000
 	Tooltip:
-		Name: Biological Lab
+		Name: Биолаборатория
 	TooltipDescription@ally:
-		Description: Provides infantry with Tiberium immunity.
+		Description: Обеспечивает пехоте иммунитет к Тиберию.
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to enable Tiberium immunity for infantry.
+		Description: Захватите для иммунитета к Тиберию у пехоты.
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: BIO.Husk
@@ -104,7 +104,7 @@ BIO.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Biological Lab (Destroyed)
+		Name: Биолаборатория (Уничтожена)
 
 MISS:
 	Inherits: ^TechBuilding
@@ -118,7 +118,7 @@ MISS:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Tooltip:
-		Name: Tech Center
+		Name: Тех-Центр
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000
@@ -130,10 +130,10 @@ MISS:
 	RevealsShroud:
 		Range: 13c0
 	TooltipDescription@ally:
-		Description: Provides range of vision.
+		Description: Даёт поле видимости.
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture to give visual range.
+		Description: Захватите для улучшения обзора.
 		ValidRelationships: Neutral, Enemy
 	WithBuildingBib:
 		HasMinibib: true
