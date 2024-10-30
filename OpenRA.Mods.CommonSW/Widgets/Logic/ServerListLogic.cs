@@ -437,7 +437,24 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			searchStatus = SearchStatus.Fetching;
 
-			var queryURL = new HttpQueryBuilder(services.ServerList)
+			// If it works doesn't touch it
+			var address = "";
+			if (Game.Settings.Game.AlwaysUseBackupMaster) {
+				address = services.ServerListBackup;
+			} else {
+				address = services.ServerList;
+			}
+
+			var queryURL = new HttpQueryBuilder(address)
+			{
+				{ "protocol", GameServer.ProtocolVersion },
+				{ "engine", Game.EngineVersion },
+				{ "mod", Game.ModData.Manifest.Id },
+				{ "version", Game.ModData.Manifest.Metadata.Version }
+			}.ToString();
+
+			// Yea, we should make better handling that
+			var queryURLBackup = new HttpQueryBuilder(services.ServerListBackup)
 			{
 				{ "protocol", GameServer.ProtocolVersion },
 				{ "engine", Game.EngineVersion },
@@ -476,6 +493,35 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					searchStatus = SearchStatus.Failed;
 					Log.Write("debug", $"Failed to query server list with exception: {e}");
+
+					// I will make that a function at some point
+					try
+					{
+						var client = HttpClientFactory.Create();
+						var httpResponseMessage = await client.GetAsync(queryURLBackup);
+						var result = await httpResponseMessage.Content.ReadAsStreamAsync();
+
+						var yaml = MiniYaml.FromStream(result);
+						games = new List<GameServer>();
+						foreach (var node in yaml)
+						{
+							try
+							{
+								var gs = new GameServer(node.Value);
+								if (gs.Address != null)
+									games.Add(gs);
+							}
+							catch
+							{
+								// Ignore any invalid games advertised.
+							}
+						}
+					}
+					catch (Exception e2)
+					{
+						searchStatus = SearchStatus.Failed;
+						Log.Write("debug", $"Failed to query server list with Backup Master with exception: {e2}");
+					}
 				}
 
 				var lanGames = new List<GameServer>();

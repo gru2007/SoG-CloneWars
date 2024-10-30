@@ -1,4 +1,4 @@
-This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-200 of OpenRA.
+This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-213 of OpenRA.
 
 All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.
 
@@ -71,11 +71,11 @@ Debug:
 ### UUID
 Sysinfo anonymous user identifier.
 
-**Default Value:** f9df7aea-a9d7-4da0-91c3-6d5136ee884e
+**Default Value:** 32be8766-9be3-4021-9215-b06c3c0f195c
 
 ```miniyaml
 Debug:
-        UUID: f9df7aea-a9d7-4da0-91c3-6d5136ee884e
+        UUID: 32be8766-9be3-4021-9215-b06c3c0f195c
 ```
 ### DisplayDeveloperSettings
 Enable hidden developer settings in the Advanced settings tab.
@@ -150,6 +150,15 @@ Debug:
         SyncCheckBotModuleCode: False
 ```
 ## Game
+### AlwaysUseBackupMaster
+If true game will always ping a backup master server, you shouldn't touch it.
+
+**Default Value:** False
+
+```miniyaml
+Game:
+        AlwaysUseBackupMaster: False
+```
 ### AuthProfile
 Filename of the authentication profile to use.
 

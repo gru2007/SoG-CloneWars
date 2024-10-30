@@ -143,7 +143,15 @@ namespace OpenRA.Mods.Common.Server
 			{
 				try
 				{
-					var endpoint = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
+					// I'm too lazy to make a retry... so host need to change that setting
+					var address = "";
+					if (Game.Settings.Game.AlwaysUseBackupMaster) {
+						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertise;
+					} else {
+						address = server.ModData.Manifest.Get<WebServices>().ServerAdvertiseBackup;
+					}
+
+					var endpoint = address;
 
 					var client = HttpClientFactory.Create();
 					var response = await client.PostAsync(endpoint, new StringContent(postData));
