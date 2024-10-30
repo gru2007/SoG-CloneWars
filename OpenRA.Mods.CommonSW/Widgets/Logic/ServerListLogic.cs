@@ -445,7 +445,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			// 	address = services.ServerList;
 			// }
 
-			var queryURL = new HttpQueryBuilder(ServerListBackup)
+			var queryURL = new HttpQueryBuilder(services.ServerList)
 			{
 				{ "protocol", GameServer.ProtocolVersion },
 				{ "engine", Game.EngineVersion },
