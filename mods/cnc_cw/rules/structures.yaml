@@ -721,7 +721,7 @@ HQCIS:
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
-		Queue: Building.GDI
+		Queue: Building.NOD
 		Description: Включает радар, а так же запрос авиаудара.\nРазблокирует более высокие по уровню здания.\nТребуется энергия для работы.
 	Building:
 		Footprint: X_ xx ==
