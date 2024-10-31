@@ -20,6 +20,8 @@ Packages:
 	~^SupportDir|Content/cnc
 	~^SupportDir|Content/cnc/movies
 	~^SupportDir|Content/eaw
+	~cnc_cw|packages/cnc
+	~cnc_cw|packages/eaw
 	^EngineDir
 	$cnc_cw: cnc_cw
 	cnc_cw|: cnc
@@ -307,20 +309,6 @@ ModContent:
 	QuickDownload: basefiles2, basefiles
 	HeaderMessage: Необходим контент игр Tiberian Dawn и Empire at War
 	Packages:
-		ContentPackage@base:
-			Title: Tiberian Dawn (база)
-			Identifier: base
-			TestFiles: ^SupportDir|Content/cnc/conquer.mix, ^SupportDir|Content/cnc/desert.mix, ^SupportDir|Content/cnc/sounds.mix, ^SupportDir|Content/cnc/speech.mix, ^SupportDir|Content/cnc/temperat.mix, ^SupportDir|Content/cnc/tempicnh.mix, ^SupportDir|Content/cnc/winter.mix
-			Sources: gdi95, nod95, tfd, origin, cncr-steam, cncr-origin
-			Required: true
-			Download: basefiles
-		ContentPackage@eaw:
-			Title: Empire at War (звуки)
-			Identifier: eaw
-			TestFiles: ^SupportDir|Content/eaw/U000_tbp0103_rus-2.wav, ^SupportDir|Content/eaw/U000_tbp0202_rus-2.wav
-			Sources:
-			Required: true
-			Download: eaw
 		ContentPackage@music:
 			Title: Tiberian Dawn Музыка
 			Identifier: music
