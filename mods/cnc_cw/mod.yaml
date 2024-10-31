@@ -1,6 +1,6 @@
 Metadata:
 	Title: Storm of The Galaxy - Clone Wars
-	Version: Alpha-213
+	Version: Alpha-215
 	Website: https://stormgalaxy.com
 	WebIcon32: https://raw.githubusercontent.com/gru2007/SoG-CloneWars/main/mods/cnc_cw/icon.png
 	WindowTitle: Storm of The Galaxy - Clone Wars
@@ -17,29 +17,22 @@ RequiresMods:
 PackageFormats: Mix
 
 Packages:
-	~^SupportDir|Content/cnc
-	~^SupportDir|Content/cnc/movies
-	~^SupportDir|Content/eaw
-	~cnc_cw|packages/cnc
-	~cnc_cw|packages/eaw
 	^EngineDir
 	$cnc_cw: cnc_cw
 	cnc_cw|: cnc
 	^EngineDir|mods/common: common
 	^EngineDir|mods/cnc: cnc_orig
-	~speech.mix
-	~conquer.mix
-	~sounds.mix
-	~tempicnh.mix
-	~temperat.mix
-	~winter.mix
-	~desert.mix
-	~movies.mix
-	~scores.mix
-	~scores2.mix
-	~scores-covertops.mix
-	~transit.mix
-	~general.mix
+	cnc_cw|packages/cnc
+	cnc_cw|packages/eaw
+	cnc_cw|packages/cnc/speech.mix
+	cnc_cw|packages/cnc/conquer.mix
+	cnc_cw|packages/cnc/sounds.mix
+	cnc_cw|packages/cnc/tempicnh.mix
+	cnc_cw|packages/cnc/temperat.mix
+	cnc_cw|packages/cnc/winter.mix
+	cnc_cw|packages/cnc/desert.mix
+	cnc_cw|packages/cnc/transit.mix
+	cnc_cw|packages/cnc/general.mix
 	cnc_cw|packages/tempstar.mix
 	cnc_cw|packages/starmain.mix
 	cnc_cw|packages/starmusc.mix
