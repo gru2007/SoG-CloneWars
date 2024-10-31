@@ -280,10 +280,6 @@ namespace OpenRA
 		public StatusBarsType StatusBars = StatusBarsType.Standard;
 		public TargetLinesType TargetLines = TargetLinesType.Manual;
 		public bool UsePlayerStanceColors = false;
-
-		// [Desc("If true game will always ping a backup master server, you shouldn't touch it.")]
-		// public bool AlwaysUseBackupMaster = false;
-
 		public bool AllowDownloading = true;
 
 		[Desc("Filename of the authentication profile to use.")]

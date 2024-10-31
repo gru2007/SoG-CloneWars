@@ -399,7 +399,6 @@
 	HitShape:
 	Voiced:
 		VoiceSet: VehicleVoice
-	HitShape:
 	MapEditorData:
 		Categories: Aircraft
 	SpawnActorOnDeath:
