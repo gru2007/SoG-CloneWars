@@ -166,10 +166,10 @@ Translations:
 	common|languages/en.ftl
 	common|languages/hotkeys/en.ftl
 	common|languages/rules/en.ftl
-	cnc_orig|languages/en.ftl
-	cnc_orig|languages/chrome/en.ftl
-	cnc_orig|languages/hotkeys/en.ftl
-	cnc_orig|languages/rules/en.ftl
+	cnc_cw|languages/en.ftl
+	cnc_cw|languages/chrome/en.ftl
+	cnc_cw|languages/hotkeys/en.ftl
+	cnc_cw|languages/rules/en.ftl
 	cnc_cw|languages/rules/en.ftl
 	cnc_cw|languages/common/en.ftl
 	cnc_cw|languages/common/rules/en.ftl
