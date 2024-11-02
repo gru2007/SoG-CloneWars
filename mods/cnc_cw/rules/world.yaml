@@ -10,6 +10,8 @@
 		DefeatMusic: nod_map1
 	DebugVisualizations:
 	TerrainRenderer:
+	ModelRenderer:
+	VoxelCache:
 	TerrainGeometryOverlay:
 	ShroudRenderer:
 		ShroudVariants: typea, typeb, typec, typed
@@ -167,14 +169,16 @@ World:
 		Type: Scorch
 		Sequence: scorches
 		SmokeChance: 50
-		SmokeImage: smoke_m
-		SmokeSequences: idle
+		SmokeImage: scorch_flames
+		SmokeSequences: large_flame, medium_flame, small_flame
+		MaxSmokeOffsetDistance: 341
 	SmudgeLayer@CRATER:
 		Type: Crater
 		Sequence: craters
 		SmokeChance: 25
 		SmokeImage: smoke_m
 		SmokeSequences: idle
+		MaxSmokeOffsetDistance: 213
 	ResourceLayer:
 		RecalculateResourceDensity: true
 		ResourceTypes:
@@ -292,8 +296,8 @@ EditorWorld:
 				TerrainType: BlueTiberium
 				AllowedTerrainTypes: Clear, Road
 				MaxDensity: 12
-	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Road
+	MarkerLayerOverlay:

@@ -1,20 +1,21 @@
 Container@MULTIPLAYER_CREATESERVER_PANEL:
 	Logic: ServerCreationLogic
-	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT - 15) / 2
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT - 15) / 2
 	Width: 530
 	Height: 275
 	Children:
 		Label@TITLE:
-			Width: PARENT_RIGHT
-			Y: 0 - 22
+			Width: PARENT_WIDTH
+			Height: 25
+			Y: 0 - 34
 			Font: BigBold
 			Contrast: true
 			Align: Center
 			Text: Создать сервер
 		Background@bg:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
 			Background: panel-black
 			Children:
 				Label@SERVER_NAME_LABEL:
@@ -91,8 +92,8 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 				Container@NOTICES_LAN:
 					X: 20
 					Y: 145
-					Width: PARENT_RIGHT
-					Height: PARENT_BOTTOM
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
 					Children:
 						Label@ADVERTISING:
 							Width: 305
@@ -125,8 +126,8 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 				Container@NOTICES_NO_UPNP:
 					X: 20
 					Y: 145
-					Width: PARENT_RIGHT
-					Height: PARENT_BOTTOM
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
 					Children:
 						Label@ADVERTISING:
 							Width: 305
@@ -174,8 +175,8 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 				Container@NOTICES_UPNP:
 					X: 20
 					Y: 145
-					Width: PARENT_RIGHT
-					Height: PARENT_BOTTOM
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
 					Children:
 						Label@ADVERTISING:
 							Width: 305
@@ -204,58 +205,27 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 							Font: Tiny
 							Align: Left
 							Text: - Вы можете выключить UPnP/NAT-PMP в меню Продвинутых настроек игры
-				Background@MAP_BG:
-					X: PARENT_RIGHT - 189
+				Container@MAP_PREVIEW_ROOT:
+					X: PARENT_WIDTH - 189
 					Y: 15
 					Width: 174
-					Height: 174
-					Background: panel-gray
-					Children:
-						MapPreview@MAP_PREVIEW:
-							X: 1
-							Y: 1
-							Width: PARENT_RIGHT - 2
-							Height: PARENT_RIGHT - 2
-				LabelWithTooltip@MAP_TITLE:
-					X: PARENT_RIGHT - 189
-					Y: 187
-					Width: 174
-					Height: 25
-					Font: Bold
-					Align: Center
-					TooltipContainer: TOOLTIP_CONTAINER
-					TooltipTemplate: SIMPLE_TOOLTIP
-				Label@MAP_TYPE:
-					X: PARENT_RIGHT - 189
-					Y: 202
-					Width: 174
-					Height: 25
-					Font: TinyBold
-					Align: Center
-					IgnoreMouseOver: true
-				Label@MAP_AUTHOR:
-					X: PARENT_RIGHT - 189
-					Y: 215
-					Width: 174
-					Height: 25
-					Font: Tiny
-					Align: Center
+					Height: 250
 		Button@BACK_BUTTON:
 			Key: return
-			Y: PARENT_BOTTOM - 1
+			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
 			Text: Назад
 		Button@MAP_BUTTON:
-			X: PARENT_RIGHT - WIDTH - 150
-			Y: PARENT_BOTTOM - 1
+			X: PARENT_WIDTH - WIDTH - 150
+			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
 			Text: Сменить Карту
 		Button@CREATE_BUTTON:
 			Key: return
-			X: PARENT_RIGHT - WIDTH
-			Y: PARENT_BOTTOM - 1
+			X: PARENT_WIDTH - WIDTH
+			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
 			Text: Создать

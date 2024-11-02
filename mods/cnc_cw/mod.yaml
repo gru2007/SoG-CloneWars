@@ -50,7 +50,7 @@ FileSystem: ContentInstallerFileSystem
 		common|scripts
 		cnc_cw|uibits
 	ContentPackages:
-	ContentInstallerMod: modcontent_ru
+	ContentInstallerMod: cnccw-content
 
 MapFolders:
 	cnc_cw|maps: System
@@ -166,10 +166,10 @@ Translations:
 	common|languages/en.ftl
 	common|languages/hotkeys/en.ftl
 	common|languages/rules/en.ftl
-	cnc|languages/en.ftl
-	cnc|languages/chrome/en.ftl
-	cnc|languages/hotkeys/en.ftl
-	cnc|languages/rules/en.ftl
+	cnc_orig|languages/en.ftl
+	cnc_orig|languages/chrome/en.ftl
+	cnc_orig|languages/hotkeys/en.ftl
+	cnc_orig|languages/rules/en.ftl
 	cnc_cw|languages/rules/en.ftl
 	cnc_cw|languages/common/en.ftl
 	cnc_cw|languages/common/rules/en.ftl
@@ -190,7 +190,7 @@ Hotkeys:
 	common|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
-	common|hotkeys/production-peractor.yaml
+	#common|hotkeys/production-peractor.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
@@ -269,8 +269,6 @@ VideoFormats: Vqa, Wsa
 TerrainFormat: DefaultTerrain
 
 SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
-
-ModelSequenceFormat: VoxelModelSequence
 
 AssetBrowser:
 	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun, .png

@@ -118,6 +118,10 @@ HELI:
 		LocalOffset: 128,-213,-85, 128,213,-85
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
+	Encyclopedia:
+		Description: actor-heli.encyclopedia
+		Order: 240
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AutoTarget:
@@ -185,6 +189,10 @@ ORCA:
 		Weapon: OrcaAAMissiles
 		LocalOffset: 427,-171,-213, 427,171,-213
 		PauseOnCondition: !ammo
+	Encyclopedia:
+		Description: actor-orca.encyclopedia
+		Order: 250
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AutoTarget:
@@ -246,6 +254,8 @@ C17:
 	Cloak:
 		InitialDelay: 0
 		CloakDelay: 0
+		CloakStyle: Palette
+		CloakedPalette: cloak
 		DetectionTypes: C17
 		RequiresCondition: global-C17-stealth
 	Contrail@1:

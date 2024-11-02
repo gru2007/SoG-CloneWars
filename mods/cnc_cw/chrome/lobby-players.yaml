@@ -1,64 +1,64 @@
 Container@LOBBY_PLAYER_BIN:
-	Width: PARENT_RIGHT
-	Height: PARENT_BOTTOM
+	Width: PARENT_WIDTH
+	Height: PARENT_HEIGHT
 	Children:
 		Container@LABEL_CONTAINER:
 			X: 5
 			Y: 0 - 24
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
 			Children:
-				Label@NAME:
+				Label@LABEL_LOBBY_NAME:
 					Width: 200
 					Height: 25
 					Text: Игрок
 					Align: Center
 					Font: Bold
-				Label@COLOR:
+				Label@LABEL_LOBBY_COLOR:
 					X: 210
 					Width: 94
 					Height: 25
 					Text: Цвет
 					Align: Center
 					Font: Bold
-				Label@FACTION:
+				Label@LABEL_LOBBY_FACTION:
 					X: 309
 					Width: 120
 					Height: 25
 					Text: Фракция
 					Align: Center
 					Font: Bold
-				Label@TEAM:
+				Label@LABEL_LOBBY_TEAM:
 					X: 460 - 25
 					Width: 50
 					Height: 25
 					Text: Команда
 					Align: Center
 					Font: Bold
-				Label@HANDICAP:
+				Label@LABEL_LOBBY_HANDICAP:
 					X: 491
 					Width: 75
 					Height: 25
 					Text: Handicap
 					Align: Center
 					Font: Bold
-				Label@SPAWN:
+				Label@LABEL_LOBBY_SPAWN:
 					X: 571
 					Width: 50
 					Height: 25
 					Text: Спаун
 					Align: Left
 					Font: Bold
-				Label@STATUS:
+				Label@LABEL_LOBBY_STATUS:
 					X: 627
-					Width: 20
+					Width: 20 + 24
 					Height: 25
 					Text: Готов
 					Align: Left
 					Font: Bold
 		ScrollPanel@LOBBY_PLAYERS:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
 			TopBottomSpacing: 5
 			ItemSpacing: 5
 			Children:
@@ -78,8 +78,8 @@ Container@LOBBY_PLAYER_BIN:
 								ColorBlock@LATENCY_COLOR:
 									X: 2
 									Y: 2
-									Width: PARENT_RIGHT - 4
-									Height: PARENT_BOTTOM - 4
+									Width: PARENT_WIDTH - 4
+									Height: PARENT_HEIGHT - 4
 						ClientTooltipRegion@LATENCY_REGION:
 							Width: 11
 							Height: 25
@@ -123,8 +123,8 @@ Container@LOBBY_PLAYER_BIN:
 								ColorBlock@COLORBLOCK:
 									X: 5
 									Y: 6
-									Width: PARENT_RIGHT - 35
-									Height: PARENT_BOTTOM - 12
+									Width: PARENT_WIDTH - 35
+									Height: PARENT_HEIGHT - 12
 						DropDownButton@FACTION:
 							X: 309
 							Width: 120
@@ -191,8 +191,8 @@ Container@LOBBY_PLAYER_BIN:
 								ColorBlock@LATENCY_COLOR:
 									X: 2
 									Y: 2
-									Width: PARENT_RIGHT - 4
-									Height: PARENT_BOTTOM - 4
+									Width: PARENT_WIDTH - 4
+									Height: PARENT_HEIGHT - 4
 						ClientTooltipRegion@LATENCY_REGION:
 							Width: 11
 							Height: 25
@@ -257,7 +257,7 @@ Container@LOBBY_PLAYER_BIN:
 									Text: Фракция
 						Label@TEAM:
 							X: 435
-							Width: 25
+							Width: 44
 							Height: 25
 							Align: Center
 						DropDownButton@TEAM_DROPDOWN:
@@ -337,8 +337,8 @@ Container@LOBBY_PLAYER_BIN:
 								ColorBlock@LATENCY_COLOR:
 									X: 2
 									Y: 2
-									Width: PARENT_RIGHT - 4
-									Height: PARENT_BOTTOM - 4
+									Width: PARENT_WIDTH - 4
+									Height: PARENT_HEIGHT - 4
 						ClientTooltipRegion@LATENCY_REGION:
 							Width: 11
 							Height: 25
@@ -401,8 +401,8 @@ Container@LOBBY_PLAYER_BIN:
 								ColorBlock@LATENCY_COLOR:
 									X: 2
 									Y: 2
-									Width: PARENT_RIGHT - 4
-									Height: PARENT_BOTTOM - 4
+									Width: PARENT_WIDTH - 4
+									Height: PARENT_HEIGHT - 4
 						ClientTooltipRegion@LATENCY_REGION:
 							Width: 11
 							Height: 25

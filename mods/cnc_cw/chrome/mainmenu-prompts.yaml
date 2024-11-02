@@ -1,31 +1,32 @@
 Container@MAINMENU_INTRODUCTION_PROMPT:
 	Logic: IntroductionPromptLogic
-	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 700
 	Height: 445
 	Children:
 		Label@PROMPT_TITLE:
-			Width: PARENT_RIGHT
-			Y: 0 - 25
+			Width: PARENT_WIDTH
+			Height: 25
+			Y: 0 - 37
 			Font: BigBold
 			Contrast: true
 			Align: Center
 			Text: Настройка Мобильного Командного Пункта
 		Background@bg:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
 			Background: panel-black
 			Children:
 				Label@DESC_A:
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Y: 15
 					Height: 16
 					Font: Regular
 					Align: Center
 					Text: Добро пожаловать, командир! Инициализируйте боевые параметры, используя параметры ниже.
 				Label@DESC_B:
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Y: 33
 					Height: 16
 					Font: Regular
@@ -34,50 +35,50 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 				ScrollPanel@SETTINGS_SCROLLPANEL:
 					X: 15
 					Y: 60
-					Width: PARENT_RIGHT - 30
-					Height: PARENT_BOTTOM - 75
+					Width: PARENT_WIDTH - 30
+					Height: PARENT_HEIGHT - 75
 					CollapseHiddenChildren: True
 					TopBottomSpacing: 5
 					ItemSpacing: 10
 					ScrollBar: Hidden
 					Children:
-						Background@SECTION_HEADER:
+						Background@PROFILE_SECTION_HEADER:
 							X: 5
-							Width: PARENT_RIGHT - 10
+							Width: PARENT_WIDTH - 10
 							Height: 13
 							Background: separator
 							ClickThrough: True
 							Children:
 								Label@LABEL:
-									Width: PARENT_RIGHT
-									Height: PARENT_BOTTOM
+									Width: PARENT_WIDTH
+									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
 									Text: Профиль
 						Container@ROW:
-							Width: PARENT_RIGHT
+							Width: PARENT_WIDTH
 							Height: 50
 							Children:
 								Container@PLAYER_CONTAINER:
 									X: 10
-									Width: PARENT_RIGHT / 2 - 20
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Label@PLAYER:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Text: Ник командира:
 										TextField@PLAYERNAME:
 											Y: 25
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 25
 											MaxLength: 16
-											Text: Ник
+											Text: Name
 								Container@PLAYERCOLOR_CONTAINER:
-									X: PARENT_RIGHT / 2 + 10
-									Width: PARENT_RIGHT / 2 - 20
+									X: PARENT_WIDTH / 2 + 10
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Label@COLOR:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Text: Предпочитаемый Цвет:
 										DropDownButton@PLAYERCOLOR:
@@ -90,212 +91,230 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 												ColorBlock@COLORBLOCK:
 													X: 5
 													Y: 6
-													Width: PARENT_RIGHT - 35
-													Height: PARENT_BOTTOM - 12
+													Width: PARENT_WIDTH - 35
+													Height: PARENT_HEIGHT - 12
 						Container@SPACER:
-						Background@SECTION_HEADER:
+						Background@INPUT_SECTION_HEADER:
 							X: 5
-							Width: PARENT_RIGHT - 10
+							Width: PARENT_WIDTH - 10
 							Height: 13
 							Background: separator
 							ClickThrough: True
 							Children:
 								Label@LABEL:
-									Width: PARENT_RIGHT
-									Height: PARENT_BOTTOM
+									Width: PARENT_WIDTH
+									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
 									Text: Ввод
 						Container@ROW:
-							Width: PARENT_RIGHT
+							Width: PARENT_WIDTH
 							Height: 50
 							Children:
 								Container@MOUSE_CONTROL_CONTAINER:
 									X: 10
-									Width: PARENT_RIGHT / 2 - 20
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Label@MOUSE_CONTROL_LABEL:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
 											Text: Схема управления:
 										DropDownButton@MOUSE_CONTROL_DROPDOWN:
 											Y: 25
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 25
 											Font: Regular
 								Container@MOUSE_CONTROL_DESC_CLASSIC:
-									X: PARENT_RIGHT / 2 + 10
-									Width: PARENT_RIGHT / 2 - 20
+									X: PARENT_WIDTH / 2 + 10
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										LabelWithHighlight@DESC_SELECTION:
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Выберите юнитов, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_COMMANDS:
 											Y: 17
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Командуйте юнитами, используя {Левую} кнопку мыши
-										LabelWithHighlight@DESC_BUILDIGS:
+										LabelWithHighlight@DESC_BUILDINGS:
 											Y: 34
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Размещайте здания, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_SUPPORT:
 											Y: 51
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Вызывайте поддержку, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_ZOOM:
 											Y: 68
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Приближайте камеру, используя {Колесо прокрутки}
 										LabelWithHighlight@DESC_ZOOM_MODIFIER:
 											Y: 68
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Приближайте камеру, используя {MODIFIER + Колесо прокрутки}
 										LabelWithHighlight@DESC_SCROLL_RIGHT:
 											Y: 85
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Передвигайте камеру, используя {Правую} кнопку мыши
 										LabelWithHighlight@DESC_SCROLL_MIDDLE:
 											Y: 85
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Передвигайте камеру, используя {Среднюю} кнопку мыши
 										Label@DESC_EDGESCROLL:
 											X: 9
 											Y: 102
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: или перемещая курсор на край экрана
 								Container@MOUSE_CONTROL_DESC_MODERN:
-									X: PARENT_RIGHT / 2 + 6
-									Width: PARENT_RIGHT / 2 - 20
+									X: PARENT_WIDTH / 2 + 10
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										LabelWithHighlight@DESC_SELECTION:
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Выберите юнитов, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_COMMANDS:
 											Y: 17
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Командуйте юнитами, используя {Правую} кнопку мыши
-										LabelWithHighlight@DESC_BUILDIGS:
+										LabelWithHighlight@DESC_BUILDINGS:
 											Y: 34
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Размещайте здания, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_SUPPORT:
 											Y: 51
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Вызывайте поддержку, используя {Левую} кнопку мыши
 										LabelWithHighlight@DESC_ZOOM:
 											Y: 68
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Приближайте камеру, используя {Колесо прокрутки}
 										LabelWithHighlight@DESC_ZOOM_MODIFIER:
 											Y: 68
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Приближайте камеру, используя {MODIFIER + Колесо прокрутки}
 										LabelWithHighlight@DESC_SCROLL_RIGHT:
 											Y: 85
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Передвигайте камеру, используя {Правую} кнопку мыши
 										LabelWithHighlight@DESC_SCROLL_MIDDLE:
 											Y: 85
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: - Передвигайте камеру, используя {Среднюю} кнопку мыши
 										Label@DESC_EDGESCROLL:
 											X: 9
 											Y: 102
+											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
 											Text: или перемещая курсор на край экрана
 						Container@ROW:
-							Width: PARENT_RIGHT
+							Width: PARENT_WIDTH
 							Height: 20
 							Children:
 								Container@EDGESCROLL_CHECKBOX_CONTAINER:
 									X: 10
-									Width: PARENT_RIGHT / 2 - 20
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Checkbox@EDGESCROLL_CHECKBOX:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
 											Text: Край экрана двигает камеру 
 						Container@SPACER:
 							Height: 30
-						Background@SECTION_HEADER:
+						Background@DISPLAY_SECTION_HEADER:
 							X: 5
-							Width: PARENT_RIGHT - 10
+							Width: PARENT_WIDTH - 10
 							Height: 13
 							Background: separator
 							ClickThrough: True
 							Children:
 								Label@LABEL:
-									Width: PARENT_RIGHT
-									Height: PARENT_BOTTOM
+									Width: PARENT_WIDTH
+									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
 									Text: Дисплей
 						Container@ROW:
-							Width: PARENT_RIGHT
+							Width: PARENT_WIDTH
 							Height: 50
 							Children:
 								Container@BATTLEFIELD_CAMERA_DROPDOWN_CONTAINER:
 									X: 10
-									Width: PARENT_RIGHT / 2 - 20
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Label@BATTLEFIELD_CAMERA:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Text: Камера:
 										DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 											Y: 25
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 25
 											Font: Regular
 								Container@UI_SCALE_DROPDOWN_CONTAINER:
-									X: PARENT_RIGHT / 2 + 10
-									Width: PARENT_RIGHT / 2 - 20
+									X: PARENT_WIDTH / 2 + 10
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Label@UI_SCALE:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Text: Размер UI:
 										DropDownButton@UI_SCALE_DROPDOWN:
 											Y: 25
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 25
 											Font: Regular
 						Container@ROW:
-							Width: PARENT_RIGHT
+							Width: PARENT_WIDTH
 							Height: 20
 							Children:
 								Container@CURSORDOUBLE_CHECKBOX_CONTAINER:
-									X: PARENT_RIGHT / 2 + 10
-									Width: PARENT_RIGHT / 2 - 20
+									X: PARENT_WIDTH / 2 + 10
+									Width: PARENT_WIDTH / 2 - 20
 									Children:
 										Checkbox@CURSORDOUBLE_CHECKBOX:
-											Width: PARENT_RIGHT
+											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
 											Text: Увеличить Курсор
 		Button@CONTINUE_BUTTON:
-			X: PARENT_RIGHT - WIDTH
-			Y: PARENT_BOTTOM - 1
+			X: PARENT_WIDTH - WIDTH
+			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
 			Text: Продолжить
@@ -304,41 +323,42 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 
 Container@MAINMENU_SYSTEM_INFO_PROMPT:
 	Logic: SystemInfoPromptLogic
-	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 600
 	Height: 350
 	Children:
-		Label@TITLE:
-			Width: PARENT_RIGHT
-			Y: 0 - 25
+		Label@PROMPT_TITLE:
+			Width: PARENT_WIDTH
+			Height: 25
+			Y: 0 - 37
 			Font: BigBold
 			Contrast: true
 			Align: Center
 			Text: Настройка Мобильного Командного Пункта
 		Background@bg:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
 			Background: panel-black
 			Children:
 				Label@PROMPT_TEXT_A:
 					X: 15
 					Y: 15
-					Width: PARENT_RIGHT - 30
+					Width: PARENT_WIDTH - 30
 					Height: 16
 					Align: Center
 					Text: Разработчики OpenRA и SoG хотят получить данные для улучшения движка и игры.
 				Label@PROMPT_TEXT_B:
 					X: 15
 					Y: 33
-					Width: PARENT_RIGHT - 30
+					Width: PARENT_WIDTH - 30
 					Height: 16
 					Align: Center
 					Text: С Вашего разрешения, данные ниже будут анонимно отправлены им:
 				ScrollPanel@SYSINFO_DATA:
 					X: 15
 					Y: 63
-					Width: PARENT_RIGHT - 30
+					Width: PARENT_WIDTH - 30
 					TopBottomSpacing: 4
 					ItemSpacing: 4
 					Height: 240
@@ -356,8 +376,8 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Font: Regular
 					Text: Отправить данные
 		Button@CONTINUE_BUTTON:
-			X: PARENT_RIGHT - WIDTH
-			Y: PARENT_BOTTOM - 1
+			X: PARENT_WIDTH - WIDTH
+			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
 			Text: Продолжить

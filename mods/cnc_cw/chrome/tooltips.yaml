@@ -405,6 +405,7 @@ Background@LATENCY_TOOLTIP:
 		Label@LATENCY_PREFIX:
 			X: 5
 			Y: 1
+			Width: 200
 			Height: 23
 			Font: Bold
 			Text: Задежка:
@@ -413,16 +414,31 @@ Background@LATENCY_TOOLTIP:
 			Height: 23
 			Font: Bold
 
+Background@BOT_TOOLTIP:
+	Logic: BotTooltipLogic
+	Background: panel-black
+	Height: 30
+	Width: 300
+	Children:
+		Label@NAME:
+			X: 5
+			Y: 2
+			Text: label-bot-player-tooltip-name
+			Width: 290
+			Height: 24
+			Font: Bold
+
 Background@ANONYMOUS_PLAYER_TOOLTIP:
 	Logic: AnonymousProfileTooltipLogic
 	Background: panel-black
 	Height: 30
-	Width: 200
+	Width: 300
 	Children:
 		Label@NAME:
 			X: 5
 			Y: 2
 			Text: Анонимный игрок
+			Width: 290
 			Height: 23
 			Font: MediumBold
 		Label@LOCATION:
@@ -452,6 +468,7 @@ Background@ANONYMOUS_PLAYER_TOOLTIP:
 					ImageName: admin
 				Label@LABEL:
 					X: 10
+					Width: 200
 					Height: 12
 					Text: Админ игры
 					Font: TinyBold
@@ -462,29 +479,29 @@ Container@REGISTERED_PLAYER_TOOLTIP:
 	Height: 137
 	Children:
 		Background@HEADER:
-			Width: PARENT_RIGHT
+			Width: PARENT_WIDTH
 			Background: panel-black
 			Children:
 				Container@PROFILE_HEADER:
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Height: 42
 					Children:
 						Label@PROFILE_NAME:
 							X: 5
 							Y: 2
-							Width: PARENT_RIGHT - 20
+							Width: PARENT_WIDTH - 20
 							Height: 23
 							Font: MediumBold
 						Label@PROFILE_RANK:
 							X: 5
 							Y: 24
-							Width: PARENT_RIGHT - 20
+							Width: PARENT_WIDTH - 20
 							Height: 12
 							Font: TinyBold
 						Container@GAME_ADMIN:
 							X: 5
 							Y: 36
-							Width: PARENT_RIGHT - 20
+							Width: PARENT_WIDTH - 20
 							Height: 12
 							Visible: False
 							Children:
@@ -498,21 +515,22 @@ Container@REGISTERED_PLAYER_TOOLTIP:
 								Label@LABEL:
 									X: 10
 									Y: 1
+									Width: 200
 									Height: 12
 									Text: Админ игры
 									Font: TinyBold
 				Container@MESSAGE_HEADER:
 					Height: 26
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Children:
 						Label@MESSAGE:
 							Y: 1
 							X: 5
-							Width: PARENT_RIGHT - 20
+							Width: PARENT_WIDTH - 20
 							Height: 23
 							Font: Bold
 		Background@BADGES_CONTAINER:
-			Width: PARENT_RIGHT
+			Width: PARENT_WIDTH
 			Y: -1
 			Visible: false
 			Background: panel-black

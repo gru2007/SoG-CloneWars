@@ -409,6 +409,7 @@ lobby-bits:
 		admin-anonymous: 802, 51, 16, 16
 		player-registered: 785, 51, 16, 16
 		player-anonymous: 819, 51, 16, 16
+		bot: 938, 51, 16, 16
 
 reload-icon:
 	Inherits: ^Chrome
@@ -545,9 +546,9 @@ production-icons:
 		building: 768, 68, 16, 16
 		building-disabled: 768, 85, 16, 16
 		building-alert: 768, 102, 16, 16
-		defence: 785, 68, 16, 16
-		defence-disabled: 785, 85, 16, 16
-		defence-alert: 785, 102, 16, 16
+		support: 785, 68, 16, 16
+		support-disabled: 785, 85, 16, 16
+		support-alert: 785, 102, 16, 16
 		infantry: 802, 68, 16, 16
 		infantry-disabled: 802, 85, 16, 16
 		infantry-alert: 802, 102, 16, 16
@@ -750,3 +751,14 @@ chrome-radar-gdi:
 	Inherits: ^Chrome
 	Regions:
 		logo: 644, 320, 132, 132
+
+editor:
+	Inherits: ^Chrome
+	Regions:
+		select: 802, 170, 16, 16
+		tiles: 768, 170, 16, 16
+		overlays: 785, 170, 16, 16
+		actors: 802, 68, 16, 16
+		tools: 904, 68, 16, 16
+		history: 904, 51, 16, 16
+		erase: 818, 170, 16, 16

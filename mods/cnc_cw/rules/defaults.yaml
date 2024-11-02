@@ -54,7 +54,7 @@
 ^GainsExperience:
 	GainsExperience:
 		LevelUpNotification: LevelUp
-		LevelUpTextNotification: Unit promoted.
+		LevelUpTextNotification: Юнит повышен.
 		Conditions:
 			250: rank-veteran
 			500: rank-veteran
@@ -151,11 +151,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Defense
+		ValidTargets: Infantry, Vehicle, Creep, Water, Support
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Creep, Water, Structure, Support
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetGroundAssaultMove:
@@ -178,11 +178,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Air, Defense
+		ValidTargets: Infantry, Vehicle, Creep, Water, Air, Support
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Air, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Creep, Water, Air, Structure, Support
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAllAssaultMove:
@@ -205,6 +205,8 @@
 		CloakDelay: 90
 		CloakSound: trans1.aud
 		UncloakSound: trans1.aud
+		CloakStyle: Palette
+		CloakedPalette: cloak
 		PauseOnCondition: cloak-force-disabled
 		RequiresCondition: cloak-crate-collected
 	ExternalCondition@CLOAK:
@@ -225,7 +227,7 @@
 			red: pip-red
 
 ^StoresResources:
-	StoresResources:
+	StoresPlayerResources:
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -252,12 +254,12 @@
 	Passenger:
 		CargoType: Vehicle
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: Юнит потерян.
 	HiddenUnderFog:
 	AttackMove:
 	WithDamageOverlay:
 	WithFacingSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Guard:
@@ -311,8 +313,8 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
-		TextNotification: Unit lost.
-	Explodes:
+		TextNotification: Юнит потерян.
+	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 	AttackMove:
@@ -375,7 +377,7 @@
 	ActorLostNotification:
 		TextNotification: Unit lost.
 	AttackMove:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
 	Guard:
@@ -490,7 +492,7 @@
 		Margin: 5, 6
 		RequiresCondition: hazmatsuits
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: Юнит потерян.
 	SpawnActorOnDeath:
 		Probability: 5
 		Actor: vice
@@ -547,7 +549,7 @@
 	Inherits: ^Infantry
 	MustBeDestroyed:
 	Tooltip:
-		GenericName: Солдат
+		GenericName: meta-soldier-generic-name
 	Guard:
 	TakeCover:
 		SpeedModifier: 60
@@ -568,7 +570,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Гражданский
+		Name: meta-civinfantry-name
 		GenericVisibility: None
 	Mobile:
 		Speed: 54
@@ -619,8 +621,6 @@
 		Prerequisites: ~disabled
 	Valued:
 		Cost: 1000
-	Tooltip:
-		Name: Динозавр
 	RevealsShroud:
 		Range: 6c0
 	Mobile:
@@ -687,7 +687,7 @@
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Викцероид
+		Name: meta-viceroid-name
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 384,0,0
@@ -733,7 +733,7 @@
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: Юнит потерян.
 	AttackMove:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -790,7 +790,7 @@
 		TextNotification: Юнит потерян.
 	AttackMove:
 	WithDamageOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeShip
 		EmptyWeapon: UnitExplodeShip
 	Guard:
@@ -827,7 +827,7 @@
 		DamagedSounds: xplobig4.aud
 		DestroyedSounds: crumble.aud, xplobig4.aud
 	WithSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
@@ -956,8 +956,8 @@
 	-Selectable:
 	Interactable:
 	Tooltip:
-		GenericName: Field
-	-Explodes:
+		GenericName: meta-civfield-generic-name
+	-FireWarheadsOnDeath:
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	-Demolishable:
@@ -973,12 +973,12 @@
 		Condition: winter
 		TileSets: SNOW, WINTER
 	Tooltip@WINTER:
-		Name: Igloo
+		Name: meta-civhaystackorigloo.winter-name
 		RequiresCondition: winter
 		GenericVisibility: None
 		ShowOwnerRow: false
 	Tooltip@SUMMER:
-		Name: Haystacks
+		Name: meta-civhaystackorigloo.summer-name
 		RequiresCondition: !winter
 		GenericVisibility: None
 		ShowOwnerRow: false
@@ -991,7 +991,6 @@
 		Dimensions: 1,1
 		Footprint: =
 	Tooltip:
-		Name: Поле (Уничтожено)
 		GenericVisibility: None
 		ShowOwnerRow: false
 	RenderSprites:
@@ -1010,12 +1009,12 @@
 		Condition: winter
 		TileSets: SNOW, WINTER
 	Tooltip@WINTER:
-		Name: Igloo (Destroyed)
+		Name: meta-civhaystackorigloohusk.winter-name
 		RequiresCondition: winter
 		GenericVisibility: None
 		ShowOwnerRow: false
 	Tooltip@SUMMER:
-		Name: Haystacks (Destroyed)
+		Name: meta-civhaystackorigloohusk.summer-name
 		RequiresCondition: !winter
 		GenericVisibility: None
 		ShowOwnerRow: false
@@ -1199,13 +1198,13 @@
 	Inherits: ^CommonHuskDefaults
 	Husk:
 		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+		Locomotor: tracked
 	Targetable:
 		RequiresForceFire: true
 		TargetTypes: Ground, Husk
 	CaptureManager:
 	Capturable:
 		Types: husk
-		ValidRelationships: Enemy, Neutral, Ally
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	Tooltip:
@@ -1213,7 +1212,7 @@
 	WithColoredOverlay@IDISABLE:
 		Color: 000000B4
 	ScriptTriggers:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	WithIdleOverlay@Burns:
@@ -1227,6 +1226,8 @@
 
 ^LightHusk:
 	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
 	Health:
 		HP: 4000
 
@@ -1276,8 +1277,8 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Ящик
-		GenericName: Crate
+		Name: meta-crate.name
+		GenericName: meta-crate.generic-name
 		ShowOwnerRow: false
 	Crate:
 		TerrainTypes: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
@@ -1289,7 +1290,7 @@
 	MapEditorData:
 		Categories: System
 
-^Defense:
+^Support:
 	Inherits: ^BaseBuilding
 	Inherits@selection: ^SelectableCombatBuilding
 	RenderRangeCircle:
@@ -1298,9 +1299,9 @@
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Targetable:
-		TargetTypes: Ground, C4, Structure, Defense
+		TargetTypes: Ground, C4, Structure, Support
 	MapEditorData:
-		Categories: Defense
+		Categories: Support
 	-CommandBarBlacklist:
 	-AcceptsDeliveredCash:
 

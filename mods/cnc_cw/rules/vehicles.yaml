@@ -16,6 +16,10 @@ MCV:
 		Locomotor: heavywheeled
 	Health:
 		HP: 120000
+	Encyclopedia:
+		Description: actor-mcv.encyclopedia
+		Order: 80
+		Category: Units
 	Repairable:
 		HpPerStep: 1819
 	Armor:
@@ -56,17 +60,24 @@ HARV:
 		DecorationBounds: 1536, 1536
 	Harvester:
 		Resources: Tiberium, BlueTiberium
-		Capacity: 20
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 15
 		SearchFromHarvesterRadius: 8
 		HarvestFacings: 8
 		EmptyCondition: no-tiberium
+	StoresResources:
+		Capacity: 20
+		Resources: Tiberium, BlueTiberium
+	DockClientManager:
 	Mobile:
 		Speed: 72
 	Health:
 		HP: 62500
+	Encyclopedia:
+		Description: actor-harv.encyclopedia
+		Order: 90
+		Category: Units
 	Repairable:
 		HpPerStep: 2584
 	Armor:
@@ -82,13 +93,13 @@ HARV:
 		EffectiveOwnerFromOwner: true
 	WithHarvestAnimation:
 	WithDockingAnimation:
-	Explodes@EMPTY:
+	FireWarheadsOnDeath@EMPTY:
 		Weapon: UnitExplodeHarvEmpty
 		EmptyWeapon: UnitExplodeHarvEmpty
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !no-tiberium
 		Weapon: TiberiumExplosion
-	WithHarvesterPipsDecoration:
+	WithStoresResourcesPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
@@ -120,6 +131,10 @@ APC:
 		PauseOnCondition: notmobile
 	Health:
 		HP: 19000
+	Encyclopedia:
+		Description: actor-apc.encyclopedia
+		Order: 100
+		Category: Units
 	Repairable:
 		HpPerStep: 1440
 	Armor:
@@ -169,7 +184,7 @@ APC:
 		MaxWeight: 5
 		UnloadVoice: Unload
 		LoadingCondition: notmobile
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 		EmptyWeapon: UnitExplodeBig
 	SpawnActorOnDeath:
@@ -208,6 +223,10 @@ ARTY:
 		Weapon: ArtilleryShell
 		LocalOffset: 624,0,208
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-arty.encyclopedia
+		Order: 110
+		Category: Units
 	AttackFrontal:
 		TargetFrozenActors: True
 		ForceFireIgnoresActors: True
@@ -222,7 +241,7 @@ ARTY:
 		Actor: ARTY.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryShell
 		EmptyWeapon: ArtilleryShell
 
@@ -257,13 +276,17 @@ FTNK:
 		Weapon: BigFlamer
 		LocalOffset: 512,128,42, 512,-128,42
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-ftnk.encyclopedia
+		Order: 120
+		Category: Units
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 0
 	AttackMove:
 		Voice: Attack
 	WithMuzzleOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: FlametankExplode
 		EmptyWeapon: FlametankExplode
 	SpawnActorOnDeath:
@@ -305,6 +328,10 @@ BGGY:
 		Weapon: MachineGun
 		LocalOffset: 171,0,43
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-bggy.encyclopedia
+		Order: 130
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AttackTurreted:
@@ -348,6 +375,10 @@ BIKE:
 		Weapon: BikeRockets
 		LocalOffset: -128, -170, 170, -128, 170, 170
 		LocalYaw: 100, -100
+	Encyclopedia:
+		Description: actor-bike.encyclopedia
+		Order: 140
+		Category: Units
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 0
@@ -392,6 +423,10 @@ JEEP:
 		Weapon: MachineGunH
 		LocalOffset: 171,0,85
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-jeep.encyclopedia
+		Order: 150
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AttackTurreted:
@@ -438,6 +473,10 @@ LTNK:
 		RecoilRecovery: 17
 		LocalOffset: 720,0,90
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-ltnk.encyclopedia
+		Order: 160
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AttackTurreted:
@@ -483,13 +522,17 @@ MTNK:
 		RecoilRecovery: 26
 		LocalOffset: 768,0,90
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-mtnk.encyclopedia
+		Order: 170
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AttackTurreted:
 		Voice: Attack
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeBig
 		EmptyWeapon: UnitExplodeBig
 	SpawnActorOnDeath:
@@ -543,6 +586,10 @@ HTNK:
 		LocalYaw: -100, 100
 		Recoil: 10
 		MuzzleSequence: muzzle
+	Encyclopedia:
+		Description: actor-htnk.encyclopedia
+		Order: 180
+		Category: Units
 	AttackMove:
 		Voice: Attack
 	AttackTurreted:
@@ -553,7 +600,7 @@ HTNK:
 		Delay: 10
 		StartIfBelow: 50
 		DamageCooldown: 200
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeMech
 		EmptyWeapon: UnitExplodeMech
 	SpawnActorOnDeath:
@@ -593,13 +640,17 @@ MSAM:
 	Turreted:
 		TurnSpeed: 512
 		Offset: -256,0,128
-	Armament@PRIMARY:
+	Armament:
 		Weapon: 227mm
 		LocalOffset: 213,128,0, 213,-128,0
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: 227mm
 		LocalOffset: 213,-128,0, 213,128,0
+	Encyclopedia:
+		Description: actor-msam.encyclopedia
+		Order: 190
+		Category: Units
 	AttackFrontal:
 		TargetFrozenActors: True
 		ForceFireIgnoresActors: True
@@ -608,7 +659,7 @@ MSAM:
 	AttackMove:
 		Voice: Attack
 	WithSpriteTurret:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeMech
 		EmptyWeapon: UnitExplodeMech
 	SpawnActorOnDeath:
@@ -626,7 +677,7 @@ MLRS:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Иобильная S.A.M.
+		Name: Мобильная S.A.M.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -652,6 +703,10 @@ MLRS:
 	Armament:
 		Weapon: Patriot
 		LocalOffset: 0,-171,0, 0,171,0
+	Encyclopedia:
+		Description: actor-mlrs.encyclopedia
+		Order: 200
+		Category: Units
 	AmmoPool:
 		Ammo: 2
 		AmmoCondition: ammo
@@ -709,6 +764,8 @@ STNK:
 		CloakDelay: 85
 		CloakSound: trans1.aud
 		UncloakSound: trans1.aud
+		CloakStyle: Palette
+		CloakedPalette: cloak
 		UncloakOn: Attack, Unload, Dock, Damage, Heal
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
@@ -720,6 +777,10 @@ STNK:
 	Armament@SECONDARY:
 		Weapon: 227mm.stnkAA
 		LocalOffset: 213,43,128, 213,-43,128
+	Encyclopedia:
+		Description: actor-stnk.encyclopedia
+		Order: 210
+		Category: Units
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 0
@@ -728,7 +789,7 @@ STNK:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeStealthTank
 		EmptyWeapon: UnitExplodeStealthTank
 	SpawnActorOnDeath:
@@ -778,6 +839,10 @@ TRUCK:
 		Speed: 113
 	RevealsShroud:
 		Range: 4c0
+	Encyclopedia:
+		Description: actor-truck.encyclopedia
+		Order: 220
+		Category: Units
 	DeliversCash:
 		Payload: 1000
 		PlayerExperience: 10

@@ -6,7 +6,7 @@ BOAT:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Gunboat
+		Name: actor-boat-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
