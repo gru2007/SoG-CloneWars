@@ -119,10 +119,10 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				var rx = mf.ReadUInt16();
 				var ry = mf.ReadUInt16();
 				var tilenum = mf.ReadUInt16();
-				/*var zero1 = */mf.ReadInt16();
+				mf.ReadInt16(); // zero1
 				var subtile = mf.ReadUInt8();
 				var z = mf.ReadUInt8();
-				/*var zero2 = */mf.ReadUInt8();
+				mf.ReadUInt8(); // zero2
 
 				var uv = ToMPos(rx, ry, fullSize.X);
 
@@ -171,6 +171,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				}
 			}
 
+			var nodes = new List<MiniYamlNode>();
 			foreach (var cell in map.AllCells)
 			{
 				var overlayType = overlayPack[overlayIndex[cell]];
@@ -180,7 +181,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				if (TryHandleOverlayToActorInner(cell, overlayPack, overlayIndex, overlayType, out var ar))
 				{
 					if (ar != null)
-						map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+						nodes.Add(new MiniYamlNode("Actor" + (map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 
 					continue;
 				}
@@ -196,14 +197,17 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 				Console.WriteLine($"Cell {cell}: unknown overlay {overlayType}");
 			}
+
+			map.ActorDefinitions = map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		protected virtual void ReadWaypoints(Map map, IniFile file, int2 fullSize)
 		{
+			var nodes = new List<MiniYamlNode>();
 			var waypointsSection = file.GetSection("Waypoints", true);
 			foreach (var kv in waypointsSection)
 			{
-				var pos = int.Parse(kv.Value);
+				var pos = Exts.ParseInt32Invariant(kv.Value);
 				var ry = pos / 1000;
 				var rx = pos - ry * 1000;
 				var cell = ToMPos(rx, ry, fullSize.X).ToCPos(map);
@@ -214,16 +218,19 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 					new OwnerInit("Neutral")
 				};
 
-				map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+				nodes.Add(new MiniYamlNode("Actor" + (map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 			}
+
+			map.ActorDefinitions = map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		protected virtual void ReadTerrainActors(Map map, IniFile file, int2 fullSize)
 		{
+			var nodes = new List<MiniYamlNode>();
 			var terrainSection = file.GetSection("Terrain", true);
 			foreach (var kv in terrainSection)
 			{
-				var pos = int.Parse(kv.Key);
+				var pos = Exts.ParseInt32Invariant(kv.Key);
 				var ry = pos / 1000;
 				var rx = pos - ry * 1000;
 				var cell = ToMPos(rx, ry, fullSize.X).ToCPos(map);
@@ -238,12 +245,15 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				if (!map.Rules.Actors.ContainsKey(name))
 					Console.WriteLine($"Ignoring unknown actor type: `{name}`");
 				else
-					map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+					nodes.Add(new MiniYamlNode("Actor" + (map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 			}
+
+			map.ActorDefinitions = map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		protected virtual void ReadActors(Map map, IniFile file, string type, int2 fullSize)
 		{
+			var nodes = new List<MiniYamlNode>();
 			var structuresSection = file.GetSection(type, true);
 			foreach (var kv in structuresSection)
 			{
@@ -252,16 +262,16 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 				var name = entries[1].ToLowerInvariant();
 
-				if (DeployableActors.ContainsKey(name))
+				if (DeployableActors.TryGetValue(name, out var n))
 				{
-					name = DeployableActors[name];
+					name = n;
 					isDeployed = true;
 				}
 
-				var health = short.Parse(entries[2]);
-				var rx = int.Parse(entries[3]);
-				var ry = int.Parse(entries[4]);
-				var facing = (byte)(224 - byte.Parse(entries[type == "Infantry" ? 7 : 5]));
+				var health = Exts.ParseInt16Invariant(entries[2]);
+				var rx = Exts.ParseInt32Invariant(entries[3]);
+				var ry = Exts.ParseInt32Invariant(entries[4]);
+				var facing = (byte)(224 - Exts.ParseByteInvariant(entries[type == "Infantry" ? 7 : 5]));
 
 				var cell = ToMPos(rx, ry, fullSize.X).ToCPos(map);
 
@@ -274,7 +284,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				if (type == "Infantry")
 				{
 					var subcell = 0;
-					switch (byte.Parse(entries[5]))
+					switch (Exts.ParseByteInvariant(entries[5]))
 					{
 						case 2: subcell = 3; break;
 						case 3: subcell = 1; break;
@@ -296,8 +306,10 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				if (!map.Rules.Actors.ContainsKey(name))
 					Console.WriteLine($"Ignoring unknown actor type: `{name}`");
 				else
-					map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+					nodes.Add(new MiniYamlNode("Actor" + (map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 			}
+
+			map.ActorDefinitions = map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		protected virtual void ReadLighting(Map map, IniFile file)
@@ -340,10 +352,13 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 			if (lightingNodes.Count > 0)
 			{
-				map.RuleDefinitions.Nodes.Add(new MiniYamlNode("^BaseWorld", new MiniYaml("", new List<MiniYamlNode>()
+				map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(new[]
 				{
-					new MiniYamlNode("TerrainLighting", new MiniYaml("", lightingNodes))
-				})));
+					new MiniYamlNode("^BaseWorld", new MiniYaml("", new[]
+					{
+						new MiniYamlNode("TerrainLighting", new MiniYaml("", lightingNodes))
+					}))
+				});
 			}
 		}
 
@@ -357,6 +372,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				{ "LightBlueTint", "BlueTint" },
 			};
 
+			var nodes = new List<MiniYamlNode>();
 			foreach (var lamp in LampActors)
 			{
 				var lightingSection = file.GetSection(lamp, true);
@@ -380,12 +396,14 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 				if (lightingNodes.Count > 0)
 				{
-					map.RuleDefinitions.Nodes.Add(new MiniYamlNode(lamp, new MiniYaml("", new List<MiniYamlNode>()
+					nodes.Add(new MiniYamlNode(lamp, new MiniYaml("", new[]
 					{
 						new MiniYamlNode("TerrainLightSource", new MiniYaml("", lightingNodes))
 					})));
 				}
 			}
+
+			map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(nodes);
 		}
 
 		protected virtual void SetInteractableBounds(Map map, int[] iniBounds)
@@ -403,12 +421,34 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			// Calculate Bounds edge tile coordinates.
 			// Reduce bottom and right by 1 because map.SetBounds() increases them.
 			var topLeft = new PPos(left, top);
-			var bottomRight = new PPos(playableAreaWidth + left - 1, playableAreaHeight + unknownHeightPadding + top - 1);
 
-			map.SetBounds(topLeft, bottomRight);
+			if (map.Height.Max() != 0)
+			{
+				// Workaround: Some custom TS maps have invalid boundaries, with no padding area at the bottom
+				// The boundary needs to be reduced until the projections are valid
+				bool hasValidBoundaries;
+				var paddingOffset = 1;
+				do
+				{
+					var bottomRight = new PPos(playableAreaWidth + left - 1, playableAreaHeight + unknownHeightPadding + top - paddingOffset);
+					map.SetBounds(topLeft, bottomRight);
+
+					var (topBound, bottomBound) = map.GetCellSpaceBounds();
+
+					hasValidBoundaries = topBound != int.MaxValue && bottomBound != int.MinValue;
+					paddingOffset++;
+				}
+				while (!hasValidBoundaries);
+			}
+			else
+			{
+				var bottomRight = new PPos(playableAreaWidth + left - 1, playableAreaHeight + unknownHeightPadding + top - 1);
+				map.SetBounds(topLeft, bottomRight);
+			}
 		}
 
-		protected virtual bool TryHandleOverlayToActorInner(CPos cell, byte[] overlayPack, CellLayer<int> overlayIndex, byte overlayType, out ActorReference actorReference)
+		protected virtual bool TryHandleOverlayToActorInner(
+			CPos cell, byte[] overlayPack, CellLayer<int> overlayIndex, byte overlayType, out ActorReference actorReference)
 		{
 			actorReference = null;
 			if (!OverlayToActor.TryGetValue(overlayType, out var actorType))
@@ -423,14 +463,12 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				// Only import the top-left cell of multi-celled overlays
 				// Returning true here means this is a part of a bigger overlay that has already been handled.
 				var aboveType = overlayPack[overlayIndex[cell - new CVec(1, 0)]];
-				if (shape.Width > 1 && aboveType != 0xFF)
-					if (OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
-						return true;
+				if (shape.Width > 1 && aboveType != 0xFF && OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
+					return true;
 
 				var leftType = overlayPack[overlayIndex[cell - new CVec(0, 1)]];
-				if (shape.Height > 1 && leftType != 0xFF)
-					if (OverlayToActor.TryGetValue(leftType, out var a) && a == actorType)
-						return true;
+				if (shape.Height > 1 && leftType != 0xFF && OverlayToActor.TryGetValue(leftType, out var l) && l == actorType)
+					return true;
 			}
 
 			actorReference = new ActorReference(actorType)

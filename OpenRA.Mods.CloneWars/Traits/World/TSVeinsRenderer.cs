@@ -39,12 +39,13 @@ namespace OpenRA.Mods.Cnc.Traits
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
 		[FieldLoader.Require]
+		[FluentReference]
 		[Desc("Resource name used by tooltips.")]
 		public readonly string Name = null;
 
 		[ActorReference]
 		[Desc("Actor types that should be treated as veins for adjacency.")]
-		public readonly HashSet<string> VeinholeActors = new() { };
+		public readonly HashSet<string> VeinholeActors = new();
 
 		void IMapPreviewSignatureInfo.PopulateMapPreviewSignatureCells(Map map, ActorInfo ai, ActorReference s, List<(MPos Uv, Color Color)> destinationBuffer)
 		{
@@ -369,10 +370,10 @@ namespace OpenRA.Mods.Cnc.Traits
 
 		string IResourceRenderer.GetRenderedResourceTooltip(CPos cell)
 		{
-			if (renderIndices[cell] != null)
-				return info.Name;
+			if (renderIndices[cell] != null || borders[cell] != Adjacency.None)
+				return FluentProvider.GetString(info.Name);
 
-			return borders[cell] != Adjacency.None ? info.Name : null;
+			return null;
 		}
 
 		IEnumerable<IRenderable> IResourceRenderer.RenderUIPreview(WorldRenderer wr, string resourceType, int2 origin, float scale)
@@ -380,7 +381,7 @@ namespace OpenRA.Mods.Cnc.Traits
 			if (resourceType != info.ResourceType)
 				yield break;
 
-			var sprite = veinSequence.GetSprite(HeavyIndices.First());
+			var sprite = veinSequence.GetSprite(HeavyIndices[0]);
 			var palette = wr.Palette(info.Palette);
 
 			yield return new UISpriteRenderable(sprite, WPos.Zero, origin, 0, palette, scale);
@@ -391,7 +392,7 @@ namespace OpenRA.Mods.Cnc.Traits
 			if (resourceType != info.ResourceType)
 				yield break;
 
-			var frame = HeavyIndices.First();
+			var frame = HeavyIndices[0];
 			var sprite = veinSequence.GetSprite(frame);
 			var alpha = veinSequence.GetAlpha(frame);
 			var palette = wr.Palette(info.Palette);

@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Cnc.SpriteLoaders
 	public class ShpD2Loader : ISpriteLoader
 	{
 		[Flags]
-		enum FormatFlags : int
+		enum FormatFlags : ushort
 		{
 			PaletteTable = 1,
 			NotLCWCompressed = 2,
@@ -40,7 +40,7 @@ namespace OpenRA.Mods.Cnc.SpriteLoaders
 			public ShpD2Frame(Stream s)
 			{
 				var flags = (FormatFlags)s.ReadUInt16();
-				s.Position += 1;
+				s.Position++;
 				var width = s.ReadUInt16();
 				var height = s.ReadUInt8();
 				Size = new Size(width, height);

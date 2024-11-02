@@ -21,7 +21,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Cnc.Traits
 {
-	sealed class MadTankInfo : TraitInfo, IRulesetLoaded, Requires<ExplodesInfo>, Requires<WithFacingSpriteBodyInfo>
+	sealed class MadTankInfo : TraitInfo, IRulesetLoaded, Requires<FireWarheadsOnDeathInfo>, Requires<WithFacingSpriteBodyInfo>
 	{
 		[SequenceReference]
 		public readonly string ThumpSequence = "piston";
@@ -102,7 +102,9 @@ namespace OpenRA.Mods.Cnc.Traits
 		{
 			get
 			{
-				yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("DetonateAttack"), "DetonateAttack", 5, info.AttackCursor, true, false) { ForceAttack = false };
+				yield return
+					new TargetTypeOrderTargeter(new BitSet<TargetableType>("DetonateAttack"), "DetonateAttack", 5, info.AttackCursor, true, false)
+					{ ForceAttack = false };
 
 				if (!initiated)
 					yield return new DeployOrderTargeter("Detonate", 5, () => info.DeployCursor);
@@ -203,13 +205,10 @@ namespace OpenRA.Mods.Cnc.Traits
 					mad.initiated = true;
 				}
 
-				if (++ticks % mad.info.ThumpInterval == 0)
+				if (++ticks % mad.info.ThumpInterval == 0 && mad.info.ThumpDamageWeapon != null)
 				{
-					if (mad.info.ThumpDamageWeapon != null)
-					{
-						// Use .FromPos since this weapon needs to affect more than just the MadTank actor
-						mad.info.ThumpDamageWeaponInfo.Impact(Target.FromPos(self.CenterPosition), self);
-					}
+					// Use .FromPos since this weapon needs to affect more than just the MadTank actor
+					mad.info.ThumpDamageWeaponInfo.Impact(Target.FromPos(self.CenterPosition), self);
 				}
 
 				if (ticks == mad.info.ChargeDelay)
@@ -249,7 +248,7 @@ namespace OpenRA.Mods.Cnc.Traits
 					new LocationInit(self.Location),
 					new OwnerInit(self.Owner)
 				});
-				driver.TraitOrDefault<Mobile>()?.Nudge(driver);
+				driver.QueueActivity(false, new Nudge(driver));
 			}
 		}
 	}

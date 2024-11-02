@@ -53,7 +53,7 @@ namespace OpenRA.Mods.Cnc.SpriteLoaders
 
 		static int ParseGroup(Match match, string group)
 		{
-			return int.Parse(match.Groups[group].Value);
+			return Exts.ParseInt32Invariant(match.Groups[group].Value);
 		}
 
 		public IReadOnlyList<ISpriteFrame> Frames { get; }
@@ -76,7 +76,7 @@ namespace OpenRA.Mods.Cnc.SpriteLoaders
 				if (prefix != framePrefix)
 					throw new InvalidDataException($"Frame prefix mismatch: `{prefix}` != `{framePrefix}`");
 
-				frameCount = Math.Max(frameCount, int.Parse(match.Groups["frame"].Value) + 1);
+				frameCount = Math.Max(frameCount, Exts.ParseInt32Invariant(match.Groups["frame"].Value) + 1);
 			}
 
 			var frames = new ISpriteFrame[frameCount];
@@ -97,14 +97,21 @@ namespace OpenRA.Mods.Cnc.SpriteLoaders
 					var metaStream = metaEntry != null ? container.GetInputStream(metaEntry) : null;
 					if (metaStream != null)
 					{
-						var meta = MetaRegex.Match(metaStream.ReadAllText());
+						string metaText;
+#if NET5_0_OR_GREATER
+						using (metaStream)
+						using (var metaReader = new StreamReader(metaStream, bufferSize: 64))
+							metaText = metaReader.ReadToEnd();
+#else
+						metaText = metaStream.ReadAllText();
+#endif
+						var meta = MetaRegex.Match(metaText);
 						var crop = Rectangle.FromLTRB(
 							ParseGroup(meta, "left"), ParseGroup(meta, "top"),
 							ParseGroup(meta, "right"), ParseGroup(meta, "bottom"));
 
 						var frameSize = new Size(ParseGroup(meta, "width"), ParseGroup(meta, "height"));
 						frames[i] = new TgaSprite.TgaFrame(tgaStream, frameSize, crop);
-						metaStream.Dispose();
 					}
 					else
 						frames[i] = new TgaSprite.TgaFrame(tgaStream);

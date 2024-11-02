@@ -9,12 +9,13 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace OpenRA.Mods.Cnc.FileFormats
 {
-	public enum NormalType { TiberianSun = 2, RedAlert2 = 4 }
+	public enum NormalType : byte { TiberianSun = 2, RedAlert2 = 4 }
 	public readonly struct VxlElement
 	{
 		public readonly byte Color;
@@ -111,7 +112,7 @@ namespace OpenRA.Mods.Cnc.FileFormats
 
 		public VxlReader(Stream s)
 		{
-			if (!s.ReadASCII(16).StartsWith("Voxel Animation"))
+			if (!s.ReadASCII(16).StartsWith("Voxel Animation", StringComparison.Ordinal))
 				throw new InvalidDataException("Invalid vxl header");
 
 			s.ReadUInt32();
@@ -140,14 +141,14 @@ namespace OpenRA.Mods.Cnc.FileFormats
 			{
 				limbDataOffset[i] = s.ReadUInt32();
 				s.Seek(8, SeekOrigin.Current);
-				Limbs[i].Scale = s.ReadFloat();
+				Limbs[i].Scale = s.ReadSingle();
 				s.Seek(48, SeekOrigin.Current);
 
 				Limbs[i].Bounds = new float[6];
 				for (var j = 0; j < 6; j++)
-					Limbs[i].Bounds[j] = s.ReadFloat();
+					Limbs[i].Bounds[j] = s.ReadSingle();
 				Limbs[i].Size = s.ReadBytes(3);
-				Limbs[i].Type = (NormalType)s.ReadByte();
+				Limbs[i].Type = (NormalType)s.ReadUInt8();
 			}
 
 			for (var i = 0; i < LimbCount; i++)

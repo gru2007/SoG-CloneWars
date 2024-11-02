@@ -99,7 +99,7 @@ namespace OpenRA.Mods.Cnc.Traits
 		public override object Create(ActorInitializer init) { return new Disguise(init.Self, this); }
 	}
 
-	sealed class Disguise : IEffectiveOwner, IIssueOrder, IResolveOrder, IOrderVoice, IRadarColorModifier, INotifyAttack,
+	sealed class Disguise : IEffectiveOwner, IIssueOrder, IResolveOrder, IOrderVoice, INotifyAttack,
 		INotifyDamage, INotifyLoadCargo, INotifyUnloadCargo, INotifyDemolition, INotifyInfiltration, ITick
 	{
 		public ActorInfo AsActor { get; private set; }
@@ -158,14 +158,6 @@ namespace OpenRA.Mods.Cnc.Traits
 			return order.OrderString == "Disguise" ? info.Voice : null;
 		}
 
-		Color IRadarColorModifier.RadarColorOverride(Actor self, Color color)
-		{
-			if (!Disguised || self.Owner.IsAlliedWith(self.World.RenderPlayer))
-				return color;
-
-			return Game.Settings.Game.UsePlayerStanceColors ? AsPlayer.PlayerRelationshipColor(self) : AsPlayer.Color;
-		}
-
 		public void DisguiseAs(Actor target)
 		{
 			var oldEffectiveActor = AsActor;
@@ -187,7 +179,7 @@ namespace OpenRA.Mods.Cnc.Traits
 				{
 					var tooltip = target.TraitsImplementing<ITooltip>().FirstEnabledTraitOrDefault();
 					if (tooltip == null)
-						throw new ArgumentNullException("tooltip", "Missing tooltip or invalid target.");
+						throw new ArgumentException("Missing tooltip or invalid target.", nameof(target));
 
 					AsPlayer = tooltip.Owner;
 					AsActor = target.Info;
@@ -302,6 +294,9 @@ namespace OpenRA.Mods.Cnc.Traits
 		{
 			var relationship = self.Owner.RelationshipWith(target.Owner);
 			if (!info.ValidRelationships.HasRelationship(relationship))
+				return false;
+
+			if (target.Equals(self))
 				return false;
 
 			return info.TargetTypes.Overlaps(target.GetAllTargetTypes());

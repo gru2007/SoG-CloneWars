@@ -23,7 +23,7 @@ namespace OpenRA.Mods.Cnc.Traits
 
 		[ActorReference]
 		[Desc("Actor types that should be treated as veins for adjacency.")]
-		public readonly HashSet<string> VeinholeActors = new() { };
+		public readonly HashSet<string> VeinholeActors = new();
 
 		public override object Create(ActorInitializer init) { return new TSEditorResourceLayer(init.Self, this); }
 	}
@@ -46,7 +46,7 @@ namespace OpenRA.Mods.Cnc.Traits
 				return false;
 
 			// Cell is automatically valid if it contains a veinhole actor
-			if (actorLayer.PreviewsAt(neighbour).Any(a => info.VeinholeActors.Contains(a.Info.Name)))
+			if (actorLayer.PreviewsAtCell(neighbour).Any(a => info.VeinholeActors.Contains(a.Info.Name)))
 				return true;
 
 			// Neighbour must be flat or a cardinal slope, unless the resource cell itself is a slope

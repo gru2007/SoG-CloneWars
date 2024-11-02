@@ -34,20 +34,17 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		public override void ValidateMapFormat(int format)
 		{
 			if (format < 2)
-			{
 				Console.WriteLine($"ERROR: Detected NewINIFormat {format}. Are you trying to import a Tiberian Dawn map?");
-				return;
-			}
 		}
 
 		// Mapping from RA95 overlay index to type string
 		static readonly string[] RedAlertOverlayNames =
 		{
-			"sbag", "cycl", "brik", "fenc", "wood",
+			"sbag", "cycl", "brik", "barb", "wood",
 			"gold01", "gold02", "gold03", "gold04",
 			"gem01", "gem02", "gem03", "gem04",
 			"v12", "v13", "v14", "v15", "v16", "v17", "v18",
-			"fpls", "wcrate", "scrate", "barb", "sbag",
+			"fpls", "wcrate", "scrate", "fenc", "sbag",
 		};
 
 		static readonly Dictionary<string, (byte Type, byte Index)> OverlayResourceMapping = new()
@@ -83,7 +80,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		static readonly string[] OverlayActors = new string[]
 		{
 			// Fences
-			"sbag", "cycl", "brik", "fenc", "wood",
+			"sbag", "cycl", "brik", "barb", "wood", "fenc",
 
 			// Fields
 			"v12", "v13", "v14", "v15", "v16", "v17", "v18",
@@ -94,6 +91,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 		void UnpackOverlayData(MemoryStream ms)
 		{
+			var nodes = new List<MiniYamlNode>();
 			for (var j = 0; j < MapSize; j++)
 			{
 				for (var i = 0; i < MapSize; i++)
@@ -115,11 +113,12 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 							new OwnerInit("Neutral")
 						};
 
-						var actorCount = Map.ActorDefinitions.Count;
-						Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + actorCount++, ar.Save()));
+						nodes.Add(new MiniYamlNode("Actor" + (Map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 					}
 				}
 			}
+
+			Map.ActorDefinitions = Map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		public override string ParseTreeActor(string input)
@@ -132,7 +131,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			var newLoc = new CPos(loc % MapSize, loc / MapSize);
 			var vectorDown = new CVec(0, 1);
 
-			if (input == "tsla" || input == "agun" || input == "gap" || input == "apwr" || input == "iron")
+			if (input == "tsla" || input == "agun" || input == "gap" || input == "apwr")
 				newLoc += vectorDown;
 
 			return newLoc;
@@ -144,46 +143,46 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			string faction;
 			switch (section)
 			{
-			case "Spain":
-				color = "gold";
-				faction = "allies";
-				break;
-			case "England":
-				color = "green";
-				faction = "allies";
-				break;
-			case "Ukraine":
-				color = "orange";
-				faction = "soviet";
-				break;
-			case "Germany":
-				color = "black";
-				faction = "allies";
-				break;
-			case "France":
-				color = "teal";
-				faction = "allies";
-				break;
-			case "Turkey":
-				color = "salmon";
-				faction = "allies";
-				break;
-			case "Greece":
-			case "GoodGuy":
-				color = "blue";
-				faction = "allies";
-				break;
-			case "USSR":
-			case "BadGuy":
-				color = "red";
-				faction = "soviet";
-				break;
-			case "Special":
-			case "Neutral":
-			default:
-				color = "neutral";
-				faction = "allies";
-				break;
+				case "Spain":
+					color = "gold";
+					faction = "allies";
+					break;
+				case "England":
+					color = "green";
+					faction = "allies";
+					break;
+				case "Ukraine":
+					color = "orange";
+					faction = "soviet";
+					break;
+				case "Germany":
+					color = "black";
+					faction = "allies";
+					break;
+				case "France":
+					color = "teal";
+					faction = "allies";
+					break;
+				case "Turkey":
+					color = "salmon";
+					faction = "allies";
+					break;
+				case "Greece":
+				case "GoodGuy":
+					color = "blue";
+					faction = "allies";
+					break;
+				case "USSR":
+				case "BadGuy":
+					color = "red";
+					faction = "soviet";
+					break;
+				case "Special":
+				case "Neutral":
+				default:
+					color = "neutral";
+					faction = "allies";
+					break;
 			}
 
 			SetMapPlayers(section, faction, color, file, Players, MapPlayers);
@@ -194,7 +193,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			var sb = new StringBuilder();
 			for (var i = 1; ; i++)
 			{
-				var line = mapPackSection.GetValue(i.ToString(), null);
+				var line = mapPackSection.GetValue(i.ToStringInvariant(), null);
 				if (line == null)
 					break;
 
@@ -241,12 +240,12 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			LoadActors(file, "SHIPS", Players, Map);
 		}
 
-		public override void SaveWaypoint(int waypointNumber, ActorReference waypointReference)
+		public override MiniYamlNode SaveWaypoint(int waypointNumber, ActorReference waypointReference)
 		{
 			var waypointName = "waypoint" + waypointNumber;
 			if (waypointNumber == 98)
 				waypointName = "DefaultCameraPosition";
-			Map.ActorDefinitions.Add(new MiniYamlNode(waypointName, waypointReference.Save()));
+			return new MiniYamlNode(waypointName, waypointReference.Save());
 		}
 	}
 }

@@ -212,7 +212,8 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		{
 			// "tib" - Regular Tiberium
 			{
-				0x01, new byte[]
+				0x01,
+				new byte[]
 				{
 					0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F,
 					0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78, 0x79
@@ -221,7 +222,8 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 			// "btib" - Blue Tiberium
 			{
-				0x02, new byte[]
+				0x02,
+				new byte[]
 				{
 					0x1B, 0x1C, 0x1D, 0x1E, 0x1F, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26,
 
@@ -267,7 +269,8 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 		#region Method overrides
 
-		protected override bool TryHandleOverlayToActorInner(CPos cell, byte[] overlayPack, CellLayer<int> overlayIndex, byte overlayType, out ActorReference actorReference)
+		protected override bool TryHandleOverlayToActorInner(
+			CPos cell, byte[] overlayPack, CellLayer<int> overlayIndex, byte overlayType, out ActorReference actorReference)
 		{
 			actorReference = null;
 			if (!OverlayToActor.TryGetValue(overlayType, out var actorType))
@@ -282,14 +285,12 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				// Only import the top-left cell of multi-celled overlays
 				// Returning true here means this is a part of a bigger overlay that has already been handled.
 				var aboveType = overlayPack[overlayIndex[cell - new CVec(1, 0)]];
-				if (shape.Width > 1 && aboveType != 0xFF)
-					if (OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
-						return true;
+				if (shape.Width > 1 && aboveType != 0xFF && OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
+					return true;
 
 				var leftType = overlayPack[overlayIndex[cell - new CVec(0, 1)]];
-				if (shape.Height > 1 && leftType != 0xFF)
-					if (OverlayToActor.TryGetValue(leftType, out var a) && a == actorType)
-						return true;
+				if (shape.Height > 1 && leftType != 0xFF && OverlayToActor.TryGetValue(leftType, out var l) && l == actorType)
+					return true;
 			}
 
 			// Fix position of vein hole actors.

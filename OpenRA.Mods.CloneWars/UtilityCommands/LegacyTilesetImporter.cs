@@ -79,7 +79,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				{
 					var section = file.GetSection($"TileSet{tilesetGroupIndex:D4}");
 
-					var sectionCount = int.Parse(section.GetValue("TilesInSet", "1"));
+					var sectionCount = Exts.ParseInt32Invariant(section.GetValue("TilesInSet", "1"));
 					var sectionFilename = section.GetValue("FileName", "").ToLowerInvariant();
 					var sectionCategory = section.GetValue("SetName", "");
 					if (!string.IsNullOrEmpty(sectionCategory) && sectionFilename != "blank")
@@ -115,8 +115,8 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 
 							var templateWidth = s.ReadUInt32();
 							var templateHeight = s.ReadUInt32();
-							/* var tileWidth = */s.ReadInt32();
-							/* var tileHeight = */s.ReadInt32();
+							s.ReadInt32(); // tileWidth
+							s.ReadInt32(); // tileHeight
 							var offsets = new uint[templateWidth * templateHeight];
 							for (var j = 0; j < offsets.Length; j++)
 								offsets[j] = s.ReadUInt32();
@@ -168,8 +168,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			metadata.AppendLine();
 
 			metadata.AppendLine("Terrain:");
-			terrainTypes = terrainTypes.Distinct().ToArray();
-			foreach (var terrainType in terrainTypes)
+			foreach (var terrainType in terrainTypes.Distinct())
 			{
 				metadata.AppendLine($"\tTerrainType@{terrainType}:");
 				metadata.AppendLine($"\t\tType: {terrainType}");

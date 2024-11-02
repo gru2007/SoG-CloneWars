@@ -68,13 +68,13 @@ namespace OpenRA.Mods.Cnc.FileFormats
 			// Decode FORM chunk
 			if (stream.ReadASCII(4) != "FORM")
 				throw new InvalidDataException("Invalid vqa (invalid FORM section)");
-			/*var length = */stream.ReadUInt32();
+			stream.ReadUInt32(); // length
 
 			if (stream.ReadASCII(8) != "WVQAVQHD")
 				throw new InvalidDataException("Invalid vqa (not WVQAVQHD)");
-			/*var length2 = */stream.ReadUInt32();
+			stream.ReadUInt32(); // length2
 
-			/*var version = */stream.ReadUInt16();
+			stream.ReadUInt16(); // version
 			videoFlags = stream.ReadUInt16();
 			FrameCount = stream.ReadUInt16();
 			Width = stream.ReadUInt16();
@@ -87,20 +87,20 @@ namespace OpenRA.Mods.Cnc.FileFormats
 			blocks = new int2(Width / blockWidth, Height / blockHeight);
 
 			numColors = stream.ReadUInt16();
-			/*var maxBlocks = */stream.ReadUInt16();
-			/*var unknown1 = */stream.ReadUInt16();
-			/*var unknown2 = */stream.ReadUInt32();
+			stream.ReadUInt16(); // maxBlocks
+			stream.ReadUInt16(); // unknown1
+			stream.ReadUInt32(); // unknown2
 
 			// Audio
 			SampleRate = stream.ReadUInt16();
-			AudioChannels = stream.ReadByte();
-			SampleBits = stream.ReadByte();
+			AudioChannels = stream.ReadUInt8();
+			SampleBits = stream.ReadUInt8();
 
-			/*var unknown3 =*/stream.ReadUInt32();
-			/*var unknown4 =*/stream.ReadUInt16();
-			/*maxCbfzSize =*/stream.ReadUInt32(); // Unreliable
+			stream.ReadUInt32(); // unknown3
+			stream.ReadUInt16(); // unknown4
+			stream.ReadUInt32(); // maxCbfzSize, unreliable
 
-			/*var unknown5 =*/stream.ReadUInt32();
+			stream.ReadUInt32(); // unknown5
 
 			if (IsHqVqa)
 			{
@@ -131,8 +131,8 @@ namespace OpenRA.Mods.Cnc.FileFormats
 					throw new NotSupportedException($"Vqa uses unknown Subtype: {type}");
 			}
 
-			/*var length = */stream.ReadUInt16();
-			/*var unknown4 = */stream.ReadUInt16();
+			stream.ReadUInt16(); // length
+			stream.ReadUInt16(); // unknown4
 
 			// Frame offsets
 			offsets = new uint[FrameCount];
@@ -199,16 +199,16 @@ namespace OpenRA.Mods.Cnc.FileFormats
 							else if (AudioChannels == 1)
 							{
 								var rawAudio = stream.ReadBytes((int)length);
-								audio1.WriteArray(rawAudio);
+								audio1.Write(rawAudio);
 							}
 							else
 							{
 								var rawAudio = stream.ReadBytes((int)length / 2);
-								audio1.WriteArray(rawAudio);
+								audio1.Write(rawAudio);
 								rawAudio = stream.ReadBytes((int)length / 2);
-								audio2.WriteArray(rawAudio);
+								audio2.Write(rawAudio);
 								if (length % 2 != 0)
-									stream.ReadBytes(2);
+									stream.Position += 2;
 							}
 
 							compressed = type == "SND2";
@@ -216,12 +216,12 @@ namespace OpenRA.Mods.Cnc.FileFormats
 						default:
 							if (length + stream.Position > stream.Length)
 								throw new NotSupportedException($"Vqa uses unknown Subtype: {type}");
-							stream.ReadBytes((int)length);
+							stream.Position += length;
 							break;
 					}
 
 					// Chunks are aligned on even bytes; advance by a byte if the next one is null
-					if (stream.Peek() == 0) stream.ReadByte();
+					if (stream.Peek() == 0) stream.ReadUInt8();
 				}
 			}
 
@@ -300,7 +300,7 @@ namespace OpenRA.Mods.Cnc.FileFormats
 						DecodeVQFR(stream);
 						break;
 					case "\0VQF":
-						stream.ReadByte();
+						stream.ReadUInt8();
 						DecodeVQFR(stream);
 						break;
 					case "VQFL":
@@ -308,12 +308,12 @@ namespace OpenRA.Mods.Cnc.FileFormats
 						break;
 					default:
 						// Don't parse sound here.
-						stream.ReadBytes((int)length);
+						stream.Position += length;
 						break;
 				}
 
 				// Chunks are aligned on even bytes; advance by a byte if the next one is null
-				if (stream.Peek() == 0) stream.ReadByte();
+				if (stream.Peek() == 0) stream.ReadUInt8();
 			}
 
 			// Now that the frame data has been loaded (in the relevant private fields), decode it into CurrentFrameData.
@@ -340,7 +340,7 @@ namespace OpenRA.Mods.Cnc.FileFormats
 			while (true)
 			{
 				// Chunks are aligned on even bytes; may be padded with a single null
-				if (s.Peek() == 0) s.ReadByte();
+				if (s.Peek() == 0) s.ReadUInt8();
 				var type = s.ReadASCII(4);
 				var subchunkLength = (int)int2.Swap(s.ReadUInt32());
 
@@ -382,8 +382,7 @@ namespace OpenRA.Mods.Cnc.FileFormats
 					// frame-modifier chunk
 					case "CBP0":
 					case "CBPZ":
-						var bytes = s.ReadBytes(subchunkLength);
-						bytes.CopyTo(cbp, chunkBufferOffset);
+						s.ReadBytes(cbp, chunkBufferOffset, subchunkLength);
 						chunkBufferOffset += subchunkLength;
 						currentChunkBuffer++;
 						cbpIsCompressed = type == "CBPZ";

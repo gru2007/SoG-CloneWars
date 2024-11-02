@@ -32,10 +32,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		public override void ValidateMapFormat(int format)
 		{
 			if (format > 1)
-			{
 				Console.WriteLine($"ERROR: Detected NewINIFormat {format}. Are you trying to import a Red Alert map?");
-				return;
-			}
 		}
 
 		static readonly Dictionary<string, (byte Type, byte Index)> OverlayResourceMapping = new()
@@ -71,7 +68,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		static readonly string[] OverlayActors = new string[]
 		{
 			// Fences
-			"sbag", "cycl", "brik", "fenc", "wood",
+			"sbag", "cycl", "brik", "barb", "wood",
 
 			// Fields
 			"v12", "v13", "v14", "v15", "v16", "v17", "v18",
@@ -86,15 +83,16 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			if (overlay == null)
 				return;
 
+			var nodes = new List<MiniYamlNode>();
 			foreach (var kv in overlay)
 			{
-				var loc = Exts.ParseIntegerInvariant(kv.Key);
+				var loc = Exts.ParseInt32Invariant(kv.Key);
 				var cell = new CPos(loc % MapSize, loc / MapSize);
 
 				var res = (Type: (byte)0, Index: (byte)0);
 				var type = kv.Value.ToLowerInvariant();
-				if (OverlayResourceMapping.ContainsKey(type))
-					res = OverlayResourceMapping[type];
+				if (OverlayResourceMapping.TryGetValue(type, out var r))
+					res = r;
 
 				Map.Resources[cell] = new ResourceTile(res.Type, res.Index);
 				if (OverlayActors.Contains(type))
@@ -105,10 +103,11 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 						new OwnerInit("Neutral")
 					};
 
-					var actorCount = Map.ActorDefinitions.Count;
-					Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + actorCount++, ar.Save()));
+					nodes.Add(new MiniYamlNode("Actor" + (Map.ActorDefinitions.Count + nodes.Count), ar.Save()));
 				}
 			}
+
+			Map.ActorDefinitions = Map.ActorDefinitions.Concat(nodes).ToArray();
 		}
 
 		public override string ParseTreeActor(string input)
@@ -143,20 +142,20 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			string faction;
 			switch (section)
 			{
-			case "GoodGuy":
-				color = "gold";
-				faction = "gdi";
-				break;
-			case "BadGuy":
-				color = "red";
-				faction = "nod";
-				break;
-			case "Special":
-			case "Neutral":
-			default:
-				color = "neutral";
-				faction = "gdi";
-				break;
+				case "GoodGuy":
+					color = "gold";
+					faction = "gdi";
+					break;
+				case "BadGuy":
+					color = "red";
+					faction = "nod";
+					break;
+				case "Special":
+				case "Neutral":
+				default:
+					color = "neutral";
+					faction = "gdi";
+					break;
 			}
 
 			SetMapPlayers(section, faction, color, file, Players, MapPlayers);
@@ -170,7 +169,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			ReadOverlay(file);
 		}
 
-		public override void SaveWaypoint(int waypointNumber, ActorReference waypointReference)
+		public override MiniYamlNode SaveWaypoint(int waypointNumber, ActorReference waypointReference)
 		{
 			var waypointName = "waypoint" + waypointNumber;
 			if (waypointNumber == 25)
@@ -179,7 +178,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 				waypointName = "DefaultCameraPosition";
 			else if (waypointNumber == 27)
 				waypointName = "DefaultChinookTarget";
-			Map.ActorDefinitions.Add(new MiniYamlNode(waypointName, waypointReference.Save()));
+			return new MiniYamlNode(waypointName, waypointReference.Save());
 		}
 	}
 }
