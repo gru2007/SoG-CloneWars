@@ -5,3 +5,5 @@ Metrics:
 	ButtonFont: Bold
 	TextfieldColorHighlight: 800000
 	SystemMessageLabel: Сервер
+	LobbyOptionChangedSound: LobbyOptionChanged
+	PlayerLeftSound: PlayerLeft
