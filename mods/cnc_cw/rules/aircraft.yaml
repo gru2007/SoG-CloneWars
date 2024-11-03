@@ -370,10 +370,8 @@ LAAT.Husk:
 		TurnSpeed: 20
 		Speed: 130
 	RenderVoxels:
+		PlayerPalette: playertem
 		Scale: 6
-	RenderVoxels:
-		Palette: colorpickervoxel
-	RenderVoxels:
 		Image: laat
 
 GUNSHIP.Husk:
@@ -384,8 +382,6 @@ GUNSHIP.Husk:
 		TurnSpeed: 20
 		Speed: 130
 	RenderVoxels:
+		PlayerPalette: playertem
 		Scale: 6
-	RenderVoxels:
-		Palette: colorpickervoxel
-	RenderVoxels:
 		Image: gunship

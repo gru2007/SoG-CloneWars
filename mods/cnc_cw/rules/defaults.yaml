@@ -388,7 +388,7 @@
 		QuantizedFacings: 0
 		CameraPitch: 85
 	RenderVoxels:
-		Palette: colorpickervoxel
+		PlayerPalette: playertem
 	WithVoxelBody:
 	Selectable:
 		Bounds: 1512, 1512
@@ -767,7 +767,7 @@
 		CameraPitch: 85
 	RenderSprites:
 	RenderVoxels:
-		Palette: colorpickervoxel
+		PlayerPalette: playertem
 	WithVoxelBody:
 	RejectsOrders:
 	Aircraft:
