@@ -155,6 +155,7 @@ ChromeLayout:
 	cnc_cw|chrome/settings-hotkeys.yaml
 	cnc_cw|chrome/settings-advanced.yaml
 	cnc_cw|chrome/credits.yaml
+	cnc_cw|chrome/encyclopedia.yaml
 	cnc_cw|chrome/dialogs.yaml
 	cnc_cw|chrome/tooltips.yaml
 	cnc_cw|chrome/assetbrowser.yaml

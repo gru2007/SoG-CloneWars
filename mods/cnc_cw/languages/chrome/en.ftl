@@ -922,7 +922,7 @@ button-production-types-aircraft-tooltip = Авиация
 
 productionpalette-player-widgets-production-palette =
    .ready = Готово
-   .hold = На Удержании
+   .hold = Ожидание
 
 ## lobby-kickdialogs.yaml
 label-kick-client-dialog-texta = Вы также можете выдать временный бан, предотвращая

@@ -522,7 +522,7 @@ label-loading-player-profile = Загрузка профиля игрока...
 label-loading-player-profile-failed = Не удалось получить профиль.
 
 ## ProductionTooltipLogic
-label-requires = Нужно { $prequisites }
+label-requires = Нужно { $prerequisites }
 
 ## ReplayBrowserLogic
 label-duration = Длительность: { $time }
