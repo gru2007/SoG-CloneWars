@@ -1,4 +1,4 @@
-This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-213 of OpenRA.
+This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-300 of OpenRA.
 
 All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.
 
@@ -71,11 +71,11 @@ Debug:
 ### UUID
 Sysinfo anonymous user identifier.
 
-**Default Value:** 32be8766-9be3-4021-9215-b06c3c0f195c
+**Default Value:** 464edecb-8d3b-4600-bd1c-5ac6184e567d
 
 ```miniyaml
 Debug:
-        UUID: 32be8766-9be3-4021-9215-b06c3c0f195c
+        UUID: 464edecb-8d3b-4600-bd1c-5ac6184e567d
 ```
 ### DisplayDeveloperSettings
 Enable hidden developer settings in the Advanced settings tab.
@@ -150,15 +150,6 @@ Debug:
         SyncCheckBotModuleCode: False
 ```
 ## Game
-### AlwaysUseBackupMaster (FUTURE)
-If true game will always ping a backup master server, you shouldn't touch it.
-
-**Default Value:** False
-
-```miniyaml
-Game:
-        AlwaysUseBackupMaster: False
-```
 ### AuthProfile
 Filename of the authentication profile to use.
 
@@ -267,15 +258,6 @@ Disable operating-system provided cursor rendering.
 ```miniyaml
 Graphics:
         DisableHardwareCursors: False
-```
-### DisableLegacyGL
-Disable legacy OpenGL 2.1 support.
-
-**Default Value:** True
-
-```miniyaml
-Graphics:
-        DisableLegacyGL: True
 ```
 ### VideoDisplay
 Display index to use in a multi-monitor fullscreen setup.
@@ -482,6 +464,9 @@ For dedicated servers only, treat maps that fail the lint checks as invalid.
 Server:
         EnableLintChecks: True
 ```
+### MapPool
+For dedicated servers only, a comma separated list of map uids that are allowed to be used.
+
 ### FloodLimitJoinCooldown
 Delay in milliseconds before newly joined players can send chat messages.
 

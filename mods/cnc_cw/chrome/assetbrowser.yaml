@@ -13,7 +13,7 @@ Container@ASSETBROWSER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Asset Browser
+			Text: label-assetbrowser-panel-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -97,7 +97,7 @@ Container@ASSETBROWSER_PANEL:
 					Height: 25
 					Font: Bold
 					Align: Left
-					Text: Scale:
+					Text: label-bg-model-scale
 				Slider@MODEL_SCALE_SLIDER:
 					X: PARENT_RIGHT - WIDTH - 330
 					Y: 35

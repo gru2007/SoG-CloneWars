@@ -58,7 +58,7 @@ LST:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Десантный корабль
+		Name: actor-lst-name
 	Mobile:
 		Locomotor: lcraft
 		InitialFacing: 0

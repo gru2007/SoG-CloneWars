@@ -50,7 +50,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_WIDTH
 							Height: 20
-							Text: Главное меню
+							Text: label-main-menu-mainmenu-title
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -59,37 +59,37 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Одиночная игра
+							Text: button-main-menu-singleplayer
 						Button@MULTIPLAYER_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Мультиплеер
+							Text: button-main-menu-multiplayer
 						Button@SETTINGS_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Настройки
+							Text: button-main-menu-settings
 						Button@EXTRAS_BUTTON:
 							X: 450
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Дополнительно
+							Text: button-main-menu-extras
 						Button@DISABLED_CONTENT_BUTTON:
 							X: 600
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Контент (выкл)
+							Text: button-main-menu-disabled-content
 						Button@QUIT_BUTTON:
 							X: 750
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Выйти
+							Text: button-main-menu-quit
 				Container@SINGLEPLAYER_MENU:
 					Width: PARENT_WIDTH
 					Visible: False
@@ -99,7 +99,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_WIDTH
 							Height: 20
-							Text: Одиночная игра
+							Text: label-singleplayer-menu-title
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -108,19 +108,19 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Стычка
+							Text: button-singleplayer-menu-skirmish
 						Button@MISSIONS_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Задания
+							Text: button-singleplayer-menu-missions
 						Button@LOAD_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Загрузить
+							Text: button-singleplayer-menu-load
 						Button@ENCYCLOPEDIA_BUTTON:
 							X: 450
 							Y: 0
@@ -133,7 +133,7 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Назад
+							Text: button-singleplayer-menu-back
 				Container@EXTRAS_MENU:
 					Width: PARENT_WIDTH
 					Visible: False
@@ -143,7 +143,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_WIDTH
 							Height: 20
-							Text: Дополнительно
+							Text: label-extras-menu-title
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -152,39 +152,39 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Реплеи
+							Text: button-extras-menu-replays
 						Button@MUSIC_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Музыка
+							Text: button-extras-menu-music
 						Button@MAP_EDITOR_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Редактор карт
+							Text: button-extras-menu-map-editor
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
 							X: 450
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Браузер Ассетов
+							Text: button-extras-menu-assetbrowser
 						Button@CREDITS_BUTTON:
 							X: 600
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Создатели
+							Text: button-extras-menu-credits
 						Button@BACK_BUTTON:
 							Key: escape
 							X: 750
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Назад
+							Text: button-extras-menu-back
 				Container@MAP_EDITOR_MENU:
 					Width: PARENT_WIDTH
 					Visible: False
@@ -194,7 +194,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_WIDTH
 							Height: 20
-							Text: Редактор Карт
+							Text: label-map-editor-menu-title
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -203,21 +203,21 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Новая Карта
+							Text: button-map-editor-menu-new
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Загрузить Карту
+							Text: button-map-editor-menu-load
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Назад
+							Text: button-map-editor-menu-back
 							Font: Bold
 							Key: escape
 		Container@NEWS_BG:
@@ -227,7 +227,7 @@ Container@MENU_BACKGROUND:
 					Y: 50
 					Width: 400
 					Height: 25
-					Text: Новости
+					Text: dropdownbutton-news-bg-button
 					Font: Bold
 		Container@UPDATE_NOTICE:
 			X: (WINDOW_WIDTH - WIDTH) / 2
@@ -239,14 +239,14 @@ Container@MENU_BACKGROUND:
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: У вас запущена устаревшая версия игры.
+					Text: label-update-notice-a
 				Label@B:
 					Y: 20
 					Width: PARENT_WIDTH
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
+					Text: label-update-notice-b
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
 			Children:

@@ -12,7 +12,7 @@ Container@REPLAYBROWSER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Просмотр Реплеев
+			Text: label-replaybrowser-panel-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -35,104 +35,104 @@ Container@REPLAYBROWSER_PANEL:
 									Height: 25
 									Font: Bold
 									Align: Center
-									Text: Фильтр
+									Text: label-filters-title
 								Label@FLT_GAMETYPE_DESC:
 									X: 0
 									Y: 15
 									Width: 80
 									Height: 25
-									Text: Тип:
+									Text: label-filters-flt-gametype-desc
 									Align: Right
 								DropDownButton@FLT_GAMETYPE_DROPDOWNBUTTON:
 									X: 85
 									Y: 15
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любой
+									Text: dropdownbutton-filters-flt-gametype
 								Label@FLT_DATE_DESC:
 									X: 0
 									Y: 45
 									Width: 80
 									Height: 25
-									Text: Дата:
+									Text: label-filters-flt-date-desc
 									Align: Right
 								DropDownButton@FLT_DATE_DROPDOWNBUTTON:
 									X: 85
 									Y: 45
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любой
+									Text: dropdownbutton-filters-flt-date
 								Label@FLT_DURATION_DESC:
 									X: 0
 									Y: 75
 									Width: 80
 									Height: 25
-									Text: Длина:
+									Text: label-filters-flt-duration-desc
 									Align: Right
 								DropDownButton@FLT_DURATION_DROPDOWNBUTTON:
 									X: 85
 									Y: 75
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любой
+									Text: dropdownbutton-filters-flt-duration
 								Label@FLT_MAPNAME_DESC:
 									X: 0
 									Y: 105
 									Width: 80
 									Height: 25
-									Text: Карта:
+									Text: label-filters-flt-mapname-desc
 									Align: Right
 								DropDownButton@FLT_MAPNAME_DROPDOWNBUTTON:
 									X: 85
 									Y: 105
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любая
+									Text: dropdownbutton-filters-flt-mapname
 								Label@FLT_PLAYER_DESC:
 									X: 0
 									Y: 135
 									Width: 80
 									Height: 25
-									Text: Игрок:
+									Text: label-filters-flt-player-desc
 									Align: Right
 								DropDownButton@FLT_PLAYER_DROPDOWNBUTTON:
 									X: 85
 									Y: 135
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любой
+									Text: dropdownbutton-filters-flt-player
 								Label@FLT_OUTCOME_DESC:
 									X: 0
 									Y: 165
 									Width: 80
 									Height: 25
-									Text: Outcome:
+									Text: label-filters-flt-outcome-desc
 									Align: Right
 								DropDownButton@FLT_OUTCOME_DROPDOWNBUTTON:
 									X: 85
 									Y: 165
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любой
+									Text: dropdownbutton-filters-flt-outcome
 								Label@FLT_FACTION_DESC:
 									X: 0
 									Y: 195
 									Width: 80
 									Height: 25
-									Text: Фракция:
+									Text: label-filters-flt-faction-desc
 									Align: Right
 								DropDownButton@FLT_FACTION_DROPDOWNBUTTON:
 									X: 85
 									Y: 195
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Любая
+									Text: dropdownbutton-filters-flt-faction
 								Button@FLT_RESET_BUTTON:
 									X: 85
 									Y: 235
 									Width: PARENT_WIDTH - 85
 									Height: 25
-									Text: Сбросить
+									Text: button-filters-flt-reset
 									Font: Bold
 						Container@MANAGEMENT:
 							X: 85
@@ -145,26 +145,26 @@ Container@REPLAYBROWSER_PANEL:
 									Height: 25
 									Font: Bold
 									Align: Center
-									Text: Управлять
+									Text: label-management-manage-title
 								Button@MNG_RENSEL_BUTTON:
 									Y: 30
 									Width: PARENT_WIDTH
 									Height: 25
-									Text: Переменовать
+									Text: button-management-mng-rensel
 									Font: Bold
 									Key: F2
 								Button@MNG_DELSEL_BUTTON:
 									Y: 60
 									Width: PARENT_WIDTH
 									Height: 25
-									Text: Удалить
+									Text: button-management-mng-delsel
 									Font: Bold
 									Key: Delete
 								Button@MNG_DELALL_BUTTON:
 									Y: 90
 									Width: PARENT_WIDTH
 									Height: 25
-									Text: Удалить всё
+									Text: button-management-mng-delall
 									Font: Bold
 				Container@REPLAY_LIST_CONTAINER:
 					X: 314
@@ -176,7 +176,7 @@ Container@REPLAYBROWSER_PANEL:
 							Y: 0 - 9
 							Width: PARENT_WIDTH
 							Height: 25
-							Text: Выбрать реплей
+							Text: label-replay-list-container-replaybrowser-title
 							Align: Center
 							Font: Bold
 						ScrollPanel@REPLAY_LIST:
@@ -262,12 +262,12 @@ Container@REPLAYBROWSER_PANEL:
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Назад
+			Text: button-replaybrowser-panel-cancel
 		Button@WATCH_BUTTON:
 			Key: return
 			X: PARENT_WIDTH - 140
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Смотреть
+			Text: button-replaybrowser-panel-watch
 		TooltipContainer@TOOLTIP_CONTAINER:

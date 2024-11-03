@@ -135,7 +135,7 @@ Container@OBSERVER_WIDGETS:
 					Width: PARENT_WIDTH - 30
 					Height: 25
 					Align: Right
-					Text: Аудио в муте
+					Text: label-mute-indicator
 					Contrast: true
 		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		MenuButton@OPTIONS_BUTTON:
@@ -144,7 +144,7 @@ Container@OBSERVER_WIDGETS:
 			Y: 5
 			Width: 30
 			Height: 25
-			TooltipText: Меню
+			TooltipText: button-observer-widgets-options-tooltip
 			TooltipContainer: TOOLTIP_CONTAINER
 			DisableWorldSounds: true
 			Children:
@@ -186,7 +186,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Пауза
+					TooltipText: button-replay-player-pause-tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -203,7 +203,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Играть
+					TooltipText: button-replay-player-play-tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -220,10 +220,10 @@ Container@OBSERVER_WIDGETS:
 					Width: 36
 					Height: 20
 					Key: ReplaySpeedSlow
-					TooltipText: Медленно
+					TooltipText: button-replay-player-slow.tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
-					Text: 50%
+					Text: button-replay-player-slow.label
 					Font: TinyBold
 				Button@BUTTON_REGULAR:
 					X: 57 + 48
@@ -231,10 +231,10 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedRegular
-					TooltipText: Обычно
+					TooltipText: button-replay-player-regular.tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
-					Text: 100%
+					Text: button-replay-player-regular.label
 					Font: TinyBold
 				Button@BUTTON_FAST:
 					X: 57 + 48 * 2
@@ -242,10 +242,10 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedFast
-					TooltipText: Быстро
+					TooltipText: button-replay-player-fast.tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
-					Text: 200%
+					Text: button-replay-player-fast.label
 					Font: TinyBold
 				Button@BUTTON_MAXIMUM:
 					X: 57 + 48 * 3
@@ -253,10 +253,10 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedMax
-					TooltipText: Макс
+					TooltipText: button-replay-player-maximum.tooltip
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
-					Text: MAX
+					Text: button-replay-player-maximum.label
 					Font: TinyBold
 		DropDownButton@SHROUD_SELECTOR:
 			Logic: ObserverShroudSelectorLogic
@@ -339,7 +339,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Игрок
+									Text: label-basic-stats-player-header
 									Align: Left
 									Shadow: True
 								Label@CASH_HEADER:
@@ -348,7 +348,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Деньги
+									Text: label-basic-stats-cash-header
 									Align: Right
 									Shadow: True
 								Label@POWER_HEADER:
@@ -357,7 +357,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Энер.
+									Text: label-basic-stats-power-header
 									Align: Center
 									Shadow: True
 								Label@KILLS_HEADER:
@@ -366,7 +366,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 40
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Килы
+									Text: label-basic-stats-kills-header
 									Align: Right
 									Shadow: True
 								Label@DEATHS_HEADER:
@@ -375,7 +375,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Смерти
+									Text: label-basic-stats-deaths-header
 									Align: Right
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -384,7 +384,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Уничт.
+									Text: label-basic-stats-assets-destroyed-header
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -393,7 +393,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Потерян
+									Text: label-basic-stats-assets-lost-header
 									Align: Right
 									Shadow: True
 								Label@EXPERIENCE_HEADER:
@@ -402,7 +402,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Очки
+									Text: label-basic-stats-experience-header
 									Align: Right
 									Shadow: True
 								Label@ACTIONS_MIN_HEADER:
@@ -411,7 +411,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: APM
+									Text: label-basic-stats-actions-min-header
 									Align: Right
 									Shadow: True
 						Container@ECONOMY_STATS_HEADERS:
@@ -438,7 +438,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Игрок
+									Text: label-economy-stats-player-header
 									Shadow: True
 								Label@CASH_HEADER:
 									X: 160
@@ -453,7 +453,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Приход
+									Text: label-economy-stats-income-header
 									Align: Right
 									Shadow: True
 								Label@ASSETS_HEADER:
@@ -461,7 +461,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Ассеты
+									Text: label-economy-stats-assets-header
 									Align: Right
 									Shadow: True
 								Label@EARNED_HEADER:
@@ -469,7 +469,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Заработано
+									Text: label-economy-stats-earned-header
 									Align: Right
 									Shadow: True
 								Label@SPENT_HEADER:
@@ -477,7 +477,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Потрачено
+									Text: label-economy-stats-spent-header
 									Align: Right
 									Shadow: True
 								Label@HARVESTERS_HEADER:
@@ -485,7 +485,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
-									Text: Добытчики
+									Text: label-economy-stats-harvesters-header
 									Align: Right
 									Shadow: True
 								Label@DERRICKS_HEADER:
@@ -1246,7 +1246,7 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: Атака
+					TooltipText: button-command-bar-attack-move-tooltip
 					TooltipDesc: button-command-bar-attack-move.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
@@ -1270,8 +1270,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Принудительное Движение
-					TooltipDesc: Выбранные юниты будут двигаться в указанную позицию\n - Обычная активность у цели будет приглушена\n - Техника будет пытаться уничтожить технику в заданой точке\n - Авиация сядет указанной точке\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.\nУдерживайте {(Alt)} для временной активации когда командуйте юнитами.
+					TooltipText: button-command-bar-force-move.tooltip
+					TooltipDesc: button-command-bar-force-move.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1294,8 +1294,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Принудительная атака
-					TooltipDesc: Выбранные юниты будут атаковать цель или локацию\n - Обычная активность у цели будет приглушена\n - Позволяет атаковать союзников\n - Артилерия будет нацелена на\n   локацию, игнорируя юнитов и здания\n\nЛКМ по иконке, затем ПКМ по цели.\nУдерживайте {(Ctrl)} временной активации при командовании.
+					TooltipText: button-command-bar-force-attack.tooltip
+					TooltipDesc: button-command-bar-force-attack.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1319,8 +1319,8 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: Guard
 					DisableKeySound: true
-					TooltipText: Защищать
-					TooltipDesc: Выбранные юниты будут следовать за юнитом-целью.\n\nЛКМ по иконке, затем нажмите ПКМ для укзазация цели.
+					TooltipText: button-command-bar-guard.tooltip
+					TooltipDesc: button-command-bar-guard.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1345,8 +1345,8 @@ Container@PLAYER_WIDGETS:
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Развернуть
-					TooltipDesc: Выбранные подразделения будут выполнять свои действия по развертыванию по умолчанию\n - MVC будут раскрыты в стройплощадки\n - Стройплощадки собраны в MVC\n - Транспорты будут выгружать своих пассажиров\n\nДействует немедленно на выбранные объекты.
+					TooltipText: button-command-bar-deploy.tooltip
+					TooltipDesc: button-command-bar-deploy.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1371,8 +1371,8 @@ Container@PLAYER_WIDGETS:
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Разброс
-					TooltipDesc: Выбранные юниты прекратят свою текущую деятельность\nи выдвинуться к ближайшей локации.\n\nДействует немедленно на выбранные объекты.
+					TooltipText: button-command-bar-scatter.tooltip
+					TooltipDesc: button-command-bar-scatter.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1397,8 +1397,8 @@ Container@PLAYER_WIDGETS:
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Стоп
-					TooltipDesc: Выбранные юниты прекратят свою текущую деятельность.\nВыбранные здания сбросят свою точку сбора.\n\nДействует немедленно по выбранным целям.
+					TooltipText: button-command-bar-stop.tooltip
+					TooltipDesc: button-command-bar-stop.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1421,8 +1421,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Режим Waypoint'ов
-					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
+					TooltipText: button-command-bar-queue-orders.tooltip
+					TooltipDesc: button-command-bar-queue-orders.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1448,8 +1448,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Атаковать всё
-					TooltipDesc: Установить юниты в положение атаки на всё:\n - Юниты будут атаковать вражеские юниты и сооружения, как только увидят их\n - Юниты будут преследовать атакующих по всему полю боя
+					TooltipText: button-stance-bar-attackanything.tooltip
+					TooltipDesc: button-stance-bar-attackanything.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1474,8 +1474,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Защищать позицию
-					TooltipDesc: Установить юниты на оборону:\n - Юниты будут атаковать вражеские юниты, как только увидят их\n - Юниты не будут двигаться или преследовать врагов
+					TooltipText: button-stance-bar-defend.tooltip
+					TooltipDesc: button-stance-bar-defend.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1500,8 +1500,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Ответный огонь
-					TooltipDesc: Установить юниты на ответный огонь:\n - Юниты будут наносить ответный удар по врагам, которые нападают на них\n - Юниты не будут двигаться или преследовать врагов
+					TooltipText: button-stance-bar-returnfire.tooltip
+					TooltipDesc: button-stance-bar-returnfire.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1526,8 +1526,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Не стрелять
-					TooltipDesc: Запретить юнитам стрелять:\n - Юниты не будут стрелять по врагам\n - Юниты не будут двигаться или преследовать врагов
+					TooltipText: button-stance-bar-holdfire.tooltip
+					TooltipDesc: button-stance-bar-holdfire.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1554,7 +1554,7 @@ Container@PLAYER_WIDGETS:
 					Width: PARENT_WIDTH - 30
 					Height: 25
 					Align: Right
-					Text: Аудио в муте
+					Text: label-mute-indicator
 					Contrast: true
 		Image@SIDEBAR_BACKGROUND:
 			X: WINDOW_WIDTH - WIDTH - 5
@@ -1577,7 +1577,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Sell
-							TooltipText: Продать
+							TooltipText: button-top-buttons-sell-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1599,7 +1599,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Repair
-							TooltipText: Чинить
+							TooltipText: button-top-buttons-repair-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1621,7 +1621,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: PlaceBeacon
-							TooltipText: Разместить маяк
+							TooltipText: button-top-buttons-beacon-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1637,7 +1637,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Настройки
+							TooltipText: button-top-buttons-options-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							DisableWorldSounds: true
@@ -1756,7 +1756,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Постройки
+							TooltipText: button-production-types-building-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Building
@@ -1778,7 +1778,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Поддержка
+							TooltipText: button-production-types-support-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Support
@@ -1800,7 +1800,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Пехота
+							TooltipText: button-production-types-infantry-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Infantry
@@ -1822,7 +1822,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Техника
+							TooltipText: button-production-types-vehicle-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Vehicle
@@ -1844,7 +1844,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Авиация
+							TooltipText: button-production-types-aircraft-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Aircraft
@@ -1870,8 +1870,8 @@ Container@PLAYER_WIDGETS:
 			Width: 192
 			TooltipContainer: TOOLTIP_CONTAINER
 			TooltipTemplate: PRODUCTION_TOOLTIP_FACTIONSUFFIX
-			ReadyText: Готово
-			HoldText: На Удержании
+			ReadyText: productionpalette-player-widgets-production-palette.ready
+			HoldText: productionpalette-player-widgets-production-palette.hold
 			HotkeyPrefix: Production
 			HotkeyCount: 24
 			SelectProductionBuildingHotkey: SelectProductionBuilding

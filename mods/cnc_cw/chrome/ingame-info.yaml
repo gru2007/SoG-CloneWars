@@ -8,7 +8,7 @@ Container@GAME_INFO_PANEL:
 	Children:
 		Label@TITLE:
 			Y: 0 - 22
-			Text: Информация
+			Text: label-game-info-panel-title
 			Width: PARENT_WIDTH
 			Height: 25
 			Align: Center

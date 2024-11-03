@@ -76,7 +76,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Эта карта не совместима
+					Text: label-map-incompatible-status-a
 					IgnoreMouseOver: true
 				Label@MAP_STATUS_B:
 					Y: 201
@@ -84,7 +84,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: с этой версией OpenRA
+					Text: label-map-incompatible-status-b
 		Container@MAP_VALIDATING:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -95,7 +95,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Проверка...
+					Text: label-map-validating-status
 					IgnoreMouseOver: true
 				ProgressBar@MAP_VALIDATING_BAR:
 					Y: 194

@@ -11,26 +11,26 @@ Container@LOBBY_SERVERS_BIN:
 					X: 5
 					Width: 355
 					Height: 25
-					Text: Сервер
+					Text: label-container-name
 					Align: Center
 					Font: Bold
 				Label@PLAYERS:
 					X: 390
 					Width: 85
 					Height: 25
-					Text: Игроки
+					Text: label-container-players
 					Font: Bold
 				Label@LOCATION:
 					X: 480
 					Width: 110
 					Height: 25
-					Text: Локация
+					Text: label-container-location
 					Font: Bold
 				Label@STATUS:
 					X: 595
 					Width: 50
 					Height: 25
-					Text: Статус
+					Text: label-container-status
 					Font: Bold
 		LogicTicker@NOTICE_WATCHER:
 		Container@NOTICE_CONTAINER:
@@ -47,21 +47,21 @@ Container@LOBBY_SERVERS_BIN:
 							Width: PARENT_WIDTH - 10
 							Height: 18
 							Align: Center
-							Text: У вас запущена устаревшая версия игры. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
+							Text: label-bg-outdated-version
 							Font: TinyBold
 						Label@UNKNOWN_VERSION_LABEL:
 							X: 5
 							Width: PARENT_WIDTH - 10
 							Height: 18
 							Align: Center
-							Text: Вы используете неизвестную версию игры. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
+							Text: label-bg-unknown-version
 							Font: TinyBold
 						Label@PLAYTEST_AVAILABLE_LABEL:
 							X: 5
 							Width: PARENT_WIDTH - 10
 							Height: 18
 							Align: Center
-							Text: Новая версия доступна для тестирования. Скачайте последнюю с сайта github.com/gru2007/SoG-CloneWars
+							Text: label-bg-playtest-available
 							Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			Width: PARENT_WIDTH
@@ -100,7 +100,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Необходим пароль
+							TooltipText: image-lobby-servers-bin-password-protected-tooltip
 						Image@REQUIRES_AUTHENTICATION:
 							X: 372
 							Y: 6
@@ -109,7 +109,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Необходим аккаунт SoG
+							TooltipText: image-lobby-servers-bin-requires-authentication-tooltip
 						LabelWithTooltip@PLAYERS:
 							X: 390
 							Width: 85

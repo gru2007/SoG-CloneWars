@@ -54,7 +54,7 @@
 ^GainsExperience:
 	GainsExperience:
 		LevelUpNotification: LevelUp
-		LevelUpTextNotification: Юнит повышен.
+		LevelUpTextNotification: meta-gainsexperience-gainsexperience-level-up-text-notification
 		Conditions:
 			250: rank-veteran
 			500: rank-veteran
@@ -254,7 +254,7 @@
 	Passenger:
 		CargoType: Vehicle
 	ActorLostNotification:
-		TextNotification: Юнит потерян.
+		TextNotification: meta-vehicle.actorlostnotification-text-notification
 	HiddenUnderFog:
 	AttackMove:
 	WithDamageOverlay:
@@ -265,7 +265,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Техника
+		GenericName: meta-vehicle.generic-name
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: VehicleVoice
@@ -279,7 +279,7 @@
 		Locomotor: tracked
 		TurnSpeed: 20
 	Tooltip:
-		GenericName: Танк
+		GenericName: meta-tank-generic-name
 
 ^Helicopter:
 	Inherits@1: ^ExistsInWorld
@@ -313,7 +313,7 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
-		TextNotification: Юнит потерян.
+		TextNotification: meta-helicopter.actorlostnotification-text-notification
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
@@ -321,7 +321,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Авиатехника
+		GenericName: meta-helicopter.generic-name
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -375,7 +375,7 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: meta-voxelhelicopter.actorlostnotification-text-notification
 	AttackMove:
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
@@ -383,7 +383,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Авиатехника
+		GenericName: meta-voxelhelicopter.generic-name
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 85
@@ -424,7 +424,7 @@
 	ScriptTriggers:
 	Interactable:
 	Tooltip:
-		GenericName: Уничтоженная авиатехника
+		GenericName: meta-voxelhelicopterhusk-generic-name
 	FallsToEarth:
 		Moves: true
 		Velocity: 112
@@ -492,7 +492,7 @@
 		Margin: 5, 6
 		RequiresCondition: hazmatsuits
 	ActorLostNotification:
-		TextNotification: Юнит потерян.
+		TextNotification: meta-infantry-actorlostnotification-text-notification
 	SpawnActorOnDeath:
 		Probability: 5
 		Actor: vice
@@ -733,7 +733,7 @@
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	ActorLostNotification:
-		TextNotification: Юнит потерян.
+		TextNotification: meta-plane-actorlostnotification-text-notification
 	AttackMove:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -757,7 +757,7 @@
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: meta-voxelplane-actorlostnotification-text-notification
 	AttackMove:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -787,7 +787,7 @@
 		TargetTypes: Ground, Water
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Юнит потерян.
+		TextNotification: meta-ship.actorlostnotification-text-notification
 	AttackMove:
 	WithDamageOverlay:
 	FireWarheadsOnDeath:
@@ -796,7 +796,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Корабль
+		GenericName: meta-ship.generic-name
 	Voiced:
 		VoiceSet: VehicleVoice
 	HitShape:
@@ -833,16 +833,16 @@
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
 		Notification: BuildingCaptured
-		TextNotification: Здание захвачено.
+		TextNotification: meta-building.capturenotification-text-notification
 		NewOwnerVoice: false
 	ActorLostNotification:
 		Notification: BuildingLost
-		TextNotification: Структура потеряна.
+		TextNotification: meta-building.actorlostnotification-text-notification
 	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
 	Tooltip:
-		GenericName: Структура
+		GenericName: meta-building.generic-name
 	FrozenUnderFog:
 	Demolishable:
 	MapEditorData:
@@ -897,7 +897,7 @@
 ^CivBuilding:
 	Inherits: ^Building
 	Tooltip:
-		GenericName: Гражданское здание
+		GenericName: meta-civbuilding-generic-name
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -913,7 +913,7 @@
 		Footprint: x
 	WithSpriteBody:
 	Tooltip:
-		GenericName: Гражданское здание (Уничтожно)
+		GenericName: meta-civbuildinghusk-generic-name
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -930,7 +930,7 @@
 		Types: building
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-		TextNotification: Гражданское здание захвачено.
+		TextNotification: meta-techbuilding-capturenotification-text-notification
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1400
@@ -1069,7 +1069,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Дерево
+		Name: meta-tree-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1123,7 +1123,7 @@
 		Dimensions: 2,2
 	WithSpriteBody:
 	Tooltip:
-		Name: Дерево (сгорело)
+		Name: meta-treehusk-name
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 	MapEditorData:
@@ -1135,7 +1135,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Цветущее дерево
+		Name: meta-tibtree-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1159,7 +1159,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Камень
+		Name: meta-rock-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1208,7 +1208,7 @@
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	Tooltip:
-		GenericName: Уничтоженная техника
+		GenericName: meta-husk-generic-name
 	WithColoredOverlay@IDISABLE:
 		Color: 000000B4
 	ScriptTriggers:
@@ -1244,14 +1244,14 @@
 		Moves: False
 		Explosion: HeliCrash
 	Tooltip:
-		GenericName: Уничтоженная авиатехника
+		GenericName: meta-helicopterhusk-generic-name
 	-MapEditorData:
 
 ^Bridge:
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
 	Tooltip:
-		Name: Мост
+		Name: meta-bridge-name
 		ShowOwnerRow: false
 	Targetable:
 		RequiresForceFire: true

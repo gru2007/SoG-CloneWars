@@ -38,14 +38,14 @@ CRATE:
 WCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Деревянный ящик
+		Name: actor-wcrate-name
 	RenderSprites:
 		Image: wcrate
 
 SCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Стальной ящик
+		Name: actor-scrate-name
 
 mpspawn:
 	Interactable:

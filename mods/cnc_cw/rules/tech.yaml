@@ -15,12 +15,12 @@ V19:
 		Order: 0
 		Category: Civilian
 	Tooltip:
-		Name: Нефтяная вышка
+		Name: actor-v19.name
 	TooltipDescription@ally:
-		Description: Даёт дополнительные деньги.
+		Description: actor-v19.tooltipdescription-ally-description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Захватите для дополнительных денег.
+		Description: actor-v19.tooltipdescription-other-description
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: V19.Husk
@@ -40,7 +40,7 @@ V19.Husk:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Нефтяная вышка (уничтожено)
+		Name: actor-v19-husk-name
 
 HOSP:
 	Inherits: ^TechBuilding
@@ -57,12 +57,12 @@ HOSP:
 		Order: 10
 		Category: Civilian
 	Tooltip:
-		Name: Больница
+		Name: actor-hosp.name
 	TooltipDescription@ally:
-		Description: Позволяет пехоте регенерировать HP.
+		Description: actor-hosp.tooltipdescription-ally-description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Захватите для регенерации HP у пехоты.
+		Description: actor-hosp.tooltipdescription-other-description
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: HOSP.Husk
@@ -78,7 +78,7 @@ HOSP.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Больница (уничтожено)
+		Name: actor-hosp-husk-name
 	WithBuildingBib:
 		HasMinibib: true
 
@@ -97,12 +97,12 @@ BIO:
 		Order: 10
 		Category: Civilian
 	Tooltip:
-		Name: Биолаборатория
+		Name: actor-bio.name
 	TooltipDescription@ally:
-		Description: Обеспечивает пехоте иммунитет к Тиберию.
+		Description: actor-bio.tooltipdescription-ally-description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Захватите для иммунитета к Тиберию у пехоты.
+		Description: actor-bio.tooltipdescription-other-description
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: BIO.Husk
@@ -116,7 +116,7 @@ BIO.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Биолаборатория (Уничтожена)
+		Name: actor-bio-husk-name
 
 MISS:
 	Inherits: ^TechBuilding
@@ -130,7 +130,7 @@ MISS:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Tooltip:
-		Name: Тех-Центр
+		Name: actor-miss.name
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000
@@ -146,10 +146,10 @@ MISS:
 	RevealsShroud:
 		Range: 13c0
 	TooltipDescription@ally:
-		Description: Даёт поле видимости.
+		Description: actor-miss.tooltipdescription-ally-description
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Захватите для улучшения обзора.
+		Description: actor-miss.tooltipdescription-other-description
 		ValidRelationships: Neutral, Enemy
 	WithBuildingBib:
 		HasMinibib: true

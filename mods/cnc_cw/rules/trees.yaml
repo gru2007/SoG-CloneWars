@@ -26,7 +26,7 @@ SPLITBLUE:
 	WithIdleAnimation:
 		Interval: 500, 1000
 	Tooltip:
-		Name: Цветущее дерево (синее)
+		Name: actor-splitblue-name
 	RadarColorFromTerrain:
 		Terrain: BlueTiberium
 	AppearsOnMapPreview:

@@ -11,20 +11,20 @@ Container@LOBBY_MUSIC_BIN:
 				Label@MUSIC:
 					Width: 308
 					Height: 25
-					Text: Музыка
+					Text: label-container-music
 					Align: Center
 					Font: Bold
 				Label@TITLE:
 					X: 317
 					Width: 230
 					Height: 25
-					Text: Трек
+					Text: label-container-title
 					Font: Bold
 				Label@LENGTH:
 					X: PARENT_WIDTH - 80
 					Height: 25
 					Width: 50
-					Text: Длина
+					Text: label-container-length
 					Font: Bold
 					Align: Right
 		Background@CONTROLS:
@@ -125,20 +125,20 @@ Container@LOBBY_MUSIC_BIN:
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: Перемешать
+					Text: checkbox-controls-shuffle
 				Checkbox@REPEAT:
 					X: PARENT_WIDTH - 15 - WIDTH
 					Y: 150
 					Width: 70
 					Height: 20
 					Font: Regular
-					Text: Зациклить
+					Text: checkbox-controls-repeat
 				Label@VOLUME_LABEL:
 					Y: 182
 					Width: 65
 					Height: 25
 					Align: Right
-					Text: Громкость:
+					Text: label-controls-volume
 				ExponentialSlider@MUSIC_SLIDER:
 					X: 70
 					Y: 186
@@ -179,16 +179,16 @@ Container@LOBBY_MUSIC_BIN:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Музыка не установлена
+					Text: label-no-music-title
 				Label@DESCA:
 					Y: 95
 					Width: PARENT_WIDTH - 24
 					Height: 25
 					Align: Center
-					Text: музыка может быть установлена
+					Text: label-no-music-desca
 				Label@DESCB:
 					Y: 115
 					Width: PARENT_WIDTH - 24
 					Height: 25
 					Align: Center
-					Text: из вкладки "Контент" в гл. меню
+					Text: label-no-music-descb

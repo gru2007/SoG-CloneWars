@@ -6,14 +6,14 @@ E1:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Мини-стрелок
+		Name: actor-e1.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Пехота общего назначения.\n  Сильна vs Пехоты\n  Слаба vs Техники
+		Description: actor-e1.description
 	Mobile:
 		Speed: 54
 	Health:
@@ -43,14 +43,14 @@ E2:
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Гренадер
+		Name: actor-e2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.GDI
-		Description: Быстрая пехота вооружённая гранатами. \n  Сильна vs Зданий, Медленных целей
+		Description: actor-e2.description
 	Mobile:
 		Speed: 68
 	Health:
@@ -86,14 +86,14 @@ E3:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Солдат с РПГ
+		Name: actor-e3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Пехота против техники и авиации. \n  Сильна vs Танки, Авиация\n  Слаба vs Пехота
+		Description: actor-e3.description
 	Mobile:
 		Speed: 39
 	Health:
@@ -126,14 +126,14 @@ E4:
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Огнемётчик
+		Name: actor-e4.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.Nod
-		Description: Передовое противопехотное подразделение.\n  Сильна vs Пехоты, Зданий\n  Слаба vs Танков
+		Description: actor-e4.description
 	Mobile:
 		Speed: 54
 	Health:
@@ -168,14 +168,14 @@ E5:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Химический воин
+		Name: actor-e5.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Infantry.Nod
-		Description: Усовершенствованная пехота.\n  Сильна vs всех Наземных юнитов
+		Description: actor-e5.description
 	Mobile:
 		Speed: 54
 		Locomotor: chem
@@ -210,14 +210,14 @@ E6:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Инженер
+		Name: actor-e6.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Наносит урон и захватывает здания врага.\n  Чинит уничтоженую технику\n  Безоружен
+		Description: actor-e6.description
 	Mobile:
 		Speed: 46
 	Health:
@@ -252,14 +252,14 @@ RMBO:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Коммандо
+		Name: actor-rmbo.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: eye, ~techlevel.high
 		Queue: Infantry.GDI
-		Description: Элитный снайпер.\n  Силен vs Пехоты, Зданий\n  Слаб vs Техники
+		Description: actor-rmbo.description
 	Mobile:
 		Speed: 68
 	Health:
@@ -297,7 +297,7 @@ PVICE:
 		Queue: Infantry.GDI, Infantry.Nod
 		BuildPaletteOrder: 50
 		Prerequisites: ~disabled
-		Description: Мутировавшая мерзость, плюющаяся жидким тиберием.\n  Силен vs Пехоты, Зданий\n  Слаб vs Авиации
+		Description: actor-pvice-description
 	Tooltip:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -311,43 +311,43 @@ PVICE:
 STEG:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Стегозавр
+		Name: actor-steg.name
 	Armament:
 		Weapon: tail
 	WithDeathAnimation:
 		DeathSequencePalette: terrain
 		DeathPaletteIsPlayerPalette: false
 	Buildable:
-		Description: Крупное, крепко сложенное травоядное четвероногое животное
+		Description: actor-steg.description
 
 TREX:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Тираннозавр рекс
+		Name: actor-trex.name
 	Armament:
 		Weapon: teeth
 	Selectable:
 		Bounds: 2048, 1536, 85, 42
 		DecorationBounds: 2218, 1621
 	Buildable:
-		Description: Двуногий хищник с массивным черепом
+		Description: actor-trex.description
 
 TRIC:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Трицератопс
+		Name: actor-tric.name
 	Armament:
 		Weapon: horn
 	Buildable:
-		Description: Четвероногий, с большим костяным жабо и тремя рогами
+		Description: actor-tric.description
 	Selectable:
 		DecorationBounds: 1450, 1024, 0, 85
 
 RAPT:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Велоцираптор
+		Name: actor-rapt.name
 	Armament:
 		Weapon: claw
 	Buildable:
-		Description: Двуногий с увеличенными серповидными когтями на каждой задней ноге
+		Description: actor-rapt.description

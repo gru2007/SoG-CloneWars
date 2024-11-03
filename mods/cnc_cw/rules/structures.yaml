@@ -6,7 +6,7 @@ FACT:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Стойплощадка
+		Name: actor-fact.name
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -53,11 +53,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Строительство завершено.
+		ReadyTextNotification: actor-fact.productionqueue-gdibuilding-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить больше.
+		BlockedTextNotification: actor-fact.productionqueue-gdibuilding-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
+		LimitedTextNotification: actor-fact.productionqueue-gdibuilding-limited-text-notification
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -68,11 +68,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Строительство завершено.
+		ReadyTextNotification: actor-fact.productionqueue-nodbuilding-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить больше.
+		BlockedTextNotification: actor-fact.productionqueue-nodbuilding-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
+		LimitedTextNotification: actor-fact.productionqueue-nodbuilding-limited-text-notification
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -83,11 +83,11 @@ FACT:
 		Group: Support
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Строительство завершено.
+		ReadyTextNotification: actor-fact.productionqueue-gdisupport-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить больше.
+		BlockedTextNotification: actor-fact.productionqueue-gdisupport-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
+		LimitedTextNotification: actor-fact.productionqueue-gdisupport-limited-text-notification
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -98,11 +98,11 @@ FACT:
 		Group: Support
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: Строительство завершено.
+		ReadyTextNotification: actor-fact.productionqueue-nodsupport-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить больше.
+		BlockedTextNotification: actor-fact.productionqueue-nodsupport-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно соблюдать. Стройка в процессе.
+		LimitedTextNotification: actor-fact.productionqueue-nodsupport-limited-text-notification
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -126,7 +126,7 @@ FACT:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
 	Buildable:
-		Description: Строит здания
+		Description: actor-fact.description
 
 FACT.GDI:
 	Inherits: FACT
@@ -138,7 +138,7 @@ FACT.GDI:
 		Prerequisites: ~disabled
 		ForceFaction: gdi
 	Tooltip:
-		Name: Стойплощадка (ВАР)
+		Name: actor-fact-gdi-name
 	-Encyclopedia:
 
 FACT.NOD:
@@ -151,7 +151,7 @@ FACT.NOD:
 		Prerequisites: ~disabled
 		ForceFaction: nod
 	Tooltip:
-		Name: Стойплощадка (КНС)
+		Name: actor-fact-nod-name
 	-Encyclopedia:
 
 NUKE:
@@ -164,14 +164,14 @@ NUKE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Генератор энергии
+		Name: actor-nuke.name
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: fact
 		Queue: Building.GDI, Building.Nod
-		Description: Создаёт электричество
+		Description: actor-nuke.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -199,14 +199,14 @@ NUK2:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Продвинутый генератор энергии
+		Name: actor-nuk2.name
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Building.GDI, Building.Nod
-		Description: Создаёт больше энергии, дешевле\nстандартного генератора
+		Description: actor-nuk2.description
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -238,12 +238,12 @@ PROC:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Переработчик Тиберия
+		Name: actor-proc.name
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Building.GDI, Building.Nod
-		Description: Перерабатывает чистый Тиберий в\nиспользуемые ресурсы
+		Description: actor-proc.description
 	Building:
 		Footprint: _x_ xxx +++ ===
 		Dimensions: 3,4
@@ -290,11 +290,11 @@ SILO:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Хранилище Тиберия
+		Name: actor-silo.name
 	Buildable:
 		BuildPaletteOrder: 35
 		Prerequisites: proc
-		Description: Хранит обработанный Тиберий
+		Description: actor-silo.description
 		Queue: Support.GDI, Support.Nod
 	Building:
 		Footprint: xx
@@ -336,14 +336,14 @@ PYLE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Бараки
+		Name: actor-pyle.name
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.GDI
-		Description: Тренирует пехоту
+		Description: actor-pyle.description
 	Building:
 		Footprint: xx ++ ==
 		Dimensions: 2,3
@@ -376,11 +376,11 @@ PYLE:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Юнит готов.
+		ReadyTextNotification: actor-pyle.productionqueue-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-pyle.productionqueue-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-pyle.productionqueue-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -401,14 +401,14 @@ HAND:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Бараки
+		Name: actor-hand.name
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.Nod
-		Description: Тренирует пехоту
+		Description: actor-hand.description
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -440,11 +440,11 @@ HAND:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Юнит готов.
+		ReadyTextNotification: actor-hand.productionqueue-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-hand.productionqueue-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-hand.productionqueue-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -469,14 +469,14 @@ AFLD:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Взлётно-посадочная полоса
+		Name: actor-afld.name
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.Nod
-		Description: Создаёт дроп-зону\nдля сброса техники
+		Description: actor-afld.description
 	Building:
 		Footprint: XXX+ xxx+ ====
 		Dimensions: 4,3
@@ -498,7 +498,7 @@ AFLD:
 	ProductionAirdrop:
 		Produces: Vehicle.Nod
 		ActorType: c17
-		ReadyTextNotification: Прибыли подкрепления.
+		ReadyTextNotification: actor-afld.productionairdrop-ready-text-notification
 		LandOffset: -1024,0,0
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
@@ -512,9 +512,9 @@ AFLD:
 		Group: Vehicle
 		LowPowerModifier: 150
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-afld.productionqueue-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-afld.productionqueue-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -535,14 +535,14 @@ WEAP:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Завод Оружия
+		Name: actor-weap.name
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.GDI
-		Description: Производит технику
+		Description: actor-weap.description
 	Building:
 		Footprint: xxx +++ ===
 		Dimensions: 3,3
@@ -577,11 +577,11 @@ WEAP:
 		Group: Vehicle
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Юнит готов.
+		ReadyTextNotification: actor-weap.productionqueue-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-weap.productionqueue-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-weap.productionqueue-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -606,12 +606,12 @@ HPAD:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Космопорт
+		Name: actor-hpad.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
 		Queue: Building.GDI, Building.Nod
-		Description: Производит и чинит авиацию
+		Description: actor-hpad.description
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -633,7 +633,7 @@ HPAD:
 		HpPerStep: 1000
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Ремонт.
+		StartRepairingTextNotification: actor-hpad.repairsunits-start-repairing-text-notification
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
@@ -646,11 +646,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Юнит готов.
+		ReadyTextNotification: actor-hpad.productionqueue-gdi-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-hpad.productionqueue-gdi-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-hpad.productionqueue-gdi-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -661,11 +661,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Юнит готов.
+		ReadyTextNotification: actor-hpad.productionqueue-nod-ready-text-notification
 		BlockedAudio: NoBuild
-		BlockedTextNotification: Невозможно построить ещё.
+		BlockedTextNotification: actor-hpad.productionqueue-nod-blocked-text-notification
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: Невозможно. Строительство в процессе.
+		LimitedTextNotification: actor-hpad.productionqueue-nod-limited-text-notification
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -688,14 +688,14 @@ HQ:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Центр связи
+		Name: actor-hq.name
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
 		Queue: Building.GDI
-		Description: Включает радар, а так же запрос авиаудара.\nРазблокирует более высокие по уровню здания.\nТребуется энергия для работы.
+		Description: actor-hq.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -727,16 +727,16 @@ HQ:
 		ChargeInterval: 7500
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Авиаудар
-		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
+		Name: actor-hq.airstrikepower-name
+		Description: actor-hq.airstrikepower-description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Авиаудар готов.
-		SelectTargetTextNotification: Выберите цель.
-		InsufficientPowerTextNotification: Недостаточно энергии.
-		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
+		EndChargeTextNotification: actor-hq.airstrikepower-end-charge-text-notification
+		SelectTargetTextNotification: actor-hq.airstrikepower-select-target-text-notification
+		InsufficientPowerTextNotification: actor-hq.airstrikepower-insufficient-power-text-notification
+		IncomingTextNotification: actor-hq.airstrikepower-incoming-text-notification
 		UnitType: a10
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -764,14 +764,14 @@ HQCIS:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Центр связи
+		Name: actor-hqcis.name
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
 		Queue: Building.Nod
-		Description: Включает радар, а так же запрос авиаудара.\nРазблокирует более высокие по уровню здания.\nТребуется энергия для работы.
+		Description: actor-hqcis.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -799,16 +799,16 @@ HQCIS:
 		ChargeInterval: 7500
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Авиаудар
-		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
+		Name: actor-hqcis.airstrikepower-name
+		Description: actor-hqcis.airstrikepower-description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Авиаудар готов.
-		SelectTargetTextNotification: Выберите цель.
-		InsufficientPowerTextNotification: Недостаточно энергии.
-		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
+		EndChargeTextNotification: actor-hqcis.airstrikepower-end-charge-text-notification
+		SelectTargetTextNotification: actor-hqcis.airstrikepower-select-target-text-notification
+		InsufficientPowerTextNotification: actor-hqcis.airstrikepower-insufficient-power-text-notification
+		IncomingTextNotification: actor-hqcis.airstrikepower-incoming-text-notification
 		UnitType: a10cis
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -834,12 +834,12 @@ FIX:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Ремонтный цех
+		Name: actor-fix.name
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Building.GDI, Building.Nod
-		Description: Чинит технику
+		Description: actor-fix.description
 	Building:
 		Footprint: _+_ +++ _+_
 		Dimensions: 3,3
@@ -864,7 +864,7 @@ FIX:
 		Interval: 15
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Ремонт.
+		StartRepairingTextNotification: actor-fix.repairsunits-start-repairing-text-notification
 	RallyPoint:
 	CommandBarBlacklist:
 		DisableStop: false
@@ -883,14 +883,14 @@ EYE:
 	Valued:
 		Cost: 1800
 	Tooltip:
-		Name: Продвинутый центр связи
+		Name: actor-eye.name
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.GDI
-		Description: Включает радар, а так же запрос Орбитального Ионного удара.\nРазблокирует танк Мамонт и Коммандос.\nНужна энергия для работы.
+		Description: actor-eye.description
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -921,16 +921,16 @@ EYE:
 		Icon: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 9000
-		Name: Ионное орудие
-		Description: Начать ионный орбитальный удар.\nНаносит моментальный урон на небольшой площади.
+		Name: actor-eye.ioncannonpower-name
+		Description: actor-eye.ioncannonpower-description
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
-		BeginChargeTextNotification: Ионное орудие заряжается.
-		EndChargeTextNotification: Ионное орудие готово.
-		SelectTargetTextNotification: Выберите цель.
-		InsufficientPowerTextNotification: Недостаточно энергии.
+		BeginChargeTextNotification: actor-eye.ioncannonpower-begin-charge-text-notification
+		EndChargeTextNotification: actor-eye.ioncannonpower-end-charge-text-notification
+		SelectTargetTextNotification: actor-eye.ioncannonpower-select-target-text-notification
+		InsufficientPowerTextNotification: actor-eye.ioncannonpower-insufficient-power-text-notification
 		OnFireSound: ion1.aud
 		DisplayRadarPing: True
 		CameraActor: camera.small
@@ -950,14 +950,14 @@ TMPL:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Храм войны
+		Name: actor-tmpl.name
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.Nod
-		Description: Предоставляет доступ к Ядерному удару.\nРазблокирует Стелс-Танк, Хим. Война и обелиска света.\nНужна энергия для работы.
+		Description: actor-tmpl.description
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -983,18 +983,18 @@ TMPL:
 		Icon: abomb
 		Cursor: nuke
 		ChargeInterval: 11250
-		Name: Ядерный удар
-		Description: Запустить тактическую ядерную боеголовку.\nНаносит большой урон на большой площади.
+		Name: actor-tmpl.nukepower-name
+		Description: actor-tmpl.nukepower-description
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		SelectTargetTextNotification: Выберите цель.
-		EndChargeTextNotification: Ядерное оружие доступно.
-		InsufficientPowerTextNotification: Недостаточно мощности.
-		LaunchTextNotification: Ядерное оружие запущено.
-		IncomingTextNotification: Приближается ядерный удар.
+		SelectTargetTextNotification: actor-tmpl.nukepower-select-target-text-notification
+		EndChargeTextNotification: actor-tmpl.nukepower-end-charge-text-notification
+		InsufficientPowerTextNotification: actor-tmpl.nukepower-insufficient-power-text-notification
+		LaunchTextNotification: actor-tmpl.nukepower-launch-text-notification
+		IncomingTextNotification: actor-tmpl.nukepower-incoming-text-notification
 		MissileWeapon: atomic
 		MissileImage: atomic
 		MissileDelay: 11
@@ -1027,13 +1027,13 @@ GUN:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Турель
+		Name: actor-gun.name
 	Buildable:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks
 		Queue: Support.GDI, Support.Nod
 		BuildDuration: 960
-		Description: Базовая противотанковая турель.\n  Сильна vs Танков, техники\n  Слаба vs Пехоты
+		Description: actor-gun.description
 	Building:
 	Encyclopedia:
 		Description: actor-gun.encyclopedia
@@ -1086,13 +1086,13 @@ SAM:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: ПВО
+		Name: actor-sam.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: hand
 		Queue: Support.Nod
 		BuildDuration: 1130
-		Description: Сбивает авиацели.\n  Сильна vs Авиатехники\n  Не стреляет по наземным юнитам.
+		Description: actor-sam.description
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -1136,13 +1136,13 @@ OBLI:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Обелиск Света
+		Name: actor-obli.name
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Support.Nod
 		BuildDuration: 2080
-		Description: Продвинутая турель.\nНужна энергия для работы.\n  Сильна vs всех Наземныю юнитов\n  Не может стерлять по воздуху
+		Description: actor-obli.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 938, 1877, 0, -426
@@ -1187,13 +1187,13 @@ GTWR:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Сторожевая башня
+		Name: actor-gtwr.name
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks
 		Queue: Support.GDI, Support.Nod
 		BuildDuration: 960
-		Description: Базовое защитное сооружение.\n  Сильна vs Пехоты\n  Слаба vs Танков
+		Description: actor-gtwr.description
 	Building:
 	Encyclopedia:
 		Description: actor-gtwr.encyclopedia
@@ -1230,13 +1230,13 @@ ATWR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Улучшенная сторожевая башня
+		Name: actor-atwr.name
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Support.GDI
 		BuildDuration: 1920
-		Description: Универсальное защитное сооружение.\n  Сильна vs Авиатехники, пехоты\n  Слаба vs Танков
+		Description: actor-atwr.description
 	Selectable:
 		Bounds: 1024, 1024
 		DecorationBounds: 938, 2048, 0, -512
@@ -1284,11 +1284,11 @@ SBAG:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Мешки с песком
+		Name: actor-sbag.name
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
-		Description: Останавливает пехоту и легкую технику.\nМожет быть раздавлен танками.
+		Description: actor-sbag.description
 		Queue: Support.GDI
 	Encyclopedia:
 		Description: actor-sbag.encyclopedia
@@ -1310,11 +1310,11 @@ CYCL:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Забор
+		Name: actor-cycl.name
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
-		Description: Останавливает пехоту и легкую технику.\nМожет быть раздавлен танками.
+		Description: actor-cycl.description
 		Queue: Support.Nod
 	Encyclopedia:
 		Description: actor-cycl.encyclopedia
@@ -1336,13 +1336,13 @@ BRIK:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Бетонный барьер
+		Name: actor-brik.name
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
 		Queue: Support.GDI, Support.Nod
 		BuildDuration: 230
-		Description: Останавливает пехоту и большинство танков.\nБлокирует некоторые снаряды.
+		Description: actor-brik.description
 	Encyclopedia:
 		Description: actor-brik.encyclopedia
 		Category: Buildings
@@ -1366,22 +1366,22 @@ BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Производство пехоты
+		Name: actor-barracks-name
 
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Производство техники
+		Name: actor-vehicleproduction-name
 
 ANYPOWER:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Электростанция
+		Name: actor-anypower-name
 
 ANYHQ:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Центр связи
+		Name: actor-anyhq-name

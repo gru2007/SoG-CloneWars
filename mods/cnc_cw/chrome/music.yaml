@@ -13,7 +13,7 @@ Container@MUSIC_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Музыкальный Плеер
+			Text: label-music-panel-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -52,14 +52,14 @@ Container@MUSIC_PANEL:
 						Label@TITLE:
 							Width: 100
 							Height: 25
-							Text: Трек
+							Text: label-container-title
 							Align: Center
 							Font: Bold
 						Label@TYPE:
 							X: PARENT_WIDTH - 85
 							Height: 25
 							Width: 50
-							Text: Длина
+							Text: label-container-type
 							Align: Right
 							Font: Bold
 				Container@BUTTONS:
@@ -150,14 +150,14 @@ Container@MUSIC_PANEL:
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: Перемешать
+					Text: checkbox-bg-shuffle
 				Checkbox@REPEAT:
 					X: PARENT_WIDTH - 15 - WIDTH
 					Y: PARENT_HEIGHT - HEIGHT - 60
 					Width: 70
 					Height: 20
 					Font: Regular
-					Text: Зациклить
+					Text: checkbox-bg-repeat
 				Container@NO_MUSIC_LABEL:
 					X: 15
 					Y: (PARENT_HEIGHT - HEIGHT - 60) / 2
@@ -170,26 +170,26 @@ Container@MUSIC_PANEL:
 							Height: 25
 							Font: Bold
 							Align: Center
-							Text: Музыка Не Установлена
+							Text: label-no-music-title
 						Label@DESCA:
 							Y: 20
 							Width: PARENT_WIDTH - 24
 							Height: 25
 							Align: Center
-							Text: Игровая музыка может быть установлена
+							Text: label-no-music-desca
 						Label@DESCB:
 							Y: 40
 							Width: PARENT_WIDTH - 24
 							Height: 25
 							Align: Center
-							Text: из меню «Контент».
+							Text: label-no-music-descb
 		Button@BACK_BUTTON:
 			Key: escape
 			X: 0
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Назад
+			Text: button-music-panel-back
 		Label@MUTE_LABEL:
 			X: 100
 			Y: PARENT_HEIGHT - 60 - 3

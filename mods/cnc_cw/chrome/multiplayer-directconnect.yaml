@@ -12,7 +12,7 @@ Container@DIRECTCONNECT_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Подключиться к Серверу
+			Text: label-directconnect-panel-title
 		Background@bg:
 			Width: 370
 			Height: 90
@@ -24,7 +24,7 @@ Container@DIRECTCONNECT_PANEL:
 					Width: 125
 					Height: 25
 					Align: Right
-					Text: Адрес:
+					Text: label-bg-address
 				TextField@IP:
 					X: 150
 					Y: 15
@@ -36,7 +36,7 @@ Container@DIRECTCONNECT_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Порт:
+					Text: label-bg-port
 				TextField@PORT:
 					X: 150
 					Y: 50
@@ -49,11 +49,11 @@ Container@DIRECTCONNECT_PANEL:
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Назад
+			Text: button-directconnect-panel-back
 		Button@JOIN_BUTTON:
 			Key: return
 			X: 230
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Зайти
+			Text: button-directconnect-panel-join

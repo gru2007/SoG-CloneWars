@@ -19,19 +19,19 @@ Container@SETTINGS_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Настройки
+			Text: label-settings-panel-title
 		Button@BACK_BUTTON:
 			Key: escape
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Назад
+			Text: button-settings-panel-back
 		Button@RESET_BUTTON:
 			X: 150
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Сбросить
+			Text: button-settings-panel-reset
 		Container@SETTINGS_TAB_CONTAINER:
 			X: 0 - 140 + 1
 			Children:

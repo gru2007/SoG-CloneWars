@@ -22,7 +22,7 @@ Container@DISPLAY_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Профиль
+							Text: label-profile-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -34,7 +34,7 @@ Container@DISPLAY_PANEL:
 								LabelForInput@PLAYER:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Ник командира:
+									Text: label-player-container
 									For: PLAYERNAME
 								TextField@PLAYERNAME:
 									Y: 25
@@ -49,7 +49,7 @@ Container@DISPLAY_PANEL:
 								LabelForInput@COLOR:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Цвет:
+									Text: label-playercolor-container-color
 									For: PLAYERCOLOR
 								DropDownButton@PLAYERCOLOR:
 									Y: 25
@@ -76,7 +76,7 @@ Container@DISPLAY_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Дисплей
+							Text: label-display-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -88,7 +88,7 @@ Container@DISPLAY_PANEL:
 								Label@BATTLEFIELD_CAMERA:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Камера:
+									Text: label-battlefield-camera-dropdown-container
 								DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -101,7 +101,7 @@ Container@DISPLAY_PANEL:
 								Label@TARGET_LINES:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Target Lines:
+									Text: label-target-lines-dropdown-container
 								DropDownButton@TARGET_LINES_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -118,7 +118,7 @@ Container@DISPLAY_PANEL:
 								LabelForInput@UI_SCALE:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Размер UI:
+									Text: label-ui-scale-dropdown-container
 									For: UI_SCALE_DROPDOWN
 								DropDownButton@UI_SCALE_DROPDOWN:
 									Y: 25
@@ -132,7 +132,7 @@ Container@DISPLAY_PANEL:
 								Label@STATUS_BARS:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Статус-бары:
+									Text: label-status-bar-dropdown-container-bars
 								DropDownButton@STATUS_BAR_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -150,7 +150,7 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Увеличить Курсор
+									Text: checkbox-cursordouble-container
 						Container@PLAYER_STANCE_COLORS_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -159,8 +159,8 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Цвета отношений игроков
-									TooltipText: Изменять миникарту и полоски здоровья на основе отношений (я, враг, друг, нейтрал)
+									Text: checkbox-player-stance-colors-container.label
+									TooltipText: checkbox-player-stance-colors-container.tooltip
 									TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
@@ -174,8 +174,8 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Show UI Feedback Notifications
-									TooltipText: Show transient text notifications for UI events
+									Text: checkbox-ui-feedback-container.label
+									TooltipText: checkbox-ui-feedback-container.tooltip
 									TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 						Container@TRANSIENTS_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
@@ -185,8 +185,8 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Show Game Event Notifications
-									TooltipText: Show transient text notifications for game events
+									Text: checkbox-transients-container.label
+									TooltipText: checkbox-transients-container.tooltip
 									TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
@@ -200,7 +200,7 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Спрятать чат в реплеях
+									Text: checkbox-hide-replay-chat-container
 				Container@SPACER:
 				Background@VIDEO_SECTION_HEADER:
 					X: 5
@@ -214,7 +214,7 @@ Container@DISPLAY_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Видео
+							Text: label-video-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -226,13 +226,13 @@ Container@DISPLAY_PANEL:
 								Label@VIDEO_MODE:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Режим окна:
+									Text: label-video-mode-dropdown-container
 								DropDownButton@MODE_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
 									Font: Regular
-									Text: В окне
+									Text: dropdownbutton-video-mode-dropdown-container
 						Container@WINDOW_RESOLUTION_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -240,7 +240,7 @@ Container@DISPLAY_PANEL:
 								Label@WINDOW_SIZE:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Размер окна:
+									Text: label-window-resolution-container-size
 								TextField@WINDOW_WIDTH:
 									Y: 25
 									Width: 55
@@ -269,13 +269,13 @@ Container@DISPLAY_PANEL:
 								Label@DISPLAY_SELECTION_LABEL:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Дисплей:
+									Text: label-display-selection-container
 								DropDownButton@DISPLAY_SELECTION_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
 									Font: Regular
-									Text: Обычный
+									Text: dropdownbutton-display-selection-container-dropdown
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -307,7 +307,7 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Включить VSync
+									Text: checkbox-vsync-container
 						Container@FRAME_LIMIT_GAMESPEED_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Y: 25
@@ -317,7 +317,7 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Ограничить FPS тикрейтом игры
+									Text: checkbox-frame-limit-gamespeed-container
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -329,7 +329,7 @@ Container@DISPLAY_PANEL:
 								Label@GL_PROFILE:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Профиль OpenGL:
+									Text: label-gl-profile-dropdown-container
 								DropDownButton@GL_PROFILE_DROPDOWN:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -347,5 +347,5 @@ Container@DISPLAY_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Tiny
-									Text: Изменениям Дисплея и OpenGL необхом рестарт
+									Text: label-restart-required-container-video-desc
 									Align: Center

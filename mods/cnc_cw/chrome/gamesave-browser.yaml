@@ -12,7 +12,7 @@ Container@GAMESAVE_BROWSER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Загрузить игру
+			Text: label-gamesave-browser-panel-load-title
 			Visible: False
 		Label@SAVE_TITLE:
 			Y: 0 - 22
@@ -21,7 +21,7 @@ Container@GAMESAVE_BROWSER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Сохранить игру
+			Text: label-gamesave-browser-panel-save-title
 			Visible: False
 		Background@bg:
 			Width: PARENT_WIDTH
@@ -44,7 +44,7 @@ Container@GAMESAVE_BROWSER_PANEL:
 									Width: PARENT_WIDTH
 									Height: PARENT_HEIGHT
 									Align: Center
-									Text: [СОЗДАТЬ НОВЫЙ ФАЙЛ]
+									Text: label-bg-title
 						ScrollItem@GAME_TEMPLATE:
 							Width: PARENT_WIDTH - 27
 							Height: 25
@@ -80,26 +80,26 @@ Container@GAMESAVE_BROWSER_PANEL:
 					Y: PARENT_HEIGHT - 1
 					Width: 140
 					Height: 35
-					Text: Назад
+					Text: button-bg-cancel
 				Button@DELETE_ALL_BUTTON:
 					X: PARENT_WIDTH - 370 - WIDTH
 					Y: PARENT_HEIGHT - 1
 					Width: 100
 					Height: 35
-					Text: Удалить все
+					Text: button-bg-delete-all
 				Button@DELETE_BUTTON:
 					X: PARENT_WIDTH - 260 - WIDTH
 					Y: PARENT_HEIGHT - 1
 					Width: 100
 					Height: 35
-					Text: Удалить
+					Text: button-bg-delete
 					Key: Delete
 				Button@RENAME_BUTTON:
 					Width: 120
 					X: PARENT_WIDTH - 150 - WIDTH
 					Y: PARENT_HEIGHT - 1
 					Height: 35
-					Text: Переименовать
+					Text: button-bg-rename
 					Key: F2
 				Button@LOAD_BUTTON:
 					Key: return
@@ -107,7 +107,7 @@ Container@GAMESAVE_BROWSER_PANEL:
 					Y: PARENT_HEIGHT - 1
 					Width: 140
 					Height: 35
-					Text: Загрузить
+					Text: button-bg-load
 					Visible: False
 				Button@SAVE_BUTTON:
 					Key: return
@@ -115,6 +115,6 @@ Container@GAMESAVE_BROWSER_PANEL:
 					Y: PARENT_HEIGHT - 1
 					Width: 140
 					Height: 35
-					Text: Сохранить
+					Text: button-bg-save
 					Visible: False
 		TooltipContainer@GAMESAVE_TOOLTIP_CONTAINER:

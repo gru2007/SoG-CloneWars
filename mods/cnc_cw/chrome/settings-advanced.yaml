@@ -22,7 +22,7 @@ Container@ADVANCED_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Продвинутые
+							Text: label-network-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 20
@@ -35,7 +35,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Включить UPnP/NAT-PMP
+									Text: checkbox-nat-discovery-container
 						Container@FETCH_NEWS_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -44,7 +44,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Получать новости
+									Text: checkbox-fetch-news-container
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 20
@@ -57,7 +57,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: График производительности
+									Text: checkbox-perfgraph-container
 						Container@CHECK_VERSION_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -66,7 +66,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Проверять обновления
+									Text: checkbox-check-version-container
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -79,7 +79,7 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Текст о производительности
+									Text: checkbox-perftext-container
 						Container@SENDSYSINFO_CHECKBOX_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -88,14 +88,14 @@ Container@ADVANCED_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Отправлять данные о системе
+									Text: checkbox-sendsysinfo-container
 								Label@SENDSYSINFO_DESC:
 									Y: 15
 									Width: PARENT_WIDTH
 									Height: 30
 									Font: Tiny
 									WordWrap: True
-									Text: Ваша ОС, OpenGL, версию .NET и настройки языка будут отправлены с анонимным ID для преоритизации разработки.
+									Text: label-sendsysinfo-checkbox-container-desc
 				Container@SPACER:
 				Background@DEBUG_SECTION_HEADER:
 					X: 5
@@ -109,7 +109,7 @@ Container@ADVANCED_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Разработчик
+							Text: label-debug-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 40
@@ -121,13 +121,13 @@ Container@ADVANCED_PANEL:
 								Label@A:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Дополнительные настройки для разработчиков можно включить
+									Text: label-debug-hidden-container-a
 									Align: Center
 								Label@B:
 									Y: 20
 									Width: PARENT_WIDTH
 									Height: 20
-									Text:  с Debug.DisplayDeveloperSettings настройкой или флагом запуска
+									Text: label-debug-hidden-container-b
 									Align: Center
 				Container@ROW:
 					Width: PARENT_WIDTH - 24

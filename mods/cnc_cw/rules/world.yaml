@@ -127,18 +127,18 @@
 			BlueTiberium: 100
 			Beach: 89
 	Faction@Random:
-		Name: Любая
+		Name: meta-baseworld.faction-random-name
 		InternalName: Random
 		RandomFactionMembers: gdi, nod
-		Description: Случайная\nСлучайная фракция будет выбрана после запуска игры.
+		Description: meta-baseworld.faction-random-description
 	Faction@gdi:
-		Name: ВАР
+		Name: meta-baseworld.faction-gdi-name
 		InternalName: gdi
-		Description: Великая Армия Республики\nОсновная часть вооружённых сил Галактической Республики в её последние годы существования.\nЗа исключением сепаратистских сил, она стала одной из крупнейших армий, когда-либо созданных.
+		Description: meta-baseworld.faction-gdi-description
 	Faction@nod:
-		Name: КНС
+		Name: meta-baseworld.faction-nod-name
 		InternalName: nod
-		Description: Конфедерация Независимых Систем\nГосударство, образованное несколькими планетами и секторами,\nобъявившими о намерении выйти из Галактической Республики,\nотказываясь соблюдать ее чрезмерное налогообложение и подчиняться коррупции в Сенате
+		Description: meta-baseworld.faction-nod-description
 	ResourceRenderer:
 		ResourceTypes:
 			Tiberium:

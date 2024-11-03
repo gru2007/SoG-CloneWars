@@ -4,14 +4,14 @@ TRAN:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: LAAT Transport
+		Name: actor-tran.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.GDI
-		Description: LAAT/i для доставки пехоты.\n  Безоружен
+		Description: actor-tran.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -46,14 +46,14 @@ TRANCIS:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: HMP Gunship Transport
+		Name: actor-trancis.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.Nod
-		Description: Gunship для доставки пехоты.\n  Безоружен
+		Description: actor-trancis.description
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -89,14 +89,14 @@ HELI:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: HMP Gunship
+		Name: actor-heli.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Nod
-		Description: Gunship с пулеметами.\n  Силен против пехоты, Легких ТС и\n  Воздуха\n  Слаб против танков
+		Description: actor-heli.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 180
@@ -163,14 +163,14 @@ ORCA:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: LAAT/i Gunship
+		Name: actor-orca.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.GDI
-		Description: LAAT/i с AG-ракетами.\n  Силен против Зданий, Танков\n  Слаб против Пехоты
+		Description: actor-orca.description
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 186
@@ -231,7 +231,7 @@ C17:
 	Inherits@TRANSPORT: ^Transport
 	Interactable:
 	Tooltip:
-		Name: Supply Aircraft
+		Name: actor-c17-name
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -283,7 +283,7 @@ A10:
 		Scale: 6
 		Image: arc170
 	Tooltip:
-		Name: ARC170 Bomber
+		Name: actor-a10-name
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -321,7 +321,7 @@ A10CIS:
 		Scale: 4
 		Image: vulture
 	Tooltip:
-		Name: Vulture Bomber
+		Name: actor-a10cis-name
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -355,7 +355,7 @@ A10CIS:
 LAAT.Husk:
 	Inherits: ^VoxelHelicopterHusk
 	Tooltip:
-		Name: LAAT
+		Name: actor-laat-husk-name
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 130
@@ -369,7 +369,7 @@ LAAT.Husk:
 GUNSHIP.Husk:
 	Inherits: ^VoxelHelicopterHusk
 	Tooltip:
-		Name: HMP Gunship
+		Name: actor-gunship-husk-name
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 130

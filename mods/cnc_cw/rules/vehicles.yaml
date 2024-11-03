@@ -4,11 +4,11 @@ MCV:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Мобильная стройплощадка
+		Name: actor-mcv.name
 	Buildable:
 		BuildPaletteOrder: 100
 		Queue: Vehicle.GDI, Vehicle.Nod
-		Description: Разворачивается в стройплощадку.\n  Безоружна
+		Description: actor-mcv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Mobile:
@@ -32,7 +32,7 @@ MCV:
 		Facing: 432
 		TransformSounds: constru2.aud, hvydoor1.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
-		NoTransformTextNotification: Нельзя развернуть здесь.
+		NoTransformTextNotification: actor-mcv.transforms-no-transform-text-notification
 		Voice: Unload
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -49,13 +49,13 @@ HARV:
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Сборщик
-		GenericName: Harvester
+		Name: actor-harv.name
+		GenericName: actor-harv.generic-name
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: proc
 		Queue: Vehicle.GDI, Vehicle.Nod
-		Description: Собирает ресурсы для обработки.\n  Безоружен
+		Description: actor-harv.description
 	Selectable:
 		DecorationBounds: 1536, 1536
 	Harvester:
@@ -86,7 +86,7 @@ HARV:
 		Range: 4c0
 	ActorLostNotification:
 		Notification: HarvesterLost
-		TextNotification: Сборщик потерян.
+		TextNotification: actor-harv.actorlostnotification-text-notification
 	SpawnActorOnDeath:
 		Actor: HARV.Husk
 		OwnerType: InternalName
@@ -117,14 +117,14 @@ APC:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: APC
+		Name: actor-apc.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: pyle
 		Queue: Vehicle.GDI
-		Description: Вооруженный пехотный транспорт.\nМожет атаковать авиацию.\n  Силен vs Техники\n  Слаб vs Пехоты
+		Description: actor-apc.description
 	Mobile:
 		TurnSpeed: 20
 		Speed: 128
@@ -200,14 +200,14 @@ ARTY:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Артилерия
+		Name: actor-arty.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
-		Description: Дальнобойная артиллерия.\n  Сильна vs Пехоты, Техники и зданий
+		Description: actor-arty.description
 	Mobile:
 		TurnSpeed: 16
 		Speed: 72
@@ -253,14 +253,14 @@ FTNK:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Огненный танк
+		Name: actor-ftnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
-		Description: Тяжелобронированная огнеметная машина.\n  Сильна vs Пехоты, Зданий and Техники\n  Слаба vs Танков
+		Description: actor-ftnk.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 92
@@ -302,14 +302,14 @@ BGGY:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Багги
+		Name: actor-bggy.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: afld
 		Queue: Vehicle.Nod
-		Description: Быстрая противопехотная машина разведки.\n  Сильна vs Пехоты\n  Слаба vs Танков
+		Description: actor-bggy.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 170
@@ -351,14 +351,14 @@ BIKE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Recon Bike
+		Name: actor-bike.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: afld
 		Queue: Vehicle.Nod
-		Description: Быстрая машина разведки с\nракетами.\nМожет атаковать авиацию.\n  Сильна vs Техники, Танков\n  Слаба vs Пехоты
+		Description: actor-bike.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 192
@@ -397,14 +397,14 @@ JEEP:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Хамви
+		Name: actor-jeep.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: weap
 		Queue: Vehicle.GDI
-		Description: Быстрая противопехотная машина разведки.\n  Сильна vs Пехоты\n  Слаба vs Танков
+		Description: actor-jeep.description
 	Mobile:
 		TurnSpeed: 40
 		Speed: 145
@@ -446,14 +446,14 @@ LTNK:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Лёгкий танк
+		Name: actor-ltnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
-		Description: Быстрый, лёгкий танк.\n  Силён vs Техники, Танков\n  Слаб vs Пехоты
+		Description: actor-ltnk.description
 	Mobile:
 		TurnSpeed: 28
 		Speed: 102
@@ -496,14 +496,14 @@ MTNK:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Средний танк
+		Name: actor-mtnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.GDI
-		Description: Танк общего назначения.\n  Силен vs Танков, Техники\n  Слаб vs Пехоты
+		Description: actor-mtnk.description
 	Mobile:
 		Speed: 72
 	Health:
@@ -550,14 +550,14 @@ HTNK:
 	Valued:
 		Cost: 1800
 	Tooltip:
-		Name: Танк Мамонт
+		Name: actor-htnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: eye, ~techlevel.high
 		Queue: Vehicle.GDI
-		Description: Тяжёлый танк.\nМожет атаковать авиацию.\n  Силён vs ВСЕГО
+		Description: actor-htnk.description
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 46
@@ -618,14 +618,14 @@ MSAM:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Реактивная установка
+		Name: actor-msam.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.GDI
-		Description: Артилерия большого расстояния.\n  Сильна vs всех Наземных юнитов.
+		Description: actor-msam.description
 	Mobile:
 		Speed: 72
 		TurnSpeed: 16
@@ -677,14 +677,14 @@ MLRS:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Мобильная S.A.M.
+		Name: actor-mlrs.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
-		Description: Сильная ПВО.\nНе может атаковать наземные цели.
+		Description: actor-mlrs.description
 	Mobile:
 		Speed: 92
 		TurnSpeed: 28
@@ -737,14 +737,14 @@ STNK:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Стелс-танк
+		Name: actor-stnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Vehicle.Nod
-		Description: Ракетный танк большой дальности, способный маскироваться.\nМожет атаковать авиацию.\nИмеет слабую броню. Может быть замечен пехотой и оборонительными сооружениями.\n  Силён vs Техники, Танков\n  Слаб vs Пехоты.
+		Description: actor-stnk.description
 	Mobile:
 		Locomotor: heavywheeled
 		TurnSpeed: 40
@@ -803,7 +803,7 @@ MHQ:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Mobile HQ
+		Name: actor-mhq.name
 	Health:
 		HP: 20000
 	Armor:
@@ -816,7 +816,7 @@ MHQ:
 		Sequence: spinner
 		Offset: -256,0,256
 	Buildable:
-		Description: Мобильная база операций
+		Description: actor-mhq.description
 
 TRUCK:
 	Inherits: ^Vehicle
@@ -826,11 +826,11 @@ TRUCK:
 		BuildPaletteOrder: 35
 		Prerequisites: vehicleproduction
 		BuildDuration: 500
-		Description: Перевозит деньги другим игрокам.\n  Строится быстро\n  Безоружен
+		Description: actor-truck.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Грузовик
+		Name: actor-truck.name
 	Health:
 		HP: 11000
 	Armor:

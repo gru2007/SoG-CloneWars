@@ -22,7 +22,7 @@ Container@AUDIO_PANEL:
 							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
-							Text: Аудио
+							Text: label-audio-section-header
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 20
@@ -35,7 +35,7 @@ Container@AUDIO_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Align: Center
-									Text: Для настроек аудио необходимо аудио-устройство
+									Text: label-no-audio-device-container
 				Container@ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 50
@@ -48,7 +48,7 @@ Container@AUDIO_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Cash Ticks
+									Text: checkbox-cash-ticks-container
 						Container@MUTE_SOUND_CONTAINER:
 							X: 10
 							Y: 30
@@ -58,7 +58,7 @@ Container@AUDIO_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Мьют Звука
+									Text: checkbox-mute-sound-container
 						Container@SOUND_VOLUME_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
 							Width: PARENT_WIDTH / 2 - 20
@@ -66,7 +66,7 @@ Container@AUDIO_PANEL:
 								Label@SOUND_LABEL:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Громкость звука:
+									Text: label-sound-volume-container
 								ExponentialSlider@SOUND_VOLUME:
 									Y: 30
 									Width: PARENT_WIDTH
@@ -84,8 +84,8 @@ Container@AUDIO_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Font: Regular
-									Text: Мьют музыки в меню
-									TooltipText: Замьютить фоновую музыку, когда не играет какой-то трек
+									Text: checkbox-mute-background-music-container.label
+									TooltipText: checkbox-mute-background-music-container.tooltip
 									TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 						Container@MUSIC_VOLUME_CONTAINER:
 							X: PARENT_WIDTH / 2 + 10
@@ -94,7 +94,7 @@ Container@AUDIO_PANEL:
 								Label@MUSIC_LABEL:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Громкость музыки:
+									Text: label-music-volume-container
 								ExponentialSlider@MUSIC_VOLUME:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -111,7 +111,7 @@ Container@AUDIO_PANEL:
 								Label@AUDIO_DEVICE_LABEL:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Аудио устройство:
+									Text: label-audio-device-container
 								DropDownButton@AUDIO_DEVICE:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -123,7 +123,7 @@ Container@AUDIO_PANEL:
 								Label@VIDEO_LABEL:
 									Width: PARENT_WIDTH
 									Height: 20
-									Text: Громкость видео:
+									Text: label-video-volume-container
 								ExponentialSlider@VIDEO_VOLUME:
 									Y: 25
 									Width: PARENT_WIDTH
@@ -142,4 +142,4 @@ Container@AUDIO_PANEL:
 									Height: 20
 									Font: Tiny
 									Align: Center
-									Text: Изменения устройста будут применены после перезапуска игры
+									Text: label-restart-required-container-audio-desc

@@ -7,7 +7,7 @@ Container@MISSIONBROWSER_PANEL:
 	Children:
 		Label@MISSIONBROWSER_TITLE:
 			Y: 0 - 22
-			Text: Задания
+			Text: label-missionbrowser-panel-title
 			Width: PARENT_WIDTH
 			Height: 25
 			Align: Center
@@ -155,7 +155,7 @@ Container@MISSIONBROWSER_PANEL:
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Назад
+			Text: button-missionbrowser-panel-back
 			Font: Bold
 			Key: escape
 		Button@START_BRIEFING_VIDEO_BUTTON:
@@ -163,35 +163,35 @@ Container@MISSIONBROWSER_PANEL:
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Брифинг
+			Text: button-missionbrowser-panel-start-briefing-video
 			Font: Bold
 		Button@STOP_BRIEFING_VIDEO_BUTTON:
 			X: PARENT_WIDTH - 290
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Остановить
+			Text: button-missionbrowser-panel-stop-briefing-video
 			Font: Bold
 		Button@START_INFO_VIDEO_BUTTON:
 			X: PARENT_WIDTH - 440
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Видео 
+			Text: button-missionbrowser-panel-start-info-video
 			Font: Bold
 		Button@STOP_INFO_VIDEO_BUTTON:
 			X: PARENT_WIDTH - 440
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Остановить
+			Text: button-missionbrowser-panel-stop-info-video
 			Font: Bold
 		Button@STARTGAME_BUTTON:
 			X: PARENT_WIDTH - 140
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Играть
+			Text: button-missionbrowser-panel-startgame
 			Font: Bold
 		Background@MISSION_BIN:
 			X: 15

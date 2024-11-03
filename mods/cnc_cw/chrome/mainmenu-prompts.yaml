@@ -12,7 +12,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Настройка Мобильного Командного Пункта
+			Text: label-mainmenu-introduction-prompt-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -24,14 +24,14 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Height: 16
 					Font: Regular
 					Align: Center
-					Text: Добро пожаловать, командир! Инициализируйте боевые параметры, используя параметры ниже.
+					Text: label-bg-desc-a
 				Label@DESC_B:
 					Width: PARENT_WIDTH
 					Y: 33
 					Height: 16
 					Font: Regular
 					Align: Center
-					Text: Дополнительные настройки могут быть настроены позже из меню Настроек.
+					Text: label-bg-desc-b
 				ScrollPanel@SETTINGS_SCROLLPANEL:
 					X: 15
 					Y: 60
@@ -54,7 +54,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
-									Text: Профиль
+									Text: label-profile-section-header
 						Container@ROW:
 							Width: PARENT_WIDTH
 							Height: 50
@@ -66,7 +66,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 										Label@PLAYER:
 											Width: PARENT_WIDTH
 											Height: 20
-											Text: Ник командира:
+											Text: label-player-container
 										TextField@PLAYERNAME:
 											Y: 25
 											Width: PARENT_WIDTH
@@ -80,7 +80,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 										Label@COLOR:
 											Width: PARENT_WIDTH
 											Height: 20
-											Text: Предпочитаемый Цвет:
+											Text: label-playercolor-container-color
 										DropDownButton@PLAYERCOLOR:
 											Y: 25
 											Width: 75
@@ -106,7 +106,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
-									Text: Ввод
+									Text: label-input-section-header
 						Container@ROW:
 							Width: PARENT_WIDTH
 							Height: 50
@@ -119,7 +119,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
-											Text: Схема управления:
+											Text: label-mouse-control-container
 										DropDownButton@MOUSE_CONTROL_DROPDOWN:
 											Y: 25
 											Width: PARENT_WIDTH
@@ -133,56 +133,56 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Выберите юнитов, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-classic-selection
 										LabelWithHighlight@DESC_COMMANDS:
 											Y: 17
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Командуйте юнитами, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-classic-commands
 										LabelWithHighlight@DESC_BUILDINGS:
 											Y: 34
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Размещайте здания, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-classic-buildings
 										LabelWithHighlight@DESC_SUPPORT:
 											Y: 51
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Вызывайте поддержку, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-classic-support
 										LabelWithHighlight@DESC_ZOOM:
 											Y: 68
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Приближайте камеру, используя {Колесо прокрутки}
+											Text: label-mouse-control-desc-classic-zoom
 										LabelWithHighlight@DESC_ZOOM_MODIFIER:
 											Y: 68
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Приближайте камеру, используя {MODIFIER + Колесо прокрутки}
+											Text: label-mouse-control-desc-classic-zoom-modifier
 										LabelWithHighlight@DESC_SCROLL_RIGHT:
 											Y: 85
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Передвигайте камеру, используя {Правую} кнопку мыши
+											Text: label-mouse-control-desc-classic-scroll-right
 										LabelWithHighlight@DESC_SCROLL_MIDDLE:
 											Y: 85
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Передвигайте камеру, используя {Среднюю} кнопку мыши
+											Text: label-mouse-control-desc-classic-scroll-middle
 										Label@DESC_EDGESCROLL:
 											X: 9
 											Y: 102
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: или перемещая курсор на край экрана
+											Text: label-mouse-control-desc-classic-edgescroll
 								Container@MOUSE_CONTROL_DESC_MODERN:
 									X: PARENT_WIDTH / 2 + 10
 									Width: PARENT_WIDTH / 2 - 20
@@ -191,56 +191,56 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Выберите юнитов, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-modern-selection
 										LabelWithHighlight@DESC_COMMANDS:
 											Y: 17
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Командуйте юнитами, используя {Правую} кнопку мыши
+											Text: label-mouse-control-desc-modern-commands
 										LabelWithHighlight@DESC_BUILDINGS:
 											Y: 34
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Размещайте здания, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-modern-buildings
 										LabelWithHighlight@DESC_SUPPORT:
 											Y: 51
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Вызывайте поддержку, используя {Левую} кнопку мыши
+											Text: label-mouse-control-desc-modern-support
 										LabelWithHighlight@DESC_ZOOM:
 											Y: 68
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Приближайте камеру, используя {Колесо прокрутки}
+											Text: label-mouse-control-desc-modern-zoom
 										LabelWithHighlight@DESC_ZOOM_MODIFIER:
 											Y: 68
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Приближайте камеру, используя {MODIFIER + Колесо прокрутки}
+											Text: label-mouse-control-desc-modern-zoom-modifier
 										LabelWithHighlight@DESC_SCROLL_RIGHT:
 											Y: 85
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Передвигайте камеру, используя {Правую} кнопку мыши
+											Text: label-mouse-control-desc-modern-scroll-right
 										LabelWithHighlight@DESC_SCROLL_MIDDLE:
 											Y: 85
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: - Передвигайте камеру, используя {Среднюю} кнопку мыши
+											Text: label-mouse-control-desc-modern-scroll-middle
 										Label@DESC_EDGESCROLL:
 											X: 9
 											Y: 102
 											Width: PARENT_WIDTH
 											Height: 16
 											Font: Small
-											Text: или перемещая курсор на край экрана
+											Text: label-mouse-control-desc-modern-edgescroll
 						Container@ROW:
 							Width: PARENT_WIDTH
 							Height: 20
@@ -253,7 +253,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
-											Text: Край экрана двигает камеру 
+											Text: checkbox-edgescroll-container
 						Container@SPACER:
 							Height: 30
 						Background@DISPLAY_SECTION_HEADER:
@@ -268,7 +268,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 									Height: PARENT_HEIGHT
 									Font: TinyBold
 									Align: Center
-									Text: Дисплей
+									Text: label-display-section-header
 						Container@ROW:
 							Width: PARENT_WIDTH
 							Height: 50
@@ -280,7 +280,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 										Label@BATTLEFIELD_CAMERA:
 											Width: PARENT_WIDTH
 											Height: 20
-											Text: Камера:
+											Text: label-battlefield-camera-dropdown-container
 										DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 											Y: 25
 											Width: PARENT_WIDTH
@@ -293,7 +293,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 										Label@UI_SCALE:
 											Width: PARENT_WIDTH
 											Height: 20
-											Text: Размер UI:
+											Text: label-ui-scale-dropdown-container
 										DropDownButton@UI_SCALE_DROPDOWN:
 											Y: 25
 											Width: PARENT_WIDTH
@@ -311,13 +311,13 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 											Width: PARENT_WIDTH
 											Height: 20
 											Font: Regular
-											Text: Увеличить Курсор
+											Text: checkbox-cursordouble-container
 		Button@CONTINUE_BUTTON:
 			X: PARENT_WIDTH - WIDTH
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Продолжить
+			Text: button-mainmenu-introduction-prompt-continue
 			Font: Bold
 			Key: return
 
@@ -335,7 +335,7 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Настройка Мобильного Командного Пункта
+			Text: label-mainmenu-system-info-prompt-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -347,14 +347,14 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Width: PARENT_WIDTH - 30
 					Height: 16
 					Align: Center
-					Text: Разработчики OpenRA и SoG хотят получить данные для улучшения движка и игры.
+					Text: label-bg-prompt-text-a
 				Label@PROMPT_TEXT_B:
 					X: 15
 					Y: 33
 					Width: PARENT_WIDTH - 30
 					Height: 16
 					Align: Center
-					Text: С Вашего разрешения, данные ниже будут анонимно отправлены им:
+					Text: label-bg-prompt-text-b
 				ScrollPanel@SYSINFO_DATA:
 					X: 15
 					Y: 63
@@ -374,12 +374,12 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Width: 190
 					Height: 20
 					Font: Regular
-					Text: Отправить данные
+					Text: checkbox-bg-sysinfo
 		Button@CONTINUE_BUTTON:
 			X: PARENT_WIDTH - WIDTH
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: Продолжить
+			Text: button-mainmenu-system-info-prompt-continue
 			Font: Bold
 			Key: return

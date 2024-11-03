@@ -1,4 +1,4 @@
-Background@ENCYCLOPEDIA_PANEL:
+Container@ENCYCLOPEDIA_PANEL:
 	Logic: EncyclopediaLogic
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
