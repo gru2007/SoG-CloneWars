@@ -24,9 +24,9 @@ namespace OpenRA.Mods.Cnc
 
 		int loadTick;
 
-		Sprite nodLogo, evaLogo, brightBlock, dimBlock;
+		Sprite nodLogo, gdiLogo, evaLogo, brightBlock, dimBlock;
 		Sprite[] border;
-		float2 nodPos, evaPos;
+		float2 nodPos, gdiPos, evaPos;
 		Rectangle bounds;
 		string versionText;
 
@@ -41,6 +41,8 @@ namespace OpenRA.Mods.Cnc
 			base.Init(modData, info);
 
 			versionText = modData.Manifest.Metadata.Version;
+
+			message = FluentProvider.GetMessage(Loading);
 		}
 
 		public override void DisplayInner(Renderer r, Sheet s, int density)
@@ -63,7 +65,8 @@ namespace OpenRA.Mods.Cnc
 					CreateSprite(s, density, new Rectangle(223, 223, 32, 32))
 				};
 
-				nodLogo = CreateSprite(s, density, new Rectangle(120, 256, 256, 256));
+				nodLogo = CreateSprite(s, density, new Rectangle(0, 256, 256, 256));
+				gdiLogo = CreateSprite(s, density, new Rectangle(256, 256, 256, 256));
 				evaLogo = CreateSprite(s, density, new Rectangle(769, 320, 128, 64));
 
 				brightBlock = CreateSprite(s, density, new Rectangle(777, 385, 16, 35));
@@ -75,7 +78,8 @@ namespace OpenRA.Mods.Cnc
 				lastResolution = r.Resolution;
 
 				bounds = new Rectangle(0, 0, lastResolution.Width, lastResolution.Height);
-				nodPos = new float2(bounds.Width / 2 - 128, bounds.Height / 2 - 128);
+				nodPos = new float2(bounds.Width / 2 - 384, bounds.Height / 2 - 128);
+				gdiPos = new float2(bounds.Width / 2 + 128, bounds.Height / 2 - 128);
 				evaPos = new float2(bounds.Width - 43 - 128, 43);
 			}
 
@@ -83,6 +87,7 @@ namespace OpenRA.Mods.Cnc
 
 			loadTick = ++loadTick % 8;
 
+			r.RgbaSpriteRenderer.DrawSprite(gdiLogo, gdiPos);
 			r.RgbaSpriteRenderer.DrawSprite(nodLogo, nodPos);
 			r.RgbaSpriteRenderer.DrawSprite(evaLogo, evaPos);
 
