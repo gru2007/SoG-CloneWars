@@ -14,6 +14,7 @@ checkbox-stealth-deliveries =
     .description = Самолет доставки NOD скрыт
 
 ## World
+resource-tiberium = Tiberium
 options-starting-units =
     .mcv-only = Только MCV
     .light-support = Легкая поддержка
@@ -31,6 +32,13 @@ actor-player =
    .modularbot-cabal-name = Батя-подпивасник
    .modularbot-watson-name = Доктор Ватсон
    .modularbot-hal9001-name = T-1000
+
+## defaults.yaml
+notification-unit-lost = Unit lost.
+notification-unit-promoted = Unit promoted.
+notification-building-captured = Building captured.
+notification-civ-building-captured = Civilian building captured.
+notification-structure-lost = Structure lost.
 
 ## aircraft.yaml
 actor-tran =
@@ -182,7 +190,25 @@ actor-player =
    .resourcestoragewarning-text-notification = Нужны хранилища.
 
 ## ships.yaml
+actor-boat-name = Gunboat
 actor-lst-name = Десантный корабль
+
+## structures.yaml
+notification-construction-complete = Construction complete.
+notification-unit-ready = Unit ready.
+notification-reinforcements-have-arrived = Reinforcements have arrived.
+notification-unable-to-build-more = Unable to build more.
+notification-unable-to-comply-building-in-progress = Unable to comply. Building in progress.
+notification-repairing = Repairing.
+notification-ion-cannon-charging = Ion cannon charging.
+notification-ion-cannon-ready = Ion cannon ready.
+notification-select-target = Select target.
+notification-insufficient-power = Insufficient power.
+notification-airstrike-ready = Airstrike ready.
+notification-enemy-planes-approaching = Enemy planes approaching.
+notification-nuclear-weapon-available = Nuclear weapon available.
+notification-nuclear-weapon-launched = Nuclear weapon launched.
+notification-nuclear-warhead-approaching = Nuclear warhead approaching.
 
 ## structures.yaml
 actor-fact =
@@ -371,6 +397,15 @@ actor-vehicleproduction-name = Производство техники
 actor-anypower-name = Электростанция
 actor-anyhq-name = Центр связи
 
+## misc.yaml
+actor-wcrate-name = Wooden Crate
+actor-scrate-name = Steel Crate
+actor-mpspawn-name = (multiplayer starting point)
+actor-waypoint-name = (waypoint for scripted behavior)
+actor-camera-name = (reveals area to owner)
+actor-camera-small-name = (reveals small area to owner)
+actor-flare-name = Flare
+
 ## tech.yaml
 actor-v19 =
    .name = Нефтяная вышка
@@ -513,3 +548,132 @@ meta-baseworld =
     Государство, образованное несколькими планетами и секторами,
     объявившими о намерении выйти из Галактической Республики,
     отказываясь соблюдать ее чрезмерное налогообложение и подчиняться коррупции в Сенате
+
+
+## civilian-desert.yaml
+actor-v20-name = Sala's House
+actor-v20-husk-name = Sala's House (Destroyed)
+actor-v21-name = Abdul's House
+actor-v21-husk-name = Abdul's House (Destroyed)
+actor-v22-name = Pablo's Wicked Pub
+actor-v22-husk-name = Pablo's Wicked Pub (Destroyed)
+actor-v23-name = Village Well
+actor-v23-husk-name = Village Well (Destroyed)
+actor-v24-name = Camel Trader
+actor-v24-husk-name = Camel Trader (Destroyed)
+actor-v25-name = Church
+actor-v25-husk-name = Church (Destroyed)
+actor-v26-name = Ali's House
+actor-v26-husk-name = Ali's House (Destroyed)
+actor-v27-name = Trader Ted's
+actor-v27-husk-name = Trader Ted's (Destroyed)
+actor-v28-name = Menelik's House
+actor-v28-husk-name = Menelik's House (Destroyed)
+actor-v29-name = Prestor John's House
+actor-v29-husk-name = Prestor John's House (Destroyed)
+actor-v30-name = Village Well
+actor-v30-husk-name = Village Well (Destroyed)
+actor-v31-name = Witch Doctor's Hut
+actor-v31-husk-name = Witch Doctor's Hut (Destroyed)
+actor-v32-name = Rikitikitembo's Hut
+actor-v32-husk-name = Rikitikitembo's Hut (Destroyed)
+actor-v33-name = Roarke's Hut
+actor-v33-husk-name = Roarke's Hut (Destroyed)
+actor-v34-name = Mubasa's Hut
+actor-v34-husk-name = Mubasa's Hut (Destroyed)
+actor-v35-name = Aksum's Hut
+actor-v35-husk-name = Aksum's Hut (Destroyed)
+actor-v36-name = Mambo's Hut
+actor-v36-husk-name = Mambo's Hut (Destroyed)
+actor-v37-name = The Studio
+actor-v37-husk-name = The Studio (Destroyed)
+
+## civilian.yaml
+actor-v01-name = Church
+actor-v01-husk-name = Church (Destroyed)
+actor-v02-name = Hans and Gretel's House
+actor-v02-husk-name = Hans and Gretel's House (Destroyed)
+actor-v03-name = Hewitt's House
+actor-v03-husk-name = Hewitt's House (Destroyed)
+actor-v04-name = Ricktor's House
+actor-v04-husk-name = Ricktor's House (Destroyed)
+actor-v05-name = Gretchkin's House
+actor-v05-husk-name = Gretchkin's House (Destroyed)
+actor-v06-name = The Barn
+actor-v06-husk-name = The Barn (Destroyed)
+actor-v07-name = Damon's Pub
+actor-v07-husk-name = Damon's Pub (Destroyed)
+actor-v08-name = Fran's House
+actor-v08-husk-name = Fran's House (Destroyed)
+actor-v09-name = Music Factory
+actor-v09-husk-name = Music Factory (Destroyed)
+actor-v10-name = Toymaker's
+actor-v10-husk-name = Toymaker's (Destroyed)
+actor-v11-name = Ludwig's House
+actor-v11-husk-name = Ludwig's House (Destroyed)
+actor-v14-name = Wheat Field
+actor-v14-husk-name = Wheat Field (Destroyed)
+actor-v15-name = Fallow Field
+actor-v15-husk-name = Fallow Field (Destroyed)
+actor-v16-name = Corn Field
+actor-v16-husk-name = Corn Field (Destroyed)
+actor-v17-name = Celery Field
+actor-v17-husk-name = Celery Field (Destroyed)
+actor-v18-name = Potato Field
+actor-v18-husk-name = Potato Field (Destroyed)
+actor-arco-name = Oil Pump
+actor-arco-husk-name = Oil Pump (Destroyed)
+actor-barb-name = Barbwire Fence
+actor-wood-name = Wooden Fence
+actor-delphi-name = Agent Delphi
+actor-chan-name = Dr. Chan
+actor-moebius-name = Dr. Moebius
+
+## defaults.yaml
+meta-vehicle-generic-name = Vehicle
+meta-tank-generic-name = Tank
+meta-helicopter-generic-name = Helicopter
+meta-soldier-generic-name = Soldier
+meta-civinfantry-name = Civilian
+meta-viceroid-name = Visceroid
+meta-ship-generic-name = Ship
+meta-building-generic-name = Structure
+meta-civbuilding-generic-name = Civilian Building
+meta-civbuildinghusk-generic-name = Civilian Building (Destroyed)
+meta-civfield-generic-name = Field
+
+meta-civhaystackorigloo =
+   .winter-name = Igloo
+   .summer-name = Haystack
+
+meta-civhaystackorigloohusk =
+   .winter-name = Igloo (Destroyed)
+   .summer-name = Haystack (Destroyed)
+
+meta-tree-name = Tree
+meta-treehusk-name = Tree (Burnt)
+meta-tibtree-name = Blossom Tree
+meta-rock-name = Rock
+meta-husk-generic-name = Destroyed Vehicle
+meta-helicopterhusk-generic-name = Destroyed Helicopter
+meta-bridge-name = Bridge
+
+meta-crate =
+   .name = Crate
+   .generic-name = Crate
+
+## husks.yaml
+actor-harv-husk-name = Harvester (Destroyed)
+actor-apc-husk-name = APC (Destroyed)
+actor-ftnk-husk-name = Flame Tank (Destroyed)
+actor-arty-husk-name = Artillery (Destroyed)
+actor-bggy-husk-name = Nod Buggy (Destroyed)
+actor-bike-husk-name = Recon Bike (Destroyed)
+actor-jeep-husk-name = Hum-vee (Destroyed)
+actor-ltnk-husk-name = Light Tank (Destroyed)
+actor-mtnk-husk-name = Medium Tank (Destroyed)
+actor-htnk-husk-name = Mammoth Tank (Destroyed)
+actor-msam-husk-name = Rocket Launcher (Destroyed)
+actor-mlrs-husk-name = Mobile SAM (Destroyed)
+actor-stnk-husk-name = Stealth Tank (Destroyed)
+actor-truck-husk-name = Supply Truck (Destroyed)
