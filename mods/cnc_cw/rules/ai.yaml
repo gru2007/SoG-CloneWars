@@ -103,6 +103,7 @@ Player:
 			pyle: 3
 			hand: 3
 			hq: 1
+			hqcis: 1
 			weap: 3
 			afld: 3
 			hpad: 0
@@ -115,6 +116,7 @@ Player:
 			pyle: 5
 			hand: 5
 			hq: 4
+			hqcis: 4
 			weap: 9
 			afld: 9
 			gtwr: 5
@@ -147,6 +149,7 @@ Player:
 			pyle: 3
 			hand: 3
 			hq: 1
+			hqcis: 1
 			weap: 3
 			afld: 3
 			hpad: 2
@@ -159,6 +162,7 @@ Player:
 			pyle: 2
 			hand: 2
 			hq: 1
+			hqcis: 1
 			weap: 5
 			afld: 5
 			hpad: 4
@@ -191,6 +195,7 @@ Player:
 			pyle: 4
 			hand: 4
 			hq: 1
+			hqcis: 1
 			weap: 4
 			afld: 4
 			hpad: 2
@@ -203,6 +208,7 @@ Player:
 			pyle: 7
 			hand: 9
 			hq: 1
+			hqcis: 1
 			weap: 8
 			afld: 6
 			hpad: 4
@@ -222,7 +228,7 @@ Player:
 		ExcludeFromSquadsTypes: harv, mcv, a10
 		ConstructionYardTypes: fact
 		AirUnitsTypes: heli, orca
-		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
+		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, hqcis, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
 		IgnoredEnemyTargetTypes: Air
 	UnitBuilderBotModule@cabal:
 		RequiresCondition: enable-cabal-ai
@@ -259,7 +265,7 @@ Player:
 		ExcludeFromSquadsTypes: harv, mcv, a10
 		ConstructionYardTypes: fact
 		AirUnitsTypes: heli, orca
-		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
+		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, hqcis, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
 		IgnoredEnemyTargetTypes: Air
 	UnitBuilderBotModule@watson:
 		RequiresCondition: enable-watson-ai
@@ -291,7 +297,7 @@ Player:
 		ExcludeFromSquadsTypes: harv, mcv, a10
 		ConstructionYardTypes: fact
 		AirUnitsTypes: heli, orca
-		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
+		ProtectionTypes: fact, fact.gdi, fact.nod, nuke, nuk2, proc, silo, pyle, hand, afld, weap, hpad, hq, hqcis, fix, eye, tmpl, gun, sam, obli, gtwr, atwr, mcv, harv, miss
 		IgnoredEnemyTargetTypes: Air
 	UnitBuilderBotModule@hal9001:
 		RequiresCondition: enable-hal9001-ai
