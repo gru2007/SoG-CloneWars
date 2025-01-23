@@ -141,17 +141,11 @@ engine: check-variables check-sdk-scripts
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 
 all: engine
-ifneq ("$(MOD_SOLUTION_FILES)","")
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=${CONFIGURATION} -p:TargetPlatform=$(TARGETPLATFORM) \;
-endif
-else
-	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c ${CONFIGURATION} -p:TargetPlatform=$(TARGETPLATFORM) \;
-endif
+@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c ${CONFIGURATION} -p:TargetPlatform=$(TARGETPLATFORM) \;
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) clean \;
-endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
