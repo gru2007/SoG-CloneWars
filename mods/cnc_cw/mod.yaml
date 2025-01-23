@@ -17,7 +17,7 @@ RequiresMods:
 PackageFormats: Mix
 
 FileSystem: ContentInstallerFileSystem
-    Packages:
+    SystemPackages:
 		^EngineDir
 		$cnc_cw: cnc_cw
 		cnc_cw|: cnc
@@ -46,10 +46,30 @@ FileSystem: ContentInstallerFileSystem
 		cnc_cw|bits/ss
 		cnc_cw|bits/ts
 		cnc_cw|bits/models
-		cnc_cw|scripts
 		common|scripts
+		cnc_cw|scripts
 		cnc_cw|uibits
 	ContentPackages:
+		# Just an example
+		# content|speech.mix
+		# content|conquer.mix
+		# content|sounds.mix
+		# content|tempicnh.mix
+		# content|temperat.mix
+		# content|winter.mix
+		# content|desert.mix
+		# ~content|movies
+		# ~content|scores.mix
+		# ~content|scores2.mix
+		# ~content|scores-covertops.mix
+		# ~content|transit.mix
+		# ~content|general.mix
+		# # Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
+		# cnc|bits/snow.mix
+		# cnc|bits
+		# cnc|bits/jungle
+		# cnc|bits/desert
+		# cnc|bits/ss
 	ContentInstallerMod: cnccw-content
 
 MapFolders:
@@ -74,6 +94,7 @@ Rules:
 	cnc_cw|rules/ships.yaml
 	cnc_cw|rules/aircraft.yaml
 	cnc_cw|rules/husks.yaml
+	cnc_cw|rules/map-generators.yaml
 
 Sequences:
 	cnc_cw|sequences/structures.yaml
@@ -149,6 +170,7 @@ ChromeLayout:
 	cnc_cw|chrome/ingame-debuginfo.yaml
 	cnc_cw|chrome/music.yaml
 	cnc_cw|chrome/settings.yaml
+	cnc_cw|chrome/settings-gameplay.yaml
 	cnc_cw|chrome/settings-display.yaml
 	cnc_cw|chrome/settings-audio.yaml
 	cnc_cw|chrome/settings-input.yaml

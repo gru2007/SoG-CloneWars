@@ -7,6 +7,7 @@ Container@SETTINGS_PANEL:
 			INPUT_PANEL: Ввод
 			HOTKEYS_PANEL: Горячие кл.
 			ADVANCED_PANEL: Продвинутые
+			GAMEPLAY_PANEL: Игра
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 640

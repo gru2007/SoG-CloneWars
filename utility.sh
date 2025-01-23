@@ -52,11 +52,5 @@ if [ ! -f "${ENGINE_DIRECTORY}/bin/OpenRA.Utility.dll" ] || [ "$(cat "${ENGINE_D
 	exit 1
 fi
 
-if command -v mono >/dev/null 2>&1 && [ "$(grep -c .NETCoreApp,Version= ${ENGINE_DIRECTORY}/bin/OpenRA.Utility.dll)" = "0" ]; then
-	RUNTIME_LAUNCHER="mono --debug"
-else
-	RUNTIME_LAUNCHER="dotnet"
-fi
-
 cd "${ENGINE_DIRECTORY}"
-MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" ENGINE_DIR=".." ${RUNTIME_LAUNCHER} bin/OpenRA.Utility.dll "${LAUNCH_MOD}" "$@"
+MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" ENGINE_DIR=".." dotnet bin/OpenRA.Utility.dll "${LAUNCH_MOD}" "$@"

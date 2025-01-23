@@ -1,4 +1,4 @@
-This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-300 of OpenRA.
+This documentation displays annotated settings with default values and description. Please do not edit it directly, but add new `[Desc("String")]` tags to the source code. This file has been automatically generated for version Alpha-310 of OpenRA.
 
 All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.
 
@@ -71,11 +71,11 @@ Debug:
 ### UUID
 Sysinfo anonymous user identifier.
 
-**Default Value:** 464edecb-8d3b-4600-bd1c-5ac6184e567d
+**Default Value:** c559596b-81d1-4362-92a2-e73a4bf8bb0d
 
 ```miniyaml
 Debug:
-        UUID: 464edecb-8d3b-4600-bd1c-5ac6184e567d
+        UUID: c559596b-81d1-4362-92a2-e73a4bf8bb0d
 ```
 ### DisplayDeveloperSettings
 Enable hidden developer settings in the Advanced settings tab.
@@ -529,4 +529,23 @@ If a vote kick was unsuccessful for how long should the player who started the v
 ```miniyaml
 Server:
         VoteKickerCooldown: 120000
+```
+## SinglePlayerSettings
+### AutoSaveInterval
+Sets the Auto-save frequency, in seconds
+
+**Default Value:** 0
+
+```miniyaml
+SinglePlayerSettings:
+        AutoSaveInterval: 0
+```
+### AutoSaveMaxFileCount
+Sets the AutoSave number of max files to bes saved on the file-system
+
+**Default Value:** 10
+
+```miniyaml
+SinglePlayerSettings:
+        AutoSaveMaxFileCount: 10
 ```

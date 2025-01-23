@@ -100,12 +100,24 @@ button-editor-world-root-undo =
 button-editor-world-root-redo =
    .label = Redo
    .tooltip = Redo last step
-
+label-tool-bg-category = Tool:
 dropdownbutton-editor-world-root-overlay-button = Overlays
 button-select-categories-buttons-all = All
 button-select-categories-buttons-none = None
-
+label-selection-filters = Filters
+label-filters = Filters
+label-tool-bg-category = Tool:
 label-tool-marker-tiles = Marker Tiles
+button-delete-area =
+   .label = Delete
+   .tooltip = Remove everything in the selected area
+button-delete-actor =
+   .label = Delete
+   .tooltip = Remove the selected actor
+label-tool-map-generator = Map Generator
+label-map-generator-generator = Generator
+button-map-generator-generate = Generate
+button-map-generator-generate-random = Generate Random
 
 ## encyclopedia.yaml, mainmenu.yaml
 label-encyclopedia-title = Энциклопедия
@@ -168,6 +180,8 @@ label-script-error-panel-desc-c = Please send this file to the map author so tha
 ## ingame-infostats.yaml
 label-objective-mission = Mission:
 checkbox-objective-stats = Destroy all opposition!
+label-mission-objective = Mission:
+checkbox-stats-objective = Destroy all opposition!
 label-stats-player = Player
 label-stats-faction = Faction
 label-stats-score = Score
@@ -1303,3 +1317,8 @@ label-production-tooltip-factionsuffix-requires = Нужно <0>
 label-latency-tooltip-prefix = Задежка:
 label-anonymous-player-tooltip-name = Анонимный игрок
 label-game-admin = Админ игры
+
+## settings-gameplay.yaml
+label-game-play-section-header = Авто-сохранение
+auto-save-interval-label = Частота:
+auto-save-max-file-number-label = Лимит:
