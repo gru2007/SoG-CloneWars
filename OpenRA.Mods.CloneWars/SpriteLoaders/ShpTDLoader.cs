@@ -8,6 +8,7 @@
  * information, see COPYING.
  */
 #endregion
+#pragma warning disable CA1852
 
 using System;
 using System.Collections.Generic;

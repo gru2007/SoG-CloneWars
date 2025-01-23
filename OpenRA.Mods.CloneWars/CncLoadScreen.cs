@@ -19,9 +19,6 @@ namespace OpenRA.Mods.Cnc
 {
 	public sealed class CncLoadScreen : SheetLoadScreen
 	{
-		[FluentReference]
-		const string Loading = "loadscreen-loading";
-
 		int loadTick;
 
 		Sprite nodLogo, evaLogo, brightBlock, dimBlock;
