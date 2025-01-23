@@ -169,7 +169,6 @@ ifneq ("$(MOD_SOLUTION_FILES)","")
 	@$(DOTNET) clean -c Debug --nologo --verbosity minimal
 	@$(DOTNET) build -c Debug -nologo -warnaserror -p:TargetPlatform=$(TARGETPLATFORM)
 endif
-endif
 	@echo "Checking for explicit interface violations..."
 	@./utility.sh --check-explicit-interfaces
 	@echo "Checking for incorrect conditional trait interface overrides..."
