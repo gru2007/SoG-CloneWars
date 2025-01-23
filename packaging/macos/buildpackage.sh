@@ -116,7 +116,7 @@ cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/Info.plist.in" "${LAUNC
 modify_plist "{DEV_VERSION}" "${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.15" "${LAUNCHER_CONTENTS_DIR}/Contents/Info.plist"
+modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.15" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 if [ -n "${DISCORD_APPID}" ]; then
