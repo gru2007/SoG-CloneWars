@@ -55,23 +55,22 @@ Player:
 		Type: campaign
 
 airstrike.proxy:
-	AlwaysVisible:
 	AirstrikePower:
 		Icon: airstrike
 		StartFullyCharged: True
 		ChargeInterval: 3000
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Авиаудар
-		Description: Вызвать истребители с напалмом.\nСжигает здания и пехоту в указанном месте.
+		Name: actor-hq.airstrikepower-name
+		Description: actor-hq.airstrikepower-description
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: Авиаудар готов.
-		SelectTargetTextNotification: Выберите цель.
-		InsufficientPowerTextNotification: Недостаточно энергии.
-		IncomingTextNotification: Вражеские бомбардировщики на подлёте.
+		EndChargeTextNotification: notification-airstrike-ready
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
+		IncomingTextNotification: notification-enemy-planes-approaching
 		UnitType: a10
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -85,7 +84,7 @@ airstrike.proxy:
 MoneyCrate:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Коробка Денег
+		Name: actor-moneycrate-name
 	GiveCashCrateAction:
 		Amount: 2000
 		Sequence: dollar

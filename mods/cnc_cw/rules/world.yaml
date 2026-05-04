@@ -1,5 +1,4 @@
 ^BaseWorld:
-	AlwaysVisible:
 	Inherits: ^Palettes
 	ScreenMap:
 	ActorMap:
@@ -14,10 +13,11 @@
 	VoxelCache:
 	TerrainGeometryOverlay:
 	ShroudRenderer:
-		ShroudVariants: typea, typeb, typec, typed
-		FogVariants: typea, typeb, typec, typed
-		OverrideFullShroud: full
-		OverrideFullFog: full
+		ShroudVariants: shroud-typea, shroud-typeb, shroud-typec, shroud-typed
+		OverrideFullShroud: shroud-full
+		FogVariants: fog-typea, fog-typeb, fog-typec, fog-typed
+		OverrideFullFog: fog-full
+		FogPalette: shroud
 	Locomotor@FOOT:
 		Name: foot
 		Crushes: crate
@@ -127,28 +127,28 @@
 			BlueTiberium: 100
 			Beach: 89
 	Faction@Random:
-		Name: meta-baseworld.faction-random-name
+		Name: faction-random.name
 		InternalName: Random
 		RandomFactionMembers: gdi, nod
-		Description: meta-baseworld.faction-random-description
+		Description: faction-random.description
 	Faction@gdi:
-		Name: meta-baseworld.faction-gdi-name
+		Name: faction-gdi.name
 		InternalName: gdi
-		Description: meta-baseworld.faction-gdi-description
+		Description: faction-gdi.description
 	Faction@nod:
-		Name: meta-baseworld.faction-nod-name
+		Name: faction-nod.name
 		InternalName: nod
-		Description: meta-baseworld.faction-nod-description
+		Description: faction-nod.description
 	ResourceRenderer:
 		ResourceTypes:
 			Tiberium:
 				Sequences: ti1, ti2, ti3, ti4, ti5, ti6, ti7, ti8, ti9, ti10, ti11, ti12
 				Palette: staticterrain
-				Name: Тиберий
+				Name: resource-tiberium
 			BlueTiberium:
-				Sequences: bti1, bti2, bti3, bti4, bti5, bti6, bti7, bti8, bti9, bti10, bti11, bti12
+				Sequences: ti1, ti2, ti3, ti4, ti5, ti6, ti7, ti8, ti9, ti10, ti11, ti12
 				Palette: bluetiberium
-				Name: Тиберий
+				Name: resource-tiberium
 
 World:
 	Inherits: ^BaseWorld
@@ -158,6 +158,7 @@ World:
 	PathFinderOverlay:
 	AutoSave:
 	HierarchicalPathFinderOverlay:
+	ActorMapOverlay:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
@@ -266,6 +267,11 @@ World:
 	ObjectivesPanel:
 		PanelName: SKIRMISH_STATS
 	RadarPings:
+	StartGameNotification:
+		Notification:
+		LoadedNotification:
+		SavedNotification:
+		SavedTextNotification: notification-game-saved
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MENU_BACKGROUND
 	ScriptTriggers:
@@ -282,7 +288,6 @@ World:
 
 EditorWorld:
 	Inherits: ^BaseWorld
-	Inherits@MapGenerators: ^MapGenerators
 	EditorActorLayer:
 	EditorCursorLayer:
 	EditorResourceLayer:
@@ -303,3 +308,8 @@ EditorWorld:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Road
 	MarkerLayerOverlay:
+	TilingPathTool:
+		DefaultStart: Clear
+		DefaultInner: Beach
+		DefaultEnd: Clear
+	Inherits@MapGenerators: ^MapGenerators

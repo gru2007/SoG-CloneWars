@@ -54,7 +54,7 @@
 ^GainsExperience:
 	GainsExperience:
 		LevelUpNotification: LevelUp
-		LevelUpTextNotification: meta-gainsexperience-gainsexperience-level-up-text-notification
+		LevelUpTextNotification: notification-unit-promoted
 		Conditions:
 			250: rank-veteran
 			500: rank-veteran
@@ -254,10 +254,11 @@
 	Passenger:
 		CargoType: Vehicle
 	ActorLostNotification:
-		TextNotification: meta-vehicle.actorlostnotification-text-notification
+		TextNotification: notification-unit-lost
 	HiddenUnderFog:
 	AttackMove:
 	WithDamageOverlay:
+		StartSequence: idle
 	WithFacingSpriteBody:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
@@ -265,7 +266,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: meta-vehicle.generic-name
+		GenericName: meta-vehicle-generic-name
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: VehicleVoice
@@ -313,7 +314,7 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
-		TextNotification: meta-helicopter.actorlostnotification-text-notification
+		TextNotification: notification-unit-lost
 	FireWarheadsOnDeath:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
@@ -321,7 +322,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: meta-helicopter.generic-name
+		GenericName: meta-helicopter-generic-name
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -466,6 +467,8 @@
 			FireDeath: 5
 			TiberiumDeath: 6
 		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: true
 	AttackMove:
 	Passenger:
 		CargoType: Infantry
@@ -492,7 +495,7 @@
 		Margin: 5, 6
 		RequiresCondition: hazmatsuits
 	ActorLostNotification:
-		TextNotification: meta-infantry-actorlostnotification-text-notification
+		TextNotification: notification-unit-lost
 	SpawnActorOnDeath:
 		Probability: 5
 		Actor: vice
@@ -567,6 +570,8 @@
 ^CivInfantry:
 	Inherits: ^Infantry
 	Inherits@selection: ^SelectableSupportUnit
+	Selectable:
+		Class: CivInfantry
 	Valued:
 		Cost: 10
 	Tooltip:
@@ -590,16 +595,22 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 		AvoidTerrainTypes: Tiberium, BlueTiberium
+	WithInfantryBody:
+		IdleSequences: idle1
+		MinIdleDelay: 60
+		MaxIdleDelay: 220
 	MapEditorData:
 		Categories: Civilian infantry
 
 ^ArmedCivilian:
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@selection: ^SelectableCombatUnit
 	Armament:
 		Weapon: Pistol
 	AttackFrontal:
 		FacingTolerance: 0
 	WithInfantryBody:
+		IdleSequences: idle1,idle2
 		DefaultAttackSequence: shoot
 
 ^DINO:
@@ -733,7 +744,7 @@
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	ActorLostNotification:
-		TextNotification: meta-plane-actorlostnotification-text-notification
+		TextNotification: notification-unit-lost
 	AttackMove:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -787,16 +798,17 @@
 		TargetTypes: Ground, Water
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: meta-ship.actorlostnotification-text-notification
+		TextNotification: notification-unit-lost
 	AttackMove:
 	WithDamageOverlay:
+		StartSequence: idle
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeShip
 		EmptyWeapon: UnitExplodeShip
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: meta-ship.generic-name
+		GenericName: meta-ship-generic-name
 	Voiced:
 		VoiceSet: VehicleVoice
 	HitShape:
@@ -833,16 +845,16 @@
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
 		Notification: BuildingCaptured
-		TextNotification: meta-building.capturenotification-text-notification
+		TextNotification: notification-building-captured
 		NewOwnerVoice: false
 	ActorLostNotification:
 		Notification: BuildingLost
-		TextNotification: meta-building.actorlostnotification-text-notification
+		TextNotification: notification-structure-lost
 	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
 	Tooltip:
-		GenericName: meta-building.generic-name
+		GenericName: meta-building-generic-name
 	FrozenUnderFog:
 	Demolishable:
 	MapEditorData:
@@ -881,6 +893,7 @@
 	Sellable:
 		RequiresCondition: !build-incomplete && !being-demolished
 		SellSounds: cashturn.aud
+		Notification: StructureSold
 	CaptureManager:
 	Capturable:
 		RequiresCondition: !build-incomplete
@@ -930,7 +943,7 @@
 		Types: building
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-		TextNotification: meta-techbuilding-capturenotification-text-notification
+		TextNotification: notification-civ-building-captured
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1400
@@ -942,7 +955,7 @@
 	Tooltip:
 		ShowOwnerRow: True
 	MapEditorData:
-		Categories: Техническое здание
+		Categories: Tech building
 	AppearsOnMapPreview:
 	WithBuildingRepairDecoration:
 		Image: allyrepair
@@ -1093,16 +1106,28 @@
 		Image: burn-s
 		MinimumDamageState: Light
 		MaximumDamageState: Medium
+		StartSequence: start
+		LoopCount: 1, 7
+		InitialDelay: 0, 25
+		EndSequence: end
 	WithDamageOverlay@MediumBurn:
 		DamageTypes: Incendiary
 		Image: burn-m
 		MinimumDamageState: Medium
 		MaximumDamageState: Heavy
+		StartSequence: start
+		LoopCount: 1, 7
+		InitialDelay: 0, 25
+		EndSequence: end
 	WithDamageOverlay@LargeBurn:
 		DamageTypes: Incendiary
 		Image: burn-l
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
+		StartSequence: start
+		LoopCount: 1, 7
+		InitialDelay: 0, 25
+		EndSequence: end
 	HiddenUnderShroud:
 	HitShape:
 	MapEditorData:
@@ -1249,7 +1274,6 @@
 
 ^Bridge:
 	Inherits@shape: ^1x1Shape
-	AlwaysVisible:
 	Tooltip:
 		Name: meta-bridge-name
 		ShowOwnerRow: false

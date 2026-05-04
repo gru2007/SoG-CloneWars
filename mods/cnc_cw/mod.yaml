@@ -65,11 +65,11 @@ FileSystem: ContentInstallerFileSystem
 		# ~content|transit.mix
 		# ~content|general.mix
 		# # Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
-		# cnc|bits/snow.mix
-		# cnc|bits
-		# cnc|bits/jungle
-		# cnc|bits/desert
-		# cnc|bits/ss
+		# cnc_cw|bits/snow.mix
+		# cnc_cw|bits
+		# cnc_cw|bits/jungle
+		# cnc_cw|bits/desert
+		# cnc_cw|bits/ss
 	ContentInstallerMod: cnccw-content
 
 MapFolders:
@@ -115,7 +115,6 @@ TileSets:
 	cnc_cw|tilesets/winter.yaml
 	cnc_cw|tilesets/snow.yaml
 	cnc_cw|tilesets/temperat.yaml
-	cnc_cw|tilesets/jungle.yaml
 
 Weapons:
 	cnc_cw|weapons/explosions.yaml
@@ -131,12 +130,13 @@ Cursors:
 Chrome:
 	cnc_cw|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.CloneWars.dll
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
 
 ChromeLayout:
 	cnc_cw|chrome/mainmenu.yaml
 	cnc_cw|chrome/mainmenu-prompts.yaml
 	cnc_cw|chrome/playerprofile.yaml
+	cnc_cw|chrome/encyclopedia.yaml
 	cnc_cw|chrome/multiplayer-browser.yaml
 	cnc_cw|chrome/multiplayer-browserpanels.yaml
 	cnc_cw|chrome/multiplayer-createserver.yaml
@@ -153,6 +153,7 @@ ChromeLayout:
 	cnc_cw|chrome/mapchooser.yaml
 	cnc_cw|chrome/replaybrowser.yaml
 	cnc_cw|chrome/gamesave-browser.yaml
+	cnc_cw|chrome/load-game-browser.yaml
 	cnc_cw|chrome/gamesave-loading.yaml
 	cnc_cw|chrome/ingame.yaml
 	cnc_cw|chrome/ingame-chat.yaml
@@ -170,14 +171,13 @@ ChromeLayout:
 	cnc_cw|chrome/ingame-debuginfo.yaml
 	cnc_cw|chrome/music.yaml
 	cnc_cw|chrome/settings.yaml
-	cnc_cw|chrome/settings-gameplay.yaml
 	cnc_cw|chrome/settings-display.yaml
+	cnc_cw|chrome/settings-gameplay.yaml
 	cnc_cw|chrome/settings-audio.yaml
 	cnc_cw|chrome/settings-input.yaml
 	cnc_cw|chrome/settings-hotkeys.yaml
 	cnc_cw|chrome/settings-advanced.yaml
 	cnc_cw|chrome/credits.yaml
-	cnc_cw|chrome/encyclopedia.yaml
 	cnc_cw|chrome/dialogs.yaml
 	cnc_cw|chrome/tooltips.yaml
 	cnc_cw|chrome/assetbrowser.yaml
@@ -193,9 +193,6 @@ FluentMessages:
 	cnc_cw|fluent/chrome.ftl
 	cnc_cw|fluent/hotkeys.ftl
 	cnc_cw|fluent/rules.ftl
-	cnc_cw|fluent/common/common.ftl
-	cnc_cw|fluent/common/rules.ftl
-	cnc_cw|fluent/ru.ftl
 
 AllowUnusedFluentMessagesInExternalPackages: true
 
@@ -212,7 +209,6 @@ Hotkeys:
 	common|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
-	#common|hotkeys/production-peractor.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
@@ -231,7 +227,6 @@ ServerTraits:
 	SkirmishLogic
 	PlayerPinger
 	MasterServerPinger
-	LobbySettingsNotification
 
 ChromeMetrics:
 	common|metrics.yaml
@@ -275,7 +270,6 @@ Missions:
 	cnc_cw|missions.yaml
 
 MapGrid:
-	TileSize: 24,24
 	Type: Rectangular
 
 DefaultOrderGenerator: UnitOrderGenerator
@@ -327,4 +321,4 @@ GameSpeeds:
 			OrderLatency: 6
 
 DiscordService:
-	ApplicationId: 1037696848808382474
+	ApplicationId: 699223250181292033

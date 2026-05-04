@@ -9,26 +9,26 @@ PreviousProductionTab: PAGEUP
 	Contexts: player
 
 ProductionTypeBuilding: E
-	Description: Строения
+	Description: hotkey-description-productiontypebuilding
 	Types: Production
 	Contexts: player
 
 ProductionTypeDefense: R
-	Description: Защита
+	Description: hotkey-description-productiontypesupport
 	Types: Production
 	Contexts: player
 
 ProductionTypeInfantry: T
-	Description: Пехота
+	Description: hotkey-description-productiontypeinfantry
 	Types: Production
 	Contexts: player
 
 ProductionTypeVehicle: Y
-	Description: Техника
+	Description: hotkey-description-productiontypevehicle
 	Types: Production
 	Contexts: player
 
 ProductionTypeAircraft: U
-	Description: Воздух
+	Description: hotkey-description-productiontypeaircraft
 	Types: Production
 	Contexts: player

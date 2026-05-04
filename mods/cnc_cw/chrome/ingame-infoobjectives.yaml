@@ -11,7 +11,7 @@ Container@MISSION_OBJECTIVES:
 			Font: MediumBold
 			Text: label-mission-objectives
 		Label@MISSION_STATUS:
-			X: 105
+			X: 95
 			Y: 17
 			Width: PARENT_WIDTH - 110
 			Height: 20

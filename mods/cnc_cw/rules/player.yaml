@@ -1,5 +1,4 @@
 ^BasePlayer:
-	AlwaysVisible:
 	Shroud:
 	PlayerResources:
 		ResourceValues:
@@ -14,8 +13,8 @@ Player:
 	PlaceBuilding:
 		NewOptionsNotification: NewOptions
 		CannotPlaceNotification: BuildingCannotPlaceAudio
-		NewOptionsTextNotification: actor-player.placebuilding-new-options-text-notification
-		CannotPlaceTextNotification: actor-player.placebuilding-cannot-place-text-notification
+		NewOptionsTextNotification: notification-new-construction-options
+		CannotPlaceTextNotification: notification-cannot-deploy-here
 	TechTree:
 	SupportPowerManager:
 	ScriptTriggers:
@@ -26,7 +25,7 @@ Player:
 	ConquestVictoryConditions:
 	PowerManager:
 		SpeechNotification: LowPower
-		TextNotification: actor-player.powermanager-text-notification
+		TextNotification: notification-low-power
 	AllyRepair:
 	PlayerResources:
 		CashTickUpNotification: CashTickUp
@@ -35,9 +34,14 @@ Player:
 		DefaultCash: 7500
 	DeveloperMode:
 		CheckboxDisplayOrder: 9
-	BaseAttackNotifier:
-		TextNotification: actor-player.baseattacknotifier-text-notification
-		AllyTextNotification: actor-player.baseattacknotifier-ally-text-notification
+	DamageNotifier:
+		ValidTargets: Structure
+		Notification: BaseAttack
+		TextNotification: notification-base-under-attack
+		AllyTextNotification: notification-ally-under-attack
+	DamageNotifier@Unit:
+		InvalidTargets: Structure
+		NotifyInterval: 10000
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
@@ -75,7 +79,7 @@ Player:
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
-		TextNotification: actor-player.resourcestoragewarning-text-notification
+		TextNotification: notification-silos-needed
 	PlayerExperience:
 	GameSaveViewportManager:
 	PlayerRadarTerrain:

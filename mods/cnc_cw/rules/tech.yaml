@@ -19,16 +19,18 @@ V19:
 	Tooltip:
 		Name: actor-v19.name
 	TooltipDescription@ally:
-		Description: actor-v19.tooltipdescription-ally-description
+		Description: actor-v19.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: actor-v19.tooltipdescription-other-description
+		Description: actor-v19.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: V19.Husk
 	UpdatesDerrickCount:
 	GrantConditionOnCombatantOwner:
 		Condition: enabled
+	RenderSprites:
+		PlayerPalette: derrick
 
 V19.Husk:
 	Inherits: ^CivBuildingHusk
@@ -43,6 +45,8 @@ V19.Husk:
 		Dimensions: 1,1
 	Tooltip:
 		Name: actor-v19-husk-name
+	RenderSprites:
+		PlayerPalette: derrick
 
 HOSP:
 	Inherits: ^TechBuilding
@@ -63,10 +67,10 @@ HOSP:
 	Tooltip:
 		Name: actor-hosp.name
 	TooltipDescription@ally:
-		Description: actor-hosp.tooltipdescription-ally-description
+		Description: actor-hosp.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: actor-hosp.tooltipdescription-other-description
+		Description: actor-hosp.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: HOSP.Husk
@@ -105,10 +109,10 @@ BIO:
 	Tooltip:
 		Name: actor-bio.name
 	TooltipDescription@ally:
-		Description: actor-bio.tooltipdescription-ally-description
+		Description: actor-bio.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: actor-bio.tooltipdescription-other-description
+		Description: actor-bio.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: BIO.Husk
@@ -155,10 +159,10 @@ MISS:
 	RevealsShroud:
 		Range: 13c0
 	TooltipDescription@ally:
-		Description: actor-miss.tooltipdescription-ally-description
+		Description: actor-miss.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: actor-miss.tooltipdescription-other-description
+		Description: actor-miss.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	WithBuildingBib:
 		HasMinibib: true

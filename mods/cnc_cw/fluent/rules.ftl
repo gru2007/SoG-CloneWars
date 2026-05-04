@@ -1,40 +1,60 @@
-map-generator-ra = RA Experimental (CnC)
-map-generator-clear = Clear
-
-## Player
+## player.yaml
 options-tech-level =
-    .low = Низкий
-    .medium = Средний
-    .no-powers = Нет сил
-    .unrestricted = Без ограничений
+    .low = Low
+    .medium = Medium
+    .no-powers = No Superpowers
+    .unrestricted = Unrestricted
 
 checkbox-redeployable-mcvs =
-    .label = Складывание базы
-    .description = Разрешает складывание базы в машину
+    .label = Redeployable MCVs
+    .description = Allows Construction Yards to undeploy
 
 checkbox-stealth-deliveries =
-    .label = Стелс-доставки
-    .description = Самолет доставки NOD скрыт
+    .label = Stealth Deliveries
+    .description = Nod's delivery plane is cloaked
 
-## World
-resource-tiberium = Tiberium
+notification-new-construction-options = New construction options.
+notification-cannot-deploy-here = Cannot deploy here.
+notification-low-power = Low power.
+notification-base-under-attack = Base under attack.
+notification-ally-under-attack = Our ally is under attack.
+notification-silos-needed = Silos needed.
+
+## world.yaml
+notification-game-saved = Game saved.
+
 options-starting-units =
-    .mcv-only = Только MCV
-    .light-support = Легкая поддержка
-    .heavy-support = Тяжёлая поддержка
+    .mcv-only = MCV Only
+    .light-support = Light Support
+    .heavy-support = Heavy Support
 
 dropdown-map-creeps =
-    .label = Крипы
-    .description = Враждебные силы спауняться на поле боя
+    .label = Creep Actors
+    .description = Hostile forces spawn on the battlefield
 
-options-difficulty =
-    .normal = Нормально
+resource-tiberium = Tiberium
 
-## ai.yaml
-actor-player =
-   .modularbot-cabal-name = Батя-подпивасник
-   .modularbot-watson-name = Доктор Ватсон
-   .modularbot-hal9001-name = T-1000
+faction-random =
+    .name = Any
+    .description = Random Faction
+     A random faction is chosen at the start of the game
+
+faction-gdi =
+    .name = GDI
+    .description = Global Defense Initiative
+     The GDI is an international military branch of the United Nations tasked
+     with keeping world peace. Commanding the combined forces of the world's
+     most powerful nations, it possess an unmatched arsenal of high-tech weaponry.
+
+faction-nod =
+    .name = Nod
+    .description = Brotherhood of Nod
+     The Brotherhood is a religious cult centered around their leader Kane
+     and the alien substance Tiberium. They use stealth technology
+     and guerilla tactics to defeat those who oppose them.
+
+map-generator-classic = Map Generator
+map-generator-clear = Clear Terrain
 
 ## defaults.yaml
 notification-unit-lost = Unit lost.
@@ -45,513 +65,42 @@ notification-structure-lost = Structure lost.
 
 ## aircraft.yaml
 actor-tran =
-   .name = LAAT Transport
-   .description = LAAT/i для доставки пехоты.
-      Безоружен
+    .name = Chinook Transport
+    .description =
+    Fast Infantry Transport Helicopter.
+      Unarmed
+    .encyclopedia =
+    The chinook is a flying transport capable of carrying a detachment of infantry. It is mostly used to transport commandos or engineers for backline-destruction.
 
-actor-trancis =
-   .name = HMP Gunship Transport
-   .description = Gunship для доставки пехоты.
-      Безоружен
+    Like all aircraft, it can be handy in a pinch to crush a commando by landing!
 
 actor-heli =
-   .name = HMP Gunship
-   .description = Gunship с пулеметами.
-      Силен против пехоты, Легких ТС и
-      Воздуха
-      Слаб против танков
+    .name = Apache Longbow
+    .description =
+    Helicopter Gunship with chainguns.
+      Strong vs Infantry, Light Vehicles and Aircraft
+      Weak vs Tanks
+    .encyclopedia =
+    Has more health than the Orca and acts as a support unit. It works well with artillery, as it can kill approaching light vehicles.
+
+    Ammo is automatically reloaded in the air.
 
 actor-orca =
-   .name = LAAT/i Gunship
-   .description = LAAT/i с AG-ракетами.
-      Силен против Зданий, Танков
-      Слаб против Пехоты
+    .name = Orca
+    .description =
+    Helicopter gunship with AG missiles.
+      Strong vs Buildings and Tanks
+      Weak vs Infantry
+    .encyclopedia =
+    Fast but fragile, the Orca harasses enemy vehicles and aircraft with AT missiles. It is best used opportunistically, and can be kept alive longer with careful micro. Its AA missiles are effective but have a hard time hitting fast-moving air targets.
+
+    Ammo is automatically reloaded in the air.
 
 actor-c17-name = Supply Aircraft
-actor-a10-name = ARC170 Bomber
-actor-a10cis-name = Vulture Bomber
-actor-laat-husk-name = LAAT
-actor-gunship-husk-name = HMP Gunship
-
-## defaults.yaml
-meta-gainsexperience-gainsexperience-level-up-text-notification = Юнит повышен.
-
-meta-vehicle =
-   .actorlostnotification-text-notification = Юнит потерян.
-   .generic-name = Техника
-
-meta-tank-generic-name = Танк
-
-meta-helicopter =
-   .actorlostnotification-text-notification = Юнит потерян.
-   .generic-name = Авиатехника
-
-meta-voxelhelicopter =
-   .actorlostnotification-text-notification = Unit lost.
-   .generic-name = Авиатехника
-
-meta-voxelhelicopterhusk-generic-name = Уничтоженная авиатехника
-meta-infantry-actorlostnotification-text-notification = Юнит потерян.
-meta-plane-actorlostnotification-text-notification = Юнит потерян.
-meta-voxelplane-actorlostnotification-text-notification = Unit lost.
-
-meta-ship =
-   .actorlostnotification-text-notification = Юнит потерян.
-   .generic-name = Корабль
-
-meta-building =
-   .capturenotification-text-notification = Здание захвачено.
-   .actorlostnotification-text-notification = Структура потеряна.
-   .generic-name = Структура
-
-meta-civbuilding-generic-name = Гражданское здание
-meta-civbuildinghusk-generic-name = Гражданское здание (Уничтожно)
-meta-techbuilding-capturenotification-text-notification = Гражданское здание захвачено.
-meta-tree-name = Дерево
-meta-treehusk-name = Дерево (сгорело)
-meta-tibtree-name = Цветущее дерево
-meta-rock-name = Камень
-meta-husk-generic-name = Уничтоженная техника
-meta-helicopterhusk-generic-name = Уничтоженная авиатехника
-meta-bridge-name = Мост
-
-## husks.yaml
-actor-mcv-husk-name = Мобильная Стройплощадка (уничтожена)
-
-## infantry.yaml
-actor-e1 =
-   .name = Мини-стрелок
-   .description = Пехота общего назначения.
-      Сильна vs Пехоты
-      Слаба vs Техники
-
-actor-e2 =
-   .name = Гренадер
-   .description = Быстрая пехота вооружённая гранатами.
-      Сильна vs Зданий, Медленных целей
-
-actor-e3 =
-   .name = Солдат с РПГ
-   .description = Пехота против техники и авиации.
-      Сильна vs Танки, Авиация
-      Слаба vs Пехота
-
-actor-e4 =
-   .name = Огнемётчик
-   .description = Передовое противопехотное подразделение.
-      Сильна vs Пехоты, Зданий
-      Слаба vs Танков
-
-actor-e5 =
-   .name = Химический воин
-   .description = Усовершенствованная пехота.
-      Сильна vs всех Наземных юнитов
-
-actor-e6 =
-   .name = Инженер
-   .description = Наносит урон и захватывает здания врага.
-      Чинит уничтоженую технику
-      Безоружен
-
-actor-rmbo =
-   .name = Коммандо
-   .description = Элитный снайпер.
-      Силен vs Пехоты, Зданий
-      Слаб vs Техники
-
-actor-pvice-description = Мутировавшая мерзость, плюющаяся жидким тиберием.
-      Силен vs Пехоты, Зданий
-      Слаб vs Авиации
-
-actor-steg =
-   .name = Стегозавр
-   .description = Крупное, крепко сложенное травоядное четвероногое животное
-
-actor-trex =
-   .name = Тираннозавр рекс
-   .description = Двуногий хищник с массивным черепом
-
-actor-tric =
-   .name = Трицератопс
-   .description = Четвероногий, с большим костяным жабо и тремя рогами
-
-actor-rapt =
-   .name = Велоцираптор
-   .description = Двуногий с увеличенными серповидными когтями на каждой задней ноге
-
-## misc.yaml
-actor-wcrate-name = Деревянный ящик
-actor-scrate-name = Стальной ящик
-
-## player.yaml
-actor-player =
-   .placebuilding-new-options-text-notification = Новые опции строительства.
-   .placebuilding-cannot-place-text-notification = Невозможно развернуть тут.
-   .powermanager-text-notification = Мало энергии.
-   .baseattacknotifier-text-notification = База под атакой.
-   .baseattacknotifier-ally-text-notification = Наш союзник под атакой.
-   .resourcestoragewarning-text-notification = Нужны хранилища.
-
-## ships.yaml
-actor-boat-name = Gunboat
-actor-lst-name = Десантный корабль
-
-## structures.yaml
-notification-construction-complete = Construction complete.
-notification-unit-ready = Unit ready.
-notification-reinforcements-have-arrived = Reinforcements have arrived.
-notification-unable-to-build-more = Unable to build more.
-notification-unable-to-comply-building-in-progress = Unable to comply. Building in progress.
-notification-repairing = Repairing.
-notification-ion-cannon-charging = Ion cannon charging.
-notification-ion-cannon-ready = Ion cannon ready.
-notification-select-target = Select target.
-notification-insufficient-power = Insufficient power.
-notification-airstrike-ready = Airstrike ready.
-notification-enemy-planes-approaching = Enemy planes approaching.
-notification-nuclear-weapon-available = Nuclear weapon available.
-notification-nuclear-weapon-launched = Nuclear weapon launched.
-notification-nuclear-warhead-approaching = Nuclear warhead approaching.
-
-## structures.yaml
-actor-fact =
-   .name = Стойплощадка
-   .productionqueue-gdibuilding-ready-text-notification = Строительство завершено.
-   .productionqueue-gdibuilding-blocked-text-notification = Невозможно построить больше.
-   .productionqueue-gdibuilding-limited-text-notification = Невозможно соблюдать. Стройка в процессе.
-   .productionqueue-nodbuilding-ready-text-notification = Строительство завершено.
-   .productionqueue-nodbuilding-blocked-text-notification = Невозможно построить больше.
-   .productionqueue-nodbuilding-limited-text-notification = Невозможно соблюдать. Стройка в процессе.
-   .productionqueue-gdisupport-ready-text-notification = Строительство завершено.
-   .productionqueue-gdisupport-blocked-text-notification = Невозможно построить больше.
-   .productionqueue-gdisupport-limited-text-notification = Невозможно соблюдать. Стройка в процессе.
-   .productionqueue-nodsupport-ready-text-notification = Строительство завершено.
-   .productionqueue-nodsupport-blocked-text-notification = Невозможно построить больше.
-   .productionqueue-nodsupport-limited-text-notification = Невозможно соблюдать. Стройка в процессе.
-   .description = Строит здания
-
-actor-fact-gdi-name = Стойплощадка (ВАР)
-actor-fact-nod-name = Стойплощадка (КНС)
-
-actor-nuke =
-   .name = Генератор энергии
-   .description = Создаёт электричество
-
-actor-nuk2 =
-   .name = Продвинутый генератор энергии
-   .description = Создаёт больше энергии, дешевле
-    стандартного генератора
-
-actor-proc =
-   .name = Переработчик Тиберия
-   .description = Перерабатывает чистый Тиберий в
-    используемые ресурсы
-
-actor-silo =
-   .name = Хранилище Тиберия
-   .description = Хранит обработанный Тиберий
-
-actor-pyle =
-   .name = Бараки
-   .description = Тренирует пехоту
-   .productionqueue-ready-text-notification = Юнит готов.
-   .productionqueue-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-limited-text-notification = Невозможно. Строительство в процессе.
-
-actor-hand =
-   .name = Бараки
-   .description = Тренирует пехоту
-   .productionqueue-ready-text-notification = Юнит готов.
-   .productionqueue-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-limited-text-notification = Невозможно. Строительство в процессе.
-
-actor-afld =
-   .name = Взлётно-посадочная полоса
-   .description = Создаёт дроп-зону
-    для сброса техники
-   .productionairdrop-ready-text-notification = Прибыли подкрепления.
-   .productionqueue-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-limited-text-notification = Невозможно. Строительство в процессе.
-
-actor-weap =
-   .name = Завод Оружия
-   .description = Производит технику
-   .productionqueue-ready-text-notification = Юнит готов.
-   .productionqueue-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-limited-text-notification = Невозможно. Строительство в процессе.
-
-actor-hpad =
-   .name = Космопорт
-   .description = Производит и чинит авиацию
-   .repairsunits-start-repairing-text-notification = Ремонт.
-   .productionqueue-gdi-ready-text-notification = Юнит готов.
-   .productionqueue-gdi-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-gdi-limited-text-notification = Невозможно. Строительство в процессе.
-   .productionqueue-nod-ready-text-notification = Юнит готов.
-   .productionqueue-nod-blocked-text-notification = Невозможно построить ещё.
-   .productionqueue-nod-limited-text-notification = Невозможно. Строительство в процессе.
-
-actor-hq =
-   .name = Центр связи
-   .description = Включает радар, а так же запрос авиаудара.
-    Разблокирует более высокие по уровню здания.
-    Требуется энергия для работы.
-   .airstrikepower-name = Авиаудар
-   .airstrikepower-description = Вызвать истребители с напалмом.
-    Сжигает здания и пехоту в указанном месте.
-   .airstrikepower-end-charge-text-notification = Авиаудар готов.
-   .airstrikepower-select-target-text-notification = Выберите цель.
-   .airstrikepower-insufficient-power-text-notification = Недостаточно энергии.
-   .airstrikepower-incoming-text-notification = Вражеские бомбардировщики на подлёте.
-
-actor-hqcis =
-   .name = Центр связи
-   .description = Включает радар, а так же запрос авиаудара.
-    Разблокирует более высокие по уровню здания.
-    Требуется энергия для работы.
-   .airstrikepower-name = Авиаудар
-   .airstrikepower-description = Вызвать истребители с напалмом.
-    Сжигает здания и пехоту в указанном месте.
-   .airstrikepower-end-charge-text-notification = Авиаудар готов.
-   .airstrikepower-select-target-text-notification = Выберите цель.
-   .airstrikepower-insufficient-power-text-notification = Недостаточно энергии.
-   .airstrikepower-incoming-text-notification = Вражеские бомбардировщики на подлёте.
-
-actor-fix =
-   .name = Ремонтный цех
-   .description = Чинит технику
-   .repairsunits-start-repairing-text-notification = Ремонт.
-
-actor-eye =
-   .name = Продвинутый центр связи
-   .description = Включает радар, а так же запрос Орбитального Ионного удара.
-    Разблокирует танк Мамонт и Коммандос.
-    Нужна энергия для работы.
-   .ioncannonpower-name = Ионное орудие
-   .ioncannonpower-description = Начать ионный орбитальный удар.
-    Наносит моментальный урон на небольшой площади.
-   .ioncannonpower-begin-charge-text-notification = Ионное орудие заряжается.
-   .ioncannonpower-end-charge-text-notification = Ионное орудие готово.
-   .ioncannonpower-select-target-text-notification = Выберите цель.
-   .ioncannonpower-insufficient-power-text-notification = Недостаточно энергии.
-
-actor-tmpl =
-   .name = Храм войны
-   .description = Предоставляет доступ к Ядерному удару.
-    Разблокирует Стелс-Танк, Хим. Война и обелиска света.
-    Нужна энергия для работы.
-   .nukepower-name = Ядерный удар
-   .nukepower-description = Запустить тактическую ядерную боеголовку.
-    Наносит большой урон на большой площади.
-   .nukepower-select-target-text-notification = Выберите цель.
-   .nukepower-end-charge-text-notification = Ядерное оружие доступно.
-   .nukepower-insufficient-power-text-notification = Недостаточно мощности.
-   .nukepower-launch-text-notification = Ядерное оружие запущено.
-   .nukepower-incoming-text-notification = Приближается ядерный удар.
-
-actor-gun =
-   .name = Турель
-   .description = Базовая противотанковая турель.
-      Сильна vs Танков, техники
-      Слаба vs Пехоты
-
-actor-sam =
-   .name = ПВО
-   .description = Сбивает авиацели.
-      Сильна vs Авиатехники
-      Не стреляет по наземным юнитам.
-
-actor-obli =
-   .name = Обелиск Света
-   .description = Продвинутая турель.
-    Нужна энергия для работы.
-      Сильна vs всех Наземныю юнитов
-      Не может стерлять по воздуху
-
-actor-gtwr =
-   .name = Сторожевая башня
-   .description = Базовое защитное сооружение.
-      Сильна vs Пехоты
-      Слаба vs Танков
-
-actor-atwr =
-   .name = Улучшенная сторожевая башня
-   .description = Универсальное защитное сооружение.
-      Сильна vs Авиатехники, пехоты
-      Слаба vs Танков
-
-actor-sbag =
-   .name = Мешки с песком
-   .description = Останавливает пехоту и легкую технику.
-    Может быть раздавлен танками.
-
-actor-cycl =
-   .name = Забор
-   .description = Останавливает пехоту и легкую технику.
-    Может быть раздавлен танками.
-
-actor-brik =
-   .name = Бетонный барьер
-   .description = Останавливает пехоту и большинство танков.
-    Блокирует некоторые снаряды.
-
-actor-barracks-name = Производство пехоты
-actor-vehicleproduction-name = Производство техники
-actor-anypower-name = Электростанция
-actor-anyhq-name = Центр связи
-
-## misc.yaml
-actor-wcrate-name = Wooden Crate
-actor-scrate-name = Steel Crate
-actor-mpspawn-name = (multiplayer starting point)
-actor-waypoint-name = (waypoint for scripted behavior)
-actor-camera-name = (reveals area to owner)
-actor-camera-small-name = (reveals small area to owner)
-actor-flare-name = Flare
-
-## tech.yaml
-actor-v19 =
-   .name = Нефтяная вышка
-   .tooltipdescription-ally-description = Даёт дополнительные деньги.
-   .tooltipdescription-other-description = Захватите для дополнительных денег.
-
-actor-v19-husk-name = Нефтяная вышка (уничтожено)
-
-actor-hosp =
-   .name = Больница
-   .tooltipdescription-ally-description = Позволяет пехоте регенерировать HP.
-   .tooltipdescription-other-description = Захватите для регенерации HP у пехоты.
-
-actor-hosp-husk-name = Больница (уничтожено)
-
-actor-bio =
-   .name = Биолаборатория
-   .tooltipdescription-ally-description = Обеспечивает пехоте иммунитет к Тиберию.
-   .tooltipdescription-other-description = Захватите для иммунитета к Тиберию у пехоты.
-
-actor-bio-husk-name = Биолаборатория (Уничтожена)
-
-actor-miss =
-   .name = Тех-Центр
-   .tooltipdescription-ally-description = Даёт поле видимости.
-   .tooltipdescription-other-description = Захватите для улучшения обзора.
-
-## trees.yaml
-actor-splitblue-name = Цветущее дерево (синее)
-
-## vehicles.yaml
-actor-mcv =
-   .name = Мобильная стройплощадка
-   .description = Разворачивается в стройплощадку.
-      Безоружна
-   .transforms-no-transform-text-notification = Нельзя развернуть здесь.
-
-actor-harv =
-   .name = Сборщик
-   .generic-name = Harvester
-   .description = Собирает ресурсы для обработки.
-      Безоружен
-   .actorlostnotification-text-notification = Сборщик потерян.
-
-actor-apc =
-   .name = APC
-   .description = Вооруженный пехотный транспорт.
-    Может атаковать авиацию.
-      Силен vs Техники
-      Слаб vs Пехоты
-
-actor-arty =
-   .name = Артилерия
-   .description = Дальнобойная артиллерия.
-      Сильна vs Пехоты, Техники и зданий
-
-actor-ftnk =
-   .name = Огненный танк
-   .description = Тяжелобронированная огнеметная машина.
-      Сильна vs Пехоты, Зданий and Техники
-      Слаба vs Танков
-
-actor-bggy =
-   .name = Багги
-   .description = Быстрая противопехотная машина разведки.
-      Сильна vs Пехоты
-      Слаба vs Танков
-
-actor-bike =
-   .name = Recon Bike
-   .description = Быстрая машина разведки с
-    ракетами.
-    Может атаковать авиацию.
-      Сильна vs Техники, Танков
-      Слаба vs Пехоты
-
-actor-jeep =
-   .name = Хамви
-   .description = Быстрая противопехотная машина разведки.
-      Сильна vs Пехоты
-      Слаба vs Танков
-
-actor-ltnk =
-   .name = Лёгкий танк
-   .description = Быстрый, лёгкий танк.
-      Силён vs Техники, Танков
-      Слаб vs Пехоты
-
-actor-mtnk =
-   .name = Средний танк
-   .description = Танк общего назначения.
-      Силен vs Танков, Техники
-      Слаб vs Пехоты
-
-actor-htnk =
-   .name = Танк Мамонт
-   .description = Тяжёлый танк.
-    Может атаковать авиацию.
-      Силён vs ВСЕГО
-
-actor-msam =
-   .name = Реактивная установка
-   .description = Артилерия большого расстояния.
-      Сильна vs всех Наземных юнитов.
-
-actor-mlrs =
-   .name = Мобильная S.A.M.
-   .description = Сильная ПВО.
-    Не может атаковать наземные цели.
-
-actor-stnk =
-   .name = Стелс-танк
-   .description = Ракетный танк большой дальности, способный маскироваться.
-    Может атаковать авиацию.
-    Имеет слабую броню. Может быть замечен пехотой и оборонительными сооружениями.
-      Силён vs Техники, Танков
-      Слаб vs Пехоты.
-
-actor-mhq =
-   .name = Mobile HQ
-   .description = Мобильная база операций
-
-actor-truck =
-   .description = Перевозит деньги другим игрокам.
-      Строится быстро
-      Безоружен
-   .name = Грузовик
-
-## world.yaml
-meta-baseworld =
-   .faction-random-name = Любая
-   .faction-random-description = Случайная
-    Случайная фракция будет выбрана после запуска игры.
-   .faction-gdi-name = ВАР
-   .faction-gdi-description = Великая Армия Республики
-    Основная часть вооружённых сил Галактической Республики в её последние годы существования.
-    За исключением сепаратистских сил, она стала одной из крупнейших армий, когда-либо созданных.
-   .faction-nod-name = КНС
-   .faction-nod-description = Конфедерация Независимых Систем
-    Государство, образованное несколькими планетами и секторами,
-    объявившими о намерении выйти из Галактической Республики,
-    отказываясь соблюдать ее чрезмерное налогообложение и подчиняться коррупции в Сенате
-
+actor-a10-name = A10 Bomber
+actor-tran-husk-name = Chinook Transport (Destroyed)
+actor-heli-husk-name = Apache Longbow (Destroyed)
+actor-orca-husk-name = Orca (Destroyed)
 
 ## civilian-desert.yaml
 actor-v20-name = Sala's House
@@ -646,12 +195,12 @@ meta-civbuildinghusk-generic-name = Civilian Building (Destroyed)
 meta-civfield-generic-name = Field
 
 meta-civhaystackorigloo =
-   .winter-name = Igloo
-   .summer-name = Haystack
+    .winter-name = Igloo
+    .summer-name = Haystack
 
 meta-civhaystackorigloohusk =
-   .winter-name = Igloo (Destroyed)
-   .summer-name = Haystack (Destroyed)
+    .winter-name = Igloo (Destroyed)
+    .summer-name = Haystack (Destroyed)
 
 meta-tree-name = Tree
 meta-treehusk-name = Tree (Burnt)
@@ -662,10 +211,11 @@ meta-helicopterhusk-generic-name = Destroyed Helicopter
 meta-bridge-name = Bridge
 
 meta-crate =
-   .name = Crate
-   .generic-name = Crate
+    .name = Crate
+    .generic-name = Crate
 
 ## husks.yaml
+actor-mcv-husk-name = Mobile Construction Vehicle (Destroyed)
 actor-harv-husk-name = Harvester (Destroyed)
 actor-apc-husk-name = APC (Destroyed)
 actor-ftnk-husk-name = Flame Tank (Destroyed)
@@ -681,54 +231,700 @@ actor-mlrs-husk-name = Mobile SAM (Destroyed)
 actor-stnk-husk-name = Stealth Tank (Destroyed)
 actor-truck-husk-name = Supply Truck (Destroyed)
 
+## infantry.yaml
+actor-e1 =
+    .name = Minigunner
+    .description =
+    General-purpose infantry.
+      Strong vs Infantry
+      Weak vs Vehicles
+    .encyclopedia =
+    The humble Minigunner is a highly specialized infantry unit designed to soak damage and kill other infantry.
+
+    Like most TD units, they can see farther than they can shoot, and work well in packs to eliminate enemy infantry.
+
+actor-e2 =
+    .name = Grenadier
+    .description =
+    Fast infantry with grenades.
+      Strong vs Buildings, slow-moving targets
+    .encyclopedia =
+    Fast and able to keep up with medium tanks, letting it work well with flanking armies.
+
+    While not as powerful as the Minigunner or a Rocket soldier, its speed can be used to your advantage.
+
+actor-e3 =
+    .name = Rocket Soldier
+    .description =
+    Anti-tank/Anti-aircraft infantry.
+      Strong vs Tanks and Aircraft
+      Weak vs Infantry
+    .encyclopedia =
+    Highly vulnerable but excelling at eliminating enemy armor and aircraft. It is the slowest unit in the game, lagging behind other infantry and even mammoth tanks.
+
+    Its large weapons range makes up for its slow speed, making it most effective when used defensively, where it can be protected and provide vision.
+
+actor-e4 =
+    .name = Flamethrower
+    .description =
+    Advanced anti-infantry unit.
+      Strong vs Infantry and Buildings
+      Weak vs Tanks
+    .encyclopedia =
+    Good for flanking and burning down structures. It has more health than a standard Minigunner, but its short weapons range makes it difficult to use in large armies.
+
+actor-e5 =
+    .name = Chemical Warrior
+    .description =
+    Advanced general-purpose infantry.
+      Strong vs all Ground units
+    .encyclopedia =
+    Similar stats to the Flamethrower but deals good damage vs heavy armor. Great for stopping enemy armor from crushing your forces.
+
+    It can walk on Tiberium without taking damage, making it particularly useful for harvester harassment on certain maps.
+
+actor-e6 =
+    .name = Engineer
+    .description =
+    Damages and captures enemy structures.
+    Repairs destroyed vehicles.
+      Unarmed
+    .encyclopedia =
+    Like the rocket soldier, the Engineer is slow and requires escorts to be used effectively. It can instantly capture structures but is consumed in the process.
+
+    Capturing a civilian structure requires only one engineer, while capturing an enemy structure typically requires two engineers, or one if the structure is heavily damaged.
+
+    Engineers can also be used to repair friendly structures or restore husks from destroyed vehicles.
+
+actor-rmbo =
+    .name = Commando
+    .description =
+    Elite sniper infantry unit.
+      Strong vs Infantry and Buildings
+      Weak vs Vehicles
+    .encyclopedia =
+    Equipped with a long-range sniper rifle, the Commando fires slowly but can eliminate enemy infantry from a distance when well-supported.
+
+    It carries C4, for surprise backline structure destruction.
+
+actor-pvice =
+    .description =
+    Mutated abomination that spits liquid Tiberium.
+      Strong vs Infantry and Buildings
+      Weak vs Aircraft
+    .encyclopedia =
+    A mutated lifeform created from the strange properties of Tiberium, when infantry units are exposed to it.
+
+    They regenerate health quickly and have a short-range Tiberium weapon.
+
+actor-steg =
+    .name = Stegosaurus
+    .description =
+    A large, heavily built,
+    herbivorous quadruped.
+
+actor-trex =
+    .name = Tyrannosaurus rex
+    .description =
+    Bipedal carnivore with
+    a massive skull.
+
+actor-tric =
+    .name = Triceratops
+    .description =
+    Quadruped with large bony
+    frill and three horns.
+
+actor-rapt =
+    .name = Velociraptor
+    .description =
+    Bipedal with enlarged sickle-shaped
+    claw on each hindfoot.
+
+## misc.yaml
+actor-wcrate-name = Wooden Crate
+actor-scrate-name = Steel Crate
+actor-mpspawn-name = (multiplayer starting point)
+actor-waypoint-name = (waypoint for scripted behavior)
+actor-camera-name = (reveals area to owner)
+actor-camera-small-name = (reveals small area to owner)
+actor-flare-name = Flare
+
+## ships.yaml
+actor-boat-name = Gunboat
+actor-lst-name = Landing Craft
+
+## structures.yaml
+notification-construction-complete = Construction complete.
+notification-unit-ready = Unit ready.
+notification-reinforcements-have-arrived = Reinforcements have arrived.
+notification-unable-to-build-more = Unable to build more.
+notification-unable-to-comply-building-in-progress = Unable to comply. Building in progress.
+notification-repairing = Repairing.
+notification-ion-cannon-charging = Ion cannon charging.
+notification-ion-cannon-ready = Ion cannon ready.
+notification-select-target = Select target.
+notification-insufficient-power = Insufficient power.
+notification-airstrike-ready = Airstrike ready.
+notification-enemy-planes-approaching = Enemy planes approaching.
+notification-nuclear-weapon-available = Nuclear weapon available.
+notification-nuclear-weapon-launched = Nuclear weapon launched.
+notification-nuclear-warhead-approaching = Nuclear warhead approaching.
+
+actor-fact =
+    .name = Construction Yard
+    .description = Builds structures.
+    .encyclopedia =
+    The core of any base. It produces buildings and defenses while also providing a build radius. It has a large health pool, but is difficult to replace, making it paramount to defend.
+
+    It can be unpacked into a mobile version using the deploy key, but takes a small amount of time to do so.
+
+actor-fact-gdi-name = GDI Construction Yard
+actor-fact-nod-name = Nod Construction Yard
+
+actor-nuke =
+    .name = Power Plant
+    .description = Generates power.
+    .encyclopedia =
+    Provides power to the structures in your base. Power output is directly related to the power plant's condition, so protect them during battles.
+
+actor-nuk2 =
+    .name = Advanced Power Plant
+    .description =
+    Provides more power, cheaper than the
+    standard Power Plant.
+    .encyclopedia =
+    Provides more power to the structures in your base, making it more cost-effective than the Power Plant. Power output is directly related to its condition, so protect it during battle.
+
+actor-proc =
+    .name = Tiberium Refinery
+    .description =
+    Processes raw Tiberium
+    into usable resources.
+    .encyclopedia =
+    Stores and processes the alien material and resource, Tiberium. Harvesters collect Tiberium in the field and deposit it at the refinery, where it is converted into credits.
+
+    The refinery stores Tiberium and immediately deploys a harvester once constructed. 3 harvesters is the maximum it can handle for close refining.
+
+actor-silo =
+    .name = Tiberium Silo
+    .description = Stores processed Tiberium.
+    .encyclopedia =
+    Stores credits. If storage is full, harvesters will wait until credits are spent.
+
+    Useful when harvesting the more valuable blue Tiberium, as a single refinery cannot store a full load.
+
+actor-pyle =
+    .name = Barracks
+    .description = Trains infantry.
+    .encyclopedia =
+    Produces infantry for GDI. Once unlocked, advanced GDI infantry are hard-hitting and fast.
+
+actor-hand =
+    .name = Hand of Nod
+    .description = Trains infantry.
+    .encyclopedia =
+    Produces infantry for Nod. Once unlocked, advanced Nod infantry are slow but have high health pools.
+
+actor-afld =
+    .name = Airstrip
+    .description =
+    Provides a dropzone
+    for vehicle reinforcements.
+    .encyclopedia =
+    Delivers vehicles by plane for Nod. Nod vehicles are fast but fragile. Produce harvesters at the start to jumpstart your economy.
+
+actor-weap =
+    .name = Weapons Factory
+    .description = Produces vehicles.
+    .encyclopedia =
+    Produces vehicles for GDI. GDI vehicles tend to be slow but hard-hitting. Produce harvesters at the start to jumpstart your economy.
+
+actor-hpad =
+    .name = Helipad
+    .description =
+    Produces and repairs helicopters.
+    .encyclopedia =
+    Produces and repairs helicopters. Requires a Communications Center to build advanced attack helicopters.
+
+actor-hq =
+    .name = Communications Center
+    .description =
+    Provides radar and Air Strike support power.
+    Unlocks higher-tech units and buildings.
+    Requires power to operate.
+    .airstrikepower-name = Air Strike
+    .airstrikepower-description = Deploy an aerial napalm strike.
+    Burns buildings and infantry along a line.
+    .encyclopedia =
+    Grants the player access to the minimap (top right) when there is sufficient power. Unlocks new units while also granting access to the airstrike support power.
+
+actor-fix =
+    .name = Repair Facility
+    .description = Repairs vehicles.
+    .encyclopedia =
+    Repairs vehicles. The repair command can be used on units to send them to the nearest repair facility.
+
+actor-eye =
+    .name = Advanced Communications Center
+    .description =
+    Provides radar and Orbital Ion Cannon support power.
+    Unlocks Mammoth Tank and Commando.
+    Requires power to operate.
+    .ioncannonpower-name = Ion Cannon
+    .ioncannonpower-description = Initiates an Ion Cannon strike.
+    Applies instant damage to a small area.
+    .encyclopedia =
+    Unlocks advanced units and the ion cannon support power. If the Communications Center is lost, it restores minimap functionality and unit production.
+
+actor-tmpl =
+    .name = Temple of Nod
+    .description =
+    Provides Nuclear Strike support power.
+    Unlocks Stealth Tank, Chem. Warrior and Obelisk of Light.
+    Requires power to operate.
+    .nukepower-name = Nuclear Strike
+    .nukepower-description = Launches a tactical nuclear warhead.
+    Applies heavy damage over a large area.
+    .encyclopedia =
+    Unlocks advanced units and the Nuke support power. Keeps unit unlocks online if the Communications Center is lost.
+
+actor-gun =
+    .name = Turret
+    .description =
+    Basic Anti-Tank base defense.
+      Strong vs Tanks and Vehicles
+      Weak vs Infantry
+    .encyclopedia =
+    Base defense armed with an armor-piercing cannon, it deals significant damage to vehicles in range.
+
+actor-sam =
+    .name = SAM Site
+    .description =
+    Anti-Aircraft base defense.
+      Strong vs Aircraft
+      Cannot target Ground units
+    .encyclopedia =
+    Nod anti-air base defense. It remains protected when closed and opens to engage aircraft.
+
+actor-obli =
+    .name = Obelisk of Light
+    .description =
+    Advanced base defense.
+    Requires power to operate.
+      Strong vs all Ground units
+      Cannot target Aircraft
+    .encyclopedia =
+    Advanced defense for Nod that quickly destroys ground targets with a powerful laser.
+
+actor-gtwr =
+    .name = Guard Tower
+    .description =
+    Basic defensive structure.
+      Strong vs Infantry
+      Weak vs Tanks
+    .encyclopedia =
+    Base defense armed with a high-velocity machine gun, it shreds infantry and light vehicles within range with its large area of effect.
+
+actor-atwr =
+    .name = Advanced Guard Tower
+    .description =
+    All-purpose defensive structure.
+      Strong vs Aircraft and Infantry
+      Weak vs Tanks
+    .encyclopedia =
+    Advanced defense for GDI that fires volleys of high explosive missiles at both ground and air targets. Effective versus everything.
+
+actor-sbag =
+    .name = Sandbag Barrier
+    .description =
+    Stops infantry and light vehicles.
+      Can be crushed by tanks.
+    .encyclopedia =
+    Blocks movement of infantry and light vehicles, but can be crushed by tanks. Immune to small arms fire.
+
+    This barrier can be built in multiple segments once an initial sandbag has been placed.
+
+actor-cycl =
+    .name = Chain Link Barrier
+    .description =
+    Stops infantry and light vehicles.
+      Can be crushed by tanks.
+    .encyclopedia =
+    Blocks movement of infantry and light vehicles, but can be crushed by tanks. Immune to small arms fire.
+
+    This barrier can be built in multiple segments once an initial chain link has been placed.
+
+actor-brik =
+    .name = Concrete Barrier
+    .description =
+    Stops infantry and most tanks.
+    Blocks some projectiles.
+    .encyclopedia =
+    Blocks all unit movement, except for Mammoth Tanks which can crush it. Immune to small arms fire.
+
+    This barrier can be built in multiple segments once an initial wall has been placed.
+
+actor-barracks-name = Infantry Production
+actor-vehicleproduction-name = Vehicle Production
+actor-anypower-name = Power Generation
+actor-anyhq-name = Communications Center
+
+## tech.yaml
+actor-v19-husk-name = Oil Derrick (Destroyed)
+actor-hosp-husk-name = Hospital (Destroyed)
+actor-bio-husk-name = Biological Lab (Destroyed)
+
+actor-hosp =
+    .name = Hospital
+    .captured-desc = Provides infantry with self-healing.
+    .capturable-desc = Capture to enable self-healing for infantry.
+    .encyclopedia =
+    Heals friendly infantry over time when captured.
+
+actor-miss =
+    .name = Tech Center
+    .captured-desc = Provides range of vision.
+    .capturable-desc = Capture to give visual range.
+    .encyclopedia =
+    Provides a wide area of vision when captured.
+
+actor-bio =
+    .name = Biological Lab
+    .captured-desc = Provides infantry with Tiberium immunity.
+    .capturable-desc = Capture to enable Tiberium immunity for infantry.
+    .encyclopedia =
+    Grants friendly infantry immunity to Tiberium when captured.
+
+actor-v19 =
+    .name = Oil Derrick
+    .captured-desc = Provides additional funds.
+    .capturable-desc = Capture to receive additional funds.
+    .encyclopedia =
+    Produces a small amount of income frequently when captured. Makes less money than building a harvester, but provides consistent income.
+
+## trees.yaml
+actor-splitblue-name = Blue Blossom Tree
+actor-t03-transformable-name = (Tree that can transform into a Blossom Tree)
+actor-t13-transformable-name = (Tree that can transform into a Blossom Tree)
+
+## vehicles.yaml
+actor-mcv =
+    .name = Mobile Construction Vehicle
+    .description =
+    Deploys into a Construction Yard.
+      Unarmed
+    .encyclopedia =
+    Deploying an MCV changes it into a Construction Yard. The MCV has more health in its deployed form, but undeploying can be helpful to escape infantry.
+
+    If you have a teammate, they can “gift” you an MCV by destroying an undeployed one near your base, allowing you to reclaim it with an engineer.
+
+actor-harv =
+    .name = Harvester
+    .generic-name = Harvester
+    .description =
+    Collects Tiberium for processing.
+      Unarmed
+    .encyclopedia =
+    Harvesters slowly mine Tiberium and deposit it in your refinery, where it is converted into credits. They can also be sent to allied refineries to provide funds.
+
+notification-harvester-lost = Harvester lost.
+
+actor-apc =
+    .name = APC
+    .description =
+    Armed infantry transport.
+    Can attack Aircraft.
+      Strong vs Vehicles
+      Weak vs Infantry
+    .encyclopedia =
+    The APC (Armored Personnel Carrier) transports infantry, making it handy for capturing civilian structures. While its flak gun does not do much damage to enemy vehicles, the APC can resist enemy shots while your Hum-vees deal the damage.
+
+    It also functions as your primary AA unit; if you hit the stop command, it'll retarget onto any nearby enemy air units.
+
+actor-arty =
+    .name = Artillery
+    .description =
+    Long-range artillery.
+      Strong vs Infantry, Vehicles and Buildings
+    .encyclopedia =
+    Nod's artillery is a glass cannon, fragile but dealing large amounts of damage at long range. Particularly strong vs structures and infantry, it can destroy stationary tanks.
+
+    Highly vulnerable when clumped due to its explosion on death.
+
+actor-ftnk =
+    .name = Flame Tank
+    .description =
+    Heavily armored flame-throwing vehicle.
+      Strong vs Infantry, Buildings and Vehicles
+      Weak vs Tanks
+    .encyclopedia =
+    Roast infantry and structures alike, making them great for surprise attacks. Be wary of their splash damage on death, but be aware it can also be used to your advantage.
+
+actor-bggy =
+    .name = Nod Buggy
+    .description =
+    Fast scout and anti-infantry vehicle.
+      Strong vs Infantry
+      Weak vs Tanks
+    .encyclopedia =
+    Strong versus light vehicles and infantry, Buggies are great at scouting and killing isolated infantry. Though it is a little cheaper and faster than the GDI Hum-vee, they are more fragile.
+
+actor-bike =
+    .name = Recon Bike
+    .description =
+    Fast scout vehicle with rockets.
+    Can attack Aircraft.
+      Strong vs Vehicles and Tanks
+      Weak vs Infantry
+    .encyclopedia =
+    The Nod bike is a very fast vehicle armed with armor-piercing rockets, which makes it great for hit and run and harvester harassment.
+
+    Be wary that its rockets are slow and have a hard time hitting fast-moving targets.
+
+actor-jeep =
+    .name = Hum-vee
+    .description =
+    Fast scout and anti-infantry vehicle.
+      Strong vs Infantry
+      Weak vs Tanks
+    .encyclopedia =
+    Strong versus light vehicles and infantry, Hum-vees are great at scouting and eliminating isolated infantry.
+
+    They're excellent for dealing with Nod bike spam and should be built instead of tanks in such engagements. Although a little slower than the Nod buggy, it has more health.
+
+actor-ltnk =
+    .name = Light Tank
+    .description =
+    Fast, light tank.
+      Strong vs Vehicles and Tanks
+      Weak vs Infantry
+    .encyclopedia =
+    With its great speed and high health pool, the light tank works great as a frontline unit in various compositions despite its damage output.
+
+    It should be combined with bikes, stealth tanks, or infantry when facing medium tanks.
+
+actor-mtnk =
+    .name = Medium Tank
+    .description =
+    General-purpose GDI Tank.
+      Strong vs Tanks and Vehicles
+      Weak vs Infantry
+    .encyclopedia =
+    The workhorse of GDI, offering a good balance of speed, durability and firepower. It will easily destroy Nod light tanks and can tear through structures if it sneaks into a base.
+
+    Mix minigunners with your medium tank armies to deal with enemy infantry.
+
+actor-htnk =
+    .name = Mammoth Tank
+    .description =
+    Heavily armored GDI Tank.
+    Can attack Aircraft.
+      Strong vs Everything
+    .encyclopedia =
+    A crawling battle station, capable of self-repair and engaging any threat. It is particularly effective against enemy armor, but can also destroy small amounts of infantry or aircraft.
+
+    When in an enemy base, put it on aggressive stance to have it carve a path of destruction as it moves.
+
+actor-msam =
+    .name = Rocket Launcher
+    .description =
+    Long-range rocket artillery.
+      Strong vs all ground units
+    .encyclopedia =
+    Referred to as  “MLRS” by players (Multiple Launch Rocket System), this artillery platform fires volleys of rockets at distant targets. It is particularly effective against light vehicles and does moderate damage vs infantry, buildings, and heavy armor.
+
+    A strong unit to build vs enemy artillery, its high bullet velocity and damage to light vehicles makes it the perfect counter to Nod artillery.
+
+actor-mlrs =
+    .name = Mobile SAM
+    .description =
+    Powerful anti-air unit.
+      Cannot attack ground units.
+    .encyclopedia =
+    Generally referred to as “MSAM” by players, this Nod vehicle is a dedicated anti-air vehicle when their bikes do not cut it. It fires slow-moving missiles with powerful splash damage.
+
+actor-stnk =
+    .name = Stealth Tank
+    .description =
+    Long-range missile tank that can cloak.
+    Can attack Aircraft.
+    Has weak armor. Can be spotted by infantry and
+    defense structures.
+      Strong vs Vehicles and Tanks
+      Weak vs Infantry
+    .encyclopedia =
+    Cloaked units that become visible when damaged or firing their weapons. They can also be detected by defenses within a small radius or infantry at a one-cell range.
+
+    Their long-range AP missiles are excellent for dealing with enemy armor or air. They can also crush infantry in a pinch.
+
+actor-mhq =
+    .name = Mobile HQ
+    .description =
+    Mobile base of operations.
+
+actor-truck =
+    .name = Supply Truck
+    .description =
+    Transports cash to other players.
+    Builds quickly
+      Unarmed
+    .encyclopedia =
+    Supply trucks are a convenient way to share cash when your ally is out of money, or you can't spend yours fast enough. They build far quicker than their cost suggests.
+
+## ai.yaml
+bot-cabal =
+    .name = Cabal
+
+bot-watson =
+    .name = Watson
+
+bot-hal9001 =
+    .name = HAL 9001
+
 ## map-generators.yaml
+label-random-map = Random Map
 label-clear-map-generator-option-tile = Tile
-label-clear-map-generator-choice-tile-clear = Clear
-label-clear-map-generator-choice-tile-water = Water
+label-clear-map-generator-choice-tile-clear =
+   .label = Clear
+label-clear-map-generator-choice-tile-water =
+   .label = Water
+
 label-cnc-map-generator-option-seed = Seed
+
 label-cnc-map-generator-option-terrain-type = Terrain Type
-label-cnc-map-generator-choice-terrain-type-lakes = Lakes
-label-cnc-map-generator-choice-terrain-type-puddles = Puddles
-label-cnc-map-generator-choice-terrain-type-gardens = Gardens
-label-cnc-map-generator-choice-terrain-type-plains = Plains
-label-cnc-map-generator-choice-terrain-type-parks = Parks
-label-cnc-map-generator-choice-terrain-type-woodlands = Woodlands
-label-cnc-map-generator-choice-terrain-type-overgrown = Overgrown
-label-cnc-map-generator-choice-terrain-type-rocky = Rocky
-label-cnc-map-generator-choice-terrain-type-mountains = Mountains
-label-cnc-map-generator-choice-terrain-type-mountain-lakes = Mountain Lakes
-label-cnc-map-generator-option-rotations = Rotations
-label-cnc-map-generator-option-mirror = Mirror
-label-cnc-map-generator-choice-mirror-none = None
-label-cnc-map-generator-choice-mirror-left-matches-right = Left vs right
-label-cnc-map-generator-choice-mirror-top-left-matches-bottom-right = Top left vs bottom right
-label-cnc-map-generator-choice-mirror-top-matches-bottom = Top vs bottom
-label-cnc-map-generator-choice-mirror-top-right-matches-bottom-left = Top right vs bottom left
-label-cnc-map-generator-option-shape = Bounds Shape
-label-cnc-map-generator-choice-shape-square = Square
-label-cnc-map-generator-choice-shape-circle-mountain = Circle in mountains
-label-cnc-map-generator-choice-shape-circle-water = Circle in water
-label-cnc-map-generator-option-players = Players per side
-label-cnc-map-generator-option-resources = Resources
-label-cnc-map-generator-choice-resources-none = None
-label-cnc-map-generator-choice-resources-low = Low
-label-cnc-map-generator-choice-resources-medium = Medium
-label-cnc-map-generator-choice-resources-high = High
-label-cnc-map-generator-choice-resources-very-high = Very High
-label-cnc-map-generator-choice-resources-full = Oreful
-label-cnc-map-generator-option-buildings = Buildings
-label-cnc-map-generator-choice-buildings-none = None
-label-cnc-map-generator-choice-buildings-standard = Standard
-label-cnc-map-generator-choice-buildings-extra = Extra
-label-cnc-map-generator-choice-buildings-oil-only = Oil Only
-label-cnc-map-generator-choice-buildings-oil-rush = Oil Rush
-label-cnc-map-generator-option-density = Entity Density
-label-cnc-map-generator-choice-density-players = Scale with players
-label-cnc-map-generator-choice-density-area-and-players = Scale with area and players
-label-cnc-map-generator-choice-density-area-very-low = Scale with area (very low density)
-label-cnc-map-generator-choice-density-area-low = Scale with area (low density)
-label-cnc-map-generator-choice-density-area-medium = Scale with area (medium density)
-label-cnc-map-generator-choice-density-area-high = Scale with area (high density)
-label-cnc-map-generator-choice-density-area-very-high = Scale with area (very high density)
+label-cnc-map-generator-choice-terrain-type-lakes =
+   .label = Lakes
+   .description = Open spaces with moderately sized lakes
+label-cnc-map-generator-choice-terrain-type-puddles =
+   .label = Puddles
+   .description = Open spaces with small ponds
+label-cnc-map-generator-choice-terrain-type-gardens =
+   .label = Gardens
+   .description = Densely-packed terrain with ponds, cliffs, and forests
+label-cnc-map-generator-choice-terrain-type-plots =
+   .label = Plots
+   .description = Loosely-packed terrain with ponds, cliffs, and forests
+label-cnc-map-generator-choice-terrain-type-plains =
+   .label = Plains
+   .description = Open spaces with sparse trees and cliffs
+label-cnc-map-generator-choice-terrain-type-parks =
+   .label = Parks
+   .description = Open spaces with light forestry and occasional cliffs
+label-cnc-map-generator-choice-terrain-type-woodlands =
+   .label = Woodlands
+   .description = Moderate forestry with occasional cliffs
+label-cnc-map-generator-choice-terrain-type-overgrown =
+   .label = Overgrown
+   .description = Narrow passages, dense forestry and moderate cliffs
+label-cnc-map-generator-choice-terrain-type-rocky =
+   .label = Rocky
+   .description = Moderate cliffs with light forestry
+label-cnc-map-generator-choice-terrain-type-mountains =
+   .label = Mountains
+   .description = Many long cliffs
+label-cnc-map-generator-choice-terrain-type-mountain-lakes =
+   .label = Mountain Lakes
+   .description = Lakes and many long cliffs
+
+label-cnc-map-generator-option-symmetry = Symmetry
+label-cnc-map-generator-choice-mirror-none =
+   .label = None
+label-cnc-map-generator-choice-symmetry-mirror-horizontal =
+   .label = Mirror Horizontal
+label-cnc-map-generator-choice-symmetry-mirror-vertical =
+   .label = Mirror Vertical
+label-cnc-map-generator-choice-symmetry-mirror-diagonal-tl =
+   .label = Mirror Diagonal (Top-Left)
+label-cnc-map-generator-choice-symmetry-mirror-diagonal-tr =
+   .label = Mirror Diagonal (Top-Right)
+label-cnc-map-generator-choice-symmetry-mirror-2-rotations =
+   .label = 2 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-3-rotations =
+   .label = 3 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-4-rotations =
+   .label = 4 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-5-rotations =
+   .label = 5 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-6-rotations =
+   .label = 6 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-7-rotations =
+   .label = 7 Rotations
+label-cnc-map-generator-choice-symmetry-mirror-8-rotations =
+   .label = 8 Rotations
+
+label-cnc-map-generator-option-shape = Boundary Shape
+label-cnc-map-generator-choice-shape-square =
+   .label = Rectangle
+   .description = Playable area is the full map
+label-cnc-map-generator-choice-shape-circle-mountain =
+   .label = Circle in mountains
+   .description = Playable area is contained within a circular mountain range
+label-cnc-map-generator-choice-shape-circle-water =
+   .label = Circle in water
+   .description = Playable area is a circular island
+
+label-cnc-map-generator-option-players = Players
+
+label-cnc-map-generator-option-resources = Tiberium Density
+label-cnc-map-generator-choice-resources-none =
+   .label = None
+label-cnc-map-generator-choice-resources-low =
+   .label = Low
+label-cnc-map-generator-choice-resources-medium =
+   .label = Medium
+label-cnc-map-generator-choice-resources-high =
+   .label = High
+label-cnc-map-generator-choice-resources-very-high =
+   .label = Very High
+label-cnc-map-generator-choice-resources-full =
+   .label = Oreful
+
+label-cnc-map-generator-option-buildings = Tech Structures
+label-cnc-map-generator-choice-buildings-none =
+   .label = None
+   .description = No tech structures
+label-cnc-map-generator-choice-buildings-standard =
+   .label = Standard
+   .description = Oil Derricks, Hospitals, Biological Labs, Tech Centers
+label-cnc-map-generator-choice-buildings-oil-only =
+   .label = Oil Only
+   .description = Oil Derricks only
+label-cnc-map-generator-choice-buildings-oil-rush =
+   .label = Oil Rush
+   .description = Lots of Oil Derricks
+
+label-cnc-map-generator-option-density = Expansion Opportunities
+label-cnc-map-generator-choice-density-players =
+   .label = Scale with players
+label-cnc-map-generator-choice-density-area-and-players =
+   .label = Scale with size and players
+label-cnc-map-generator-choice-density-area-very-low =
+   .label = Very Low
+label-cnc-map-generator-choice-density-area-low =
+   .label = Low
+label-cnc-map-generator-choice-density-area-medium =
+   .label = Medium
+label-cnc-map-generator-choice-density-area-high =
+   .label = High
+label-cnc-map-generator-choice-density-area-very-high =
+   .label = Very High
+
 label-cnc-map-generator-option-roads = Roads
 label-cnc-map-generator-option-deny-walled-areas = Obstruct walled areas
+
+label-cnc-map-generator-option-civilian-density = Civilian Density
+label-cnc-map-generator-choice-civilian-density-default =
+   .label = Default
+label-cnc-map-generator-choice-civilian-density-none =
+   .label = None
+label-cnc-map-generator-choice-civilian-density-low =
+   .label = Low
+label-cnc-map-generator-choice-civilian-density-medium =
+   .label = Medium
+label-cnc-map-generator-choice-civilian-density-high =
+   .label = High
+label-cnc-map-generator-choice-civilian-density-very-high =
+   .label = Very High
+label-cnc-map-generator-choice-civilian-density-max =
+   .label = Maximum

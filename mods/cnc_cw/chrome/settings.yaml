@@ -2,12 +2,12 @@ Container@SETTINGS_PANEL:
 	Logic: SettingsLogic
 		ButtonStride: 0, 45
 		Panels:
-			DISPLAY_PANEL: Дисплей
-			AUDIO_PANEL: Аудио
-			INPUT_PANEL: Ввод
-			HOTKEYS_PANEL: Горячие кл.
-			ADVANCED_PANEL: Продвинутые
-			GAMEPLAY_PANEL: Игра
+			GAMEPLAY_PANEL: button-panel-gameplay
+			INPUT_PANEL: button-panel-input
+			DISPLAY_PANEL: button-panel-display
+			AUDIO_PANEL: button-panel-audio
+			HOTKEYS_PANEL: button-panel-hotkeys
+			ADVANCED_PANEL: button-panel-advanced
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 640
@@ -20,13 +20,13 @@ Container@SETTINGS_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: label-settings-panel-title
+			Text: button-settings-title
 		Button@BACK_BUTTON:
 			Key: escape
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: button-settings-panel-back
+			Text: button-back
 		Button@RESET_BUTTON:
 			X: 150
 			Y: PARENT_HEIGHT - 1

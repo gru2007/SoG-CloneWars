@@ -144,7 +144,7 @@ Container@OBSERVER_WIDGETS:
 			Y: 5
 			Width: 30
 			Height: 25
-			TooltipText: button-observer-widgets-options-tooltip
+			TooltipText: button-observer-widget-options-tooltip
 			TooltipContainer: TOOLTIP_CONTAINER
 			DisableWorldSounds: true
 			Children:
@@ -274,14 +274,16 @@ Container@OBSERVER_WIDGETS:
 					Y: 4
 					Width: 32
 					Height: 16
-				Label@LABEL:
+				LabelWithTooltip@LABEL:
 					X: 40
-					Width: PARENT_WIDTH
+					Width: PARENT_WIDTH - 42 - 16
 					Height: 25
 					Shadow: True
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
 				Label@NOFLAG_LABEL:
 					X: 5
-					Width: PARENT_WIDTH
+					Width: PARENT_WIDTH - 7 - 16
 					Height: 25
 					Shadow: True
 		Container@INGAME_OBSERVERSTATS_BG:
@@ -489,7 +491,7 @@ Container@OBSERVER_WIDGETS:
 									Align: Right
 									Shadow: True
 								Label@DERRICKS_HEADER:
-									X: 650
+									X: 645
 									Width: 80
 									Height: PARENT_HEIGHT
 									Font: Bold
@@ -747,6 +749,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 705
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -765,13 +768,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@CASH:
 									X: 160
 									Y: 0
@@ -834,6 +839,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 730
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -852,13 +858,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@CASH:
 									X: 160
 									Y: 0
@@ -914,6 +922,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 400
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -932,13 +941,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverProductionIcons@PRODUCTION_ICONS:
 									X: 160
 									Y: 0
@@ -951,6 +962,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 400
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -969,13 +981,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverSupportPowerIcons@SUPPORT_POWER_ICONS:
 									X: 160
 									Y: 0
@@ -988,6 +1002,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 400
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -1006,13 +1021,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverArmyIcons@ARMY_ICONS:
 									X: 160
 									Y: 0
@@ -1025,6 +1042,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 760
 							Height: 24
 							Background: scrollitem-nohover
+							EnableChildMouseOver: true
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -1043,13 +1061,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 40
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@ASSETS_DESTROYED:
 									X: 160
 									Y: 0
@@ -1119,7 +1139,7 @@ Container@OBSERVER_WIDGETS:
 							Width: PARENT_WIDTH
 							Height: PARENT_HEIGHT
 							Color: 00000090
-						LineGraph@INCOME_GRAPH:
+						ScrollableLineGraph@INCOME_GRAPH:
 							X: 0
 							Y: 0
 							Width: PARENT_WIDTH - 5
@@ -1132,6 +1152,8 @@ Container@OBSERVER_WIDGETS:
 							YAxisLabel: Earnings
 							LabelFont: TinyBold
 							AxisFont: TinyBold
+							ScrollbarBackground: scrollpanel-button-pressed
+							ScrollbarButton: scrollpanel-button
 				Container@ARMY_VALUE_GRAPH_CONTAINER:
 					X: 0
 					Y: 30
@@ -1145,7 +1167,7 @@ Container@OBSERVER_WIDGETS:
 							Width: PARENT_WIDTH
 							Height: PARENT_HEIGHT
 							Color: 00000090
-						LineGraph@ARMY_VALUE_GRAPH:
+						ScrollableLineGraph@ARMY_VALUE_GRAPH:
 							X: 0
 							Y: 0
 							Width: PARENT_WIDTH - 5
@@ -1158,6 +1180,8 @@ Container@OBSERVER_WIDGETS:
 							YAxisLabel: Army Value
 							LabelFont: TinyBold
 							AxisFont: TinyBold
+							ScrollbarBackground: scrollpanel-button-pressed
+							ScrollbarButton: scrollpanel-button
 
 Container@PLAYER_WIDGETS:
 	Logic: LoadIngamePerfLogic, LoadIngameChatLogic
@@ -1246,7 +1270,7 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: button-command-bar-attack-move-tooltip
+					TooltipText: button-command-bar-attack-move.tooltip
 					TooltipDesc: button-command-bar-attack-move.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX

@@ -13,7 +13,7 @@ Container@MUSIC_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: label-music-panel-title
+			Text: label-music-title-panel-title
 		Background@bg:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT
@@ -59,7 +59,7 @@ Container@MUSIC_PANEL:
 							X: PARENT_WIDTH - 85
 							Height: 25
 							Width: 50
-							Text: label-container-type
+							Text: label-music-controls-length
 							Align: Right
 							Font: Bold
 				Container@BUTTONS:
@@ -150,14 +150,14 @@ Container@MUSIC_PANEL:
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: checkbox-bg-shuffle
+					Text: checkbox-music-controls-shuffle
 				Checkbox@REPEAT:
 					X: PARENT_WIDTH - 15 - WIDTH
 					Y: PARENT_HEIGHT - HEIGHT - 60
 					Width: 70
 					Height: 20
 					Font: Regular
-					Text: checkbox-bg-repeat
+					Text: checkbox-music-controls-loop
 				Container@NO_MUSIC_LABEL:
 					X: 15
 					Y: (PARENT_HEIGHT - HEIGHT - 60) / 2
@@ -176,20 +176,20 @@ Container@MUSIC_PANEL:
 							Width: PARENT_WIDTH - 24
 							Height: 25
 							Align: Center
-							Text: label-no-music-desca
+							Text: label-no-music-desc-a
 						Label@DESCB:
 							Y: 40
 							Width: PARENT_WIDTH - 24
 							Height: 25
 							Align: Center
-							Text: label-no-music-descb
+							Text: label-no-music-desc-b
 		Button@BACK_BUTTON:
 			Key: escape
 			X: 0
 			Y: PARENT_HEIGHT - 1
 			Width: 140
 			Height: 35
-			Text: button-music-panel-back
+			Text: button-back
 		Label@MUTE_LABEL:
 			X: 100
 			Y: PARENT_HEIGHT - 60 - 3

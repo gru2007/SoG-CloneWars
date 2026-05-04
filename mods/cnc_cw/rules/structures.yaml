@@ -55,11 +55,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: actor-fact.productionqueue-gdibuilding-ready-text-notification
+		ReadyTextNotification: notification-construction-complete
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-fact.productionqueue-gdibuilding-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-fact.productionqueue-gdibuilding-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -70,11 +70,11 @@ FACT:
 		Group: Building
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: actor-fact.productionqueue-nodbuilding-ready-text-notification
+		ReadyTextNotification: notification-construction-complete
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-fact.productionqueue-nodbuilding-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-fact.productionqueue-nodbuilding-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -85,11 +85,11 @@ FACT:
 		Group: Support
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: actor-fact.productionqueue-gdisupport-ready-text-notification
+		ReadyTextNotification: notification-construction-complete
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-fact.productionqueue-gdisupport-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-fact.productionqueue-gdisupport-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -100,11 +100,11 @@ FACT:
 		Group: Support
 		LowPowerModifier: 150
 		ReadyAudio: ConstructionComplete
-		ReadyTextNotification: actor-fact.productionqueue-nodsupport-ready-text-notification
+		ReadyTextNotification: notification-construction-complete
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-fact.productionqueue-nodsupport-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-fact.productionqueue-nodsupport-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -388,11 +388,11 @@ PYLE:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: actor-pyle.productionqueue-ready-text-notification
+		ReadyTextNotification: notification-unit-ready
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-pyle.productionqueue-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-pyle.productionqueue-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -454,11 +454,11 @@ HAND:
 		Group: Infantry
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: actor-hand.productionqueue-ready-text-notification
+		ReadyTextNotification: notification-unit-ready
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-hand.productionqueue-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-hand.productionqueue-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -514,8 +514,8 @@ AFLD:
 	ProductionAirdrop:
 		Produces: Vehicle.Nod
 		ActorType: c17
-		ReadyTextNotification: actor-afld.productionairdrop-ready-text-notification
 		LandOffset: -1024,0,0
+		ReadyTextNotification: notification-reinforcements-have-arrived
 	WithBuildingBib:
 	WithIdleOverlay@DISH:
 		RequiresCondition: !build-incomplete
@@ -528,9 +528,9 @@ AFLD:
 		Group: Vehicle
 		LowPowerModifier: 150
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-afld.productionqueue-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-afld.productionqueue-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -595,11 +595,11 @@ WEAP:
 		Group: Vehicle
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: actor-weap.productionqueue-ready-text-notification
+		ReadyTextNotification: notification-unit-ready
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-weap.productionqueue-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-weap.productionqueue-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -653,7 +653,7 @@ HPAD:
 		HpPerStep: 1000
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: actor-hpad.repairsunits-start-repairing-text-notification
+		StartRepairingTextNotification: notification-repairing
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
@@ -666,11 +666,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: actor-hpad.productionqueue-gdi-ready-text-notification
+		ReadyTextNotification: notification-unit-ready
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-hpad.productionqueue-gdi-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-hpad.productionqueue-gdi-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -681,11 +681,11 @@ HPAD:
 		Group: Aircraft
 		LowPowerModifier: 150
 		ReadyAudio: UnitReady
-		ReadyTextNotification: actor-hpad.productionqueue-nod-ready-text-notification
+		ReadyTextNotification: notification-unit-ready
 		BlockedAudio: NoBuild
-		BlockedTextNotification: actor-hpad.productionqueue-nod-blocked-text-notification
+		BlockedTextNotification: notification-unable-to-build-more
 		LimitedAudio: BuildingInProgress
-		LimitedTextNotification: actor-hpad.productionqueue-nod-limited-text-notification
+		LimitedTextNotification: notification-unable-to-comply-building-in-progress
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -755,10 +755,10 @@ HQ:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: EnemyPlanesApproaching
-		EndChargeTextNotification: actor-hq.airstrikepower-end-charge-text-notification
-		SelectTargetTextNotification: actor-hq.airstrikepower-select-target-text-notification
-		InsufficientPowerTextNotification: actor-hq.airstrikepower-insufficient-power-text-notification
-		IncomingTextNotification: actor-hq.airstrikepower-incoming-text-notification
+		EndChargeTextNotification: notification-airstrike-ready
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
+		IncomingTextNotification: notification-enemy-planes-approaching
 		UnitType: a10
 		DisplayBeacon: True
 		BeaconPoster: airstrike
@@ -888,7 +888,7 @@ FIX:
 		Interval: 15
 		PlayerExperience: 5
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: actor-fix.repairsunits-start-repairing-text-notification
+		StartRepairingTextNotification: notification-repairing
 	RallyPoint:
 	CommandBarBlacklist:
 		DisableStop: false
@@ -953,10 +953,10 @@ EYE:
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
-		BeginChargeTextNotification: actor-eye.ioncannonpower-begin-charge-text-notification
-		EndChargeTextNotification: actor-eye.ioncannonpower-end-charge-text-notification
-		SelectTargetTextNotification: actor-eye.ioncannonpower-select-target-text-notification
-		InsufficientPowerTextNotification: actor-eye.ioncannonpower-insufficient-power-text-notification
+		BeginChargeTextNotification: notification-ion-cannon-charging
+		EndChargeTextNotification: notification-ion-cannon-ready
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
 		OnFireSound: ion1.aud
 		DisplayRadarPing: True
 		CameraActor: camera.small
@@ -1018,11 +1018,11 @@ TMPL:
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: NuclearWeaponLaunched
 		IncomingSpeechNotification: NuclearWarheadApproaching
-		SelectTargetTextNotification: actor-tmpl.nukepower-select-target-text-notification
-		EndChargeTextNotification: actor-tmpl.nukepower-end-charge-text-notification
-		InsufficientPowerTextNotification: actor-tmpl.nukepower-insufficient-power-text-notification
-		LaunchTextNotification: actor-tmpl.nukepower-launch-text-notification
-		IncomingTextNotification: actor-tmpl.nukepower-incoming-text-notification
+		SelectTargetTextNotification: notification-select-target
+		EndChargeTextNotification: notification-nuclear-weapon-available
+		InsufficientPowerTextNotification: notification-insufficient-power
+		LaunchTextNotification: notification-nuclear-weapon-launched
+		IncomingTextNotification: notification-nuclear-warhead-approaching
 		MissileWeapon: atomic
 		MissileImage: atomic
 		MissileDelay: 11
@@ -1407,25 +1407,21 @@ BRIK:
 		Type: concrete
 
 BARRACKS:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-barracks-name
 
 VEHICLEPRODUCTION:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-vehicleproduction-name
 
 ANYPOWER:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-anypower-name
 
 ANYHQ:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-anyhq-name
