@@ -1,6 +1,6 @@
 ## Metadata
-mod-title = Tiberian Dawn
-mod-windowtitle = OpenRA — Tiberian Dawn
+mod-title = SoG - Clone Wars
+mod-windowtitle = Storm of The Galaxy - Clone Wars
 
 ## CncLoadScreen
 loadscreen-loading = Загрузка
