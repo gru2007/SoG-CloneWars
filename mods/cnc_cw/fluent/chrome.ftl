@@ -1,792 +1,791 @@
 ## assetbrowser.yaml
-label-assetbrowser-panel-title = Asset Browser
-label-bg-source-selector-desc = Select asset source
-dropdownbutton-bg-source-selector = Folders
-dropdownbutton-bg-asset-types-dropdown = Asset types
-label-bg-filename-desc = Filter by name
-label-bg-sprite-scale = Scale:
-label-bg-palette-desc = Palette:
-label-sprite-bg-error = Error displaying file. See assetbrowser.log for details.
+label-assetbrowser-panel-title = Браузер ресурсов
+label-bg-source-selector-desc = Источник ресурсов
+dropdownbutton-bg-source-selector = Папки
+dropdownbutton-bg-asset-types-dropdown = Типы ресурсов
+label-bg-filename-desc = Фильтр по имени
+label-bg-sprite-scale = Масштаб:
+label-bg-palette-desc = Палитра:
+label-sprite-bg-error = Не удалось показать файл. См. assetbrowser.log.
 
 ## color-picker.yaml
-button-color-chooser-random = Random
-button-color-chooser-store = Store
-button-color-chooser-mixer-tab = Mixer
-button-color-chooser-palette-tab = Palette
-label-preset-header = Preset Colors
-label-custom-header = Custom Colors
+button-color-chooser-random = Случайно
+button-color-chooser-store = Сохранить
+button-color-chooser-mixer-tab = Миксер
+button-color-chooser-palette-tab = Палитра
+label-preset-header = Готовые цвета
+label-custom-header = Свои цвета
 
 ## connection.yaml
-label-connecting-panel-title = Connecting
-label-bg-connecting-desc = Connecting...
-button-connecting-panel-abort = Abort
-label-connection-background-connecting-desc = Failed to connect
-label-connection-background-password = Password:
-button-connectionfailed-panel-abort = Abort
-label-connection-switchmod-panel-title = Switch Mod
-label-connection-background-desc = This server is running a different mod:
-label-connection-background-desc2 = Switch mods and join server?
-button-connection-switchmod-panel-abort = Abort
-button-connection-switchmod-panel-switch = Switch
+label-connecting-panel-title = Подключение
+label-bg-connecting-desc = Подключение...
+button-connecting-panel-abort = Отмена
+label-connection-background-connecting-desc = Не удалось подключиться
+label-connection-background-password = Пароль:
+button-connectionfailed-panel-abort = Отмена
+label-connection-switchmod-panel-title = Сменить мод
+label-connection-background-desc = На сервере запущен другой мод:
+label-connection-background-desc2 = Сменить мод и войти?
+button-connection-switchmod-panel-abort = Отмена
+button-connection-switchmod-panel-switch = Сменить
 
 ## credits.yaml
 label-openra = OpenRA
 
 ## credits.yaml, mainmenu.yaml
-label-credits-title = Credits
+label-credits-title = Авторы
 
 ## dialogs.yaml
-button-prompt-confirm = Confirm
-button-prompt-other = Restart
+button-prompt-confirm = Подтвердить
+button-prompt-other = Перезапуск
 button-text-input-prompt-accept = OK
 
 ## editor.yaml
-label-new-map-bg-title = New Map
-label-bg-tileset = Environment:
-label-bg-width = Width:
-label-bg-height = Height:
-button-new-map-bg-create = Create
-label-save-map-panel-title = Save Map
-label-save-map-background-title = Title:
-label-save-map-background-author = Author:
-label-save-map-background-visibility = Visibility:
-dropdownbutton-save-map-background-visibility-dropdown = Map Visibility
-label-save-map-background-directory = Directory:
-label-save-map-background-filename = Filename:
-button-save-map-panel = Save
+label-new-map-bg-title = Новая карта
+label-bg-tileset = Окружение:
+label-bg-width = Ширина:
+label-bg-height = Высота:
+button-new-map-bg-create = Создать
+label-save-map-panel-title = Сохранить карту
+label-save-map-background-title = Название:
+label-save-map-background-author = Автор:
+label-save-map-background-visibility = Видимость:
+dropdownbutton-save-map-background-visibility-dropdown = Видимость карты
+label-save-map-background-directory = Папка:
+label-save-map-background-filename = Файл:
+button-save-map-panel = Сохранить
 label-actor-edit-panel-id = ID
 button-container-ok = OK
-button-editor-world-root-options-tooltip = Menu
-label-tiles-bg-search = Search:
-label-bg-filter = Filter:
-label-actors-bg-search = Search:
-label-actor-bg-owner = Owner:
-label-area-selection = Area Selection
-label-area-info = Area Info
-label-selected-area-diagonal = Diagonal:
-label-selected-area-resources = Resources:
-label-selection-filters = Filters
-label-filter-terrain = Terrain
-label-filter-resources = Resources
-label-filter-actors = Actors
-label-tool-bg-category = Tool:
-button-marker-tiles-clear-current = Clear Current
-button-marker-tiles-clear-all = Clear All
-label-marker-layer-num-sides = Number of Sides
-label-marker-alpha = Tile Alpha
-label-marker-mirror-mode = Mirror Mode
-label-marker-axis-angle = Axis Angle
-button-map-generator-generate = Generate
-button-map-generator-generate-random = Generate Random
-label-tiling-path-type-start = Start type
-label-tiling-path-type-inner = Inner type
-label-tiling-path-type-end = End type
-label-tiling-path-deviation = Deviation limit
-checkbox-tiling-path-allow-end-deviation = Allow end point deviation
-checkbox-tiling-path-closed-loops = Loops use only inner types
-button-tiling-path-reverse = Reverse path
-button-tiling-path-reset = Discard path
-button-tiling-path-randomize = Re-randomize tiling
-button-tiling-path-paint = Paint tiling to map
+button-editor-world-root-options-tooltip = Меню
+label-tiles-bg-search = Поиск:
+label-bg-filter = Фильтр:
+label-actors-bg-search = Поиск:
+label-actor-bg-owner = Владелец:
+label-area-selection = Выбор области
+label-area-info = Область
+label-selected-area-diagonal = Диагональ:
+label-selected-area-resources = Ресурсы:
+label-selection-filters = Фильтры
+label-filter-terrain = Рельеф
+label-filter-resources = Ресурсы
+label-filter-actors = Объекты
+label-tool-bg-category = Инструмент:
+button-marker-tiles-clear-current = Очистить текущие
+button-marker-tiles-clear-all = Очистить всё
+label-marker-layer-num-sides = Число сторон
+label-marker-alpha = Прозрачность тайла
+label-marker-mirror-mode = Зеркалирование
+label-marker-axis-angle = Угол оси
+button-map-generator-generate = Сгенерировать
+button-map-generator-generate-random = Случайная карта
+label-tiling-path-type-start = Тип начала
+label-tiling-path-type-inner = Тип середины
+label-tiling-path-type-end = Тип конца
+label-tiling-path-deviation = Допуск отклонения
+checkbox-tiling-path-allow-end-deviation = Разрешить отклонение конца
+checkbox-tiling-path-closed-loops = Петли только из средних типов
+button-tiling-path-reverse = Развернуть путь
+button-tiling-path-reset = Сбросить путь
+button-tiling-path-randomize = Перемешать тайлы
+button-tiling-path-paint = Нанести путь на карту
 
-button-map-editor-tab-container-select-tooltip = Selection
-button-map-editor-tab-container-tiles-tooltip = Tiles
-button-map-editor-tab-container-overlays-tooltip = Overlays
-button-map-editor-tab-container-actors-tooltip = Actors
-button-map-editor-tab-container-tools-tooltip = Tools
-button-map-editor-tab-container-history-tooltip = History
+button-map-editor-tab-container-select-tooltip = Выбор
+button-map-editor-tab-container-tiles-tooltip = Тайлы
+button-map-editor-tab-container-overlays-tooltip = Слои
+button-map-editor-tab-container-actors-tooltip = Объекты
+button-map-editor-tab-container-tools-tooltip = Инструменты
+button-map-editor-tab-container-history-tooltip = История
 
 button-delete-area =
-    .label = Delete
-    .tooltip = Remove everything in the selected area
+    .label = Удалить
+    .tooltip = Убрать всё в выбранной области
 
 button-delete-actor =
-    .label = Delete
-    .tooltip = Remove the selected actor
+    .label = Удалить
+    .tooltip = Убрать выбранный объект
 
-button-editor-world-root-copy-tooltip = Copy the selected area
+button-editor-world-root-copy-tooltip = Копировать выбранную область
 
-button-editor-world-root-paste-tooltip = Paste the saved area
+button-editor-world-root-paste-tooltip = Вставить сохранённую область
 
-button-editor-world-root-undo-tooltip = Undo last step
+button-editor-world-root-undo-tooltip = Отменить последний шаг
 
-button-editor-world-root-redo-tooltip = Redo last step
+button-editor-world-root-redo-tooltip = Вернуть последний шаг
 
-dropdownbutton-editor-world-root-overlay-button = Overlays
-button-select-categories-buttons-all = All
-button-select-categories-buttons-none = None
+dropdownbutton-editor-world-root-overlay-button = Слои
+button-select-categories-buttons-all = Все
+button-select-categories-buttons-none = Нет
 
-label-tool-marker-tiles = Marker Tiles
-label-tool-tiling-path = Path Tiler
+label-tool-marker-tiles = Маркерные тайлы
+label-tool-tiling-path = Укладка пути
 
 ## encyclopedia.yaml, mainmenu.yaml
-label-encyclopedia-title = EVA Database
+label-encyclopedia-title = Архив EVA
 
 ## load-game-browser.yaml
-label-load-game-browser-panel-title = Load Game
-label-load-game-browser-panel-choose-save = Choose Save
-label-load-game-browser-panel-incompatible-title = Incompatible Savegame
-label-load-game-browser-panel-incompatible-a = This savegame is not compatible
-label-load-game-browser-panel-incompatible-b = with this version of OpenRA
-label-load-game-browser-panel-human-player = Player
-button-load-game-browser-panel-load = Load
-tooltip-savegame-date-created = Date Created
-tooltip-savegame-map = Map
-tooltip-savegame-duration = Duration
-tooltip-savegame-players = Number of players
+label-load-game-browser-panel-title = Загрузить игру
+label-load-game-browser-panel-choose-save = Выберите сохранение
+label-load-game-browser-panel-incompatible-title = Несовместимое сохранение
+label-load-game-browser-panel-incompatible-a = Это сохранение несовместимо
+label-load-game-browser-panel-incompatible-b = с этой версией OpenRA
+label-load-game-browser-panel-human-player = Игрок
+button-load-game-browser-panel-load = Загрузить
+tooltip-savegame-date-created = Дата создания
+tooltip-savegame-map = Карта
+tooltip-savegame-duration = Длительность
+tooltip-savegame-players = Игроков
 
 ## gamesave-browser.yaml
-label-gamesave-browser-panel-load-title = Load game
-label-gamesave-browser-panel-save-title = Save Game
-label-gamesave-browser-panel-no-save-selected = Select a savegame to overwrite it or type a new savegame name
-button-bg-delete-all = Delete All
-button-bg-delete = Delete
-button-bg-rename = Rename
-button-bg-load = Load
-button-bg-save = Save
+label-gamesave-browser-panel-load-title = Загрузить игру
+label-gamesave-browser-panel-save-title = Сохранить игру
+label-gamesave-browser-panel-no-save-selected = Выберите сохранение для перезаписи или введите новое имя
+button-bg-delete-all = Удалить всё
+button-bg-delete = Удалить
+button-bg-rename = Переименовать
+button-bg-load = Загрузить
+button-bg-save = Сохранить
 
 ## gamesave-loading.yaml
-label-gamesave-loading-screen-title = Loading Saved Game
-label-gamesave-loading-screen-desc = Press Escape to cancel loading and return to the main menu
+label-gamesave-loading-screen-title = Загрузка сохранения
+label-gamesave-loading-screen-desc = Нажмите Escape, чтобы отменить и вернуться в меню
 
 ## ingame-chat.yaml, ingame-infochat.yaml
 button-chat-chrome-mode =
-    .label = Team
-    .tooltip = Toggle chat mode
+    .label = Команда
+    .tooltip = Переключить режим чата
 
 ## ingame-debug.yaml
-label-debug-panel-title = Debug Options
-checkbox-debug-panel-instant-build = Instant Build Speed
-checkbox-debug-panel-enable-tech = Build Everything
-checkbox-debug-panel-build-anywhere = Build Anywhere
-checkbox-debug-panel-unlimited-power = Unlimited Power
-checkbox-debug-panel-instant-charge = Instant Charge Time
-checkbox-debug-panel-disable-visibility-checks = Disable Visibility Checks
-button-debug-panel-give-cash = Give $20,000
-button-debug-panel-grow-resources = Grow Resources
-button-debug-panel-give-exploration = Clear Shroud
-button-debug-panel-reset-exploration = Reset Shroud
-label-debug-panel-visualizations-title = Visualizations
-checkbox-debug-panel-show-unit-paths = Show Unit Paths
-checkbox-debug-panel-show-customterrain-overlay = Show Custom Terrain
-checkbox-debug-panel-show-actor-tags = Show Actor Tags
-checkbox-debug-panel-show-combatoverlay = Show Combat Geometry
-checkbox-debug-panel-show-geometry = Show Render Geometry
-checkbox-debug-panel-show-terrain-overlay = Show Terrain Geometry
-checkbox-debug-panel-show-screenmap = Show Screen Map
+label-debug-panel-title = Отладка
+checkbox-debug-panel-instant-build = Мгновенная стройка
+checkbox-debug-panel-enable-tech = Строить всё
+checkbox-debug-panel-build-anywhere = Строить где угодно
+checkbox-debug-panel-unlimited-power = Бесконечная энергия
+checkbox-debug-panel-instant-charge = Мгновенная зарядка
+checkbox-debug-panel-disable-visibility-checks = Отключить проверку видимости
+button-debug-panel-give-cash = Дать $20,000
+button-debug-panel-grow-resources = Вырастить ресурсы
+button-debug-panel-give-exploration = Открыть туман
+button-debug-panel-reset-exploration = Сбросить разведку
+label-debug-panel-visualizations-title = Визуализация
+checkbox-debug-panel-show-unit-paths = Пути юнитов
+checkbox-debug-panel-show-customterrain-overlay = Особый рельеф
+checkbox-debug-panel-show-actor-tags = Метки объектов
+checkbox-debug-panel-show-combatoverlay = Геометрия боя
+checkbox-debug-panel-show-geometry = Геометрия рендера
+checkbox-debug-panel-show-terrain-overlay = Геометрия рельефа
+checkbox-debug-panel-show-screenmap = Экранная карта
 
 ## ingame-debug-hpf.yaml
-dropdownbutton-hpf-overlay-locomotor = Select Locomotor
-dropdownbutton-hpf-overlay-check = Select BlockedByActor
+dropdownbutton-hpf-overlay-locomotor = Выбрать движение
+dropdownbutton-hpf-overlay-check = Выбрать BlockedByActor
 
 ## ingame-info.yaml
-label-game-info-panel-title = Game Information
+label-game-info-panel-title = Информация об игре
 
 ## ingame-infoobjectives.yaml
-label-mission-objectives = Mission:
+label-mission-objectives = Миссия:
 
 ## ingame-infoscripterror.yaml
-label-script-error-panel-desc-a = The map script has encountered a fatal error
-label-script-error-panel-desc-b = The details of the error have been saved to lua.log in the logs directory.
-label-script-error-panel-desc-c = Please send this file to the map author so that they can fix this issue.
+label-script-error-panel-desc-a = Скрипт карты поймал критическую ошибку
+label-script-error-panel-desc-b = Подробности сохранены в lua.log в папке логов.
+label-script-error-panel-desc-c = Отправьте файл автору карты, чтобы он починил этот бардак.
 
 ## ingame-infostats.yaml
-label-mission-objective = Mission:
-checkbox-stats-objective = Destroy all opposition!
-label-stats-player = Player
-label-stats-faction = Faction
-label-stats-score = Score
-label-stats-actions = Actions
+label-mission-objective = Миссия:
+checkbox-stats-objective = Уничтожить всех врагов!
+label-stats-player = Игрок
+label-stats-faction = Фракция
+label-stats-score = Очки
+label-stats-actions = Действия
 
 ## ingame.yaml
-button-observer-widget-options-tooltip = Menu
-button-replay-player-pause-tooltip = Pause
-button-replay-player-play-tooltip = Play
+button-observer-widget-options-tooltip = Меню
+button-replay-player-pause-tooltip = Пауза
+button-replay-player-play-tooltip = Играть
 
 button-replay-player-slow =
-    .tooltip = Slow speed
+    .tooltip = Медленно
     .label = 50%
 
 button-replay-player-regular =
-    .tooltip = Regular speed
+    .tooltip = Обычная скорость
     .label = 100%
 
 button-replay-player-fast =
-    .tooltip = Fast speed
+    .tooltip = Быстро
     .label = 200%
 
 button-replay-player-maximum =
-    .tooltip = Maximum speed
+    .tooltip = Максимум
     .label = MAX
 
-label-basic-stats-player-header = Player
-label-basic-stats-cash-header = Cash
-label-basic-stats-power-header = Power
-label-basic-stats-kills-header = Kills
-label-basic-stats-deaths-header = Deaths
-label-basic-stats-assets-destroyed-header = Destroyed
-label-basic-stats-assets-lost-header = Lost
-label-basic-stats-experience-header = Score
+label-basic-stats-player-header = Игрок
+label-basic-stats-cash-header = Деньги
+label-basic-stats-power-header = Энергия
+label-basic-stats-kills-header = Убийства
+label-basic-stats-deaths-header = Потери
+label-basic-stats-assets-destroyed-header = Уничтожено
+label-basic-stats-assets-lost-header = Потеряно
+label-basic-stats-experience-header = Очки
 label-basic-stats-actions-min-header = APM
-label-economy-stats-player-header = Player
-label-economy-stats-cash-header = Cash
-label-economy-stats-income-header = Income
-label-economy-stats-assets-header = Assets
-label-economy-stats-earned-header = Earned
-label-economy-stats-spent-header = Spent
-label-economy-stats-harvesters-header = Harvesters
-label-economy-stats-derricks-header = Oil Derricks
-label-production-stats-player-header = Player
-label-production-stats-header = Production
-label-support-powers-player-header = Player
-label-support-powers-header = Support Powers
-label-army-player-header = Player
-label-army-header = Army
-label-combat-stats-player-header = Player
-label-combat-stats-assets-destroyed-header = Destroyed
-label-combat-stats-assets-lost-header = Lost
-label-combat-stats-units-killed-header = U. Killed
-label-combat-stats-units-dead-header = Units Lost
-label-combat-stats-buildings-killed-header = B. Killed
-label-combat-stats-buildings-dead-header = B. Lost
-label-combat-stats-army-value-header = Army Value
-label-combat-stats-vision-header = Vision
+label-economy-stats-player-header = Игрок
+label-economy-stats-cash-header = Деньги
+label-economy-stats-income-header = Доход
+label-economy-stats-assets-header = Активы
+label-economy-stats-earned-header = Получено
+label-economy-stats-spent-header = Потрачено
+label-economy-stats-harvesters-header = Сборщики
+label-economy-stats-derricks-header = Вышки
+label-production-stats-player-header = Игрок
+label-production-stats-header = Производство
+label-support-powers-player-header = Игрок
+label-support-powers-header = Силы поддержки
+label-army-player-header = Игрок
+label-army-header = Армия
+label-combat-stats-player-header = Игрок
+label-combat-stats-assets-destroyed-header = Уничтожено
+label-combat-stats-assets-lost-header = Потеряно
+label-combat-stats-units-killed-header = Юн. убито
+label-combat-stats-units-dead-header = Юн. потеряно
+label-combat-stats-buildings-killed-header = Зд. убито
+label-combat-stats-buildings-dead-header = Зд. потеряно
+label-combat-stats-army-value-header = Стоимость армии
+label-combat-stats-vision-header = Обзор
 
 supportpowers-support-powers-palette =
-    .ready = Ready
-    .hold = On Hold
+    .ready = Готово
+    .hold = На паузе
 
 button-command-bar-attack-move =
-    .tooltip = Attack Move
+    .tooltip = Атака с движением
     .tooltipdesc =
-    Selected units will move to the desired location
-    and attack any enemies they encounter en route.
+    Выбранные юниты пойдут к точке
+    и будут бить врагов по дороге.
 
-    Hold <(Ctrl)> while targeting to order an Assault Move
-    that attacks any units or structures encountered en route.
+    Удерживайте <(Ctrl)> для штурмового движения:
+    атакуются все встречные юниты и здания.
 
-    Left-click icon then right-click on target location.
+    ЛКМ по значку, затем ПКМ по точке.
 
 button-command-bar-force-move =
-    .tooltip = Force Move
+    .tooltip = Принудительный ход
     .tooltipdesc =
-    Selected units will move to the desired location
-     - Default activity for the target is suppressed
-     - Vehicles will attempt to crush enemies at the target location
-     - Helicopters will land at the target location
+    Выбранные юниты пойдут в нужную точку
+     - Обычное действие цели подавляется
+     - Техника попытается давить врагов у цели
+     - Вертолёты сядут в указанной точке
 
-    Left-click icon then right-click on target.
-    Hold <(Alt)> to activate temporarily while commanding units.
+    ЛКМ по значку, затем ПКМ по цели.
+    Держите <(Alt)> для временной активации.
 
 button-command-bar-force-attack =
-    .tooltip = Force Attack
+    .tooltip = Принудительная атака
     .tooltipdesc =
-    Selected units will attack the targeted unit or location
-     - Default activity for the target is suppressed
-     - Allows targeting of own or ally forces
-     - Long-range artillery units will always target the
-       location, ignoring units and buildings
+    Выбранные юниты атакуют цель или место
+     - Обычное действие цели подавляется
+     - Можно целить своих и союзников
+     - Дальняя артиллерия всегда бьёт по
+       точке, игнорируя юниты и здания
 
-    Left-click icon then right-click on target.
-    Hold <(Ctrl)> to activate temporarily while commanding units.
+    ЛКМ по значку, затем ПКМ по цели.
+    Держите <(Ctrl)> для временной активации.
 
 button-command-bar-guard =
-    .tooltip = Guard
+    .tooltip = Охранять
     .tooltipdesc =
-    Selected units will follow the targeted unit.
+    Выбранные юниты будут следовать за целью.
 
-    Left-click icon then right-click on target unit.
+    ЛКМ по значку, затем ПКМ по юниту.
 
 button-command-bar-deploy =
-    .tooltip = Deploy
+    .tooltip = Развернуть
     .tooltipdesc =
-    Selected units will perform their default deploy activity
-     - MCVs will unpack into a Construction Yard
-     - Construction Yards will re-pack into a MCV
-     - Transports will unload their passengers
+    Выбранные юниты выполнят действие развёртывания
+     - МСЦ станет строительным двором
+     - Стройдвор свернётся обратно в МСЦ
+     - Транспорты высадят пассажиров
 
-    Acts immediately on selected units.
+    Срабатывает сразу на выбранных юнитах.
 
 button-command-bar-scatter =
-    .tooltip = Scatter
+    .tooltip = Рассредоточиться
     .tooltipdesc =
-    Selected units will stop their current activity
-    and move to a nearby location.
+    Выбранные юниты прекратят текущее действие
+    и уйдут в ближайшую точку.
 
-    Acts immediately on selected units.
+    Срабатывает сразу на выбранных юнитах.
 
 button-command-bar-stop =
-    .tooltip = Stop
+    .tooltip = Стоп
     .tooltipdesc =
-    Selected units will stop their current activity.
-    Selected buildings will reset their rally point.
+    Выбранные юниты прекратят текущее действие.
+    Выбранные здания сбросят точку сбора.
 
-    Acts immediately on selected targets.
+    Срабатывает сразу на выбранных целях.
 
 button-command-bar-queue-orders =
-    .tooltip = Waypoint Mode
+    .tooltip = Маршруты
     .tooltipdesc =
-    Use Waypoint Mode to give multiple linking commands
-    to the selected units. Units will execute the commands
-    immediately upon receiving them.
+    Режим маршрута даёт цепочку приказов
+    выбранным юнитам. Они выполнят команды
+    сразу после получения.
 
-    Left-click icon then give commands in the game world.
-    Hold <(Shift)> to activate temporarily while commanding units.
+    ЛКМ по значку, затем отдавайте приказы на карте.
+    Держите <(Shift)> для временной активации.
 
 button-stance-bar-attackanything =
-    .tooltip = Attack Anything Stance
+    .tooltip = Огонь по всему
     .tooltipdesc =
-    Set the selected units to Attack Anything stance:
-     - Units will attack enemy units and structures on sight
-     - Units will pursue attackers across the battlefield
+    Перевести выбранных юнитов в режим «бей всё»:
+     - Юниты атакуют вражеские войска и здания в поле зрения
+     - Юниты преследуют атакующих по всей карте
 
 button-stance-bar-defend =
-    .tooltip = Defend Stance
+    .tooltip = Оборона
     .tooltipdesc =
-    Set the selected units to Defend stance:
-     - Units will attack enemy units on sight
-     - Units will not move or pursue enemies
+    Перевести выбранных юнитов в оборону:
+     - Юниты атакуют врагов в поле зрения
+     - Юниты не двигаются и не гонятся за врагами
 
 button-stance-bar-returnfire =
-    .tooltip = Return Fire Stance
+    .tooltip = Ответный огонь
     .tooltipdesc =
-    Set the selected units to Return Fire stance:
-     - Units will retaliate against enemies that attack them
-     - Units will not move or pursue enemies
+    Перевести выбранных юнитов в ответный огонь:
+     - Юниты отвечают врагам, которые атакуют их
+     - Юниты не двигаются и не гонятся за врагами
 
 button-stance-bar-holdfire =
-    .tooltip = Hold Fire Stance
+    .tooltip = Не стрелять
     .tooltipdesc =
-    Set the selected units to Hold Fire stance:
-     - Units will not fire upon enemies
-     - Units will not move or pursue enemies
+    Перевести выбранных юнитов в режим «тихо сидим»:
+     - Юниты не стреляют по врагам
+     - Юниты не двигаются и не преследуют врагов
 
-label-mute-indicator = Audio Muted
-button-top-buttons-sell-tooltip = Sell
-button-top-buttons-repair-tooltip = Repair
-button-top-buttons-beacon-tooltip = Place Beacon
-button-top-buttons-options-tooltip = Options
-button-production-types-building-tooltip = Buildings
-button-production-types-support-tooltip = Support
-button-production-types-infantry-tooltip = Infantry
-button-production-types-vehicle-tooltip = Vehicles
-button-production-types-aircraft-tooltip = Aircraft
+label-mute-indicator = Звук выключен
+button-top-buttons-sell-tooltip = Продать
+button-top-buttons-repair-tooltip = Ремонт
+button-top-buttons-beacon-tooltip = Поставить маяк
+button-top-buttons-options-tooltip = Настройки
+button-production-types-building-tooltip = Здания
+button-production-types-support-tooltip = Поддержка
+button-production-types-infantry-tooltip = Пехота
+button-production-types-vehicle-tooltip = Техника
+button-production-types-aircraft-tooltip = Авиация
 
 productionpalette-player-widgets-production-palette =
-    .ready = Ready
-    .hold = On Hold
+    .ready = Готово
+    .hold = На паузе
 
 ## lobby-kickdialogs.yaml
-label-kick-client-dialog-text-a = You may also apply a temporary ban, preventing
-label-kick-client-dialog-text-b = them from joining for the remainder of this game.
-checkbox-kick-client-dialog-prevent-rejoining = Temporarily Ban
-button-kick-client-dialog = Kick
-label-kick-spectators-dialog-title = Kick Spectators
-button-kick-spectators-dialog-ok = Ok
-label-force-start-dialog-title = Start Game?
-label-force-start-dialog-text-a = One or more players are not yet ready.
-label-force-start-dialog-text-b = Are you sure that you want to force start the game?
-label-kick-warning-a = One or more clients are missing the selected
-label-kick-warning-b = map, and will be kicked from the server.
-button-force-start-dialog-start = Start
+label-kick-client-dialog-text-a = Можно также дать временный бан,
+label-kick-client-dialog-text-b = чтобы игрок не вернулся до конца матча.
+checkbox-kick-client-dialog-prevent-rejoining = Временный бан
+button-kick-client-dialog = Кикнуть
+label-kick-spectators-dialog-title = Кик зрителей
+button-kick-spectators-dialog-ok = OK
+label-force-start-dialog-title = Начать игру?
+label-force-start-dialog-text-a = Один или несколько игроков ещё не готовы.
+label-force-start-dialog-text-b = Точно запустить игру принудительно?
+label-kick-warning-a = У одного или нескольких клиентов нет выбранной
+label-kick-warning-b = карты, они будут кикнуты с сервера.
+button-force-start-dialog-start = Старт
 
 ## lobby-mappreview.yaml
-label-map-incompatible-status-a = This map is not compatible
-label-map-incompatible-status-b = with this version of OpenRA
-label-map-validating-status = Validating...
-label-map-generating-status = Generating...
-button-map-download-available-install = Install Map
-button-map-preview-update = Update Map
-button-map-update-download-available-install = Install Map
-label-map-preview-searching = Searching OpenRA Resource Center...
-label-map-unavailable-a = This map was not found on the
-label-map-unavailable-b = OpenRA Resource Center
-label-map-preview-error = An error occurred during installation
-label-map-update-available-a = A new version of the map
-label-map-update-available-b = was found on your computer
+label-map-incompatible-status-a = Эта карта несовместима
+label-map-incompatible-status-b = с этой версией OpenRA
+label-map-validating-status = Проверка...
+label-map-generating-status = Генерация...
+button-map-download-available-install = Установить карту
+button-map-preview-update = Обновить карту
+button-map-update-download-available-install = Установить карту
+label-map-preview-searching = Поиск в центре ресурсов OpenRA...
+label-map-unavailable-a = Эта карта не найдена в
+label-map-unavailable-b = центре ресурсов OpenRA
+label-map-preview-error = Ошибка при установке
+label-map-update-available-a = Новая версия карты
+label-map-update-available-b = найдена на вашем компьютере
 
 ## lobby-music.yaml
-label-music-controls-volume = Volume:
+label-music-controls-volume = Громкость:
 
 ## lobby-music.yaml, lobby.yaml, mainmenu.yaml
-label-music-title = Music
+label-music-title = Музыка
 
 ## music.yaml
-label-music-title-panel-title = Music Player
+label-music-title-panel-title = Плеер музыки
 
 ## lobby-music.yaml, music.yaml
-label-music-controls-length = Length
-checkbox-music-controls-shuffle = Shuffle
-checkbox-music-controls-loop = Loop
-label-container-title = Track
-label-no-music-title = Music Not Installed
-label-no-music-desc-a = The game music can be installed
-label-no-music-desc-b = from the "Manage Content" menu.
+label-music-controls-length = Длина
+checkbox-music-controls-shuffle = Случайно
+checkbox-music-controls-loop = Повтор
+label-container-title = Трек
+label-no-music-title = Музыка не установлена
+label-no-music-desc-a = Музыку игры можно установить
+label-no-music-desc-b = через меню «Контент».
 
 ## lobby-options.yaml
-label-lobby-options-bin-title = Map Options
+label-lobby-options-bin-title = Настройки карты
 
 ## lobby-players.yaml
-label-lobby-players-player = Player
-label-lobby-players-color = Color
-label-lobby-players-faction = Faction
-label-lobby-players-team = Team
-label-lobby-players-handicap = Handicap
-label-lobby-players-spawn = Spawn
-label-lobby-players-ready = Ready
-label-lobby-players-name = Name
-dropdownbutton-lobby-players-handicap-tooltip = A handicap decreases the combat effectiveness of the player's forces
-button-lobby-players-join = Play in this slot
-label-lobby-players-spectator = Spectator
-checkbox-lobby-players-new-spectator-toggle = Allow Spectators?
-button-lobby-players-spectate = Spectate
+label-lobby-players-player = Игрок
+label-lobby-players-color = Цвет
+label-lobby-players-faction = Фракция
+label-lobby-players-team = Команда
+label-lobby-players-handicap = Фора
+label-lobby-players-spawn = Старт
+label-lobby-players-ready = Готов
+label-lobby-players-name = Имя
+dropdownbutton-lobby-players-handicap-tooltip = Фора снижает боевую эффективность сил игрока
+button-lobby-players-join = Играть в этом слоте
+label-lobby-players-spectator = Зритель
+checkbox-lobby-players-new-spectator-toggle = Пускать зрителей?
+button-lobby-players-spectate = Смотреть
 
 ## lobby-servers.yaml
-image-lobby-servers-bin-password-protected-tooltip = Requires Password
-image-lobby-servers-bin-requires-authentication-tooltip = Requires OpenRA forum account
-dropdownbutton-lobby-servers-bin-filters = Filter Games
+image-lobby-servers-bin-password-protected-tooltip = Нужен пароль
+image-lobby-servers-bin-requires-authentication-tooltip = Нужен аккаунт форума OpenRA
+dropdownbutton-lobby-servers-bin-filters = Фильтр игр
 
 ## lobby.yaml
-dropdownbutton-bg-slots = Slot Admin
-button-bg-reset-options = Reset Defaults
-button-skirmish-tabs-players-tab = Players
-button-skirmish-tabs-options-tab = Options
-button-multiplayer-tabs-players-tab = Players
-button-multiplayer-tabs-options-tab = Options
-button-multiplayer-tabs-servers-tab = Servers
-button-bg-changemap = Change Map
+dropdownbutton-bg-slots = Управление слотами
+button-bg-reset-options = Сброс настроек
+button-skirmish-tabs-players-tab = Игроки
+button-skirmish-tabs-options-tab = Настройки
+button-multiplayer-tabs-players-tab = Игроки
+button-multiplayer-tabs-options-tab = Настройки
+button-multiplayer-tabs-servers-tab = Серверы
+button-bg-changemap = Сменить карту
 
 button-lobbychat-chat-mode =
-    .label = Team
-    .tooltip = Toggle chat mode
+    .label = Команда
+    .tooltip = Переключить режим чата
 
-button-server-lobby-disconnect = Leave Game
-button-server-lobby-start-game = Start Game
+button-server-lobby-disconnect = Покинуть игру
+button-server-lobby-start-game = Начать игру
 
 ## mainmenu-prompts.yaml
-label-mainmenu-introduction-prompt-title = Establishing Battlefield Control
-label-bg-desc-a = Welcome back Commander! Initialize combat parameters using the options below.
-label-bg-desc-b = Additional options can be configured later from the Settings menu.
-label-mainmenu-system-info-prompt-title = Establishing Battlefield Control
-label-bg-prompt-text-a = We would like to collect some details that will help us optimize OpenRA.
-label-bg-prompt-text-b = With your permission, the following anonymous system data will be sent:
-checkbox-bg-sysinfo = Send System Information
+label-mainmenu-introduction-prompt-title = Установка контроля поля боя
+label-bg-desc-a = С возвращением, командир! Задайте боевые параметры ниже.
+label-bg-desc-b = Остальное можно настроить позже в меню настроек.
+label-mainmenu-system-info-prompt-title = Установка контроля поля боя
+label-bg-prompt-text-a = Мы хотим собрать данные, чтобы оптимизировать OpenRA.
+label-bg-prompt-text-b = С вашего разрешения будут отправлены анонимные данные:
+checkbox-bg-sysinfo = Отправлять сведения о системе
 
 ## mainmenu-prompts.yaml, settings-display.yaml, settings-gameplay.yaml
-label-profile-section-header = Profile
-label-player-container = Player Name:
-label-playercolor-container-color = Preferred Color:
-label-display-section-header = Display
-label-battlefield-camera-dropdown = Battlefield Camera:
-label-ui-scale-dropdown = UI Scale:
-checkbox-cursordouble-container = Increase Cursor Size
+label-profile-section-header = Профиль
+label-player-container = Имя игрока:
+label-playercolor-container-color = Любимый цвет:
+label-display-section-header = Экран
+label-battlefield-camera-dropdown = Камера поля боя:
+label-ui-scale-dropdown = Масштаб UI:
+checkbox-cursordouble-container = Увеличить курсор
 
 ## mainmenu-prompts.yaml, settings-input.yaml
-label-input-section-header = Input
-label-mouse-control-container = Control Scheme:
-label-mouse-control-desc-classic-selection = - Select units using the <Left> mouse button
-label-mouse-control-desc-classic-commands = - Command units using the <Left> mouse button
-label-mouse-control-desc-classic-orders = - Confirm orders using the <Left> mouse button
-label-mouse-control-desc-classic-buildings = - Place structures using the <Left> mouse button
-label-mouse-control-desc-classic-support = - Target support powers using the <Left> mouse button
-label-mouse-control-desc-classic-zoom = - Zoom the battlefield using the <Scroll Wheel>
-label-mouse-control-desc-classic-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
-label-mouse-control-desc-classic-scroll-right = - Pan the battlefield using the <Right> mouse button
-label-mouse-control-desc-classic-scroll-middle = - Pan the battlefield using the <Middle> mouse button
-label-mouse-control-desc-classic-edgescroll = or by moving the cursor to the edge of the screen
-label-mouse-control-desc-otherrts-selection = - Select units using the <Left> mouse button
-label-mouse-control-desc-otherrts-commands = - Command units using the <Right> mouse button
-label-mouse-control-desc-otherrts-orders = - Confirm orders using the <Left> mouse button
-label-mouse-control-desc-otherrts-buildings = - Place structures using the <Left> mouse button
-label-mouse-control-desc-otherrts-support = - Target support powers using the <Left> mouse button
-label-mouse-control-desc-otherrts-zoom = - Zoom the battlefield using the <Scroll Wheel>
-label-mouse-control-desc-otherrts-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
-label-mouse-control-desc-otherrts-scroll-right = - Pan the battlefield using the <Right> mouse button
-label-mouse-control-desc-otherrts-scroll-middle = - Pan the battlefield using the <Middle> mouse button
-label-mouse-control-desc-otherrts-edgescroll = or by moving the cursor to the edge of the screen
-label-mouse-control-desc-modern-selection = - Select units using the <Left> mouse button
-label-mouse-control-desc-modern-commands = - Command units using the <Right> mouse button
-label-mouse-control-desc-modern-orders = - Confirm orders using the <Right> mouse button
-label-mouse-control-desc-modern-buildings = - Place structures using the <Left> mouse button
-label-mouse-control-desc-modern-support = - Target support powers using the <Left> mouse button
-label-mouse-control-desc-modern-zoom = - Zoom the battlefield using the <Scroll Wheel>
-label-mouse-control-desc-modern-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
-label-mouse-control-desc-modern-scroll-right = - Pan the battlefield using the <Right> mouse button
-label-mouse-control-desc-modern-scroll-middle = - Pan the battlefield using the <Middle> mouse button
-label-mouse-control-desc-modern-edgescroll = or by moving the cursor to the edge of the screen
-checkbox-edgescroll-container = Screen Edge Panning
+label-input-section-header = Управление
+label-mouse-control-container = Схема управления:
+label-mouse-control-desc-classic-selection = - Выбор юнитов кнопкой <Left>
+label-mouse-control-desc-classic-commands = - Приказы юнитам кнопкой <Left>
+label-mouse-control-desc-classic-orders = - Подтверждение приказов кнопкой <Left>
+label-mouse-control-desc-classic-buildings = - Размещение зданий кнопкой <Left>
+label-mouse-control-desc-classic-support = - Цель сил поддержки кнопкой <Left>
+label-mouse-control-desc-classic-zoom = - Зум поля боя через <Scroll Wheel>
+label-mouse-control-desc-classic-zoom-modifier = - Зум поля боя через <MODIFIER + Scroll Wheel>
+label-mouse-control-desc-classic-scroll-right = - Двигать карту кнопкой <Right>
+label-mouse-control-desc-classic-scroll-middle = - Двигать карту кнопкой <Middle>
+label-mouse-control-desc-classic-edgescroll = или подведя курсор к краю экрана
+label-mouse-control-desc-otherrts-selection = - Выбор юнитов кнопкой <Left>
+label-mouse-control-desc-otherrts-commands = - Приказы юнитам кнопкой <Right>
+label-mouse-control-desc-otherrts-orders = - Подтверждение приказов кнопкой <Left>
+label-mouse-control-desc-otherrts-buildings = - Размещение зданий кнопкой <Left>
+label-mouse-control-desc-otherrts-support = - Цель сил поддержки кнопкой <Left>
+label-mouse-control-desc-otherrts-zoom = - Зум поля боя через <Scroll Wheel>
+label-mouse-control-desc-otherrts-zoom-modifier = - Зум поля боя через <MODIFIER + Scroll Wheel>
+label-mouse-control-desc-otherrts-scroll-right = - Двигать карту кнопкой <Right>
+label-mouse-control-desc-otherrts-scroll-middle = - Двигать карту кнопкой <Middle>
+label-mouse-control-desc-otherrts-edgescroll = или подведя курсор к краю экрана
+label-mouse-control-desc-modern-selection = - Выбор юнитов кнопкой <Left>
+label-mouse-control-desc-modern-commands = - Приказы юнитам кнопкой <Right>
+label-mouse-control-desc-modern-orders = - Подтверждение приказов кнопкой <Right>
+label-mouse-control-desc-modern-buildings = - Размещение зданий кнопкой <Left>
+label-mouse-control-desc-modern-support = - Цель сил поддержки кнопкой <Left>
+label-mouse-control-desc-modern-zoom = - Зум поля боя через <Scroll Wheel>
+label-mouse-control-desc-modern-zoom-modifier = - Зум поля боя через <MODIFIER + Scroll Wheel>
+label-mouse-control-desc-modern-scroll-right = - Двигать карту кнопкой <Right>
+label-mouse-control-desc-modern-scroll-middle = - Двигать карту кнопкой <Middle>
+label-mouse-control-desc-modern-edgescroll = или подведя курсор к краю экрана
+checkbox-edgescroll-container = Прокрутка у края экрана
 
 ## mainmenu.yaml
-label-singleplayer-title = Singleplayer
-label-main-menu-mainmenu-title = Main Menu
-button-extras-title = Extras
-button-main-menu-content = Manage Content
-button-singleplayer-menu-skirmish = Skirmish
-button-singleplayer-menu-load = Load
-button-extras-menu-replays = Replays
-label-map-editor-title = Map Editor
-button-extras-menu-assetbrowser = Asset Browser
-button-map-editor-new-map = New Map
-button-map-editor-load-map = Load Map
-dropdownbutton-news-bg-button = Battlefield News
-label-update-notice-a = You are running an outdated version of OpenRA.
-label-update-notice-b = Download the latest version from www.openra.net
+label-singleplayer-title = Одиночная игра
+label-main-menu-mainmenu-title = Главное меню
+button-extras-title = Дополнительно
+button-main-menu-content = Контент
+button-singleplayer-menu-skirmish = Схватка
+button-singleplayer-menu-load = Загрузить
+button-extras-menu-replays = Повторы
+label-map-editor-title = Редактор карт
+button-extras-menu-assetbrowser = Браузер ресурсов
+button-map-editor-new-map = Новая карта
+button-map-editor-load-map = Загрузить карту
+dropdownbutton-news-bg-button = Новости фронта
+label-update-notice-a = У вас устаревшая версия OpenRA.
+label-update-notice-b = Скачайте свежую версию с www.openra.net
 
 ## mainmenu.yaml, missionbrowser.yaml
-label-missions-title = Missions
+label-missions-title = Миссии
 
 ## mainmenu.yaml, multiplayer-browser.yaml
-label-multiplayer-title = Multiplayer
+label-multiplayer-title = Сетевая игра
 
 ## mainmenu.yaml, settings.yaml
-button-settings-title = Settings
+button-settings-title = Настройки
 
 ## mapchooser.yaml
-label-mapchooser-panel-title = Select Map
-label-filter-order-controls-desc = Filter:
-label-filter-order-controls-desc-joiner = in
-label-filter-order-controls-orderby = Order by:
-button-bg-randommap = Random
-button-bg-delete-map = Delete Map
-button-bg-delete-all-maps = Delete All Maps
-button-bg-ok = Ok
+label-mapchooser-panel-title = Выбор карты
+label-filter-order-controls-desc = Фильтр:
+label-filter-order-controls-desc-joiner = в
+label-filter-order-controls-orderby = Сортировать:
+button-bg-randommap = Случайно
+button-bg-delete-map = Удалить карту
+button-bg-delete-all-maps = Удалить все карты
+button-bg-ok = OK
 
-label-mapchooser-random-map-title = Random Map
-label-mapchooser-random-map-generating = Generating...
-label-mapchooser-random-map-error = Map Generation Failed
-button-mapchooser-random-map-generate = Generate
-label-mapchooser-random-map-tileset = Environment:
-label-mapchooser-random-map-size = Map Size:
-label-mapchooser-random-map-error-desc = Adjust the settings or try again.
+label-mapchooser-random-map-title = Случайная карта
+label-mapchooser-random-map-generating = Генерация...
+label-mapchooser-random-map-error = Генерация не удалась
+button-mapchooser-random-map-generate = Генерировать
+label-mapchooser-random-map-tileset = Окружение:
+label-mapchooser-random-map-size = Размер карты:
+label-mapchooser-random-map-error-desc = Измените настройки или попробуйте снова.
 
 ## missionbrowser.yaml
-button-missionbrowser-panel-mission-info = Mission Info
-button-missionbrowser-panel-mission-options = Options
-button-missionbrowser-panel-start-briefing-video = Watch Briefing
-button-missionbrowser-panel-stop-briefing-video = Stop Briefing
-button-missionbrowser-panel-start-info-video = Watch Info Video
-button-missionbrowser-panel-stop-info-video = Stop Info Video
-button-missionbrowser-panel-play = Play
+button-missionbrowser-panel-mission-info = Инфо миссии
+button-missionbrowser-panel-mission-options = Настройки
+button-missionbrowser-panel-start-briefing-video = Смотреть брифинг
+button-missionbrowser-panel-stop-briefing-video = Остановить брифинг
+button-missionbrowser-panel-start-info-video = Смотреть видео
+button-missionbrowser-panel-stop-info-video = Остановить видео
+button-missionbrowser-panel-play = Играть
 dropdown-missionbrowser-difficulty =
-    .label = Difficulty
-    .description = The difficulty of the mission
+    .label = Сложность
+    .description = Сложность миссии
 
-dropdown-missionbrowser-gamespeed = Speed:
-label-missionbrowser-normal-difficulty = Normal
+dropdown-missionbrowser-gamespeed = Скорость:
+label-missionbrowser-normal-difficulty = Нормально
 
 ## multiplayer-browser.yaml
-image-bg-password-protected-tooltip = Requires Password
-image-bg-requires-authentication-tooltip = Requires OpenRA forum account
-button-selected-server-join = Join
-dropdownbutton-bg-filters = Filter Games
-button-bg-directconnect = Direct IP
-button-bg-create = Create
+image-bg-password-protected-tooltip = Нужен пароль
+image-bg-requires-authentication-tooltip = Нужен аккаунт форума OpenRA
+button-selected-server-join = Войти
+dropdownbutton-bg-filters = Фильтр игр
+button-bg-directconnect = Прямой IP
+button-bg-create = Создать
 
 ## multiplayer-browser.yaml, lobby-servers.yaml
-label-container-server = Server
-label-container-players = Players
-label-container-location = Location
-label-container-status = Status
-label-bg-outdated-version = You are running an outdated version of OpenRA. Download the latest version from www.openra.net
-label-bg-unknown-version = You are running an unrecognized version of OpenRA. Download the latest version from www.openra.net
-label-bg-playtest-available = A preview of the next OpenRA release is available for testing. Download the playtest from www.openra.net
+label-container-server = Сервер
+label-container-players = Игроки
+label-container-location = Регион
+label-container-status = Статус
+label-bg-outdated-version = У вас устаревшая версия OpenRA. Скачайте свежую с www.openra.net
+label-bg-unknown-version = У вас неизвестная версия OpenRA. Скачайте свежую с www.openra.net
+label-bg-playtest-available = Доступна тестовая версия следующего OpenRA. Скачать можно на www.openra.net
 
 ## multiplayer-browserpanels.yaml
-checkbox-multiplayer-filter-panel-waiting-for-players = Waiting
-checkbox-multiplayer-filter-panel-empty = Empty
-checkbox-multiplayer-filter-panel-password-protected = Protected
-checkbox-multiplayer-filter-panel-already-started = Started
-checkbox-multiplayer-filter-panel-incompatible-version = Incompatible
+checkbox-multiplayer-filter-panel-waiting-for-players = Ожидают
+checkbox-multiplayer-filter-panel-empty = Пустые
+checkbox-multiplayer-filter-panel-password-protected = С паролем
+checkbox-multiplayer-filter-panel-already-started = Идёт игра
+checkbox-multiplayer-filter-panel-incompatible-version = Несовместимые
 
 ## multiplayer-createserver.yaml
-label-multiplayer-createserver-panel-title = Create Server
-label-bg-server-name = Server Name:
-label-bg-password = Password:
-label-bg-after-password = (optional)
-label-bg-listen-port = Port:
-checkbox-bg-advertise = Advertise Online
-label-notices-lan-advertising = - Game will be advertised to the Local Area Network only.
-label-notices-lan-firewall = - You must manually configure your firewall to allow connections.
-label-notices-lan-portforward-a = - Players can connect using Direct IP from the Internet if you
-label-notices-lan-portforward-b = manually configure port forwarding on your router.
-label-notices-no-upnp-advertising = - Game will be advertised to the Local Area Network and Internet.
-label-notices-no-upnp-firewall = - You must manually configure your firewall to allow connections.
-label-notices-no-upnp-portforward-a = - You must manually configure your router to allow and forward
-label-notices-no-upnp-portforward-b = connections to your local IP and Port.
-label-notices-no-upnp-settings-a = - You can enable UPnP/NAT-PMP (if supported by your router)
-label-notices-no-upnp-settings-b = in the Advanced tab of the settings menu.
-label-notices-upnp-advertising = - Game will be advertised to the Local Area Network and Internet.
-label-notices-upnp-firewall = - You must manually configure your firewall to allow connections.
-label-notices-upnp-portforward-a = - Game will automatically configure port forwarding.
-label-notices-upnp-settings-a = - You can disable UPnP/NAT-PMP in the settings menu.
-button-multiplayer-createserver-panel-change-map = Change Map
-button-multiplayer-createserver-panel-create = Create
+label-multiplayer-createserver-panel-title = Создать сервер
+label-bg-server-name = Имя сервера:
+label-bg-password = Пароль:
+label-bg-after-password = (необязательно)
+label-bg-listen-port = Порт:
+checkbox-bg-advertise = Показать онлайн
+label-notices-lan-advertising = - Игра будет видна только в локальной сети.
+label-notices-lan-firewall = - Настройте firewall вручную для подключений.
+label-notices-lan-portforward-a = - Игроки смогут войти по Direct IP из Интернета,
+label-notices-lan-portforward-b = если настроить проброс портов на роутере.
+label-notices-no-upnp-advertising = - Игра будет видна в локальной сети и Интернете.
+label-notices-no-upnp-firewall = - Настройте firewall вручную для подключений.
+label-notices-no-upnp-portforward-a = - Настройте роутер вручную, чтобы разрешить и
+label-notices-no-upnp-portforward-b = пробросить подключения на ваш IP и порт.
+label-notices-no-upnp-settings-a = - Можно включить UPnP/NAT-PMP, если роутер умеет,
+label-notices-no-upnp-settings-b = во вкладке «Дополнительно» в настройках.
+label-notices-upnp-advertising = - Игра будет видна в локальной сети и Интернете.
+label-notices-upnp-firewall = - Настройте firewall вручную для подключений.
+label-notices-upnp-portforward-a = - Игра сама настроит проброс портов.
+label-notices-upnp-settings-a = - UPnP/NAT-PMP можно выключить в настройках.
+button-multiplayer-createserver-panel-change-map = Сменить карту
+button-multiplayer-createserver-panel-create = Создать
 
 ## multiplayer-directconnect.yaml
-label-directconnect-panel-title = Connect to Server
-label-bg-address = Address:
-label-bg-port = Port:
-button-directconnect-panel-join = Join
+label-directconnect-panel-title = Подключиться к серверу
+label-bg-address = Адрес:
+label-bg-port = Порт:
+button-directconnect-panel-join = Войти
 
 ## playerprofile.yaml
-button-profile-header-logout = Logout
-label-generate-keys-desc-a = Connect to a forum account to identify
-label-generate-keys-desc-b = yourself to other players, join private
-label-generate-keys-desc-c = servers, and display badges.
-button-generate-keys-key = Connect to an OpenRA forum account
-label-generating-keys-desc-a = Generating authentication key pair.
-label-generating-keys-desc-b = This will take several seconds...
-label-register-fingerprint-desc-a = An authentication key has been copied to your
-label-register-fingerprint-desc-b = clipboard. Add this to your User Control Panel
-label-register-fingerprint-desc-c = on the OpenRA forum then press Continue.
-label-checking-fingerprint-desc-a = Querying account details from
-label-checking-fingerprint-desc-b = the OpenRA forum...
-label-fingerprint-not-found-desc-a = Your authentication key is not connected
-label-fingerprint-not-found-desc-b = to an OpenRA forum account.
-label-connection-error-desc-a = Failed to connect to the OpenRA forum.
-label-connection-error-desc-b = Please check your internet connection.
+button-profile-header-logout = Выйти
+label-generate-keys-desc-a = Подключите аккаунт форума, чтобы
+label-generate-keys-desc-b = узнавали другие игроки, пускали приватные
+label-generate-keys-desc-c = серверы и показывались значки.
+button-generate-keys-key = Подключить аккаунт форума OpenRA
+label-generating-keys-desc-a = Генерация пары ключей авторизации.
+label-generating-keys-desc-b = Это займёт несколько секунд...
+label-register-fingerprint-desc-a = Ключ авторизации скопирован в
+label-register-fingerprint-desc-b = буфер. Добавьте его в User Control Panel
+label-register-fingerprint-desc-c = на форуме OpenRA и нажмите Continue.
+label-checking-fingerprint-desc-a = Запрос данных аккаунта с
+label-checking-fingerprint-desc-b = форума OpenRA...
+label-fingerprint-not-found-desc-a = Ваш ключ авторизации не привязан
+label-fingerprint-not-found-desc-b = к аккаунту форума OpenRA.
+label-connection-error-desc-a = Не удалось подключиться к форуму OpenRA.
+label-connection-error-desc-b = Проверьте интернет-соединение.
 
 ## replaybrowser.yaml
-label-replaybrowser-panel-title = Replay Viewer
-label-filters-title = Filter
-label-filters-flt-name-desc = Name:
-label-filters-flt-gametype-desc = Type:
-dropdownbutton-filters-any = Any
-label-filters-flt-date-desc = Date:
-label-filters-flt-duration-desc = Duration:
-label-filters-flt-mapname-desc = Map:
-label-filters-flt-player-desc = Player:
-dropdownbutton-filters-flt-player = Anyone
-label-filters-flt-outcome-desc = Outcome:
-label-filters-flt-faction-desc = Faction:
-button-filters-flt-reset = Reset Filters
-label-management-manage-title = Manage
-button-management-mng-rensel = Rename
-button-management-mng-delsel = Delete
-button-management-mng-delall = Delete All
-checkbox-load-game-filters = Filters
-label-replay-list-container-replaybrowser-title = Choose Replay
-button-replaybrowser-panel-watch = Watch
+label-replaybrowser-panel-title = Просмотр повторов
+label-filters-title = Фильтр
+label-filters-flt-name-desc = Имя:
+label-filters-flt-gametype-desc = Тип:
+dropdownbutton-filters-any = Любой
+label-filters-flt-date-desc = Дата:
+label-filters-flt-duration-desc = Длительность:
+label-filters-flt-mapname-desc = Карта:
+label-filters-flt-player-desc = Игрок:
+dropdownbutton-filters-flt-player = Кто угодно
+label-filters-flt-outcome-desc = Итог:
+label-filters-flt-faction-desc = Фракция:
+button-filters-flt-reset = Сбросить фильтры
+label-management-manage-title = Управление
+button-management-mng-rensel = Переименовать
+button-management-mng-delsel = Удалить
+button-management-mng-delall = Удалить всё
+checkbox-load-game-filters = Фильтры
+label-replay-list-container-replaybrowser-title = Выберите повтор
+button-replaybrowser-panel-watch = Смотреть
 
 ## settings-advanced.yaml
-label-network-section-header = Advanced
-checkbox-nat-discovery-container = Enable UPnP/NAT-PMP Discovery
-checkbox-fetch-news-container = Fetch Community News
-checkbox-perfgraph-container = Show Performance Graph
-checkbox-check-version-container = Check for Updates
-checkbox-perftext-container = Show Performance Text
-checkbox-sendsysinfo-container = Send System Information
-label-sendsysinfo-checkbox-container-desc = Your Operating System, OpenGL and .NET runtime versions, and language settings will be sent along with an anonymous ID to help prioritize future development.
-label-debug-section-header = Developer
-label-debug-hidden-container-a = Additional developer-specific options can be enabled via the
-label-debug-hidden-container-b = Debug.DisplayDeveloperSettings setting or launch flag
-checkbox-botdebug-container = Show Bot Debug Messages
-checkbox-checkbotsync-container = Check Sync around BotModule Code
-checkbox-luadebug-container = Show Map Debug Messages
-checkbox-checkunsynced-container = Check Sync around Unsynced Code
-checkbox-replay-commands-container = Enable Debug Commands in Replays
-checkbox-perflogging-container = Enable Tick Performance Logging
+label-network-section-header = Дополнительно
+checkbox-nat-discovery-container = Включить UPnP/NAT-PMP
+checkbox-fetch-news-container = Загружать новости сообщества
+checkbox-perfgraph-container = График производительности
+checkbox-check-version-container = Проверять обновления
+checkbox-perftext-container = Текст производительности
+checkbox-sendsysinfo-container = Отправлять сведения о системе
+label-sendsysinfo-checkbox-container-desc = Версии ОС, OpenGL, .NET и язык будут отправлены с анонимным ID, чтобы помочь разработке.
+label-debug-section-header = Разработчик
+label-debug-hidden-container-a = Дополнительные параметры разработчика включаются через
+label-debug-hidden-container-b = настройку Debug.DisplayDeveloperSettings или флаг запуска
+checkbox-botdebug-container = Сообщения отладки ботов
+checkbox-checkbotsync-container = Проверять синхронизацию BotModule
+checkbox-luadebug-container = Сообщения отладки карты
+checkbox-checkunsynced-container = Проверять несинхронный код
+checkbox-replay-commands-container = Отладочные команды в повторах
+checkbox-perflogging-container = Логировать производительность тиков
 
 ## settings-audio.yaml
-label-audio-section-header = Audio
-label-no-audio-device-container = Audio controls require an active sound device
-checkbox-cash-ticks-container = Cash Ticks
-checkbox-mute-sound-container = Mute Sound
-label-sound-volume-container = Sound Volume:
+label-audio-section-header = Звук
+label-no-audio-device-container = Для настроек звука нужно активное устройство
+checkbox-cash-ticks-container = Звук денег
+checkbox-mute-sound-container = Выключить звук
+label-sound-volume-container = Громкость звука:
 
 checkbox-mute-background-music-container =
-    .label = Mute Menu Music
-    .tooltip = Mute background music when no specific track is playing
+    .label = Отключить музыку меню
+    .tooltip = Глушить музыку фона, если не играет отдельный трек
 
-label-music-title-volume-container = Music Volume:
-label-audio-device-container = Audio Device:
-label-video-volume-container = Video Volume:
-label-restart-required-container-audio-desc = Device changes will be applied after the game is restarted
+label-music-title-volume-container = Громкость музыки:
+label-audio-device-container = Аудиоустройство:
+label-video-volume-container = Громкость видео:
+label-restart-required-container-audio-desc = Смена устройства применится после перезапуска
 
 ## settings-gameplay.yaml
-label-gameplay-section-header = Gameplay
-label-auto-save-interval = Auto-save frequency:
-label-auto-save-max-file-number = Auto-save limit:
-checkbox-hide-replay-chat-container = Hide Chat in Replays
+label-gameplay-section-header = Игра
+label-auto-save-interval = Частота автосохранения:
+label-auto-save-max-file-number = Лимит автосохранений:
+checkbox-hide-replay-chat-container = Скрыть чат в повторах
 
 ## settings-display.yaml
-label-target-lines-dropdown-container = Target Lines:
-label-status-bar-dropdown-container-bars = Status Bars:
+label-target-lines-dropdown-container = Линии целей:
+label-status-bar-dropdown-container-bars = Полосы статуса:
 
 checkbox-player-stance-colors-container =
-    .label = Player Relationship Colors
-    .tooltip = Change player colors based on relationship (own, enemy, ally, neutral)
+    .label = Цвета отношений игроков
+    .tooltip = Менять цвета игроков по отношению: свои, враги, союзники, нейтралы
 
 checkbox-ui-feedback-container =
-    .label = Show UI Feedback Notifications
-    .tooltip = Show transient text notifications for UI events
+    .label = Показывать уведомления UI
+    .tooltip = Показывать короткие уведомления о событиях интерфейса
 
 checkbox-transients-container =
-    .label = Show Game Event Notifications
-    .tooltip = Show transient text notifications for game events
+    .label = Показывать события игры
+    .tooltip = Показывать короткие уведомления о событиях игры
 
-label-video-section-header = Video
-label-video-mode-dropdown-container = Video Mode:
-dropdownbutton-video-mode-dropdown-container = Windowed
-label-window-resolution-container-size = Window Size:
+label-video-section-header = Видео
+label-video-mode-dropdown-container = Режим видео:
+dropdownbutton-video-mode-dropdown-container = Окно
+label-window-resolution-container-size = Размер окна:
 label-window-resolution-container-x = x
-label-resolution-preset = Presets:
-dropdownbutton-resolution-select-preset = Select a preset
-label-display-selection-container = Select Display:
-dropdownbutton-display-selection-container-dropdown = Standard
-checkbox-vsync-container = Enable VSync
-checkbox-frame-limit-gamespeed-container = Limit framerate to game tick rate
-label-gl-profile-dropdown-container = OpenGL Profile:
-label-restart-required-container-video-desc = Display and OpenGL changes require restart
+label-resolution-preset = Пресеты:
+dropdownbutton-resolution-select-preset = Выберите пресет
+label-display-selection-container = Выбор дисплея:
+dropdownbutton-display-selection-container-dropdown = Стандарт
+checkbox-vsync-container = Включить VSync
+checkbox-frame-limit-gamespeed-container = Ограничить FPS скоростью игры
+label-gl-profile-dropdown-container = Профиль OpenGL:
+label-restart-required-container-video-desc = Экран и OpenGL требуют перезапуска
 
 ## settings-hotkeys.yaml
-hotkey-group-game-commands = Game Commands
-hotkey-group-viewport-commands = Viewport Commands
-hotkey-group-observer-replay-commands = Observer / Replay Commands
-hotkey-group-unit-commands = Unit Commands
-hotkey-group-unit-stance-commands = Unit Stance Commands
-hotkey-group-production-commands = Production Commands
-hotkey-group-support-power-commands = Support Power Commands
-hotkey-group-music-commands = Music Commands
-hotkey-group-chat-commands = Chat Commands
-hotkey-group-control-groups = Control Groups
-hotkey-group-editor-commands = Editor Commands
-label-hotkeys-panel-filter-input = Filter by name:
-label-hotkeys-panel-context-dropdown = Context:
-label-hotkey-empty-list-message = No hotkeys match the filter criteria.
-label-notices-readonly-notice = This hotkey cannot be modified
-button-hotkey-remap-dialog-override = Override
+hotkey-group-game-commands = Команды игры
+hotkey-group-viewport-commands = Команды камеры
+hotkey-group-observer-replay-commands = Наблюдатель / повтор
+hotkey-group-unit-commands = Команды юнитов
+hotkey-group-unit-stance-commands = Режимы юнитов
+hotkey-group-production-commands = Производство
+hotkey-group-support-power-commands = Силы поддержки
+hotkey-group-music-commands = Музыка
+hotkey-group-chat-commands = Чат
+hotkey-group-control-groups = Группы управления
+hotkey-group-editor-commands = Редактор
+label-hotkeys-panel-filter-input = Фильтр по имени:
+label-hotkeys-panel-context-dropdown = Контекст:
+label-hotkey-empty-list-message = Нет горячих клавиш под этот фильтр.
+label-notices-readonly-notice = Эту клавишу нельзя изменить
+button-hotkey-remap-dialog-override = Заменить
 
 button-hotkey-remap-dialog-clear =
-    .label = Clear
-    .tooltip = Unbind the hotkey
+    .label = Очистить
+    .tooltip = Снять привязку клавиши
 
 button-hotkey-remap-dialog-reset =
-    .label = Reset
-    .tooltip = Reset to default
+    .label = Сбросить
+    .tooltip = Вернуть по умолчанию
 
 ## settings-input.yaml
-label-zoom-modifier-container = Zoom Modifier:
-checkbox-alternate-scroll-container = Alternate Mouse Panning
-checkbox-lockmouse-container = Lock Mouse to Window
-label-mouse-scroll-type-container = Pan Behaviour:
-label-scrollspeed-slider-container-scroll-speed = Pan Speed:
-label-zoomspeed-slider-container-zoom-speed = Zoom Speed:
-label-ui-scrollspeed-slider-container-scroll-speed = UI Scroll Speed:
+label-zoom-modifier-container = Модификатор зума:
+checkbox-alternate-scroll-container = Альтернативное движение мышью
+checkbox-lockmouse-container = Запереть мышь в окне
+label-mouse-scroll-type-container = Движение карты:
+label-scrollspeed-slider-container-scroll-speed = Скорость движения:
+label-zoomspeed-slider-container-zoom-speed = Скорость зума:
+label-ui-scrollspeed-slider-container-scroll-speed = Скорость прокрутки UI:
 
 ## settings.yaml
-button-settings-panel-reset = Reset
-button-panel-gameplay = Gameplay
-button-panel-input = Input
-button-panel-display = Display
-button-panel-audio = Audio
-button-panel-hotkeys = Hotkeys
-button-panel-advanced = Advanced
+button-settings-panel-reset = Сброс
+button-panel-gameplay = Игра
+button-panel-input = Управление
+button-panel-display = Экран
+button-panel-audio = Звук
+button-panel-hotkeys = Клавиши
+button-panel-advanced = Дополнительно
 
 ## tooltips.yaml
-label-latency-tooltip-prefix = Latency:
-label-anonymous-player-tooltip-name = Anonymous Player
-label-bot-player-tooltip-name = Bot
-label-bot-managed-by-tooltip = Bot managed by { $name }
-label-game-admin = Game Admin
-
+label-latency-tooltip-prefix = Задержка:
+label-anonymous-player-tooltip-name = Анонимный игрок
+label-bot-player-tooltip-name = Бот
+label-bot-managed-by-tooltip = Ботом управляет { $name }
+label-game-admin = Админ игры

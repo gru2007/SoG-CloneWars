@@ -1,8 +1,8 @@
 ## hotkeys.yaml
-hotkey-description-nextproductiontab = Next tab
-hotkey-description-previousproductiontab = Previous tab
-hotkey-description-productiontypebuilding = Building Tab
-hotkey-description-productiontypesupport = Support Tab
-hotkey-description-productiontypeinfantry = Infantry Tab
-hotkey-description-productiontypevehicle = Vehicle Tab
-hotkey-description-productiontypeaircraft = Aircraft Tab
+hotkey-description-nextproductiontab = След. вкладка
+hotkey-description-previousproductiontab = Пред. вкладка
+hotkey-description-productiontypebuilding = Здания
+hotkey-description-productiontypesupport = Поддержка
+hotkey-description-productiontypeinfantry = Пехота
+hotkey-description-productiontypevehicle = Техника
+hotkey-description-productiontypeaircraft = Авиация

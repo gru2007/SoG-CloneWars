@@ -1,32 +1,32 @@
 ## world
 dropdown-difficulty =
-    .label = Difficulty
-    .description = The difficulty of the mission
+    .label = Сложность
+    .description = Сложность миссии
 
 options-difficulty =
-    .easy = Easy
-    .normal = Normal
-    .hard = Hard
+    .easy = Легко
+    .normal = Нормально
+    .hard = Тяжело
 
 ## player
 bot-campaign-ai =
-    .name = Campaign Player AI
+    .name = ИИ кампании
 
 ## campaign-maprules.yaml
-actor-moneycrate-name = Money Crate
+actor-moneycrate-name = Ящик кредитов
 
 ## gdi03, gdi07, gdi08a, gdi08b, gdi09, nod03a, nod03b
-actor-hq-description = Provides an overview of the battlefield.
-      Requires power to operate.
+actor-hq-description = Даёт обзор поля боя.
+      Для работы нужна энергия.
 
 ## gdi08a
-actor-c3-name = Farmer Mike
+actor-c3-name = Фермер Майк
 
 ## gdi08b
-civilian-killed = Civilian killed.
+civilian-killed = Мирный житель убит.
 
 ## nod01
-actor-c10-name = Nikoomba
+actor-c10-name = Никумба
 
 ## nod03a, nod03b
-actor-prison-name = Prison
+actor-prison-name = Тюрьма
